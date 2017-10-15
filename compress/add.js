@@ -1,0 +1,1 @@
+window.onload=function(){performance.showHeader();performance.insertHamburger();performance.toggleMenu();performance.displayBigImg();performance.galleryService();performance.displayAnotherWebsiteLabel();aside.displaySideBar();google.displaySearch();}

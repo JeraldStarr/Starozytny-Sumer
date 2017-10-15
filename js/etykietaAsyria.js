@@ -1,0 +1,1 @@
+document.write('<div id="starozytnaAsyria" class="etykieta"><div id="labelTextContainer"><span>Artykuł znajduje się w zewnętrznym serwisie:</span><strong>Starożytna Asyria</strong><span>Kliknięcie spowoduje otwarcie nowej karty</span></div><img src="grafika/zdjecia/starozytnaAsyria.jpg" /></div>');

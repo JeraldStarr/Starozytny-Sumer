@@ -1,0 +1,1164 @@
+html,
+body {
+    background-color: #F5F2F0;
+    color: #702525;
+}
+
+
+/**
+ * container for all elements on the website
+ */
+
+#calosc {
+    background-color: #FAFACD;
+    position: center;
+    max-width: 980px;
+    margin: 0 auto;
+    border: 1px solid lightgray;
+    padding: 10px;
+    font-family: "Bookman Old Style", serif;
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, .2);
+}
+
+
+/**
+ * contains a banner
+ */
+
+#NAGLOWEK {
+    width: 100%;
+    height: 208px;
+    background: url('/grafika/zdjecia/sumeryjska-swiatynia.jpg');
+}
+
+#NAGLOWEK img {
+    visibility: hidden;
+}
+
+#NAGLOWEK span {
+    display: block;
+    font-style: italic;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 2px rgba(225, 225, 225, 1);
+    float: right;
+}
+
+#NAGLOWEK span:first-of-type {
+    font-size: 48px;
+    text-decoration: underline;
+    padding-right: 5%;
+}
+
+#NAGLOWEK span:nth-of-type(2) {
+    font-size: 28px;
+    padding-right: 5.8%;
+}
+
+#NAGLOWEK span:nth-of-type(3) {
+    font-size: 20px;
+    padding-right: 18.8%;
+    padding-top: 10px;
+    clear: both;
+}
+
+
+/**
+ * displays navigation path
+ */
+
+#lokalizacja {
+    width: 94.9%;
+    padding: 25px;
+    clear: both;
+}
+
+#MENU {
+    /*zawiera pionowy pasek nawigacyjny + bloki z odnoścnikami do najświeższych zmian na stronie*/
+    width: 18.877%;
+    min-width: 137px;
+    float: left;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
+}
+
+#MENU > span {
+    display: inline-block;
+    float: left;
+    margin: 110px 0 25px;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#MENU > span:first-of-type {
+    margin-top: 25%;
+}
+
+.nav li:hover {
+    position: relative;
+}
+
+
+/*============ 2-gi poziom menu ===========*/
+
+.podmenu {
+    overflow: visible;
+    padding: 0px;
+    border: 1px solid lightgray;
+    font-size: 12px;
+    margin-right: 12px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
+    width: 140px;
+    margin-top: -34px;
+}
+
+ul.podmenu {
+    display: none;
+    z-index: 1;
+}
+
+
+li:hover .podmenu {
+    display: block;
+    position: absolute;
+    left: 100%;
+}
+
+
+/*============ 2-gi poziom menu ===========*/
+
+
+/*============ 3-ci poziom menu ===========*/
+
+.blok {
+    overflow: visible;
+    margin-left: 10px;
+    font-size: 12px;
+    border: 1px solid lightgray;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
+    margin-top: -32px;
+    width: 155px;
+}
+
+ul.blok {
+    display: none;
+    z-index: 1;
+}
+
+
+.podmenu .gliptyka:hover .blok,
+.podmenu .krolowie:hover .blok,
+.podmenu .swiatynie:hover .blok,
+.podmenu .plaskorzezba:hover .blok,
+.podmenu .okrNowosum:hover .blok {
+    display: block;
+    position: absolute;
+    left: 130px;
+}
+
+
+/*============ 3-ci poziom menu ===========*/
+
+
+/*============ 4-ty poziom menu ===========*/
+
+.odciski,
+.urIIIpodzial {
+    width: 150px;
+}
+
+ul.odciski,
+ul.urIIIpodzial {
+    display: none;
+    z-index: 1;
+}
+
+.podmenu .blok .pieczecie:hover .odciski,
+.podmenu .blok .urIII:hover .urIIIpodzial {
+    display: block;
+    position: absolute;
+    left: 154px;
+    bottom: -1px;
+}
+
+.podmenu .blok .pieczecie:hover .odciski {
+    top: 1px;
+}
+
+.podmenu .blok .urIII:hover .urIIIpodzial {
+    top: -1px;
+}
+
+
+/*============ 4-ty poziom menu ===========*/
+
+.sitemap
+/*zastosowanie do akapitu, gdzie znajduje się link do mapy strony, umiejscowia go po prawiej stronie bloku*/
+
+{
+    float: right;
+    margin: 1px;
+    margin-top: -80px;
+}
+
+.podkreslenie
+/*stosowany do znacznika hr - decyduje o grubości lini podkreślenia pod zacznikami h1 i h2*/
+
+{
+    border: 1px solid lightgray;
+}
+
+.gora_strony
+/*klasa stosowana do linku na końcu artykułu, który  ładuje stronę od nowa i wyświetla początek artykułu*/
+
+{
+    clear: both;
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wyszukiwarka {
+    /*dla bloku z wyszukiwarką*/
+    float: left;
+    width: 245px;
+}
+
+.szukaj {
+    float: left;
+    width: 141px;
+    margin: 2% 0 0 2.5%;
+    color: black;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.linki_dol_strony
+/*klasa stosowana do formatowania linków, znajdujących się w stopce*/
+
+{
+    font-size: 11px;
+}
+
+.daty_zrodla
+/*stosowany do formatowania dat i żródeł na końcu każdego artykułu*/
+
+{
+    font-size: 12px;
+    font-style: italic;
+}
+
+.co_nowego {
+    /*bloki z odnośnikami do nowych lub ostanio aktualizowanych artykułów*/
+    border: 1px solid lightgray;
+    width: 89.18%;
+    overflow: hidden;
+    padding: 1%;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, .2);
+    margin-bottom: 15px;
+    transition: all 0.3s ease-out;
+}
+
+.co_nowego:hover {
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, .4);
+    background-color: #F5F5C9;
+}
+
+.co_nowego div a {
+    float: right;
+    margin: 20px 0 10px;
+}
+
+.co_nowego img {
+    width: 100%;
+}
+
+.menuArrow {
+    float: right;
+    display: inline-block;
+}
+
+a:link {
+    color: #17089C;
+}
+
+a:visited {
+    color: #840F94;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    color: #BA223B;
+}
+
+.czcionka_co_nowego {
+    /*klasa służy do formatowania tekstu, który znajduje się w blokach o klasie .co_nowego*/
+    font-size: 9px;
+    color: black;
+    text-align: justify;
+}
+
+#TRESC {
+    /*id, które służy fo formatowania tekstu artykułu; cześciej używa się do tego nazwy contain*/
+    width: 76.530%;
+    text-align: justify;
+    float: right;
+    padding-right: 25px;
+}
+
+#starozytnaAsyria {
+    width: 460px;
+    height: 100px;
+    background: black;
+    color: white;
+    opacity: 0.87;
+    box-shadow: 7px 7px 5px 1px rgba(0, 0, 0, .6);
+    border: 1px solid white;
+}
+
+#starozytnaAsyria img {
+    float: right;
+    padding: 20px;
+}
+
+#starozytnaAsyria span {
+    display: block;
+    float: left;
+    clear: both;
+}
+
+#starozytnaAsyria strong {
+    display: block;
+    float: left;
+    font-size: 22px;
+    clear: both;
+    margin-left: 50px;
+}
+
+#labelTextContainer {
+    float: left;
+    padding: 17px;
+}
+
+.naglowek_notes {
+    /*nagłówek do bloku o klasie .notes*/
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.strukturaArtykulu {
+    /* blok, w którym wyświetlana jest struktura artykułu*/
+    background-color: #F5F9FA;
+    font-size: 14px;
+    color: black;
+    margin-right: 10px;
+    border-style: solid;
+    width: 30%;
+}
+
+.strukturaArtykulu span {
+    color: black;
+    font-weight: bold;
+    display: block;
+    margin: 7px 0;
+    margin-left: 29%;
+}
+
+.strukturaArtykulu li {
+    list-style-type: disc;
+    padding: 3px 0;
+}
+
+.strukturaArtykulu ol {
+    float: left;
+    margin: 0;
+    padding: 0;
+    padding: 12%;
+}
+
+.notes {
+    /* blok, w którym wyświetlane są najważniejsze informacje w wersji pigułki. Blok połozony będzie po lewej stronie*/
+    background-color: #fdfde6;
+    font-size: 14px;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    margin-right: 10px;
+    border-style: solid;
+}
+
+.notes_right {
+    /* blok, w którym wyświetlane są najważniejsze informacje w wersji pigułki. Blok połozony będzie po prawej stronie*/
+    background-color: #fdfde6;
+    font-size: 14px;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    float: right;
+    margin-left: 10px;
+    border-style: solid;
+}
+
+
+/* === style dla cytatów ===*/
+
+.quote p {
+    text-align: center;
+    font-style: italic;
+}
+
+.quote {
+    width: 87%;
+    float: none;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fdfde6;
+    font-size: 14px;
+    color: black;
+    border-style: solid;
+}
+
+
+/* ======= koniec =======*/
+
+.download {
+    /* blok, w którym umeiszczane są linki do pobierania tekstów w pdf. Blok połozony będzie po prawej stronie*/
+    background-color: #fdfde6;
+    font-size: 14px;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    float: right;
+    margin: 25px 0 0 10px;
+    border-style: solid;
+}
+
+.download a {
+    padding: 0 30px 0 0;
+    background-image: url("/grafika/zdjecia/acrobat.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.daty_zrodla a {
+    /*klasa do formatowania bloku, który znajduje się pod każdym artykułem; zawiera informacje o źródłach oraz dacie 
+    utworzenia i dacie ostatniej aktualizacji*/
+    padding: 0 30px 0 0;
+    background: url("/grafika/zdjecia/globe.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+ol.c
+/*punktor w kształcie kropki*/
+
+{
+    list-style-type: disc;
+}
+
+ol.none
+/*bez wypunktowania*/
+
+{
+    list-style-type: none;
+}
+
+#STOPKA {
+    clear: both;
+    width: 100%;
+}
+
+
+/*========== FORMATOWANIE MENU ==========*/
+
+ul,
+ul li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#MENU ul a:link,
+#MENU ul a:visited {
+    display: block;
+    text-decoration: none;
+    background-color: #754219;
+    color: #FFFFCC;
+    padding: 5px;
+    border: 2px outset gray;
+}
+
+#MENU ul a:hover {
+    border-style: inset;
+    padding: 7px 3px 3px 7px;
+    color: white;
+    background: #633816;
+}
+
+
+/*========== KONIEC FORMATOWANIA MENU ==========*/
+
+
+/*========== ODCHODZĄCE FORMATOWANIE OBRAZU==========*/
+
+.zdjecia {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+}
+
+.podpis {
+    /*klasa służąca do formotowania podpisu pod ilustracjami; docelowo ma być zastąpiona całkowicie przez znacznik figcaption*/
+    font-size: 12px;
+    color: black;
+    border-top: 1px solid #7A4646;
+    line-height: 108%;
+    padding: 3px 5px 0;
+}
+
+.zdjecia1 {
+    /*klasa przeznaczona do formatowania pozycji ilustracji, która ma zajmować całą szerokość artykułu; docelowo  ma zniknąć; być może będzie zastąpiona przez inną*/
+    float: none;
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+    margin-bottom: 5px;
+}
+
+.zdjecia2 {
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+}
+
+.zdjecia img:hover,
+.zdjecia1 img:hover,
+.zdjecia2 img:hover,
+figure img:hover
+/*animacja, która powoduje efekt lekkego unienienia się obrazu po najechaniu na niegu myszą*/
+
+{
+    -webkit-transform: translate(-5px, -5px);
+    -moz-transform: translate(-5px, -5px);
+    -o-transform: translate(-5px, -5px);
+    -ms-transform: translate(-5px, -5px);
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+}
+
+img {
+    border: none;
+    transition: all 0.3s ease-out;
+}
+
+
+/*========== KONIEC ODCHODZĄCEGO FORMATOWANIA OBRAZÓW ==========*/
+
+
+/* --- FORMATOWANIE DLA SKRZYDLATYCH DYSKÓW ---*/
+
+.dingir {
+    padding: 9% 10%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.malyDingir {
+    width: 20%;
+    padding: 2%;
+    padding-bottom: 4%;
+    margin: auto;
+    display: block;
+}
+
+.bocznyDingir {
+    width: 55%;
+    padding: 20% 10% 0;
+    margin-left: 11%;
+}
+
+.bocznyDingir:nth-of-type(2) {
+    padding-bottom: 20%;
+}
+
+
+/* --- KONIEC FORMATOWANIA DLA SKRZYDLATYCH DYSKÓW ---*/
+
+
+/*========== FORMATOWANIE OBRAZÓW ==========*/
+
+figcaption {
+    font-size: 12px;
+    color: black;
+    border-top: 1px solid #7A4646;
+    line-height: 108%;
+    padding: 3px 5px 0;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+}
+
+.Obraz {
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+}
+
+.duzyObraz {
+    /*formatowanie dla obrazu o szerokości około 500px*/
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+    width: 64.516%;
+}
+
+.sporyObraz {
+    /*formatowanie dla obrazu o szerokości około 400px*/
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+    width: 51.679%;
+}
+
+.sredniObraz {
+    /*formatowanie dla obrazu o szerokości około 300px*/
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+    width: 38.461%;
+}
+
+.malyObraz {
+    /*formatowanie dla obrazu o szerokości około 200px*/
+    width: 28.101%;
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+}
+
+.najmniejszyObraz {
+    /*formatowanie dla obrazu o szerokości około 120px*/
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+    width: 120px;
+}
+
+.plywaLewo {
+    margin: 0 10px 5px 0;
+    float: left;
+}
+
+.plywaPrawo {
+    margin: 0 0 5px 10px;
+    float: right;
+}
+
+
+/*========== KONIEC FORMATOWANIA OBRAZÓW ==========*/
+
+ul a:active {
+    color: #BA223B;
+}
+
+.maly_naglowek {
+    font-size: 27px;
+    text-align: left;
+    font-family: 'Bookman Old Style';
+}
+
+.wyroznik,
+p>span
+/*clasa używana do wyróżenienienia treści za pomocą podkreślenia; uzywana do znacznika span; zastępuje znacznik <u>*/
+
+{
+    text-decoration: underline;
+}
+
+.wstep
+/*do wyróżnienia pierwszego akapitu*/
+
+{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 135%;
+    color: rgb(195, 151, 51);
+    font-weight: bold;
+}
+
+.wstep a {
+    color: rgb(195, 151, 51);
+}
+
+h1 {
+    margin: 0;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+h2 {
+    margin: 60px 0 0;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+
+.hamburger {
+    display: none;
+}
+
+
+/* ============ responsive website ============ */
+
+@media (min-width: 480px) and (max-width: 768px) {
+    #MENU {
+        display: none;
+        position: fixed;
+        left: 5%;
+        top: 50px;
+        font-size: 10px;
+        min-width: 92px;
+        max-width: 110px;
+    }
+
+    #MENU .podmenu {
+        font-size: 10px;
+        width: 110px;
+        top: 34px;
+
+    }
+
+    .blok {
+    overflow: visible;
+    margin-left: 10px;
+    font-size: 12px;
+    border: 1px solid lightgray;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
+    margin-top: -32px;
+    font-size: 10px;
+    width: 92px;
+    top: 30px;
+}
+
+    .podmenu .gliptyka:hover .blok,
+    .podmenu .krolowie:hover .blok,
+    .podmenu .swiatynie:hover .blok,
+    .podmenu .plaskorzezba:hover .blok,
+    .podmenu .okrNowosum:hover .blok {
+    display: block;
+    position: absolute;
+    left: 100px;
+}
+
+.odciski,
+.urIIIpodzial {
+    width: 100px;
+}
+
+ul.odciski,
+ul.urIIIpodzial {
+    display: none;
+    z-index: 1;
+}
+
+.podmenu .blok .pieczecie:hover .odciski,
+.podmenu .blok .urIII:hover .urIIIpodzial {
+    display: block;
+    position: absolute;
+    left: 90px;
+    bottom: -1px;
+}
+
+    #TRESC {
+        width: 94%;
+    }
+    #NAGLOWEK span {
+        float: none;
+    }
+    #NAGLOWEK span:first-of-type {
+        font-size: 31px;
+        text-decoration: underline;
+        float: right;
+    }
+    #NAGLOWEK span:nth-of-type(2) {
+        clear: both;
+        float: right;
+        font-size: 17px;
+        padding-right: 7%;
+    }
+    #NAGLOWEK span:nth-of-type(3) {
+        float: right;
+        font-size: 12px;
+        padding-right: 18.8%;
+        padding-top: 5px;
+        clear: both;
+    }
+    .dingir {
+        width: 80%;
+    }
+
+    .bocznyDingir, #MENU span, #MENU em, .co_nowego {
+        display: none;
+    }
+
+    .szukaj {
+        display: none;
+    }
+    #lokalizacja {
+        padding: 1.5%;
+    }
+    .sitemap {
+        margin-top: -67px;
+    }
+    .strukturaArtykulu {
+        width: 40%;
+    }
+    .hamburger {
+        display: block;
+        width: 40px;
+        height: 35px;
+        border-top: 5px solid black;
+        background: transparent;
+        position: fixed;
+        left: 5%;
+        top:10px;
+        opacity: .5;
+        /*transition: .3s transform linear;*/
+    }
+    .hamburger::before,
+    .hamburger::after {
+        content: "";
+        position: fixed;
+        left: 5%;
+        width: 40px;
+        border-top: 5px solid black;
+        transform: translateY(10px);
+    }
+    .hamburger::after {
+        transform: translateY(25px);
+        transition: .3s transform linear;
+        opacity: 1;
+    }
+    .hamburger:hover {
+       /* transform: rotate(45deg) translateY(5px);*/
+        /*border: none;*/
+        opacity: 1;
+    }
+    .hamburger:hover::after {
+       /* transform: rotate(-90deg) translateX(-10px);*/
+       opacity: 1;
+    }
+
+        #form {
+            width: 80%!important;
+            margin: 35px 0 0!important;
+            text-align: left;
+        }
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    #calosc {
+        padding: 2px;
+    }
+    #MENU {
+        display: none;
+        position: fixed;
+        left: 1%;
+        top: 50px;
+        font-size: 9px;
+        min-width: 83px;
+        max-width: 100px;
+    }
+
+    #MENU .podmenu {
+        overflow: visible;
+        font-size: 9px;
+        width: 83px;
+        top: 34px;
+    }
+
+    .blok {
+        overflow: visible;
+        margin-left: 10px;
+        font-size: 12px;
+        border: 1px solid lightgray;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
+        margin-top: -32px;
+        font-size: 9px;
+        width: 83px;
+        top: 30px;
+    }
+
+    .podmenu .gliptyka:hover .blok,
+    .podmenu .krolowie:hover .blok,
+    .podmenu .swiatynie:hover .blok,
+    .podmenu .plaskorzezba:hover .blok,
+    .podmenu .okrNowosum:hover .blok {
+        display: block;
+        position: absolute;
+        left: 73px;
+    }
+
+    .odciski,
+.urIIIpodzial {
+    width: 83px;
+}
+
+ul.odciski,
+ul.urIIIpodzial {
+    display: none;
+    z-index: 1;
+}
+
+.podmenu .blok .pieczecie:hover .odciski,
+.podmenu .blok .urIII:hover .urIIIpodzial {
+    display: block;
+    position: absolute;
+    left: 83px;
+    bottom: -1px;
+}
+
+
+    #TRESC {
+        width: 99%;
+        padding-right: 1px;
+    }
+    #lokalizacja {
+        padding: 0;
+        margin-bottom: 30px;
+        font-size: 13px;
+    }
+    .szukaj {
+        display: none;
+    }
+    .sitemap {
+        clear: both;
+        float: none;
+        line-height: 400%;
+    }
+    .wyszukiwarka {
+        width: 80%;
+    }
+    #NAGLOWEK {
+        background: url('/grafika/zdjecia/sumeryjska-swiatynia-maly.jpg') no-repeat;
+        height: 120px;
+        background-size: contain;
+        margin-top: 0;
+    }
+    #NAGLOWEK span:first-of-type {
+        font-size: 20px;
+        text-decoration: underline;
+        float: right;
+    }
+    #NAGLOWEK span:nth-of-type(2) {
+        clear: both;
+        float: right;
+        font-size: 13px;
+        padding-right: 3.5%;
+    }
+    #NAGLOWEK span:nth-of-type(3) {
+        float: right;
+        font-size: 12px;
+        padding-right: 14%;
+        padding-top: 0;
+        clear: both;
+    }
+    .duzyObraz {
+        /*formatowanie dla obrazu o szerokości około 500px*/
+        border-bottom: 1px solid #7A4646;
+        border-top: 1px solid #7A4646;
+        padding: 5px 0;
+        width: 100%;
+    }
+    .sporyObraz {
+        /*formatowanie dla obrazu o szerokości około 400px*/
+        border-bottom: 1px solid #7A4646;
+        border-top: 1px solid #7A4646;
+        padding: 5px 0;
+        width: 100%;
+    }
+    .sredniObraz {
+        /*formatowanie dla obrazu o szerokości około 300px*/
+        border-bottom: 1px solid #7A4646;
+        border-top: 1px solid #7A4646;
+        padding: 5px 0;
+        width: 100%;
+    }
+    .malyObraz {
+        /*formatowanie dla obrazu o szerokości około 200px*/
+        border-bottom: 1px solid #7A4646;
+        border-top: 1px solid #7A4646;
+        padding: 5px 0;
+        width: 55%;
+    }
+    .najmniejszyObraz {
+        /*formatowanie dla obrazu o szerokości około 120px*/
+        border-bottom: 1px solid #7A4646;
+        border-top: 1px solid #7A4646;
+        padding: 5px 0;
+        width: 50%;
+    }
+    .dingir {
+        width: 80%;
+    }
+
+    .bocznyDingir, #MENU span, #MENU em, .co_nowego {
+        display: none;
+    }
+
+    .malyDingir {
+        width: 50%;
+    }
+    .daty_zrodla {
+        font-size: 9px;
+    }
+    h1 {
+        letter-spacing: 0px;
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .notes_right {
+        width: 91%;
+        padding: 0 2%;
+    }
+    .notes_right ol,
+    .notes ol,
+    .notes_right ul,
+    .notes ul {
+        padding-left: 5%;
+    }
+    .notes {
+        width: 91%;
+    }
+    .strukturaArtykulu {
+        width: 100%;
+    }
+     .hamburger {
+        display: block;
+        width: 35px;
+        height: 30px;
+        border-top: 5px solid black;
+        background: transparent;
+        position: fixed;
+        left: 5%;
+        top:10px;
+        opacity: .5;
+        /*transition: .3s transform linear;*/
+    }
+    .hamburger::before,
+    .hamburger::after {
+        content: "";
+        position: fixed;
+        left: 5%;
+        width: 35px;
+        border-top: 5px solid black;
+        transform: translateY(8px);
+    }
+    .hamburger::after {
+        transform: translateY(22px);
+       /* transition: .3s transform linear;*/
+        opacity: 1;
+    }
+    .hamburger:hover {
+       /* transform: rotate(45deg) translateY(5px);*/
+        /*border: none;*/
+        opacity: 1;
+    }
+    .hamburger:hover::after {
+       /* transform: rotate(-90deg) translateX(-10px);*/
+       opacity: 1;
+    }
+
+    #MENU ul a:link,
+    #MENU ul a:visited {
+        display: block;
+        text-decoration: none;
+        background-color: #754219;
+        color: #FFFFCC;
+        padding: 5px;
+        border: 2px outset gray;
+    }
+
+    #MENU ul a:hover {
+        border-style: inset;
+        padding: 7px 3px 3px 7px;
+        color: white;
+        background: #633816;
+    }
+
+    form#form {
+        text-align: left;
+    }
+
+    form div#wrong {
+        margin: 0 0 0 0!important;
+    }
+
+    input[type="text"] {
+        width: 90%;
+    }
+
+    input[type="text"]#subject {
+        margin-left:3%!important;
+    }
+}
+
+    @media (max-width: 319px) {
+        #calosc {
+            display: none;
+        }
+}
+
+
+/* =========== STYLE DRUKARKI ============== */
+
+@media print {
+    #calosc {
+        background: white;
+        color: black !important;
+        box-shadow: none;
+    }
+    #NAGLOWEK,
+    .menu,
+    #MENU,
+    .podmenu,
+    .sitemap,
+    .gora_strony {
+        display: none;
+    }
+    #TRESC {
+        width: 97%;
+    }
+    .wstep {
+        color: black !important;
+    }
+    a {
+        color: black !important;
+        text-decoration: none;
+    }
+    figcaption {
+        border-top: 1px solid black;
+    }
+    figure {
+        border-top: 1px solid black !important;
+        border-bottom: 1px solid black !important;
+    }
+}
+
+
+/* ========KONIEC STYLE DRUKARKI=========== */

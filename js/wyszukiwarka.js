@@ -1,0 +1,1 @@
+document.write('<gcse:search></gcse:search>');
