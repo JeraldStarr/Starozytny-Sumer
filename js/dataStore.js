@@ -329,15 +329,15 @@ var navArticles = [
         //[15][0] - forth level menu pieczecie cylindryczen - cylinder seals articles' titles
         [
             "Centrum państwa",
-            "Peryferie",//
-            //"Państwa wasalne"//,
+            "Peryferie",
+            "Państwa wasalne",
             "Podatek bala"
         ],
         // [15][1] - third level menu - urls
         [
             "/podstrony/podstrony-historia/imperium/centrum-panstwa-III-dynastii-z-ur.html",
             "/podstrony/podstrony-historia/imperium/peryferie-panstwa-III-dynastii-z-ur.html",
-            //"/podstrony/podstrony-historia/imperium/wasalne.htm"//,
+            "/podstrony/podstrony-historia/imperium/panstwa-wasalne.html",
             "/podstrony/podstrony-historia/imperium/bala.html"
         ]
     ]
@@ -345,10 +345,10 @@ var navArticles = [
 
 
 var urls = [
+    "/podstrony/podstrony-historia/imperium/panstwa-wasalne.html",
     "/podstrony/podstrony-historia/imperium/bala.html",
     "/podstrony/podstrony_poziom_1_sztuka/poziom_2/pieczecie/148431.html",
     "/podstrony/podstrony_poziom_1_sztuka/poziom_2/pieczecie/1985.143.html",
-    "/podstrony/podstrony-historia/imperium/peryferie-panstwa-III-dynastii-z-ur.html",
 
     "/podstrony/podstrony-historia/poczatek-i-okres-wczesnodynastyczny.html",
     "/podstrony/podstrony-historia/sumeryjski_renesans.html",
@@ -360,10 +360,10 @@ var urls = [
 
 // articles' titles
 var titles = [
+    "Wasale królestwa III dynastii z Ur",
     "Podatek bala",
     "Pieczęć 148431",
     "Pieczęć 1985.143",
-    "Peryferie państwa III dynastii z Ur",
 
     "Okres wczesnodynastyczny",
     "Okres nowosumeryjski",
@@ -375,10 +375,10 @@ var titles = [
 
 // urls for articles' icons 
 var iconsURLs = [
+    "/grafika/ikonka/urIIIwasalne.jpg",
     "/grafika/ikonka/ikonka_standardowa.gif",
     "/grafika/ikonka/148431.jpg",
     "/grafika/ikonka/1985.143_icon.jpg",
-    "/grafika/ikonka/urIII-peryferie.jpg",
 
     "/grafika/ikonka/okres_wczesnodynastyczny.gif",
     "/grafika/ikonka/okres-nowosumeryjski.jpg",
@@ -390,10 +390,10 @@ var iconsURLs = [
 
 // fragmenty tekstów z artykułów
 var texts = [
+    "Siła militarna nie była jednym ani nawet najważniejszym czynnikiem kształtującym wzajemne relacje ...",
     "Kapitał bala były to wytworzone przez całą prowincję towary i usługi, jednak był ...",
     "Za plecami bóstwa znajdował się napis klinowy w trzech kolumnach, zatarty przez ...",
     "Przedstawiona scena jest typowa dla sztuki tego okresu, czyli pokazywanie ekonomicznej ...",
-    "Ze względu na zmilitaryzowany charakter obszaru głównymi zarządcami tamtejszych jednostek ...",
 
     "Wobec niedostatku rzetelnych źródeł informacje pochodzące z różnych gatunków piśmiennictwa mogą ...",
     "Ostatnim królem państwa nowosumeryjskiego był Ibbi-Suen, a ćwierćwiecze jego panowania ...",
@@ -406,10 +406,10 @@ var texts = [
 
 // daty dodania bądź aktualizacji artykułów
 var dates = [
+    "00.10.2017",
     "20.09.2017",
     "30.08.2017",
     "18.07.2017",
-    "12.06.2017",
 
     "03.09.2017",
     "30.08.2017",
@@ -421,10 +421,10 @@ var dates = [
 
 // treści do znacznika alt
 var alt = [
+    "Państwa wasalne",
     "Pismo sumeryjskie",
     "Pieczęć 148431",
     "Pieczęć 1985.143",
-    "Obszar peryferyjny państwa III dynastii z Ur",
 
     "Sumeryjska lista królów",
     "Podobizna Ur-Nammy",
