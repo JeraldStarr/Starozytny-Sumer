@@ -150,7 +150,7 @@ var navArticles = [
     //historia
     [
         //[6][0] - second level menu miasta - cities articles' titles
-        [
+        [   
             "Królowie Sumeru",
             "Chronologia",
             "Okres Uruk",
@@ -159,10 +159,11 @@ var navArticles = [
             "Okres akadyjski",
             "Okres gutejski",
             "Okres nowosumeryjski",
-            "Sumerowie i Semici"
+            "Sumerowie i Semici",
+            "Pochodzenie Sumerów"
         ],
         //[6][1] - second level menu - urls
-        [
+        [   
             "/podstrony/podstrony-historia/krolowie_sumeru.html",
             "/podstrony/podstrony-historia/chronologia_sumeru.html",
             "/podstrony/podstrony-historia/okres_uruk.html",
@@ -171,7 +172,8 @@ var navArticles = [
             "/podstrony/podstrony-historia/okres_akadyjski.html",
             "/podstrony/podstrony-historia/okres_gutejski.html",
             "/podstrony/podstrony-historia/sumeryjski_renesans.html",
-            "/podstrony/podstrony-historia/sumerowie_semici.html"
+            "/podstrony/podstrony-historia/sumerowie_semici.html",
+            "/podstrony/podstrony-historia/pochodzenie.html"
         ]
 
     ],
