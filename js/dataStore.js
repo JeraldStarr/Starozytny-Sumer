@@ -406,7 +406,7 @@ var texts = [
 
 // daty dodania bądź aktualizacji artykułów
 var dates = [
-    "00.10.2017",
+    "17.10.2017",
     "20.09.2017",
     "30.08.2017",
     "18.07.2017",
