@@ -679,14 +679,6 @@ ul a:active {
     font-family: 'Bookman Old Style';
 }
 
-.wyroznik,
-p>span
-/*clasa używana do wyróżenienienia treści za pomocą podkreślenia; uzywana do znacznika span; zastępuje znacznik <u>*/
-
-{
-    text-decoration: underline;
-}
-
 .wstep
 /*do wyróżnienia pierwszego akapitu*/
 
