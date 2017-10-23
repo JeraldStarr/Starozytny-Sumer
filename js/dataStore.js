@@ -350,10 +350,10 @@ var urls = [
     "/podstrony/podstrony_poziom_1_sztuka/poziom_2/pieczecie/148431.html",
     "/podstrony/podstrony_poziom_1_sztuka/poziom_2/pieczecie/1985.143.html",
 
+    "/podstrony/podstrony_poziom_1_bogowie/nanna.html",
     "/podstrony/podstrony-historia/poczatek-i-okres-wczesnodynastyczny.html",
     "/podstrony/podstrony-historia/sumeryjski_renesans.html",
     "/podstrony/podstrony-historia/krolowie/ur-namma.html",
-    "/podstrony/podstrony-historia/okres_gutejski.html",
 
     "/podstrony/bogowie.html"
 ];
@@ -365,10 +365,10 @@ var titles = [
     "Pieczęć 148431",
     "Pieczęć 1985.143",
 
+    "Nanna",
     "Okres wczesnodynastyczny",
     "Okres nowosumeryjski",
     "Ur-Namma",
-    "Okres gutejski",
 
     "Sumeryjscy bogowie"
 ];
@@ -380,10 +380,10 @@ var iconsURLs = [
     "/grafika/ikonka/148431.jpg",
     "/grafika/ikonka/1985.143_icon.jpg",
 
+    "/grafika/ikonka/nanna.jpg",
     "/grafika/ikonka/okres_wczesnodynastyczny.gif",
     "/grafika/ikonka/okres-nowosumeryjski.jpg",
     "/grafika/ikonka/ur-namma.gif",
-    "/grafika/ikonka/okres_gutejski.gif",
 
     "/grafika/ikonka/bogowie.gif"
 ];
@@ -395,10 +395,10 @@ var texts = [
     "Za plecami bóstwa znajdował się napis klinowy w trzech kolumnach, zatarty przez ...",
     "Przedstawiona scena jest typowa dla sztuki tego okresu, czyli pokazywanie ekonomicznej ...",
 
+    "Nanna był opiekuńczym bóstwem Ur, mianowany do tej funkcji przez Enlila. Tym samym wyznaczył ...",
     "Wobec niedostatku rzetelnych źródeł informacje pochodzące z różnych gatunków piśmiennictwa mogą ...",
     "Ostatnim królem państwa nowosumeryjskiego był Ibbi-Suen, a ćwierćwiecze jego panowania ...",
     "Ur-Namma mógł zatem zjednoczyć sumeryjskie ośrodki w dużej mierze stosując dyplomację ...",
-    "Gutejowie stworzyli własną dynastię, która składała się z 21 władców. Otwierał ją król ...",
 
     "Takie potraktowanie natury boskiej spowodowało nadanie im charakteru nie wyłącznie duchowego i  ..."
 
@@ -411,10 +411,10 @@ var dates = [
     "30.08.2017",
     "18.07.2017",
 
+    "23.10.2017",
     "03.09.2017",
     "30.08.2017",
     "31.07.2017",
-    "21.06.2017",
 
     ""
 ];
@@ -426,10 +426,10 @@ var alt = [
     "Pieczęć 148431",
     "Pieczęć 1985.143",
 
+    "Głowa byka",
     "Sumeryjska lista królów",
     "Podobizna Ur-Nammy",
     "Podobizna Ur-Nammy",
-    "Posąg Gudei z Lagasz",
 
     "Pieczęć cylindryczna"
 ];
