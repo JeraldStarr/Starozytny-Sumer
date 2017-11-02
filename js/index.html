@@ -1,0 +1,28 @@
+<!DOCTYPE HTML> 
+
+<html lang="pl">
+    <head>
+        <meta charset="utf-8"/>
+        
+        <script src="dzejson.js"></script>
+        
+    </head>
+    <body>
+        <h1>Testowanie JSONa</h1>
+        
+        <script>
+            var ulElement = document.createElement("ul");
+            
+            for(var i = 0; i < data.menu.length; i++) {
+                var liElement = document.createElement("li");
+                liElement.textContent = data.menu[i].name;
+                ulElement.appendChild(liElement);
+                }
+
+            document.body.appendChild(ulElement);
+
+        </script>
+    </body>
+
+
+</html>
