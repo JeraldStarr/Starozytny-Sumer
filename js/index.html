@@ -9,26 +9,21 @@
     </head>
     <body>
         <h1>Testowanie JSONa</h1>
-        
+  
         <script>
+            
             var ulElement = document.createElement("ul");
-            ulElement.addClass("nav");
-            // first level
-            for(var i = 0; i < data.menu.length; i++) {
-                var liElement = document.createElement("li");
-                liElement.textContent = data.menu[i].name;
-                ulElement.appendChild(liElement);
-                
-                //second level
-                    if(data.menu[i].extand) {
-                        console.log(data.menu[i].name + " : true");
-                        for(var j = 0; j < data.menu[i].extandContent.length; j++) {
-                            console.log(data.menu[i].extandContent[j].name);
-                        }
-                    }
-                }
+            var menu = data.menu.filter(function(article) {
 
+                var liElement = document.createElement("li");
+                liElement.innerText = article.name;
+                ulElement.appendChild(liElement);
+                return ulElement;
+
+            });
             document.body.appendChild(ulElement);
+
+            console.log(menu);
 
         </script>
     </body>
