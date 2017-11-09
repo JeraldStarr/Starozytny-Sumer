@@ -400,7 +400,7 @@ var texts = [
     "Ostatnim królem państwa nowosumeryjskiego był Ibbi-Suen, a ćwierćwiecze jego panowania ...",
     "Ur-Namma mógł zatem zjednoczyć sumeryjskie ośrodki w dużej mierze stosując dyplomację ...",
 
-    "Takie potraktowanie natury boskiej spowodowało nadanie im charakteru nie wyłącznie duchowego i  ..."
+    "Sumeryjski system liczenia oparty był na liczbie 60, który w późniejszych czasach ..."
 
 ];
 
@@ -431,5 +431,5 @@ var alt = [
     "Podobizna Ur-Nammy",
     "Podobizna Ur-Nammy",
 
-    "Pieczęć cylindryczna"
+    "Liczby w piśmie klinowym"
 ];
