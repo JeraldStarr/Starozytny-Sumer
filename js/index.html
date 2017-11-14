@@ -21,19 +21,23 @@
                     if(data.menu[i].extand) {
                         var ulElement1 = document.createElement("ul");
                         for(let j in data.menu[i].extandContent) {
-                            addLevel();
+                            let liElement1 = document.createElement("li");
+                            liElement1.textContent = "Second Level";
+                            ulElement1.appendChild(liElement1);
+                            if(data.menu[i].extandContent[j].extand) {
+                                let ulElement2 = document.createElement("ul");
+                                for(let k in data.menu[i].extandContent[j].extandContent) {
+                                    let liElement2 = document.createElement("li");
+                                    liElement2.textContent = "Third Level";
+                                    ulElement2.appendChild(liElement2);
+                                }
+                            ulElement1.appendChild(ulElement2);
+                            }
                         }
                     ulElement.appendChild(ulElement1);
                     }
                 }
             document.body.appendChild(ulElement);
-            
-            function addLevel() {
-                let liElement1 = document.createElement("li");
-                liElement1.textContent = "Second Level";
-                ulElement1.appendChild(liElement1);
-                console.log("lower level");
-            }
 
         </script>
     </body>
