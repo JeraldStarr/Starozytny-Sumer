@@ -1,0 +1,42 @@
+<!DOCTYPE HTML> 
+
+<html lang="pl">
+    <head>
+        <meta charset="utf-8"/>
+        
+        <script src="dzejson.js"></script>
+        
+    </head>
+    <body>
+        <h1>Testowanie JSONa</h1>
+        
+        <script>
+            var ulElement = document.createElement("ul");
+            // first level
+            for(let i in data.menu) {
+                let liElement = document.createElement("li");
+                liElement.textContent = data.menu[i].name;
+                ulElement.appendChild(liElement);              
+                //second level
+                    if(data.menu[i].extand) {
+                        var ulElement1 = document.createElement("ul");
+                        for(let j in data.menu[i].extandContent) {
+                            addLevel();
+                        }
+                    ulElement.appendChild(ulElement1);
+                    }
+                }
+            document.body.appendChild(ulElement);
+            
+            function addLevel() {
+                let liElement1 = document.createElement("li");
+                liElement1.textContent = "Second Level";
+                ulElement1.appendChild(liElement1);
+                console.log("lower level");
+            }
+
+        </script>
+    </body>
+
+
+</html>
