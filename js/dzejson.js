@@ -1,5 +1,3 @@
-
-
 var data = {
 	"menu"  : [
 	{
@@ -149,7 +147,25 @@ var data = {
                 {
                 	"name" : "Pieczęcie cylindryczne",
                 	"url" : "/podstrony/podstrony_poziom_1_sztuka/poziom_2/pieczecie-cylindryczne.html",
-                	"extand" : true
+                	"extand" : true,
+                    "extandContent" : [
+                        {
+                           "name" : "VA 243",
+                	       "url" : "/podstrony/podstrony_poziom_1_sztuka/poziom_2/pieczecie/VA-243.html",
+                	       "extand" : false
+                        },
+                        {
+                           "name" : "1985.143",
+                	       "url" : "/podstrony/podstrony_poziom_1_sztuka/poziom_2/pieczecie/1985.143.html",
+                	       "extand" : false
+                        },
+                        {
+                           "name" : "148431",
+                	       "url" : "/podstrony/podstrony_poziom_1_sztuka/poziom_2/pieczecie/148431.html",
+                	       "extand" : false
+                        }
+                        
+                    ]
                 }
 			  ]
             },
@@ -419,7 +435,31 @@ var data = {
 
 				"name" : "Państwo III dynastii z Ur",
 				"url" : "/podstrony/podstrony-historia/sumeryjski_renesans.html",
-				"extand" : false
+				"extand" : true,
+                "extandContent" : [
+                    {
+                        "name" : "Centrum Państwa",
+		                "url" : "/podstrony/podstrony-historia/imperium/centrum-panstwa-III-dynastii-z-ur.html",
+		                "extand" : false
+                    },
+                    {
+                        "name" : "Peryferie",
+		                "url" : "/podstrony/podstrony-historia/imperium/peryferie-panstwa-III-dynastii-z-ur.html",
+		                "extand" : false
+                    },
+                    {
+                        "name" : "Państwa wasalne",
+		                "url" :  "/podstrony/podstrony-historia/imperium/peryferie-panstwa-III-dynastii-z-ur.html",
+		                "extand" : false
+                    },
+                    {
+                        "name" : "Podatek bala",
+		                "url" : "podstrony/podstrony-historia/imperium/bala.html",
+		                "extand" : false
+                    }
+                    
+                    
+                ]
 			}
 		]
 	},
@@ -430,7 +470,7 @@ var data = {
 	},
 	{
 		"name" : "Pochodzenie Sumerów",
-		"url" : "",
+		"url" : "/podstrony/podstrony-historia/pochodzenie.html",
 		"extand" : false
 	}
             
