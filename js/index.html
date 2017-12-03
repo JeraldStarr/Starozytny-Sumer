@@ -27,10 +27,20 @@
                             //third level declaration
                             if(data.menu[i].extandContent[j].extand) {
                                 let ulElement2 = document.createElement("ul");
-                                for(let k in data.menu[i].extandContent[j].extandContent) {
+                                for(var k in data.menu[i].extandContent[j].extandContent) {
                                     let liElement2 = document.createElement("li");
                                     liElement2.textContent = "Third Level";
                                     ulElement2.appendChild(liElement2);
+                                    //fourth level declaration
+                                    if(data.menu[i].extandContent[j].extandContent[k].extand) {
+                                        let ulElement3 = document.createElement("ul");
+                                        for(var x in data.menu[i].extandContent[j].extandContent[k].extandContent) {
+                                            let liElement3 = document.createElement("li");
+                                            liElement3.textContent = "Fourth Level";
+                                            ulElement3.appendChild(liElement3);
+                                        } 
+                                        ulElement2.appendChild(ulElement3);
+                                    }
                                 }
                             ulElement1.appendChild(ulElement2); // submitting third level
                             }
