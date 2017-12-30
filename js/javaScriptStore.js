@@ -109,7 +109,9 @@ var performance = function() {
             } else {
                 var div = document.createElement("div");
                 var mark = document.createTextNode(">");
-                div.setAttribute("class", "menuArrow"), div.appendChild(mark), link.appendChild(div)
+                div.setAttribute("class", "menuArrow");
+                div.appendChild(mark);
+                link.appendChild(div);
             }
         }
         return {
@@ -122,9 +124,69 @@ var performance = function() {
             createExtendingMark: createExtendingMark
         }
     }();
+var menu = function() {
+        var menuIDElement = document.getElementById("MENU");
+        function setMenu() {
+            var ulElement = document.createElement("ul");
+            // first level declaration
+            for(let i in data.menu) {
+                let liElement = document.createElement("li");  
+                createLevel(liElement, ulElement, data.menu[i].name);            
+                //second level declaration
+                    if(data.menu[i].extand) {
+                        var ulElement1 = document.createElement("ul");
+                        for(let j in data.menu[i].extandContent) {
+                            let liElement1 = document.createElement("li");
+                            createLevel(liElement1, ulElement1, data.menu[i].extandContent[j].name);
+                            //third level declaration
+                            if(data.menu[i].extandContent[j].extand) {
+                                let ulElement2 = document.createElement("ul");
+                                for(var k in data.menu[i].extandContent[j].extandContent) {
+                                    let liElement2 = document.createElement("li");
+                                    createLevel(liElement2, ulElement2, data.menu[i].extandContent[j].extandContent[k].name);
+                                    //fourth level declaration
+                                    if(data.menu[i].extandContent[j].extandContent[k].extand) {
+                                        let ulElement3 = document.createElement("ul");
+                                        for(var x in data.menu[i].extandContent[j].extandContent[k].extandContent) {
+                                            let liElement3 = document.createElement("li");
+                                            createLevel(liElement3, ulElement3, data.menu[i].extandContent[j].extandContent[k].extandContent[x].name);
+                                            //liElement3.textContent = "Fourth Level";
+                                            //ulElement3.appendChild(liElement3);
+                                        } 
+                                        ulElement2.appendChild(ulElement3);
+                                    }
+                                }
+                            ulElement1.appendChild(ulElement2); // submitting third level
+                            }
+                        }
+                    ulElement.appendChild(ulElement1); // submitting second level
+                    }
+                }
+            document.body.appendChild(ulElement); // submitting first level
+
+            /*
+             * this function gives the name to the article from menu navigation
+             */
+
+            function createLevel(li, ul, name) {
+                // li       - takes li html element, which should get a name
+                // ul       - takes ul html element, which is li parent
+                // iterator - takes iterator from the loop inside it is invoked
+                // name     - takes the articles name form dzejson.js
+                li.textContent = name;
+                ul.appendChild(li)
+            };
+            menuIDElement.appendChild(ulElement);
+
+        };
+        return {
+            menuIDElement : menuIDElement,
+            setMenu : setMenu
+        }
+    }();
 var aside = function() {
         function displaySideBar() {
-            function e() {
+             /*function e() {
                 function e(e) {
                     var ul = document.createElement("ul");
                     for (performance.createExtendingMark(i), r.appendChild(ul), k = 0; k < navArticles[e][0].length; k++) {
@@ -137,7 +199,7 @@ var aside = function() {
                         performance.createExtendingMark(link, li, l, c, newClass)
                     }
                 }
-                var n = document.createElement("ul");
+               var n = document.createElement("ul");
                 n.setAttribute("class", "nav");
                 for (var a = 0; a < navArticles[0][0].length; a++) {
                     var r = document.createElement("li"),
@@ -146,24 +208,33 @@ var aside = function() {
                     var l = document.createTextNode(navArticles[0][0][a]);
                     for (i.appendChild(l), r.appendChild(i), n.appendChild(r), j = 1; j < 9; j++) i.innerHTML === navArticles[0][0][j] && e(j)
                 }
-                menuIDElement.appendChild(n), menu.createThirdLevel(), menu.createFourthLevel()
+               menuIDElement.appendChild(n), menu.createThirdLevel(), menu.createFourthLevel()
+            }*/
+
+            function setWaterMark(url, alternativeText) {
+                var imgElement = document.createElement("img");
+                imgElement.setAttribute("class", "bocznyDingir");
+                imgElement.setAttribute("src", url);
+                imgElement.setAttribute("alt", alternativeText);
+                menu.menuIDElement.appendChild(imgElement)
             }
 
-            function n(e, n) {
-                var a = document.createElement("img");
-                a.setAttribute("class", "bocznyDingir"), a.setAttribute("src", e), a.setAttribute("alt", n), menuIDElement.appendChild(a)
+            function setInformationBlock(text) {
+                var spanElement = document.createElement("span");
+                menu.menuIDElement.appendChild(spanElement);
+                spanElement.innerHTML = text;
             }
-
-            function a(e) {
-                var n = document.createElement("span");
-                menuIDElement.appendChild(n), n.innerHTML = e
-            }
-            e(), n("/grafika/zdjecia/dingir/dingir_przezroczysty_wersja2.gif", "Skrzydlaty dysk symbolizował sumeryjskich bogów"), a("Co nowego"), news.displayBlocks(0, 3), a("Ostatnio aktualizowane"), news.displayBlocks(4, 7), a("Najczęściej odwiedzane"), news.displayBlocks(8, 8), n("/grafika/zdjecia/dingir/dingir_przezroczysty_wersja2.gif", "Skrzydlaty dysk symbolizował sumeryjskich bogów")
+            //e();
+            setWaterMark("/grafika/zdjecia/dingir/dingir_przezroczysty_wersja2.gif", "Skrzydlaty dysk symbolizował sumeryjskich bogów");
+            setInformationBlock("Co nowego"), news.displayBlocks(0, 3);
+            setInformationBlock("Ostatnio aktualizowane");
+            news.displayBlocks(4, 7);
+            setInformationBlock("Najczęściej odwiedzane");
+            news.displayBlocks(8, 8);
+            setWaterMark("/grafika/zdjecia/dingir/dingir_przezroczysty_wersja2.gif", "Skrzydlaty dysk symbolizował sumeryjskich bogów")
         }
-        var menuIDElement = document.getElementById("MENU");
         return {
-            displaySideBar: displaySideBar,
-            menuIDElement: menuIDElement
+            displaySideBar: displaySideBar
         }
     }();
 var google = function() {
@@ -178,100 +249,16 @@ var google = function() {
             displaySearch: displaySearch
         }
     }();
-var menu = function() {
-        function e() {
-            var e = document.getElementsByClassName("gliptyka")[0];
-            var t = document.createElement("ul");
-            t.setAttribute("class", "blok"), console.log("sztuka zdobnicz: " + e), e.appendChild(t);
-            for (var n = 0; n < navArticles[9][0].length; n++) {
-                var a = document.createElement("li"),
-                    r = document.createElement("a");
-                if (r.setAttribute("href", navArticles[9][1][n]), r.innerHTML = navArticles[9][0][n], r.innerHTML === navArticles[9][0][5]) {
-                    a.setAttribute("class", "pieczecie");
-                    var i = document.createElement("div"),
-                        l = document.createTextNode(">");
-                    i.appendChild(l), i.setAttribute("class", "menuArrow"), r.appendChild(i)
-                }
-                a.appendChild(r), t.appendChild(a)
-            }
-            var c = document.getElementsByClassName("plaskorzezba")[0],
-                o = document.createElement("ul");
-            o.setAttribute("class", "blok"), c.appendChild(o);
-            for (var n = 0; n < navArticles[10][0].length; n++) {
-                var s = document.createElement("li"),
-                    d = document.createElement("a");
-                d.setAttribute("href", navArticles[10][1][n]), d.innerHTML = navArticles[10][0][n], s.appendChild(d), o.appendChild(s)
-            }
-            var u = document.getElementsByClassName("swiatynie")[0],
-                m = document.createElement("ul");
-            m.setAttribute("class", "blok"), u.appendChild(m);
-            for (var n = 0; n < navArticles[11][0].length; n++) {
-                var p = document.createElement("li"),
-                    v = document.createElement("a");
-                v.setAttribute("href", navArticles[11][1][n]), v.innerHTML = navArticles[11][0][n], p.appendChild(v), m.appendChild(p)
-            }
-            var h = document.getElementsByClassName("okrNowosum")[0],
-                f = document.createElement("ul");
-            f.setAttribute("class", "blok"), h.appendChild(f);
-            for (var n = 0; n < navArticles[12][0].length; n++) {
-                var A = document.createElement("li"),
-                    y = document.createElement("a");
-                if (y.setAttribute("href", navArticles[12][1][n]), y.innerHTML = navArticles[12][0][n], A.appendChild(y), f.appendChild(A), y.innerHTML === navArticles[12][0][0]) {
-                    A.setAttribute("class", "urIII");
-                    var i = document.createElement("div"),
-                        g = document.createTextNode(">");
-                    i.appendChild(g), i.setAttribute("class", "menuArrow"), y.appendChild(i)
-                }
-            }
-            var b = document.getElementsByClassName("krolowie")[0],
-                E = document.createElement("ul");
-            E.setAttribute("class", "blok"), b.appendChild(E);
-            for (var n = 0; n < navArticles[13][0].length; n++) {
-                var C = document.createElement("li"),
-                    k = document.createElement("a");
-                k.setAttribute("href", navArticles[13][1][n]), k.innerHTML = navArticles[13][0][n], C.appendChild(k), E.appendChild(C)
-            }
-        }
-
-        function createFourthLevel() {
-                var pieczecie = document.getElementsByClassName("pieczecie")[0];
-                var ulElement = document.createElement("ul");
-                for (ulElement.setAttribute("class", "odciski"), pieczecie.appendChild(ulElement), i = 0; i < navArticles[14][0].length; i++) {
-                    console.log(i);
-                    var link = document.createElement("a");
-                    var li = document.createElement("li");
-                    link.setAttribute("href", navArticles[14][1][i]); 
-                    link.innerText = navArticles[14][0][i];
-                    li.appendChild(link);
-                    ulElement.appendChild(li);
-                }
-
-                var urIII = document.getElementsByClassName("urIII")[0];
-                var ul = document.createElement("ul");
-                for (ul.setAttribute("class", "urIIIpodzial"), urIII.appendChild(ul), b = 0; b < navArticles[15][0].length; b++) {
-                    var liElem = document.createElement("li");
-                    var linkElem = document.createElement("a");
-                    linkElem.setAttribute("href", navArticles[15][1][b]);
-                    linkElem.innerText = navArticles[15][0][b];
-                    liElem.appendChild(linkElem);
-                    ul.appendChild(liElem);
-                }
-            }
-        return {
-            createThirdLevel: e,
-            createFourthLevel: createFourthLevel
-        }
-    }();
 var news = function() {
         function displayBlocks(startsFrom, endsOn) {
             const TITLE = "Proszę kliknąć, aby przejść do artykułu";
             for (var i = startsFrom; i <= endsOn; i++) {
                 var emElement = document.createElement("em");
                     emElement.innerHTML = dates[i]; 
-                    aside.menuIDElement.appendChild(emElement);
+                    menu.menuIDElement.appendChild(emElement);
                 var divElement = document.createElement("div");
                     divElement.setAttribute("class", "co_nowego");
-                    aside.menuIDElement.appendChild(divElement);
+                    menu.menuIDElement.appendChild(divElement);
                 var link = document.createElement("a");
                 var aElementFirst = link;
                     aElementFirst.setAttribute("href", urls[i]); 
