@@ -133,7 +133,7 @@ var menu = function() {
             for(let i in data.menu) {
                 let liElement = document.createElement("li"); 
                 let urlElement = document.createElement("a");  
-                createLevel(liElement, ulElement);
+                setList(liElement, ulElement);
                 setURL(urlElement, data.menu[i].url, liElement, data.menu[i].name);
                 //second level declaration
                     if(data.menu[i].extand) {
@@ -141,19 +141,19 @@ var menu = function() {
                         ulElement1.classList.add("podmenu");
                         for(let j in data.menu[i].extandContent) {
                             let liElement1 = document.createElement("li");
-                            createLevel(liElement1, ulElement1 /*data.menu[i].extandContent[j].name*/);
+                            setList(liElement1, ulElement1 /*data.menu[i].extandContent[j].name*/);
                             //third level declaration
                             if(data.menu[i].extandContent[j].extand) {
                                 let ulElement2 = document.createElement("ul");
                                 for(var k in data.menu[i].extandContent[j].extandContent) {
                                     let liElement2 = document.createElement("li");
-                                    createLevel(liElement2, ulElement2, /*data.menu[i].extandContent[j].extandContent[k].name*/);
+                                    setList(liElement2, ulElement2, /*data.menu[i].extandContent[j].extandContent[k].name*/);
                                     //fourth level declaration
                                     if(data.menu[i].extandContent[j].extandContent[k].extand) {
                                         let ulElement3 = document.createElement("ul");
                                         for(var x in data.menu[i].extandContent[j].extandContent[k].extandContent) {
                                             let liElement3 = document.createElement("li");
-                                            createLevel(liElement3, ulElement3 /*data.menu[i].extandContent[j].extandContent[k].extandContent[x].name*/);
+                                            setList(liElement3, ulElement3 /*data.menu[i].extandContent[j].extandContent[k].extandContent[x].name*/);
                                         } 
                                         liElement2.appendChild(ulElement3);
                                     }
@@ -169,8 +169,8 @@ var menu = function() {
              * this function gives the name to the article from menu navigation
              */
 
-            function createLevel(li, parent) {
-                // li       - takes li html element, which should get a name
+            function setList(li, parent) {
+                // li       - takes <li></li> element, which should get a name
                 // parent   - takes parent element (always <ul></ul>)
                 parent.appendChild(li)
             };
