@@ -886,10 +886,10 @@ var navArticles = [
 
 
 var urls = [
+    "/podstrony/podstrony_poziom_1_podania/enki-ninhursag.html",
+    "/podstrony/podstrony-historia/imperium/pochodzenie.html",
     "/podstrony/podstrony-historia/imperium/panstwa-wasalne.html",
     "/podstrony/podstrony-historia/imperium/bala.html",
-    "/podstrony/podstrony_poziom_1_sztuka/poziom_2/pieczecie/148431.html",
-    "/podstrony/podstrony_poziom_1_sztuka/poziom_2/pieczecie/1985.143.html",
 
     "/podstrony/podstrony_poziom_1_bogowie/nanna.html",
     "/podstrony/podstrony-historia/poczatek-i-okres-wczesnodynastyczny.html",
@@ -901,10 +901,10 @@ var urls = [
 
 // articles' titles
 var titles = [
+    "Enki i Ninhursag",
+    "Pochodzenie Sumerów",
     "Wasale królestwa III dynastii z Ur",
     "Podatek bala",
-    "Pieczęć 148431",
-    "Pieczęć 1985.143",
 
     "Nanna",
     "Okres wczesnodynastyczny",
@@ -916,10 +916,10 @@ var titles = [
 
 // urls for articles' icons 
 var iconsURLs = [
+    "/grafika/ikonka/ikonka_standardowa.gif",
+    "/grafika/ikonka/pochodzenie.jpg",
     "/grafika/ikonka/urIIIwasalne.jpg",
     "/grafika/ikonka/ikonka_standardowa.gif",
-    "/grafika/ikonka/148431.jpg",
-    "/grafika/ikonka/1985.143_icon.jpg",
 
     "/grafika/ikonka/nanna.jpg",
     "/grafika/ikonka/okres_wczesnodynastyczny.gif",
@@ -931,10 +931,10 @@ var iconsURLs = [
 
 // fragmenty tekstów z artykułów
 var texts = [
+    "Idea boskiego raju, z którego wypływały słodkie życiodajne wody, użyźniające ziemię ...",
+    "Istnieje wiele spekulacji na temat pochodzenia Sumerów, ponieważ pojawili się w Mezopotamii ...",
     "Siła militarna nie była jednym ani nawet najważniejszym czynnikiem kształtującym wzajemne relacje ...",
     "Kapitał bala były to wytworzone przez całą prowincję towary i usługi, jednak był ...",
-    "Za plecami bóstwa znajdował się napis klinowy w trzech kolumnach, zatarty przez ...",
-    "Przedstawiona scena jest typowa dla sztuki tego okresu, czyli pokazywanie ekonomicznej ...",
 
     "Nanna był opiekuńczym bóstwem Ur, mianowany do tej funkcji przez Enlila. Tym samym wyznaczył ...",
     "Wobec niedostatku rzetelnych źródeł informacje pochodzące z różnych gatunków piśmiennictwa mogą ...",
@@ -947,10 +947,10 @@ var texts = [
 
 // daty dodania bądź aktualizacji artykułów
 var dates = [
+    "31.12.2017",
+    "09.11.2017",
     "17.10.2017",
     "20.09.2017",
-    "30.08.2017",
-    "18.07.2017",
 
     "23.10.2017",
     "03.09.2017",
@@ -962,10 +962,10 @@ var dates = [
 
 // treści do znacznika alt
 var alt = [
+    "Pismo",
+    "Mapa możliwych wędrówek Sumerów",
     "Państwa wasalne",
     "Pismo sumeryjskie",
-    "Pieczęć 148431",
-    "Pieczęć 1985.143",
 
     "Głowa byka",
     "Sumeryjska lista królów",
