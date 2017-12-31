@@ -70,6 +70,7 @@ var navArticles = [
         //[2][0] - second level menu pismiennictwo - literature articles' titles
         [
             "Sumeryjska lista królów",
+            "Enki i Ninhursag",
             "Potop",
             "Inskrypcja z Tummal",
             "Gilgamesz i Agga",
@@ -79,6 +80,7 @@ var navArticles = [
         //[2][1] - second level menu - urls
         [
             "/podstrony/podstrony_poziom_1_podania/sumeryjska_lista_krolow.html",
+            "/podstrony/podstrony_poziom_1_podania/enki-ninhursag.html",
             "/podstrony/podstrony_poziom_1_podania/inskrypcja_tummal.html",
             "/podstrony/podstrony_poziom_1_podania/inskrypcja_tummal.html",
             "/podstrony/podstrony_poziom_1_podania/gilgamesz_agga.html",
