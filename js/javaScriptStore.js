@@ -128,53 +128,61 @@ var menu = function() {
         var menuIDElement = document.getElementById("MENU");
         function setMenu() {
             var ulElement = document.createElement("ul");
+            ulElement.classList.add("nav");
             // first level declaration
             for(let i in data.menu) {
-                let liElement = document.createElement("li");  
-                createLevel(liElement, ulElement, data.menu[i].name);            
+                let liElement = document.createElement("li"); 
+                let urlElement = document.createElement("a");  
+                createLevel(liElement, ulElement);
+                setURL(urlElement, data.menu[i].url, liElement, data.menu[i].name);
                 //second level declaration
                     if(data.menu[i].extand) {
                         var ulElement1 = document.createElement("ul");
+                        ulElement1.classList.add("podmenu");
                         for(let j in data.menu[i].extandContent) {
                             let liElement1 = document.createElement("li");
-                            createLevel(liElement1, ulElement1, data.menu[i].extandContent[j].name);
+                            createLevel(liElement1, ulElement1 /*data.menu[i].extandContent[j].name*/);
                             //third level declaration
                             if(data.menu[i].extandContent[j].extand) {
                                 let ulElement2 = document.createElement("ul");
                                 for(var k in data.menu[i].extandContent[j].extandContent) {
                                     let liElement2 = document.createElement("li");
-                                    createLevel(liElement2, ulElement2, data.menu[i].extandContent[j].extandContent[k].name);
+                                    createLevel(liElement2, ulElement2, /*data.menu[i].extandContent[j].extandContent[k].name*/);
                                     //fourth level declaration
                                     if(data.menu[i].extandContent[j].extandContent[k].extand) {
                                         let ulElement3 = document.createElement("ul");
                                         for(var x in data.menu[i].extandContent[j].extandContent[k].extandContent) {
                                             let liElement3 = document.createElement("li");
-                                            createLevel(liElement3, ulElement3, data.menu[i].extandContent[j].extandContent[k].extandContent[x].name);
-                                            //liElement3.textContent = "Fourth Level";
-                                            //ulElement3.appendChild(liElement3);
+                                            createLevel(liElement3, ulElement3 /*data.menu[i].extandContent[j].extandContent[k].extandContent[x].name*/);
                                         } 
-                                        ulElement2.appendChild(ulElement3);
+                                        liElement2.appendChild(ulElement3);
                                     }
                                 }
-                            ulElement1.appendChild(ulElement2); // submitting third level
+                                liElement1.appendChild(ulElement2); // submitting third level
                             }
                         }
-                    ulElement.appendChild(ulElement1); // submitting second level
+                        liElement.appendChild(ulElement1); // submitting second level
                     }
                 }
-            document.body.appendChild(ulElement); // submitting first level
 
             /*
              * this function gives the name to the article from menu navigation
              */
 
-            function createLevel(li, ul, name) {
+            function createLevel(li, parent) {
                 // li       - takes li html element, which should get a name
-                // ul       - takes ul html element, which is li parent
-                // iterator - takes iterator from the loop inside it is invoked
-                // name     - takes the articles name form dzejson.js
-                li.textContent = name;
-                ul.appendChild(li)
+                // parent   - takes parent element (always <ul></ul>)
+                parent.appendChild(li)
+            };
+            
+            function setURL(anchor, url, liParent, innerText) {
+                // anchor    - takes <a></a> html element
+                // url       - takes url from menu to the article
+                // liParent  - takes parent element (always <li></li>)
+                // innerText - takes the name of the article
+                anchor.setAttribute("href", url);
+                anchor.innerText = innerText;
+                liParent.appendChild(anchor);
             };
             menuIDElement.appendChild(ulElement);
 
@@ -186,31 +194,6 @@ var menu = function() {
     }();
 var aside = function() {
         function displaySideBar() {
-             /*function e() {
-                function e(e) {
-                    var ul = document.createElement("ul");
-                    for (performance.createExtendingMark(i), r.appendChild(ul), k = 0; k < navArticles[e][0].length; k++) {
-                        var li = document.createElement("li");
-                        var link = document.createElement("a");
-                        ul.setAttribute("class", "podmenu"), ul.appendChild(li), li.appendChild(link), link.innerHTML = navArticles[e][0][k], link.setAttribute("href", navArticles[e][1][k]);
-                        var l = [6, 3, 3, 4, 6];
-                        var c = [0, 0, 2, 0, 7];
-                        var newClass = ["krolowie", "gliptyka", "plaskorzezba", "swiatynie", "okrNowosum"];
-                        performance.createExtendingMark(link, li, l, c, newClass)
-                    }
-                }
-               var n = document.createElement("ul");
-                n.setAttribute("class", "nav");
-                for (var a = 0; a < navArticles[0][0].length; a++) {
-                    var r = document.createElement("li"),
-                        i = document.createElement("a");
-                    i.setAttribute("href", navArticles[0][1][a]);
-                    var l = document.createTextNode(navArticles[0][0][a]);
-                    for (i.appendChild(l), r.appendChild(i), n.appendChild(r), j = 1; j < 9; j++) i.innerHTML === navArticles[0][0][j] && e(j)
-                }
-               menuIDElement.appendChild(n), menu.createThirdLevel(), menu.createFourthLevel()
-            }*/
-
             function setWaterMark(url, alternativeText) {
                 var imgElement = document.createElement("img");
                 imgElement.setAttribute("class", "bocznyDingir");
@@ -224,9 +207,9 @@ var aside = function() {
                 menu.menuIDElement.appendChild(spanElement);
                 spanElement.innerHTML = text;
             }
-            //e();
             setWaterMark("/grafika/zdjecia/dingir/dingir_przezroczysty_wersja2.gif", "Skrzydlaty dysk symbolizował sumeryjskich bogów");
-            setInformationBlock("Co nowego"), news.displayBlocks(0, 3);
+            setInformationBlock("Co nowego");
+            news.displayBlocks(0, 3);
             setInformationBlock("Ostatnio aktualizowane");
             news.displayBlocks(4, 7);
             setInformationBlock("Najczęściej odwiedzane");
