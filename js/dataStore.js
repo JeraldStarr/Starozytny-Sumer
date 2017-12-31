@@ -80,6 +80,11 @@ var data = {
                 "extand" : false
             },
             {
+                "name" : "Enki i Ninhursag",
+                "url" : "/podstrony/podstrony_poziom_1_podania/enki-ninhursag.html",
+                "extand" : false
+            },
+            {
                 "name" : "Potop",
                 "url" : "/podstrony/podstrony_poziom_1_podania/potop.html",
                 "extand" : false
