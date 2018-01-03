@@ -141,13 +141,42 @@ var menu = function() {
                         ulElement1.classList.add("podmenu");
                         for(let j in data.menu[i].extandContent) {
                             let liElement1 = document.createElement("li");
+                            let urlElement1 = document.createElement("a"); 
                             setList(liElement1, ulElement1 /*data.menu[i].extandContent[j].name*/);
+                            setURL(urlElement1, data.menu[i].extandContent[j].url, liElement1, data.menu[i].extandContent[j].name);
+                            
+                            // adding classes to <li></li> second level
+                            
+                            switch(liElement1.innerText) {
+                                case data.menu[3].extandContent[0].name:
+                                    liElement1.classList.add("gliptyka");
+                                break;
+                                case data.menu[3].extandContent[2].name:
+                                    liElement1.classList.add("plaskorzezba");
+                                break;
+                                case data.menu[4].extandContent[0].name:
+                                    liElement1.classList.add("swiatynie");
+                                break;
+                                case data.menu[6].extandContent[0].name:
+                                    liElement1.classList.add("krolowie");
+                                break;
+                                case data.menu[6].extandContent[7].name:
+                                    liElement1.classList.add("okrNowosum");
+                                break;
+                                default:
+                                    console.log("switch works");
+                            }; 
+                            
+                            
                             //third level declaration
                             if(data.menu[i].extandContent[j].extand) {
                                 let ulElement2 = document.createElement("ul");
+                                ulElement2.classList.add("blok");
                                 for(var k in data.menu[i].extandContent[j].extandContent) {
                                     let liElement2 = document.createElement("li");
+                                    let urlElement2 = document.createElement("a");
                                     setList(liElement2, ulElement2, /*data.menu[i].extandContent[j].extandContent[k].name*/);
+                                    setURL(urlElement2, data.menu[i].extandContent[j].extandContent[k].url, liElement2, data.menu[i].extandContent[j].extandContent[k].name);
                                     //fourth level declaration
                                     if(data.menu[i].extandContent[j].extandContent[k].extand) {
                                         let ulElement3 = document.createElement("ul");
@@ -175,9 +204,13 @@ var menu = function() {
                 parent.appendChild(li)
             };
             
+            /*
+             * this function set url to the menu article
+             */
+            
             function setURL(anchor, url, liParent, innerText) {
                 // anchor    - takes <a></a> html element
-                // url       - takes url from menu to the article
+                // url       - takes url from data base
                 // liParent  - takes parent element (always <li></li>)
                 // innerText - takes the name of the article
                 anchor.setAttribute("href", url);

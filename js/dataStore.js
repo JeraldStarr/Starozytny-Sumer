@@ -119,14 +119,14 @@ var data = {
             
             {
                 "name" : "Sztuka zdobnicza",
-                "url" : "/podstrony/podstrony_poziom_1_podania/gliptyka.html",
+                "url" : "podstrony/podstrony_poziom_1_sztuka/gliptyka.html",
                 "extand" : true,
                 "extandContent" : [
 
                 {
 
                 	"name" : "Sztandar z Ur",
-                	"url" : "podstrony/podstrony_poziom_1_sztuka/poziom_2/sztandar_z_ur.html",
+                	"url" : "/podstrony/podstrony_poziom_1_sztuka/poziom_2/sztandar_z_ur.html",
                 	"extand" : false
                 }, 
                 {

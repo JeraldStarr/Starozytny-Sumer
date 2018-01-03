@@ -114,7 +114,7 @@ var data = {
             
             {
                 "name" : "Sztuka zdobnicza",
-                "url" : "/podstrony/podstrony_poziom_1_podania/gliptyka.html",
+                "url" : "podstrony/podstrony_poziom_1_sztuka/gliptyka.html",
                 "extand" : true,
                 "extandContent" : [
 
@@ -171,7 +171,7 @@ var data = {
             },
             {
                 "name" : "Rzeźba",
-                "url" : "/podstrony/podstrony_poziom_1_podania/rzezba.html",
+                "url" : "/podstrony/podstrony_poziom_1_sztuka/rzezba.html",
                 "extand" : false
             },
             {
