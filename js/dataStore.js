@@ -119,7 +119,7 @@ var data = {
             
             {
                 "name" : "Sztuka zdobnicza",
-                "url" : "podstrony/podstrony_poziom_1_sztuka/gliptyka.html",
+                "url" : "/podstrony/podstrony_poziom_1_sztuka/gliptyka.html",
                 "extand" : true,
                 "extandContent" : [
 
