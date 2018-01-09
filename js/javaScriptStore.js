@@ -142,10 +142,10 @@ var menu = function() {
                         for(let j in data.menu[i].extandContent) {
                             let liElement1 = document.createElement("li");
                             let urlElement1 = document.createElement("a"); 
-                            setList(liElement1, ulElement1 /*data.menu[i].extandContent[j].name*/);
+                            setList(liElement1, ulElement1);
                             setURL(urlElement1, data.menu[i].extandContent[j].url, liElement1, data.menu[i].extandContent[j].name);
                             
-                            // adding classes to <li></li> second level
+                            // adding CSS classes to <li></li> second level
                             
                             switch(liElement1.innerText) {
                                 case data.menu[3].extandContent[0].name:
@@ -175,16 +175,36 @@ var menu = function() {
                                 for(var k in data.menu[i].extandContent[j].extandContent) {
                                     let liElement2 = document.createElement("li");
                                     let urlElement2 = document.createElement("a");
-                                    setList(liElement2, ulElement2, /*data.menu[i].extandContent[j].extandContent[k].name*/);
+                                    setList(liElement2, ulElement2);
                                     setURL(urlElement2, data.menu[i].extandContent[j].extandContent[k].url, liElement2, data.menu[i].extandContent[j].extandContent[k].name);
+                                    
+                                    // adding CSS classes to <li></li> second level
+                                    
+                                    switch(liElement2.innerText) {
+                                            case data.menu[3].extandContent[0].extandContent[5].name:
+                                            liElement2.classList.add("pieczecie");
+                                            break;
+                                            case data.menu[6].extandContent[7].extandContent[0].name:
+                                            liElement2.classList.add("urIII");
+                                    }
+                                    
                                     //fourth level declaration
                                     if(data.menu[i].extandContent[j].extandContent[k].extand) {
                                         let ulElement3 = document.createElement("ul");
                                         for(var x in data.menu[i].extandContent[j].extandContent[k].extandContent) {
                                             let liElement3 = document.createElement("li");
+                                            let urlElement3 = document.createElement("a");
                                             setList(liElement3, ulElement3 /*data.menu[i].extandContent[j].extandContent[k].extandContent[x].name*/);
+                                            setList(liElement3, ulElement3);
+                                            setURL(urlElement3, data.menu[i].extandContent[j].extandContent[k].extandContent[x].url, liElement3, data.menu[i].extandContent[j].extandContent[k].extandContent[x].name);
                                         } 
                                         liElement2.appendChild(ulElement3);
+                                        if(ulElement3.parentNode.innerText.includes(data.menu[3].extandContent[0].extandContent[5].name)) {
+                                            ulElement3.classList.add("odciski");
+                                        }
+                                         else if(ulElement3.parentNode.innerText.includes(data.menu[6].extandContent[7].extandContent[0].name)) {
+                                             ulElement3.classList.add("urIIIpodzial");
+                                         }
                                     }
                                 }
                                 liElement1.appendChild(ulElement2); // submitting third level
@@ -212,7 +232,7 @@ var menu = function() {
                 // anchor    - takes <a></a> html element
                 // url       - takes url from data base
                 // liParent  - takes parent element (always <li></li>)
-                // innerText - takes the name of the article
+                // innerText - takes the name of the article from data base
                 anchor.setAttribute("href", url);
                 anchor.innerText = innerText;
                 liParent.appendChild(anchor);
