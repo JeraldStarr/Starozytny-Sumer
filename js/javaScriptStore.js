@@ -97,22 +97,13 @@ var performance = function() {
 		        });
 		    }); // koniec ready 
 		}
-        function createExtendingMark(link, li, n, a, newClass) {
-            if (li && n && a && newClass) {
-                for (var i = 0; i < n.length; i++)
-                    if (link.innerText === navArticles[n[i]][0][a[i]]) {
-                        li.setAttribute("class", newClass[i]);
-                        var div = document.createElement("div");
-                        var mark = document.createTextNode(">");
-                        div.appendChild(mark), div.setAttribute("class", "menuArrow"), link.appendChild(div)
-                    }
-            } else {
-                var div = document.createElement("div");
-                var mark = document.createTextNode(">");
-                div.setAttribute("class", "menuArrow");
-                div.appendChild(mark);
-                link.appendChild(div);
-            }
+    
+        function createExtendingMark(url, i) {
+            if(data.menu[i].extand) {
+                let divElement = document.createElement("div");
+                divElement.classList.add("menuArrow");
+                divElement.innerText = ">";
+                url.appendChild(divElement);
         }
         return {
             showHeader: showHeader,
@@ -134,7 +125,8 @@ var menu = function() {
                 let liElement = document.createElement("li"); 
                 let urlElement = document.createElement("a");  
                 setList(liElement, ulElement);
-                setURL(urlElement, data.menu[i].url, liElement, data.menu[i].name);
+                setURL(urlElement, data.menu[i].url, liElement, data.menu[i].name);  
+                performance.createExtendingMark(urlElement, i);
                 //second level declaration
                     if(data.menu[i].extand) {
                         var ulElement1 = document.createElement("ul");
