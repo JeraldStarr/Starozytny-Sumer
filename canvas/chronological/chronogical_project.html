@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Sumeryjska chronologia</title>
+	<style>
+		canvas {
+			border: 1px solid black;
+			display: block;
+			margin: 200px auto;
+		}
+	</style>
+</head>
+<body>
+	<canvas width="748" height="290"></canvas>
+
+	<script>
+		var canvas = document.querySelector("canvas");
+		canvas = canvas.getContext("2d");
+		canvas.beginPath();
+		canvas.moveTo(10, 240);
+		canvas.lineTo(738, 240);
+		canvas.moveTo(734, 236);
+		canvas.lineTo(738, 240);
+		canvas.moveTo(734, 244);
+		canvas.lineTo(738, 240);
+		canvas.moveTo(30, 238);
+		canvas.lineTo(30, 242)
+
+		/*
+		 * marks every century one the chronological line	
+		 */
+		for(var i = 30; i <= 730; i=i+38.22) {
+			canvas.moveTo(i, 238);
+			canvas.lineTo(i, 242);
+		}
+		canvas.lineWidth = 2;
+		canvas.stroke();
+		canvas.beginPath();
+		// Uruk
+		canvas.moveTo(50, 130);
+		canvas.lineTo(50, 230);
+
+		// Dzemdet Nasr
+		canvas.moveTo(297, 130);
+		canvas.lineTo(297, 230);
+		// okres wczesnodynastyczny
+		canvas.moveTo(373, 130);
+		canvas.lineTo(373, 230);
+		canvas.moveTo(583, 130);
+		canvas.lineTo(583, 230);
+		canvas.moveTo(641, 130);
+		canvas.lineTo(641, 230);
+		canvas.moveTo(675, 130);
+		canvas.lineTo(675, 230);
+		canvas.moveTo(716, 130);
+		canvas.lineTo(716, 230);
+		// WDI, WDII, WDIII
+		canvas.moveTo(450, 170);
+		canvas.lineTo(450, 230);
+		canvas.moveTo(527, 170);
+		canvas.lineTo(527, 230);
+		canvas.lineWidth = .5;
+		canvas.strokeStyle = "red";
+		canvas.stroke();
+		canvas.beginPath();
+		canvas.arc(50, 240, 3, 0, degToRad(360));
+		canvas.arc(297, 240, 3, 0, degToRad(360));
+		canvas.arc(373, 240, 3, 0, degToRad(360));
+		canvas.arc(583, 240, 3, 0, degToRad(360));
+		canvas.arc(641, 240, 3, 0, degToRad(360));
+		canvas.arc(675, 240, 3, 0, degToRad(360));
+		canvas.arc(716, 240, 3, 0, degToRad(360));
+		canvas.fillStyle = "red";
+		canvas.fill();
+		canvas.stroke();
+
+		// black horizontal help lines
+
+		canvas.beginPath();
+		canvas.moveTo(10, 150);
+		canvas.lineTo(738, 150);
+		canvas.moveTo(374, 190);
+		canvas.lineTo(583, 190);
+		canvas.strokeStyle = "black";
+		canvas.lineWidth = 1;
+		canvas.stroke();
+
+		// help line
+
+		canvas.beginPath();
+		canvas.lineWidth = 0.2;
+		canvas.moveTo(657, 140);
+		canvas.lineTo(657, 132);
+		canvas.moveTo(657, 120);
+		canvas.lineTo(657, 100);
+		canvas.stroke();
+
+
+		// text - dates
+
+		canvas.beginPath();
+		canvas.font = "12px Bookman Old Style";
+		canvas.fillText("3750", 35, 260);
+		canvas.fillText("3100", 282, 260);
+		canvas.fillText("2800", 357, 260);
+		canvas.fillText("2350", 568, 260);
+		canvas.fillText("2200", 625, 260);
+		canvas.fillText("2116", 660, 260);
+		canvas.fillText("2004", 700, 260);
+		canvas.closePath();
+
+		//text names
+
+
+		canvas.beginPath();
+		canvas.fillStyle = "black";
+		canvas.fillText("Uruk", 153, 140);
+		canvas.fillText("Dżemdet", 310, 130);
+		canvas.fillText("Nasr", 320, 140);
+		canvas.fillText("Okres wczesnodynastyczny", 398, 140);
+		canvas.fillText("Okres", 594, 120);
+		canvas.fillText("akadyjski", 584, 130);
+		canvas.fillText("Okres", 640, 80);
+		canvas.fillText("gutejski", 633, 90);
+		canvas.fillText("Okres", 677, 120);
+		canvas.fillText("nowosumeryjski", 653, 130);
+		canvas.fillText("WDI", 398, 180);
+		canvas.fillText("WDII", 475, 180);
+		canvas.fillText("WDIII", 538, 180);
+		canvas.fill();
+		canvas.closePath();
+        
+        // image
+        var img = document.createElement("img");
+        var img2 = document.createElement("img");
+        var img3 = document.createElement("img");
+        var img4 = document.createElement("img");
+        var img5 = document.createElement("img");
+        img.setAttribute("src", "uruk.jpg");
+        img2.setAttribute("src", "dzemdet_nasr.jpg");
+        img3.setAttribute("src", "helmet.jpg");
+        img4.setAttribute("src", "akad.jpg");
+        img5.setAttribute("src", "figure.jpg");
+        canvas.drawImage(img, 145, 40);
+        canvas.drawImage(img2, 301, 40);
+        canvas.drawImage(img3, 453, 40);
+        canvas.drawImage(img4, 583, 50);
+        canvas.drawImage(img5, 685, 20);
+        
+        // creates circle
+		function degToRad(deg) {
+			return deg*Math.PI/180
+		}
+
+		
+	</script>
+</body>
+</html>
