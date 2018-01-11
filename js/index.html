@@ -12,28 +12,55 @@
         
         <script>
             var ulElement = document.createElement("ul");
-            // first level
+            // first level declaration
             for(let i in data.menu) {
-                let liElement = document.createElement("li");
-                liElement.textContent = data.menu[i].name;
-                ulElement.appendChild(liElement);              
-                //second level
+                let liElement = document.createElement("li");  
+                createLevel(liElement, ulElement, data.menu[i].name);            
+                //second level declaration
                     if(data.menu[i].extand) {
                         var ulElement1 = document.createElement("ul");
                         for(let j in data.menu[i].extandContent) {
-                            addLevel();
+                            let liElement1 = document.createElement("li");
+                            createLevel(liElement1, ulElement1, data.menu[i].extandContent[j].name);
+                            //third level declaration
+                            if(data.menu[i].extandContent[j].extand) {
+                                let ulElement2 = document.createElement("ul");
+                                for(var k in data.menu[i].extandContent[j].extandContent) {
+                                    let liElement2 = document.createElement("li");
+                                    createLevel(liElement2, ulElement2, data.menu[i].extandContent[j].extandContent[k].name);
+                                    //fourth level declaration
+                                    if(data.menu[i].extandContent[j].extandContent[k].extand) {
+                                        let ulElement3 = document.createElement("ul");
+                                        for(var x in data.menu[i].extandContent[j].extandContent[k].extandContent) {
+                                            let liElement3 = document.createElement("li");
+                                            createLevel(liElement3, ulElement3, data.menu[i].extandContent[j].extandContent[k].extandContent[x].name);
+                                            //liElement3.textContent = "Fourth Level";
+                                            //ulElement3.appendChild(liElement3);
+                                        } 
+                                        ulElement2.appendChild(ulElement3);
+                                    }
+                                }
+                            ulElement1.appendChild(ulElement2); // submitting third level
+                            }
                         }
-                    ulElement.appendChild(ulElement1);
+                    ulElement.appendChild(ulElement1); // submitting second level
                     }
                 }
-            document.body.appendChild(ulElement);
-            
-            function addLevel() {
-                let liElement1 = document.createElement("li");
-                liElement1.textContent = "Second Level";
-                ulElement1.appendChild(liElement1);
-                console.log("lower level");
+            document.body.appendChild(ulElement); // submitting first level
+
+            /*
+             * this function gives the name to the article from menu navigation
+             */
+
+            function createLevel(li, ul, name) {
+                // li       - takes li html element, which should get a name
+                // ul       - takes ul html element, which is li parent
+                // iterator - takes iterator from the loop inside it is invoked
+                // name     - takes the articles name form dzejson.js
+                li.textContent = name;
+                ul.appendChild(li)
             }
+
 
         </script>
     </body>

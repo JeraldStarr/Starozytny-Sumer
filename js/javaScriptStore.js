@@ -1,4 +1,4 @@
-var performance = function() {
+var performance = function(){
         function showHeader() {
             var header = ["Starożytny Sumer", "Strona o cywilizacji Sumerów", "ok. 3750-2004 p.n.e."];
             for (i = 0; i < 3; i++) {
@@ -97,19 +97,13 @@ var performance = function() {
 		        });
 		    }); // koniec ready 
 		}
-        function createExtendingMark(link, li, n, a, newClass) {
-            if (li && n && a && newClass) {
-                for (var i = 0; i < n.length; i++)
-                    if (link.innerText === navArticles[n[i]][0][a[i]]) {
-                        li.setAttribute("class", newClass[i]);
-                        var div = document.createElement("div");
-                        var mark = document.createTextNode(">");
-                        div.appendChild(mark), div.setAttribute("class", "menuArrow"), link.appendChild(div)
-                    }
-            } else {
-                var div = document.createElement("div");
-                var mark = document.createTextNode(">");
-                div.setAttribute("class", "menuArrow"), div.appendChild(mark), link.appendChild(div)
+    
+        function createExtendingMark(url, i) {
+            if(data.menu[i].extand) {
+                let divElement = document.createElement("div");
+                divElement.classList.add("menuArrow");
+                divElement.innerText = ">";
+                url.appendChild(divElement);
             }
         }
         return {
@@ -122,48 +116,154 @@ var performance = function() {
             createExtendingMark: createExtendingMark
         }
     }();
-var aside = function() {
-        function displaySideBar() {
-            function e() {
-                function e(e) {
-                    var ul = document.createElement("ul");
-                    for (performance.createExtendingMark(i), r.appendChild(ul), k = 0; k < navArticles[e][0].length; k++) {
-                        var li = document.createElement("li");
-                        var link = document.createElement("a");
-                        ul.setAttribute("class", "podmenu"), ul.appendChild(li), li.appendChild(link), link.innerHTML = navArticles[e][0][k], link.setAttribute("href", navArticles[e][1][k]);
-                        var l = [6, 3, 3, 4, 6];
-                        var c = [0, 0, 2, 0, 7];
-                        var newClass = ["krolowie", "gliptyka", "plaskorzezba", "swiatynie", "okrNowosum"];
-                        performance.createExtendingMark(link, li, l, c, newClass)
+var menu = function() {
+        var menuIDElement = document.getElementById("MENU");
+        function setMenu() {
+            var ulElement = document.createElement("ul");
+            ulElement.classList.add("nav");
+            // first level declaration
+            for(let i in data.menu) {
+                let liElement = document.createElement("li"); 
+                let urlElement = document.createElement("a");  
+                setList(liElement, ulElement);
+                setURL(urlElement, data.menu[i].url, liElement, data.menu[i].name);  
+                performance.createExtendingMark(urlElement, i);
+                //second level declaration
+                    if(data.menu[i].extand) {
+                        var ulElement1 = document.createElement("ul");
+                        ulElement1.classList.add("podmenu");
+                        for(let j in data.menu[i].extandContent) {
+                            let liElement1 = document.createElement("li");
+                            let urlElement1 = document.createElement("a"); 
+                            setList(liElement1, ulElement1);
+                            setURL(urlElement1, data.menu[i].extandContent[j].url, liElement1, data.menu[i].extandContent[j].name);
+                            
+                            // adding CSS classes to <li></li> second level
+                            
+                            switch(liElement1.innerText) {
+                                case data.menu[3].extandContent[0].name:
+                                    liElement1.classList.add("gliptyka");
+                                break;
+                                case data.menu[3].extandContent[2].name:
+                                    liElement1.classList.add("plaskorzezba");
+                                break;
+                                case data.menu[4].extandContent[0].name:
+                                    liElement1.classList.add("swiatynie");
+                                break;
+                                case data.menu[6].extandContent[0].name:
+                                    liElement1.classList.add("krolowie");
+                                break;
+                                case data.menu[6].extandContent[7].name:
+                                    liElement1.classList.add("okrNowosum");
+                                break;
+                                default:
+                                    console.log("switch works");
+                            }; 
+                            
+                            
+                            //third level declaration
+                            if(data.menu[i].extandContent[j].extand) {
+                                let ulElement2 = document.createElement("ul");
+                                ulElement2.classList.add("blok");
+                                for(var k in data.menu[i].extandContent[j].extandContent) {
+                                    let liElement2 = document.createElement("li");
+                                    let urlElement2 = document.createElement("a");
+                                    setList(liElement2, ulElement2);
+                                    setURL(urlElement2, data.menu[i].extandContent[j].extandContent[k].url, liElement2, data.menu[i].extandContent[j].extandContent[k].name);
+                                    
+                                    // adding CSS classes to <li></li> second level
+                                    
+                                    switch(liElement2.innerText) {
+                                            case data.menu[3].extandContent[0].extandContent[5].name:
+                                            liElement2.classList.add("pieczecie");
+                                            break;
+                                            case data.menu[6].extandContent[7].extandContent[0].name:
+                                            liElement2.classList.add("urIII");
+                                    }
+                                    
+                                    //fourth level declaration
+                                    if(data.menu[i].extandContent[j].extandContent[k].extand) {
+                                        let ulElement3 = document.createElement("ul");
+                                        for(var x in data.menu[i].extandContent[j].extandContent[k].extandContent) {
+                                            let liElement3 = document.createElement("li");
+                                            let urlElement3 = document.createElement("a");
+                                            setList(liElement3, ulElement3 /*data.menu[i].extandContent[j].extandContent[k].extandContent[x].name*/);
+                                            setList(liElement3, ulElement3);
+                                            setURL(urlElement3, data.menu[i].extandContent[j].extandContent[k].extandContent[x].url, liElement3, data.menu[i].extandContent[j].extandContent[k].extandContent[x].name);
+                                        } 
+                                        liElement2.appendChild(ulElement3);
+                                        if(ulElement3.parentNode.innerText.includes(data.menu[3].extandContent[0].extandContent[5].name)) {
+                                            ulElement3.classList.add("odciski");
+                                        }
+                                         else if(ulElement3.parentNode.innerText.includes(data.menu[6].extandContent[7].extandContent[0].name)) {
+                                             ulElement3.classList.add("urIIIpodzial");
+                                         }
+                                    }
+                                }
+                                liElement1.appendChild(ulElement2); // submitting third level
+                            }
+                        }
+                        liElement.appendChild(ulElement1); // submitting second level
                     }
                 }
-                var n = document.createElement("ul");
-                n.setAttribute("class", "nav");
-                for (var a = 0; a < navArticles[0][0].length; a++) {
-                    var r = document.createElement("li"),
-                        i = document.createElement("a");
-                    i.setAttribute("href", navArticles[0][1][a]);
-                    var l = document.createTextNode(navArticles[0][0][a]);
-                    for (i.appendChild(l), r.appendChild(i), n.appendChild(r), j = 1; j < 9; j++) i.innerHTML === navArticles[0][0][j] && e(j)
-                }
-                menuIDElement.appendChild(n), menu.createThirdLevel(), menu.createFourthLevel()
-            }
 
-            function n(e, n) {
-                var a = document.createElement("img");
-                a.setAttribute("class", "bocznyDingir"), a.setAttribute("src", e), a.setAttribute("alt", n), menuIDElement.appendChild(a)
-            }
+            /*
+             * this function gives the name to the article from menu navigation
+             */
 
-            function a(e) {
-                var n = document.createElement("span");
-                menuIDElement.appendChild(n), n.innerHTML = e
-            }
-            e(), n("/grafika/zdjecia/dingir/dingir_przezroczysty_wersja2.gif", "Skrzydlaty dysk symbolizował sumeryjskich bogów"), a("Co nowego"), news.displayBlocks(0, 3), a("Ostatnio aktualizowane"), news.displayBlocks(4, 7), a("Najczęściej odwiedzane"), news.displayBlocks(8, 8), n("/grafika/zdjecia/dingir/dingir_przezroczysty_wersja2.gif", "Skrzydlaty dysk symbolizował sumeryjskich bogów")
-        }
-        var menuIDElement = document.getElementById("MENU");
+            function setList(li, parent) {
+                // li       - takes <li></li> element, which should get a name
+                // parent   - takes parent element (always <ul></ul>)
+                parent.appendChild(li)
+            };
+            
+            /*
+             * this function set url to the menu article
+             */
+            
+            function setURL(anchor, url, liParent, innerText) {
+                // anchor    - takes <a></a> html element
+                // url       - takes url from data base
+                // liParent  - takes parent element (always <li></li>)
+                // innerText - takes the name of the article from data base
+                anchor.setAttribute("href", url);
+                anchor.innerText = innerText;
+                liParent.appendChild(anchor);
+            };
+            menuIDElement.appendChild(ulElement);
+
+        };
         return {
-            displaySideBar: displaySideBar,
-            menuIDElement: menuIDElement
+            menuIDElement : menuIDElement,
+            setMenu : setMenu
+        }
+    }();
+var aside = function() {
+        function displaySideBar() {
+            function setWaterMark(url, alternativeText) {
+                var imgElement = document.createElement("img");
+                imgElement.setAttribute("class", "bocznyDingir");
+                imgElement.setAttribute("src", url);
+                imgElement.setAttribute("alt", alternativeText);
+                menu.menuIDElement.appendChild(imgElement)
+            }
+
+            function setInformationBlock(text) {
+                var spanElement = document.createElement("span");
+                menu.menuIDElement.appendChild(spanElement);
+                spanElement.innerHTML = text;
+            }
+            setWaterMark("/grafika/zdjecia/dingir/dingir_przezroczysty_wersja2.gif", "Skrzydlaty dysk symbolizował sumeryjskich bogów");
+            setInformationBlock("Co nowego");
+            news.displayBlocks(0, 3);
+            setInformationBlock("Ostatnio aktualizowane");
+            news.displayBlocks(4, 7);
+            setInformationBlock("Najczęściej odwiedzane");
+            news.displayBlocks(8, 8);
+            setWaterMark("/grafika/zdjecia/dingir/dingir_przezroczysty_wersja2.gif", "Skrzydlaty dysk symbolizował sumeryjskich bogów")
+        }
+        return {
+            displaySideBar: displaySideBar
         }
     }();
 var google = function() {
@@ -178,100 +278,16 @@ var google = function() {
             displaySearch: displaySearch
         }
     }();
-var menu = function() {
-        function e() {
-            var e = document.getElementsByClassName("gliptyka")[0];
-            var t = document.createElement("ul");
-            t.setAttribute("class", "blok"), console.log("sztuka zdobnicz: " + e), e.appendChild(t);
-            for (var n = 0; n < navArticles[9][0].length; n++) {
-                var a = document.createElement("li"),
-                    r = document.createElement("a");
-                if (r.setAttribute("href", navArticles[9][1][n]), r.innerHTML = navArticles[9][0][n], r.innerHTML === navArticles[9][0][5]) {
-                    a.setAttribute("class", "pieczecie");
-                    var i = document.createElement("div"),
-                        l = document.createTextNode(">");
-                    i.appendChild(l), i.setAttribute("class", "menuArrow"), r.appendChild(i)
-                }
-                a.appendChild(r), t.appendChild(a)
-            }
-            var c = document.getElementsByClassName("plaskorzezba")[0],
-                o = document.createElement("ul");
-            o.setAttribute("class", "blok"), c.appendChild(o);
-            for (var n = 0; n < navArticles[10][0].length; n++) {
-                var s = document.createElement("li"),
-                    d = document.createElement("a");
-                d.setAttribute("href", navArticles[10][1][n]), d.innerHTML = navArticles[10][0][n], s.appendChild(d), o.appendChild(s)
-            }
-            var u = document.getElementsByClassName("swiatynie")[0],
-                m = document.createElement("ul");
-            m.setAttribute("class", "blok"), u.appendChild(m);
-            for (var n = 0; n < navArticles[11][0].length; n++) {
-                var p = document.createElement("li"),
-                    v = document.createElement("a");
-                v.setAttribute("href", navArticles[11][1][n]), v.innerHTML = navArticles[11][0][n], p.appendChild(v), m.appendChild(p)
-            }
-            var h = document.getElementsByClassName("okrNowosum")[0],
-                f = document.createElement("ul");
-            f.setAttribute("class", "blok"), h.appendChild(f);
-            for (var n = 0; n < navArticles[12][0].length; n++) {
-                var A = document.createElement("li"),
-                    y = document.createElement("a");
-                if (y.setAttribute("href", navArticles[12][1][n]), y.innerHTML = navArticles[12][0][n], A.appendChild(y), f.appendChild(A), y.innerHTML === navArticles[12][0][0]) {
-                    A.setAttribute("class", "urIII");
-                    var i = document.createElement("div"),
-                        g = document.createTextNode(">");
-                    i.appendChild(g), i.setAttribute("class", "menuArrow"), y.appendChild(i)
-                }
-            }
-            var b = document.getElementsByClassName("krolowie")[0],
-                E = document.createElement("ul");
-            E.setAttribute("class", "blok"), b.appendChild(E);
-            for (var n = 0; n < navArticles[13][0].length; n++) {
-                var C = document.createElement("li"),
-                    k = document.createElement("a");
-                k.setAttribute("href", navArticles[13][1][n]), k.innerHTML = navArticles[13][0][n], C.appendChild(k), E.appendChild(C)
-            }
-        }
-
-        function createFourthLevel() {
-                var pieczecie = document.getElementsByClassName("pieczecie")[0];
-                var ulElement = document.createElement("ul");
-                for (ulElement.setAttribute("class", "odciski"), pieczecie.appendChild(ulElement), i = 0; i < navArticles[14][0].length; i++) {
-                    console.log(i);
-                    var link = document.createElement("a");
-                    var li = document.createElement("li");
-                    link.setAttribute("href", navArticles[14][1][i]); 
-                    link.innerText = navArticles[14][0][i];
-                    li.appendChild(link);
-                    ulElement.appendChild(li);
-                }
-
-                var urIII = document.getElementsByClassName("urIII")[0];
-                var ul = document.createElement("ul");
-                for (ul.setAttribute("class", "urIIIpodzial"), urIII.appendChild(ul), b = 0; b < navArticles[15][0].length; b++) {
-                    var liElem = document.createElement("li");
-                    var linkElem = document.createElement("a");
-                    linkElem.setAttribute("href", navArticles[15][1][b]);
-                    linkElem.innerText = navArticles[15][0][b];
-                    liElem.appendChild(linkElem);
-                    ul.appendChild(liElem);
-                }
-            }
-        return {
-            createThirdLevel: e,
-            createFourthLevel: createFourthLevel
-        }
-    }();
 var news = function() {
         function displayBlocks(startsFrom, endsOn) {
             const TITLE = "Proszę kliknąć, aby przejść do artykułu";
             for (var i = startsFrom; i <= endsOn; i++) {
                 var emElement = document.createElement("em");
                     emElement.innerHTML = dates[i]; 
-                    aside.menuIDElement.appendChild(emElement);
+                    menu.menuIDElement.appendChild(emElement);
                 var divElement = document.createElement("div");
                     divElement.setAttribute("class", "co_nowego");
-                    aside.menuIDElement.appendChild(divElement);
+                    menu.menuIDElement.appendChild(divElement);
                 var link = document.createElement("a");
                 var aElementFirst = link;
                     aElementFirst.setAttribute("href", urls[i]); 
