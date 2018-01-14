@@ -301,23 +301,23 @@ var data = {
         
         "name" : "Eridu",
 		"url" : "/podstrony/podstrony_poziom_1_miasta/eridu.html",
-		"extand" : true,
+		"extand" : false,
         
     },      
     {
 		"name" : "Nippur",
 		"url" : "/podstrony/podstrony_poziom_1_miasta/nippur.html",
-		"extand" : true
+		"extand" : false
 	},
 	{
 		"name" : "Uruk",
 		"url" : "/podstrony/podstrony_poziom_1_miasta/uruk.html",
-		"extand" : true
+		"extand" : false
 	},
 	{
 		"name" : "Ur",
 		"url" : "/podstrony/podstrony_poziom_1_miasta/ur.html",
-		"extand" : true
+		"extand" : false
 	},
 	{
 		"name" : "Lagasz",
@@ -490,7 +490,7 @@ var data = {
     {
 		"name" : "Prawo cywilne",
 		"url" : "/podstrony/prawo/prawo-cywilne-w-sumerze.html",
-		"extand" : true
+		"extand" : false
 	},
 	{
 		"name" : "Prawo karne",
@@ -509,7 +509,7 @@ var data = {
     {
 		"name" : "Astronomia",
 		"url" : "/podstrony/nauka/astronomia.html",
-		"extand" : true
+		"extand" : false
 	},
 	{
 		"name" : "Matematyka",
