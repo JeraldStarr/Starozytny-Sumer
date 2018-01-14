@@ -544,6 +544,66 @@ var data = {
 }
 
 
+var urls = [
+    "/podstrony/podstrony_poziom_1_podania/enki-ninhursag.html",
+    "/podstrony/podstrony-historia/imperium/pochodzenie.html",
+    "/podstrony/podstrony-historia/imperium/panstwa-wasalne.html",
+    "/podstrony/podstrony-historia/imperium/bala.html",
+
+    "/podstrony/podstrony_poziom_1_bogowie/nanna.html",
+    "/podstrony/podstrony-historia/poczatek-i-okres-wczesnodynastyczny.html",
+    "/podstrony/podstrony-historia/sumeryjski_renesans.html",
+    "/podstrony/podstrony-historia/krolowie/ur-namma.html",
+
+    "/podstrony/bogowie.html"
+];
+
+// articles' titles
+var titles = [
+    "Enki i Ninhursag",
+    "Pochodzenie Sumerów",
+    "Wasale królestwa III dynastii z Ur",
+    "Podatek bala",
+
+    "Nanna",
+    "Okres wczesnodynastyczny",
+    "Okres nowosumeryjski",
+    "Ur-Namma",
+
+    "Sumeryjscy bogowie"
+];
+
+// urls for articles' icons 
+var iconsURLs = [
+    "/grafika/ikonka/ikonka_standardowa.gif",
+    "/grafika/ikonka/pochodzenie.jpg",
+    "/grafika/ikonka/urIIIwasalne.jpg",
+    "/grafika/ikonka/ikonka_standardowa.gif",
+
+    "/grafika/ikonka/nanna.jpg",
+    "/grafika/ikonka/okres_wczesnodynastyczny.gif",
+    "/grafika/ikonka/okres-nowosumeryjski.jpg",
+    "/grafika/ikonka/ur-namma.gif",
+
+    "/grafika/ikonka/bogowie.gif"
+];
+
+// fragmenty tekstów z artykułów
+var texts = [
+    "Idea boskiego raju, z którego wypływały słodkie życiodajne wody, użyźniające ziemię ...",
+    "Istnieje wiele spekulacji na temat pochodzenia Sumerów, ponieważ pojawili się w Mezopotamii ...",
+    "Siła militarna nie była jednym ani nawet najważniejszym czynnikiem kształtującym wzajemne relacje ...",
+    "Kapitał bala były to wytworzone przez całą prowincję towary i usługi, jednak był ...",
+
+    "Nanna był opiekuńczym bóstwem Ur, mianowany do tej funkcji przez Enlila. Tym samym wyznaczył ...",
+    "Wobec niedostatku rzetelnych źródeł informacje pochodzące z różnych gatunków piśmiennictwa mogą ...",
+    "Ostatnim królem państwa nowosumeryjskiego był Ibbi-Suen, a ćwierćwiecze jego panowania ...",
+    "Ur-Namma mógł zatem zjednoczyć sumeryjskie ośrodki w dużej mierze stosując dyplomację ...",
+
+    "Sumeryjski system liczenia oparty był na liczbie 60, który w późniejszych czasach ..."
+
+];
+
 // daty dodania bądź aktualizacji artykułów
 var dates = [
     "31.12.2017",
