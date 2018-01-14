@@ -404,12 +404,12 @@ var data = {
     {
 		"name" : "Chronologia",
 		"url" : "/podstrony/podstrony-historia/chronologia_sumeru.html",
-		"extand" : true
+		"extand" : false
 	},
 	{
 		"name" : "Okres Uruk",
 		"url" : "/podstrony/podstrony-historia/okres_uruk.html",
-		"extand" : true
+		"extand" : false
 	},
 	{
 		"name" : "Okres Dżemdet Nasr",
@@ -429,7 +429,7 @@ var data = {
      {
 		"name" : "Okres gutejski",
 		"url" : "/podstrony/podstrony-historia/okres_gutejski.html",
-		"extand" : true
+		"extand" : false
 	},
 	{
 		"name" : "Okres nowosumeryjski",

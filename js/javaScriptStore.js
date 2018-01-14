@@ -98,8 +98,8 @@ var performance = function() {
 		    }); // koniec ready 
 		}
     
-        function createExtendingMark(url, i) {
-            if(data.menu[i].extand) {
+        function createExtendingMark(url, i, level) {
+            if(level) {
                 let divElement = document.createElement("div");
                 divElement.classList.add("menuArrow");
                 divElement.innerText = ">";
@@ -127,7 +127,7 @@ var menu = function() {
                 let urlElement = document.createElement("a");  
                 setList(liElement, ulElement);
                 setURL(urlElement, data.menu[i].url, liElement, data.menu[i].name);  
-                performance.createExtendingMark(urlElement, i);
+                performance.createExtendingMark(urlElement, i, data.menu[i].extand);
                 //second level declaration
                     if(data.menu[i].extand) {
                         var ulElement1 = document.createElement("ul");
@@ -160,7 +160,7 @@ var menu = function() {
                                     console.log("switch works");
                             }; 
                             
-                            
+                            performance.createExtendingMark(urlElement1, j, data.menu[i].extandContent[j].extand);
                             //third level declaration
                             if(data.menu[i].extandContent[j].extand) {
                                 let ulElement2 = document.createElement("ul");
@@ -180,6 +180,8 @@ var menu = function() {
                                             case data.menu[6].extandContent[7].extandContent[0].name:
                                             liElement2.classList.add("urIII");
                                     }
+                                    
+                                    performance.createExtendingMark(urlElement2, j, data.menu[i].extandContent[j].extandContent[k].extand);
                                     
                                     //fourth level declaration
                                     if(data.menu[i].extandContent[j].extandContent[k].extand) {
