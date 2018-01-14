@@ -1,1 +1,1 @@
-window.onload=function(){performance.showHeader();performance.insertHamburger();performance.toggleMenu();performance.displayBigImg();performance.galleryService();performance.displayAnotherWebsiteLabel();aside.displaySideBar();google.displaySearch();}
+window.onload=function(){performance.showHeader(),performance.insertHamburger(),performance.toggleMenu(),performance.displayBigImg(),performance.galleryService(),performance.displayAnotherWebsiteLabel(),menu.setMenu(),aside.displaySideBar(),google.displaySearch()};
