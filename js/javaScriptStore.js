@@ -104,6 +104,7 @@ var performance = function() {
                 divElement.classList.add("menuArrow");
                 divElement.innerText = ">";
                 url.appendChild(divElement);
+            }
         }
         return {
             showHeader: showHeader,
