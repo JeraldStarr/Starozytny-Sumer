@@ -546,7 +546,7 @@ var data = {
 
 var urls = [
     "/podstrony/podstrony_poziom_1_podania/enki-ninhursag.html",
-    "/podstrony/podstrony-historia/imperium/pochodzenie.html",
+    "/podstrony/podstrony-historia/pochodzenie.html",
     "/podstrony/podstrony-historia/imperium/panstwa-wasalne.html",
     "/podstrony/podstrony-historia/imperium/bala.html",
 
