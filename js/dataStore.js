@@ -176,7 +176,7 @@ var data = {
             },
             {
                 "name" : "Rzeźba",
-                "url" : "/podstrony/podstrony_poziom_1_podania/rzezba.html",
+                "url" : "/podstrony/podstrony_poziom_1_sztuka/rzezba.html",
                 "extand" : false
             },
             {
@@ -233,6 +233,11 @@ var data = {
             	{
             		"name" : "Świątynia Inanny",
             		"url" : "/podstrony/podstrony_poziom_1/swiatynia_inanny.html",
+            		"extand" : false
+            	},
+                {
+            		"name" : "Ibgal",
+            		"url" : "/podstrony/podstrony_poziom_1/ibgal.html",
             		"extand" : false
             	},
             	{
