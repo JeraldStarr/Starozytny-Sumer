@@ -1,4 +1,4 @@
-var performance = function() {
+var performance = function(){
         function showHeader() {
             var header = ["Starożytny Sumer", "Strona o cywilizacji Sumerów", "ok. 3750-2004 p.n.e."];
             for (i = 0; i < 3; i++) {

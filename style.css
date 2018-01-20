@@ -502,47 +502,7 @@ ul li {
 /*========== KONIEC FORMATOWANIA MENU ==========*/
 
 
-/*========== ODCHODZĄCE FORMATOWANIE OBRAZU==========*/
 
-.zdjecia {
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 5px;
-    border-bottom: 1px solid #7A4646;
-    border-top: 1px solid #7A4646;
-    padding: 5px 0;
-}
-
-.podpis {
-    /*klasa służąca do formotowania podpisu pod ilustracjami; docelowo ma być zastąpiona całkowicie przez znacznik figcaption*/
-    font-size: 12px;
-    color: black;
-    border-top: 1px solid #7A4646;
-    line-height: 108%;
-    padding: 3px 5px 0;
-}
-
-.zdjecia1 {
-    /*klasa przeznaczona do formatowania pozycji ilustracji, która ma zajmować całą szerokość artykułu; docelowo  ma zniknąć; być może będzie zastąpiona przez inną*/
-    float: none;
-    border-bottom: 1px solid #7A4646;
-    border-top: 1px solid #7A4646;
-    padding: 5px 0;
-    margin-bottom: 5px;
-}
-
-.zdjecia2 {
-    float: right;
-    margin-left: 10px;
-    margin-bottom: 5px;
-    border-bottom: 1px solid #7A4646;
-    border-top: 1px solid #7A4646;
-    padding: 5px 0;
-}
-
-.zdjecia img:hover,
-.zdjecia1 img:hover,
-.zdjecia2 img:hover,
 figure img:hover
 /*animacja, która powoduje efekt lekkego unienienia się obrazu po najechaniu na niegu myszą*/
 
@@ -560,8 +520,6 @@ img {
     transition: all 0.3s ease-out;
 }
 
-
-/*========== KONIEC ODCHODZĄCEGO FORMATOWANIA OBRAZÓW ==========*/
 
 
 /* --- FORMATOWANIE DLA SKRZYDLATYCH DYSKÓW ---*/
@@ -600,9 +558,11 @@ img {
 figcaption {
     font-size: 12px;
     color: black;
+    background: #e8eaed;
     border-top: 1px solid #7A4646;
+    border-bottom: 1px solid #7A4646;
     line-height: 108%;
-    padding: 3px 5px 0;
+    padding: 3px 5px 5px;
     text-align: center;
 }
 
@@ -610,15 +570,8 @@ figure img {
     width: 100%;
 }
 
-.Obraz {
-    border-bottom: 1px solid #7A4646;
-    border-top: 1px solid #7A4646;
-    padding: 5px 0;
-}
-
 .duzyObraz {
     /*formatowanie dla obrazu o szerokości około 500px*/
-    border-bottom: 1px solid #7A4646;
     border-top: 1px solid #7A4646;
     padding: 5px 0;
     width: 64.516%;
@@ -626,7 +579,6 @@ figure img {
 
 .sporyObraz {
     /*formatowanie dla obrazu o szerokości około 400px*/
-    border-bottom: 1px solid #7A4646;
     border-top: 1px solid #7A4646;
     padding: 5px 0;
     width: 51.679%;
@@ -634,7 +586,6 @@ figure img {
 
 .sredniObraz {
     /*formatowanie dla obrazu o szerokości około 300px*/
-    border-bottom: 1px solid #7A4646;
     border-top: 1px solid #7A4646;
     padding: 5px 0;
     width: 38.461%;
@@ -643,7 +594,6 @@ figure img {
 .malyObraz {
     /*formatowanie dla obrazu o szerokości około 200px*/
     width: 28.101%;
-    border-bottom: 1px solid #7A4646;
     border-top: 1px solid #7A4646;
     padding: 5px 0;
 }
