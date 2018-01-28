@@ -197,15 +197,28 @@ var menu = function() {
                                         
                                         // internet explore implementation
                                         
-                                        if(navigator.userAgent.indexOf("Trident") > 0) {
-                                            console.log("To jest Internet Explore")
-                                        } else { console.log("To jest inna przeglądarka")}
+                                        if(navigator.userAgent.indexOf("Trident") > -1) {
+                                           console.log(ulElement3.parentNode.innerText); if(ulElement3.parentNode.innerText.indexOf(data.menu[3].extandContent[0].extandContent[5].name) > -1) {
+                                                
+                                            ulElement3.className = "odciski";
+                                        }
+                                         else if(ulElement3.parentNode.innerText.indexOf(data.menu[6].extandContent[7].extandContent[0].name) > -1) {
+                                             ulElement3.className = "urIIIpodzial";
+                                         }
+                                            
+                                        } // different browser 
+                                        
+                                        else { 
+                                        
                                         if(ulElement3.parentNode.innerText.includes(data.menu[3].extandContent[0].extandContent[5].name)) {
                                             ulElement3.classList.add("odciski");
                                         }
                                          else if(ulElement3.parentNode.innerText.includes(data.menu[6].extandContent[7].extandContent[0].name)) {
                                              ulElement3.classList.add("urIIIpodzial");
                                          }
+                                            
+                                        }
+
                                     }
                                 }
                                 liElement1.appendChild(ulElement2); // submitting third level
