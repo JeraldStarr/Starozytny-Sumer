@@ -194,6 +194,12 @@ var menu = function() {
                                             setURL(urlElement3, data.menu[i].extandContent[j].extandContent[k].extandContent[x].url, liElement3, data.menu[i].extandContent[j].extandContent[k].extandContent[x].name);
                                         } 
                                         liElement2.appendChild(ulElement3);
+                                        
+                                        // internet explore implementation
+                                        
+                                        if(navigator.userAgent.indexOf("Trident") > 0) {
+                                            console.log("To jest Internet Explore")
+                                        } else { console.log("To jest inna przeglądarka")}
                                         if(ulElement3.parentNode.innerText.includes(data.menu[3].extandContent[0].extandContent[5].name)) {
                                             ulElement3.classList.add("odciski");
                                         }
