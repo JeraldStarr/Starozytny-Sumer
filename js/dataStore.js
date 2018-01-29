@@ -449,7 +449,7 @@ var data = {
 			{
 
 				"name" : "Państwo III dynastii z Ur",
-				"url" : "/podstrony/podstrony-historia/sumeryjski_renesans.html",
+				"url" : "/podstrony/podstrony-historia/imperium/panstwo-III-dynastii-z-ur.html",
 				"extand" : true,
                 "extandContent" : [
                     {
