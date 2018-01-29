@@ -555,10 +555,10 @@ var data = {
 
 
 var urls = [
+    "/podstrony/podstrony-historia/krolowie/szu-suen.html",
     "/podstrony/podstrony_poziom_1_podania/enki-ninhursag.html",
     "/podstrony/podstrony-historia/pochodzenie.html",
     "/podstrony/podstrony-historia/imperium/panstwa-wasalne.html",
-    "/podstrony/podstrony-historia/imperium/bala.html",
 
     "/podstrony/podstrony_poziom_1_bogowie/nanna.html",
     "/podstrony/podstrony-historia/poczatek-i-okres-wczesnodynastyczny.html",
@@ -570,10 +570,10 @@ var urls = [
 
 // articles' titles
 var titles = [
+    "Szu-Suen",
     "Enki i Ninhursag",
     "Pochodzenie Sumerów",
     "Wasale królestwa III dynastii z Ur",
-    "Podatek bala",
 
     "Nanna",
     "Okres wczesnodynastyczny",
@@ -586,9 +586,9 @@ var titles = [
 // urls for articles' icons 
 var iconsURLs = [
     "/grafika/ikonka/ikonka_standardowa.gif",
+    "/grafika/ikonka/ikonka_standardowa.gif",
     "/grafika/ikonka/pochodzenie.jpg",
     "/grafika/ikonka/urIIIwasalne.jpg",
-    "/grafika/ikonka/ikonka_standardowa.gif",
 
     "/grafika/ikonka/nanna.jpg",
     "/grafika/ikonka/okres_wczesnodynastyczny.gif",
@@ -600,26 +600,26 @@ var iconsURLs = [
 
 // fragmenty tekstów z artykułów
 var texts = [
+    "Sukcesy polityczne oraz zakresy tytularnego zwierzchnictwa potwiedza inskrypcja fundacyjna ...",
     "Idea boskiego raju, z którego wypływały słodkie życiodajne wody, użyźniające ziemię ...",
     "Istnieje wiele spekulacji na temat pochodzenia Sumerów, ponieważ pojawili się w Mezopotamii ...",
     "Siła militarna nie była jednym ani nawet najważniejszym czynnikiem kształtującym wzajemne relacje ...",
-    "Kapitał bala były to wytworzone przez całą prowincję towary i usługi, jednak był ...",
 
     "Nanna był opiekuńczym bóstwem Ur, mianowany do tej funkcji przez Enlila. Tym samym wyznaczył ...",
     "Wobec niedostatku rzetelnych źródeł informacje pochodzące z różnych gatunków piśmiennictwa mogą ...",
     "Ostatnim królem państwa nowosumeryjskiego był Ibbi-Suen, a ćwierćwiecze jego panowania ...",
     "Ur-Namma mógł zatem zjednoczyć sumeryjskie ośrodki w dużej mierze stosując dyplomację ...",
 
-    "Sumeryjski system liczenia oparty był na liczbie 60, który w późniejszych czasach ..."
+    "Nadrzędne siły miały charakter niepoznawalny, a ich źródło pozostawało niewyjaśnione ..."
 
 ];
 
 // daty dodania bądź aktualizacji artykułów
 var dates = [
+    "29.01.2018",
     "31.12.2017",
     "09.11.2017",
     "17.10.2017",
-    "20.09.2017",
 
     "23.10.2017",
     "03.09.2017",
@@ -632,14 +632,14 @@ var dates = [
 // treści do znacznika alt
 var alt = [
     "Pismo",
+    "Pismo",
     "Mapa możliwych wędrówek Sumerów",
     "Państwa wasalne",
-    "Pismo sumeryjskie",
 
     "Głowa byka",
     "Sumeryjska lista królów",
     "Podobizna Ur-Nammy",
     "Podobizna Ur-Nammy",
 
-    "Liczby w piśmie klinowym"
+    "Bogowie na odcisku pieczęci"
 ];
