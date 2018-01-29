@@ -400,6 +400,11 @@ var data = {
 				"name" : "Amar-Suen",
 				"url" : "/podstrony/podstrony-historia/krolowie/amar-suen.html",
 				"extand" : false
+			},
+            {
+				"name" : "Szu-Suen",
+				"url" : "/podstrony/podstrony-historia/krolowie/szu-suen.html",
+				"extand" : false
 			}
 				
 		]
