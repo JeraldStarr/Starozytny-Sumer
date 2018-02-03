@@ -57,13 +57,13 @@ var data = {
             "extand" : false
         },
         {
-            "name" : "Gesztinanna",
-            "url" : "/podstrony/podstrony_poziom_1_bogowie/gesztinanna.html",
+            "name" : "Gesztinana",
+            "url" : "/podstrony/podstrony_poziom_1_bogowie/gesztinana.html",
             "extand" : false
         },
         {
-            "name" : "Ningisszida",
-            "url" : "/podstrony/podstrony_poziom_1_bogowie/ningisszida.html",
+            "name" : "Ningiszzida",
+            "url" : "/podstrony/podstrony_poziom_1_bogowie/ningiszzida.html",
             "extand" : false
         }
             ]
