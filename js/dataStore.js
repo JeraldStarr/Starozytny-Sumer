@@ -65,6 +65,11 @@ var data = {
             "name" : "Ningisszida",
             "url" : "/podstrony/podstrony_poziom_1_bogowie/ningisszida.html",
             "extand" : false
+        },
+        {
+            "name" : "Bau",
+            "url" : "/podstrony/podstrony_poziom_1_bogowie/bau.html",
+            "extand" : false
         }
             ]
     },
