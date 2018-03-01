@@ -560,10 +560,10 @@ var data = {
 
 
 var urls = [
+    "/podstrony/podstrony_poziom_1_bogowie/bau.html",
     "/podstrony/podstrony-historia/krolowie/szu-suen.html",
     "/podstrony/podstrony_poziom_1_podania/enki-ninhursag.html",
     "/podstrony/podstrony-historia/pochodzenie.html",
-    "/podstrony/podstrony-historia/imperium/panstwa-wasalne.html",
 
     "/podstrony/podstrony_poziom_1_bogowie/nanna.html",
     "/podstrony/podstrony-historia/poczatek-i-okres-wczesnodynastyczny.html",
@@ -575,10 +575,10 @@ var urls = [
 
 // articles' titles
 var titles = [
+    "Bau",
     "Szu-Suen",
     "Enki i Ninhursag",
     "Pochodzenie Sumerów",
-    "Wasale królestwa III dynastii z Ur",
 
     "Nanna",
     "Okres wczesnodynastyczny",
@@ -592,8 +592,8 @@ var titles = [
 var iconsURLs = [
     "/grafika/ikonka/ikonka_standardowa.gif",
     "/grafika/ikonka/ikonka_standardowa.gif",
+    "/grafika/ikonka/ikonka_standardowa.gif",
     "/grafika/ikonka/pochodzenie.jpg",
-    "/grafika/ikonka/urIIIwasalne.jpg",
 
     "/grafika/ikonka/nanna.jpg",
     "/grafika/ikonka/okres_wczesnodynastyczny.gif",
@@ -605,10 +605,10 @@ var iconsURLs = [
 
 // fragmenty tekstów z artykułów
 var texts = [
+    "Głównym miejscem kultu Bau była świątynia E-tarsirsir w Girsu. Oprócz tego posiadała swoją ...",
     "Sukcesy polityczne oraz zakresy tytularnego zwierzchnictwa potwiedza inskrypcja fundacyjna ...",
     "Idea boskiego raju, z którego wypływały słodkie życiodajne wody, użyźniające ziemię ...",
     "Istnieje wiele spekulacji na temat pochodzenia Sumerów, ponieważ pojawili się w Mezopotamii ...",
-    "Siła militarna nie była jednym ani nawet najważniejszym czynnikiem kształtującym wzajemne relacje ...",
 
     "Nanna był opiekuńczym bóstwem Ur, mianowany do tej funkcji przez Enlila. Tym samym wyznaczył ...",
     "Wobec niedostatku rzetelnych źródeł informacje pochodzące z różnych gatunków piśmiennictwa mogą ...",
@@ -621,10 +621,10 @@ var texts = [
 
 // daty dodania bądź aktualizacji artykułów
 var dates = [
+    "01.03.2018",
     "29.01.2018",
     "31.12.2017",
     "09.11.2017",
-    "17.10.2017",
 
     "23.10.2017",
     "03.09.2017",
@@ -638,8 +638,8 @@ var dates = [
 var alt = [
     "Pismo",
     "Pismo",
+    "Pismo",
     "Mapa możliwych wędrówek Sumerów",
-    "Państwa wasalne",
 
     "Głowa byka",
     "Sumeryjska lista królów",
