@@ -63,7 +63,7 @@ var data = {
         },
         {
             "name" : "Ningisszida",
-            "url" : "/podstrony/podstrony_poziom_1_bogowie/ningisszida.html",
+            "url" : "/podstrony/podstrony_poziom_1_bogowie/ningiszzida.html",
             "extand" : false
         },
         {
