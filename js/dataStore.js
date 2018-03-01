@@ -57,11 +57,12 @@ var data = {
             "extand" : false
         },
         {
-            "name" : "Gesztinanna",
-            "url" : "/podstrony/podstrony_poziom_1_bogowie/gesztinanna.html",
+            "name" : "Gesztinana",
+            "url" : "/podstrony/podstrony_poziom_1_bogowie/gesztinana.html",
             "extand" : false
         },
         {
+<<<<<<< HEAD
             "name" : "Ningisszida",
             "url" : "/podstrony/podstrony_poziom_1_bogowie/ningiszzida.html",
             "extand" : false
@@ -69,6 +70,10 @@ var data = {
         {
             "name" : "Bau",
             "url" : "/podstrony/podstrony_poziom_1_bogowie/bau.html",
+=======
+            "name" : "Ningiszzida",
+            "url" : "/podstrony/podstrony_poziom_1_bogowie/ningiszzida.html",
+>>>>>>> 57d994aa3a77ad763ae3e818b4f733105dde9000
             "extand" : false
         }
             ]
