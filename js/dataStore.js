@@ -564,11 +564,11 @@ var urls = [
     "/podstrony/podstrony-historia/krolowie/szu-suen.html",
     "/podstrony/podstrony_poziom_1_podania/enki-ninhursag.html",
     "/podstrony/podstrony-historia/pochodzenie.html",
-
+    
+    "/podstrony/historia.html",
     "/podstrony/podstrony_poziom_1_bogowie/nanna.html",
     "/podstrony/podstrony-historia/poczatek-i-okres-wczesnodynastyczny.html",
     "/podstrony/podstrony-historia/sumeryjski_renesans.html",
-    "/podstrony/podstrony-historia/krolowie/ur-namma.html",
 
     "/podstrony/bogowie.html"
 ];
@@ -579,11 +579,11 @@ var titles = [
     "Szu-Suen",
     "Enki i Ninhursag",
     "Pochodzenie Sumerów",
-
+    
+    "Historia Sumerów",
     "Nanna",
     "Okres wczesnodynastyczny",
     "Okres nowosumeryjski",
-    "Ur-Namma",
 
     "Sumeryjscy bogowie"
 ];
@@ -595,10 +595,10 @@ var iconsURLs = [
     "/grafika/ikonka/ikonka_standardowa.gif",
     "/grafika/ikonka/pochodzenie.jpg",
 
+    "/grafika/ikonka/historia.gif",
     "/grafika/ikonka/nanna.jpg",
     "/grafika/ikonka/okres_wczesnodynastyczny.gif",
     "/grafika/ikonka/okres-nowosumeryjski.jpg",
-    "/grafika/ikonka/ur-namma.gif",
 
     "/grafika/ikonka/bogowie.gif"
 ];
@@ -609,11 +609,12 @@ var texts = [
     "Sukcesy polityczne oraz zakresy tytularnego zwierzchnictwa potwiedza inskrypcja fundacyjna ...",
     "Idea boskiego raju, z którego wypływały słodkie życiodajne wody, użyźniające ziemię ...",
     "Istnieje wiele spekulacji na temat pochodzenia Sumerów, ponieważ pojawili się w Mezopotamii ...",
-
+    
+    "Najdawniejsze dzieje Sumerów nie są znane. Przypuszcza się, że ich cywilizacja zaczęła się w ...",
     "Nanna był opiekuńczym bóstwem Ur, mianowany do tej funkcji przez Enlila. Tym samym wyznaczył ...",
     "Wobec niedostatku rzetelnych źródeł informacje pochodzące z różnych gatunków piśmiennictwa mogą ...",
     "Ostatnim królem państwa nowosumeryjskiego był Ibbi-Suen, a ćwierćwiecze jego panowania ...",
-    "Ur-Namma mógł zatem zjednoczyć sumeryjskie ośrodki w dużej mierze stosując dyplomację ...",
+    
 
     "Nadrzędne siły miały charakter niepoznawalny, a ich źródło pozostawało niewyjaśnione ..."
 
@@ -626,10 +627,10 @@ var dates = [
     "31.12.2017",
     "09.11.2017",
 
+    "21.03.2018",
     "23.10.2017",
     "03.09.2017",
     "30.08.2017",
-    "31.07.2017",
 
     ""
 ];
@@ -640,10 +641,10 @@ var alt = [
     "Pismo",
     "Pismo",
     "Mapa możliwych wędrówek Sumerów",
-
+    
+    "Fragment sumeryjskiej listy królów",
     "Głowa byka",
     "Sumeryjska lista królów",
-    "Podobizna Ur-Nammy",
     "Podobizna Ur-Nammy",
 
     "Bogowie na odcisku pieczęci"
