@@ -4,6 +4,15 @@ body {
     color: #702525;
 }
 
+@font-face {
+    font-family: "Bookman Old Style fat italic";
+    src: url("/fonts/bookman-old-style/bookman old style fat italic.ttf"); 
+}
+
+@font-face {
+    font-family: "Bookman Old Style normal";
+    src: url("/fonts/bookman-old-style/BOOKOS.TTF")
+}
 
 /**
  * container for all elements on the website
@@ -16,7 +25,7 @@ body {
     margin: 0 auto;
     border: 1px solid lightgray;
     padding: 10px;
-    font-family: "Bookman Old Style", serif;
+    font-family: "Bookman Old Style normal", serif;
     box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, .2);
 }
 
@@ -29,6 +38,7 @@ body {
     width: 100%;
     height: 208px;
     background: url('/grafika/zdjecia/sumeryjska-swiatynia.jpg');
+    font-family: 'Bookman Old Style fat italic';
 }
 
 #NAGLOWEK img {
@@ -64,7 +74,7 @@ body {
 
 
 /**
- * displays navigation path
+ * bread crumbs
  */
 
 #lokalizacja {
