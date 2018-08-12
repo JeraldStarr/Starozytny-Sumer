@@ -1,4 +1,4 @@
-var performance = function() {
+var performance = function () {
     function showHeader() {
         var header = ["Starożytny Sumer", "Strona o cywilizacji Sumerów", "ok. 3750-2004 p.n.e."];
         for (i = 0; i < 3; i++) {
@@ -14,18 +14,43 @@ var performance = function() {
         div.className = "hamburger";
         header.insertBefore(div, span);
     }
+    
+    
+    /*
+     * Odpowiada za wyświetlanie lub ukrywanie menu w odpowiednich mementach
+     */
 
     function toggleMenu() {
         var hamburger = document.getElementsByClassName("hamburger")[0],
             menu = document.getElementById("MENU"),
             flag = !0;
-        hamburger.onclick = function() {
-            flag ? (menu.style.display = "block", flag = false) : (menu.style.display = "none", flag = true)
+        hamburger.onclick = function () {
+            console.log("Hamburger clicked");
+            flag ? (menu.style.display = "block", flag = false) : (menu.style.display = "none", flag = true);
+                console.log(`display: ${menu.style.display}`);
+                console.log(`flag: ${flag}`);
         }
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 768) {
+                menu.style.display = "block";
+                flag = false;
+            }
+            
+            else if (window.innerWidth <= 768 && menu.style.display == "block" ) {
+                    menu.style.display = "none";
+                    flag = true;
+            }
+            
+                console.log(window.innerWidth);
+                console.log(`display: ${menu.style.display}`);
+                console.log(`flag: ${flag}`);
+        }, false)
+
     }
 
     function displayBigImg() {
-        $(document).ready(function() {
+        $(document).ready(function () {
             $("figure a").fancybox({
                 overlayColor: "#877973",
                 overlayOpacity: .8,
@@ -40,7 +65,7 @@ var performance = function() {
     }
 
     function galleryService() {
-        $(document).ready(function() {
+        $(document).ready(function () {
             $("#galeria a").fancybox({
                 overlayColor: "#D12424",
                 overlayOpacity: ".9",
@@ -57,9 +82,9 @@ var performance = function() {
     }
 
     function displayAnotherWebsiteLabel() {
-        $(document).ready(function() {
+        $(document).ready(function () {
             $(".etykieta").hide();
-            $(".wyzwalacz").mouseover(function() {
+            $(".wyzwalacz").mouseover(function () {
                 var poziomaWspolrzedna,
                     pionowaWspolrzedna,
                     $this = $(this),
@@ -92,7 +117,7 @@ var performance = function() {
                     position: "absolute"
                 }).fadeIn(200);
             }); // koniec mouseover 
-            $(".wyzwalacz").mouseout(function() {
+            $(".wyzwalacz").mouseout(function () {
                 $(".etykieta").fadeOut(200);
             });
         }); // koniec ready 
@@ -116,7 +141,7 @@ var performance = function() {
         createExtendingMark: createExtendingMark
     }
 }();
-var menu = function() {
+var menu = function () {
     var menuIDElement = document.getElementById("MENU");
 
     function setMenu() {
@@ -258,7 +283,7 @@ var menu = function() {
         setMenu: setMenu
     }
 }();
-var aside = function() {
+var aside = function () {
     function displaySideBar() {
         function setWaterMark(url, alternativeText) {
             var imgElement = document.createElement("img");
@@ -286,7 +311,7 @@ var aside = function() {
         displaySideBar: displaySideBar
     }
 }();
-var google = function() {
+var google = function () {
     function displaySearch() {
         var e = "007341217864062862490:oev_bc2l-fs",
             t = document.createElement("script");
@@ -298,7 +323,7 @@ var google = function() {
         displaySearch: displaySearch
     }
 }();
-var news = function() {
+var news = function () {
     function displayBlocks(startsFrom, endsOn) {
         const TITLE = "Proszę kliknąć, aby przejść do artykułu";
         for (var i = startsFrom; i <= endsOn; i++) {
