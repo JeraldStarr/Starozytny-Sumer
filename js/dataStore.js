@@ -91,7 +91,7 @@ var data = {
             },
             {
                 "name" : "Potop",
-                "url" : "/podstrony/podstrony_poziom_1_podania/potop.html",
+                "url" : "/podstrony/podstrony_poziom_1_podania/mit_o_potopie.html",
                 "extand" : false
             },
             {
