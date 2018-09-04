@@ -6,7 +6,7 @@ body {
 
 @font-face {
     font-family: "Bookman Old Style fat italic";
-    src: url("/fonts/bookman-old-style/bookman old style fat italic.ttf"); 
+    src: url("/fonts/bookman-old-style/bookman old style fat italic.ttf");
 }
 
 @font-face {
@@ -17,7 +17,6 @@ body {
 /**
  * container for all elements on the website
  */
-
 #calosc {
     background-color: #FAFACD;
     position: center;
@@ -29,11 +28,9 @@ body {
     box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, .2);
 }
 
-
 /**
  * contains a banner
  */
-
 #NAGLOWEK {
     width: 100%;
     height: 208px;
@@ -72,11 +69,9 @@ body {
     clear: both;
 }
 
-
 /**
  * bread crumbs
  */
-
 #lokalizacja {
     width: 94.9%;
     padding: 25px;
@@ -91,7 +86,7 @@ body {
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
 }
 
-#MENU > span {
+#MENU>span {
     display: inline-block;
     float: left;
     margin: 110px 0 25px;
@@ -100,7 +95,7 @@ body {
     font-style: italic;
 }
 
-#MENU > span:first-of-type {
+#MENU>span:first-of-type {
     margin-top: 25%;
 }
 
@@ -108,9 +103,7 @@ body {
     position: relative;
 }
 
-
 /*============ 2-gi poziom menu ===========*/
-
 .podmenu {
     overflow: visible;
     padding: 0px;
@@ -127,19 +120,14 @@ ul.podmenu {
     z-index: 1;
 }
 
-
 li:hover .podmenu {
     display: block;
     position: absolute;
     left: 100%;
 }
 
-
 /*============ 2-gi poziom menu ===========*/
-
-
 /*============ 3-ci poziom menu ===========*/
-
 .blok {
     overflow: visible;
     margin-left: 10px;
@@ -155,7 +143,6 @@ ul.blok {
     z-index: 1;
 }
 
-
 .podmenu .gliptyka:hover .blok,
 .podmenu .krolowie:hover .blok,
 .podmenu .swiatynie:hover .blok,
@@ -166,12 +153,8 @@ ul.blok {
     left: 130px;
 }
 
-
 /*============ 3-ci poziom menu ===========*/
-
-
 /*============ 4-ty poziom menu ===========*/
-
 .odciski,
 .urIIIpodzial {
     width: 150px;
@@ -199,29 +182,27 @@ ul.urIIIpodzial {
     top: -1px;
 }
 
-
 /*============ 4-ty poziom menu ===========*/
-
 .sitemap
-/*zastosowanie do akapitu, gdzie znajduje się link do mapy strony, umiejscowia go po prawiej stronie bloku*/
 
-{
+/*zastosowanie do akapitu, gdzie znajduje się link do mapy strony, umiejscowia go po prawiej stronie bloku*/
+    {
     float: right;
     margin: 1px;
     margin-top: -80px;
 }
 
 .podkreslenie
-/*stosowany do znacznika hr - decyduje o grubości lini podkreślenia pod zacznikami h1 i h2*/
 
-{
+/*stosowany do znacznika hr - decyduje o grubości lini podkreślenia pod zacznikami h1 i h2*/
+    {
     border: 1px solid lightgray;
 }
 
 .gora_strony
-/*klasa stosowana do linku na końcu artykułu, który  ładuje stronę od nowa i wyświetla początek artykułu*/
 
-{
+/*klasa stosowana do linku na końcu artykułu, który  ładuje stronę od nowa i wyświetla początek artykułu*/
+    {
     clear: both;
     width: 90px;
     margin-left: auto;
@@ -244,16 +225,16 @@ ul.urIIIpodzial {
 }
 
 .linki_dol_strony
-/*klasa stosowana do formatowania linków, znajdujących się w stopce*/
 
-{
+/*klasa stosowana do formatowania linków, znajdujących się w stopce*/
+    {
     font-size: 11px;
 }
 
 .daty_zrodla
-/*stosowany do formatowania dat i żródeł na końcu każdego artykułu*/
 
-{
+/*stosowany do formatowania dat i żródeł na końcu każdego artykułu*/
+    {
     font-size: 12px;
     font-style: italic;
 }
@@ -413,9 +394,7 @@ a:active {
     border-style: solid;
 }
 
-
 /* === style dla cytatów ===*/
-
 .quote p {
     text-align: center;
     font-style: italic;
@@ -432,9 +411,7 @@ a:active {
     border-style: solid;
 }
 
-
 /* ======= koniec =======*/
-
 .download {
     /* blok, w którym umeiszczane są linki do pobierania tekstów w pdf. Blok połozony będzie po prawej stronie*/
     background-color: #fdfde6;
@@ -463,16 +440,16 @@ a:active {
 }
 
 ol.c
-/*punktor w kształcie kropki*/
 
-{
+/*punktor w kształcie kropki*/
+    {
     list-style-type: disc;
 }
 
 ol.none
-/*bez wypunktowania*/
 
-{
+/*bez wypunktowania*/
+    {
     list-style-type: none;
 }
 
@@ -481,9 +458,7 @@ ol.none
     width: 100%;
 }
 
-
 /*========== FORMATOWANIE MENU ==========*/
-
 ul,
 ul li {
     display: block;
@@ -508,12 +483,8 @@ ul li {
     background: #633816;
 }
 
-
 /*========== KONIEC FORMATOWANIA MENU ==========*/
-
-
 /*========== ODCHODZĄCE FORMATOWANIE OBRAZU==========*/
-
 .zdjecia {
     float: left;
     margin-right: 10px;
@@ -554,9 +525,9 @@ ul li {
 .zdjecia1 img:hover,
 .zdjecia2 img:hover,
 figure img:hover
-/*animacja, która powoduje efekt lekkego unienienia się obrazu po najechaniu na niegu myszą*/
 
-{
+/*animacja, która powoduje efekt lekkego unienienia się obrazu po najechaniu na niegu myszą*/
+    {
     -webkit-transform: translate(-5px, -5px);
     -moz-transform: translate(-5px, -5px);
     -o-transform: translate(-5px, -5px);
@@ -570,12 +541,8 @@ img {
     transition: all 0.3s ease-out;
 }
 
-
 /*========== KONIEC ODCHODZĄCEGO FORMATOWANIA OBRAZÓW ==========*/
-
-
 /* --- FORMATOWANIE DLA SKRZYDLATYCH DYSKÓW ---*/
-
 .dingir {
     padding: 9% 10%;
     margin-right: auto;
@@ -601,12 +568,8 @@ img {
     padding-bottom: 20%;
 }
 
-
 /* --- KONIEC FORMATOWANIA DLA SKRZYDLATYCH DYSKÓW ---*/
-
-
 /*========== FORMATOWANIE OBRAZÓW ==========*/
-
 figcaption {
     font-size: 12px;
     color: black;
@@ -676,17 +639,15 @@ figure img {
     float: right;
 }
 
-
 /*========== KONIEC FORMATOWANIA OBRAZÓW ==========*/
-
 ul a:active {
     color: #BA223B;
 }
 
 .wstep
-/*do wyróżnienia pierwszego akapitu*/
 
-{
+/*do wyróżnienia pierwszego akapitu*/
+    {
     margin-top: 25px;
     margin-bottom: 25px;
     font-size: 18px;
@@ -711,14 +672,11 @@ h2 {
     font-weight: normal;
 }
 
-
 .hamburger {
     display: none;
 }
 
-
 /* ============ responsive website ============ */
-
 @media (min-width: 480px) and (max-width: 768px) {
     #MENU {
         display: none;
@@ -734,67 +692,70 @@ h2 {
         font-size: 10px;
         width: 110px;
         top: 34px;
-
     }
 
     .blok {
-    overflow: visible;
-    margin-left: 10px;
-    font-size: 12px;
-    border: 1px solid lightgray;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
-    margin-top: -32px;
-    font-size: 10px;
-    width: 92px;
-    top: 30px;
-}
+        overflow: visible;
+        margin-left: 10px;
+        font-size: 12px;
+        border: 1px solid lightgray;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
+        margin-top: -32px;
+        font-size: 10px;
+        width: 92px;
+        top: 30px;
+    }
 
     .podmenu .gliptyka:hover .blok,
     .podmenu .krolowie:hover .blok,
     .podmenu .swiatynie:hover .blok,
     .podmenu .plaskorzezba:hover .blok,
     .podmenu .okrNowosum:hover .blok {
-    display: block;
-    position: absolute;
-    left: 100px;
-}
+        display: block;
+        position: absolute;
+        left: 100px;
+    }
 
-.odciski,
-.urIIIpodzial {
-    width: 100px;
-}
+    .odciski,
+    .urIIIpodzial {
+        width: 100px;
+    }
 
-ul.odciski,
-ul.urIIIpodzial {
-    display: none;
-    z-index: 1;
-}
+    ul.odciski,
+    ul.urIIIpodzial {
+        display: none;
+        z-index: 1;
+    }
 
-.podmenu .blok .pieczecie:hover .odciski,
-.podmenu .blok .urIII:hover .urIIIpodzial {
-    display: block;
-    position: absolute;
-    left: 90px;
-    bottom: -1px;
-}
+    .podmenu .blok .pieczecie:hover .odciski,
+    .podmenu .blok .urIII:hover .urIIIpodzial {
+        display: block;
+        position: absolute;
+        left: 90px;
+        bottom: -1px;
+    }
 
     #TRESC {
         width: 94%;
     }
+
     #NAGLOWEK span {
         float: none;
     }
+
     #NAGLOWEK span:first-of-type {
         font-size: 31px;
         text-decoration: underline;
         float: right;
     }
+
     #NAGLOWEK span:nth-of-type(2) {
         clear: both;
         float: right;
         font-size: 17px;
         padding-right: 7%;
     }
+
     #NAGLOWEK span:nth-of-type(3) {
         float: right;
         font-size: 12px;
@@ -802,26 +763,34 @@ ul.urIIIpodzial {
         padding-top: 5px;
         clear: both;
     }
+
     .dingir {
         width: 80%;
     }
 
-    .bocznyDingir, #MENU span, #MENU em, .co_nowego {
+    .bocznyDingir,
+    #MENU span,
+    #MENU em,
+    .co_nowego {
         display: none;
     }
 
     .szukaj {
         display: none;
     }
+
     #lokalizacja {
         padding: 1.5%;
     }
+
     .sitemap {
         margin-top: -67px;
     }
+
     .strukturaArtykulu {
         width: 40%;
     }
+
     .hamburger {
         display: block;
         width: 40px;
@@ -830,10 +799,11 @@ ul.urIIIpodzial {
         background: transparent;
         position: fixed;
         left: 5%;
-        top:10px;
+        top: 10px;
         opacity: .5;
         /*transition: .3s transform linear;*/
     }
+
     .hamburger::before,
     .hamburger::after {
         content: "";
@@ -843,32 +813,36 @@ ul.urIIIpodzial {
         border-top: 5px solid black;
         transform: translateY(10px);
     }
+
     .hamburger::after {
         transform: translateY(25px);
         transition: .3s transform linear;
         opacity: 1;
     }
+
     .hamburger:hover {
-       /* transform: rotate(45deg) translateY(5px);*/
+        /* transform: rotate(45deg) translateY(5px);*/
         /*border: none;*/
         opacity: 1;
     }
+
     .hamburger:hover::after {
-       /* transform: rotate(-90deg) translateX(-10px);*/
-       opacity: 1;
+        /* transform: rotate(-90deg) translateX(-10px);*/
+        opacity: 1;
     }
 
-        #form {
-            width: 80%!important;
-            margin: 35px 0 0!important;
-            text-align: left;
-        }
+    #form {
+        width: 80% !important;
+        margin: 35px 0 0 !important;
+        text-align: left;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 479px) {
     #calosc {
         padding: 2px;
     }
+
     #MENU {
         display: none;
         position: fixed;
@@ -909,62 +883,69 @@ ul.urIIIpodzial {
     }
 
     .odciski,
-.urIIIpodzial {
-    width: 83px;
-}
+    .urIIIpodzial {
+        width: 83px;
+    }
 
-ul.odciski,
-ul.urIIIpodzial {
-    display: none;
-    z-index: 1;
-}
+    ul.odciski,
+    ul.urIIIpodzial {
+        display: none;
+        z-index: 1;
+    }
 
-.podmenu .blok .pieczecie:hover .odciski,
-.podmenu .blok .urIII:hover .urIIIpodzial {
-    display: block;
-    position: absolute;
-    left: 83px;
-    bottom: -1px;
-}
-
+    .podmenu .blok .pieczecie:hover .odciski,
+    .podmenu .blok .urIII:hover .urIIIpodzial {
+        display: block;
+        position: absolute;
+        left: 83px;
+        bottom: -1px;
+    }
 
     #TRESC {
         width: 99%;
         padding-right: 1px;
     }
+
     #lokalizacja {
         padding: 0;
         margin-bottom: 30px;
         font-size: 13px;
     }
+
     .szukaj {
         display: none;
     }
+
     .sitemap {
         clear: both;
         float: none;
         line-height: 400%;
     }
+
     .wyszukiwarka {
         width: 80%;
     }
+
     #NAGLOWEK {
         background: url('/grafika/zdjecia/sumeryjska-swiatynia-maly.jpg') no-repeat;
         height: 120px;
         background-size: contain;
         margin-top: 0;
     }
+
     #NAGLOWEK span:first-of-type {
         font-size: 20px;
         text-decoration: underline;
         float: right;
     }
+
     #NAGLOWEK span:nth-of-type(2) {
         clear: both;
         float: right;
         font-size: 13px;
         padding-right: 3.5%;
     }
+
     #NAGLOWEK span:nth-of-type(3) {
         float: right;
         font-size: 12px;
@@ -972,6 +953,7 @@ ul.urIIIpodzial {
         padding-top: 0;
         clear: both;
     }
+
     .duzyObraz {
         /*formatowanie dla obrazu o szerokości około 500px*/
         border-bottom: 1px solid #7A4646;
@@ -979,6 +961,7 @@ ul.urIIIpodzial {
         padding: 5px 0;
         width: 100%;
     }
+
     .sporyObraz {
         /*formatowanie dla obrazu o szerokości około 400px*/
         border-bottom: 1px solid #7A4646;
@@ -986,6 +969,7 @@ ul.urIIIpodzial {
         padding: 5px 0;
         width: 100%;
     }
+
     .sredniObraz {
         /*formatowanie dla obrazu o szerokości około 300px*/
         border-bottom: 1px solid #7A4646;
@@ -993,6 +977,7 @@ ul.urIIIpodzial {
         padding: 5px 0;
         width: 100%;
     }
+
     .malyObraz {
         /*formatowanie dla obrazu o szerokości około 200px*/
         border-bottom: 1px solid #7A4646;
@@ -1000,6 +985,7 @@ ul.urIIIpodzial {
         padding: 5px 0;
         width: 55%;
     }
+
     .najmniejszyObraz {
         /*formatowanie dla obrazu o szerokości około 120px*/
         border-bottom: 1px solid #7A4646;
@@ -1007,44 +993,56 @@ ul.urIIIpodzial {
         padding: 5px 0;
         width: 50%;
     }
+
     .dingir {
         width: 80%;
     }
 
-    .bocznyDingir, #MENU span, #MENU em, .co_nowego {
+    .bocznyDingir,
+    #MENU span,
+    #MENU em,
+    .co_nowego {
         display: none;
     }
 
     .malyDingir {
         width: 50%;
     }
+
     .daty_zrodla {
         font-size: 9px;
     }
+
     h1 {
         letter-spacing: 0px;
         font-size: 25px;
     }
+
     h2 {
         font-size: 20px;
     }
+
     .notes_right {
         width: 91%;
         padding: 0 2%;
     }
+
     .notes_right ol,
     .notes ol,
     .notes_right ul,
     .notes ul {
         padding-left: 5%;
     }
+
     .notes {
         width: 91%;
     }
+
     .strukturaArtykulu {
         width: 100%;
     }
-     .hamburger {
+
+    .hamburger {
         display: block;
         width: 35px;
         height: 30px;
@@ -1052,10 +1050,11 @@ ul.urIIIpodzial {
         background: transparent;
         position: fixed;
         left: 5%;
-        top:10px;
+        top: 10px;
         opacity: .5;
         /*transition: .3s transform linear;*/
     }
+
     .hamburger::before,
     .hamburger::after {
         content: "";
@@ -1065,19 +1064,22 @@ ul.urIIIpodzial {
         border-top: 5px solid black;
         transform: translateY(8px);
     }
+
     .hamburger::after {
         transform: translateY(22px);
-       /* transition: .3s transform linear;*/
+        /* transition: .3s transform linear;*/
         opacity: 1;
     }
+
     .hamburger:hover {
-       /* transform: rotate(45deg) translateY(5px);*/
+        /* transform: rotate(45deg) translateY(5px);*/
         /*border: none;*/
         opacity: 1;
     }
+
     .hamburger:hover::after {
-       /* transform: rotate(-90deg) translateX(-10px);*/
-       opacity: 1;
+        /* transform: rotate(-90deg) translateX(-10px);*/
+        opacity: 1;
     }
 
     #MENU ul a:link,
@@ -1102,7 +1104,7 @@ ul.urIIIpodzial {
     }
 
     form div#wrong {
-        margin: 0 0 0 0!important;
+        margin: 0 0 0 0 !important;
     }
 
     input[type="text"] {
@@ -1110,25 +1112,28 @@ ul.urIIIpodzial {
     }
 
     input[type="text"]#subject {
-        margin-left:3%!important;
+        margin-left: 3% !important;
     }
 }
 
-    @media (max-width: 319px) {
-        #calosc {
-            display: none;
-        }
+@media (max-width: 319px) {
+    #calosc {
+        display: none;
+    }
+
+    body {
+        text-align: center;
+    }
 }
 
-
 /* =========== STYLE DRUKARKI ============== */
-
 @media print {
     #calosc {
         background: white;
         color: black !important;
         box-shadow: none;
     }
+
     #NAGLOWEK,
     .menu,
     #MENU,
@@ -1137,24 +1142,28 @@ ul.urIIIpodzial {
     .gora_strony {
         display: none;
     }
+
     #TRESC {
         width: 97%;
     }
+
     .wstep {
         color: black !important;
     }
+
     a {
         color: black !important;
         text-decoration: none;
     }
+
     figcaption {
         border-top: 1px solid black;
     }
+
     figure {
         border-top: 1px solid black !important;
         border-bottom: 1px solid black !important;
     }
 }
-
 
 /* ========KONIEC STYLE DRUKARKI=========== */
