@@ -14,8 +14,8 @@ var performance = function () {
         div.className = "hamburger";
         header.insertBefore(div, span);
     }
-    
-    
+
+
     /*
      * Odpowiada za wyświetlanie lub ukrywanie menu w odpowiednich mementach
      */
@@ -27,24 +27,22 @@ var performance = function () {
         hamburger.onclick = function () {
             console.log("Hamburger clicked");
             flag ? (menu.style.display = "block", flag = false) : (menu.style.display = "none", flag = true);
-                console.log(`display: ${menu.style.display}`);
-                console.log(`flag: ${flag}`);
+            console.log(`display: ${menu.style.display}`);
+            console.log(`flag: ${flag}`);
         }
 
         window.addEventListener("resize", function () {
             if (window.innerWidth > 768) {
                 menu.style.display = "block";
                 flag = false;
+            } else if (window.innerWidth <= 768 && menu.style.display == "block") {
+                menu.style.display = "none";
+                flag = true;
             }
-            
-            else if (window.innerWidth <= 768 && menu.style.display == "block" ) {
-                    menu.style.display = "none";
-                    flag = true;
-            }
-            
-                console.log(window.innerWidth);
-                console.log(`display: ${menu.style.display}`);
-                console.log(`flag: ${flag}`);
+
+            console.log(window.innerWidth);
+            console.log(`display: ${menu.style.display}`);
+            console.log(`flag: ${flag}`);
         }, false)
 
     }
@@ -131,6 +129,22 @@ var performance = function () {
             url.appendChild(divElement);
         }
     }
+
+    function under319px() {
+        let paragraphElement = document.createElement("p");
+
+        function showMessage() {
+            if (window.innerWidth < 319) {
+                paragraphElement.innerText = "Ta strona nie jest obsługiwana w rozdzielczości niższej niż 319 pikseli szerokości wyświetlacza. Proszę o użycie urządzenia z szerszym ekranem.";
+                document.body.appendChild(paragraphElement);
+            }
+        }
+        showMessage();
+
+        window.addEventListener("resize", function () {
+            showMessage();
+        }, false);
+    }
     return {
         showHeader: showHeader,
         insertHamburger: insertHamburger,
@@ -138,7 +152,8 @@ var performance = function () {
         displayBigImg: displayBigImg,
         galleryService: galleryService,
         displayAnotherWebsiteLabel: displayAnotherWebsiteLabel,
-        createExtendingMark: createExtendingMark
+        createExtendingMark: createExtendingMark,
+        under319px: under319px
     }
 }();
 var menu = function () {
