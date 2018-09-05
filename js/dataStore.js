@@ -382,6 +382,11 @@ var data = {
 				"extand" : false
 			},
 			{
+				"name" : "Ur-Ningirsu",
+				"url" : "/podstrony/podstrony-historia/krolowie/ur-ningirsu.html",
+				"extand" : false
+			},
+			{
 				"name" : "Dumuzi",
 				"url" : "/podstrony/podstrony_poziom_1_bogowie/dumuzi.html",
 				"extand" : false
@@ -560,10 +565,10 @@ var data = {
 
 
 var urls = [
+	"/podstrony/podstrony-historia/krolowie/ur-ningirsu.html",
     "/podstrony/podstrony_poziom_1_bogowie/bau.html",
     "/podstrony/podstrony-historia/krolowie/szu-suen.html",
     "/podstrony/podstrony_poziom_1_podania/enki-ninhursag.html",
-    "/podstrony/podstrony-historia/pochodzenie.html",
     
     "/podstrony/historia.html",
     "/podstrony/podstrony_poziom_1_bogowie/nanna.html",
@@ -575,10 +580,10 @@ var urls = [
 
 // articles' titles
 var titles = [
+	"Ur-Ningirsu",
     "Bau",
     "Szu-Suen",
     "Enki i Ninhursag",
-    "Pochodzenie Sumerów",
     
     "Historia Sumerów",
     "Nanna",
@@ -590,10 +595,10 @@ var titles = [
 
 // urls for articles' icons 
 var iconsURLs = [
+	"/grafika/ikonka/urNingirsu.jpg",
     "/grafika/ikonka/ikonka_standardowa.gif",
     "/grafika/ikonka/ikonka_standardowa.gif",
     "/grafika/ikonka/ikonka_standardowa.gif",
-    "/grafika/ikonka/pochodzenie.jpg",
 
     "/grafika/ikonka/historia.gif",
     "/grafika/ikonka/nanna.jpg",
@@ -605,10 +610,10 @@ var iconsURLs = [
 
 // fragmenty tekstów z artykułów
 var texts = [
+	"Ur-Namma i Ur-Ningirsu byli mniej więcej w tym samym wieku. Dorastając, byli młodymi... ",
     "Głównym miejscem kultu Bau była świątynia E-tarsirsir w Girsu. Oprócz tego posiadała swoją ...",
     "Sukcesy polityczne oraz zakresy tytularnego zwierzchnictwa potwiedza inskrypcja fundacyjna ...",
     "Idea boskiego raju, z którego wypływały słodkie życiodajne wody, użyźniające ziemię ...",
-    "Istnieje wiele spekulacji na temat pochodzenia Sumerów, ponieważ pojawili się w Mezopotamii ...",
     
     "Najdawniejsze dzieje Sumerów nie są znane. Przypuszcza się, że ich cywilizacja zaczęła się w ...",
     "Nanna był opiekuńczym bóstwem Ur, mianowany do tej funkcji przez Enlila. Tym samym wyznaczył ...",
@@ -622,10 +627,10 @@ var texts = [
 
 // daty dodania bądź aktualizacji artykułów
 var dates = [
+	"05.09.2018",
     "01.03.2018",
     "29.01.2018",
     "31.12.2017",
-    "09.11.2017",
 
     "21.03.2018",
     "23.10.2017",
@@ -637,10 +642,10 @@ var dates = [
 
 // treści do znacznika alt
 var alt = [
+	"Ur-Ningirsu",
     "Pismo",
     "Pismo",
     "Pismo",
-    "Mapa możliwych wędrówek Sumerów",
     
     "Fragment sumeryjskiej listy królów",
     "Głowa byka",
