@@ -484,46 +484,7 @@ ul li {
 }
 
 /*========== KONIEC FORMATOWANIA MENU ==========*/
-/*========== ODCHODZĄCE FORMATOWANIE OBRAZU==========*/
-.zdjecia {
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 5px;
-    border-bottom: 1px solid #7A4646;
-    border-top: 1px solid #7A4646;
-    padding: 5px 0;
-}
 
-.podpis {
-    /*klasa służąca do formotowania podpisu pod ilustracjami; docelowo ma być zastąpiona całkowicie przez znacznik figcaption*/
-    font-size: 12px;
-    color: black;
-    border-top: 1px solid #7A4646;
-    line-height: 108%;
-    padding: 3px 5px 0;
-}
-
-.zdjecia1 {
-    /*klasa przeznaczona do formatowania pozycji ilustracji, która ma zajmować całą szerokość artykułu; docelowo  ma zniknąć; być może będzie zastąpiona przez inną*/
-    float: none;
-    border-bottom: 1px solid #7A4646;
-    border-top: 1px solid #7A4646;
-    padding: 5px 0;
-    margin-bottom: 5px;
-}
-
-.zdjecia2 {
-    float: right;
-    margin-left: 10px;
-    margin-bottom: 5px;
-    border-bottom: 1px solid #7A4646;
-    border-top: 1px solid #7A4646;
-    padding: 5px 0;
-}
-
-.zdjecia img:hover,
-.zdjecia1 img:hover,
-.zdjecia2 img:hover,
 figure img:hover
 
 /*animacja, która powoduje efekt lekkego unienienia się obrazu po najechaniu na niegu myszą*/
