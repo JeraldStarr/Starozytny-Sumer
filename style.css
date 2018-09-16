@@ -641,9 +641,9 @@ h2 {
 @media (min-width: 480px) and (max-width: 768px) {
     #MENU {
         display: none;
-        position: fixed;
-        left: 5%;
-        top: 50px;
+        position: absolute;
+        left: 4%;
+        top: 63px;
         font-size: 10px;
         min-width: 92px;
         max-width: 110px;
@@ -756,21 +756,21 @@ h2 {
         display: block;
         width: 40px;
         height: 35px;
+        border: 0;
         border-top: 5px solid black;
         background: transparent;
-        position: fixed;
-        left: 5%;
-        top: 10px;
-        opacity: .5;
-        /*transition: .3s transform linear;*/
+        position: absolute;;
+        left: 4vw;
+        top: 4vw;
     }
 
     .hamburger::before,
     .hamburger::after {
         content: "";
-        position: fixed;
-        left: 5%;
-        width: 40px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
         border-top: 5px solid black;
         transform: translateY(10px);
     }
@@ -781,16 +781,11 @@ h2 {
         opacity: 1;
     }
 
-    .hamburger:hover {
-        /* transform: rotate(45deg) translateY(5px);*/
-        /*border: none;*/
-        opacity: 1;
+    .hamburger:focus {
+        transform: rotate(45deg);
+        color: red;
     }
 
-    .hamburger:hover::after {
-        /* transform: rotate(-90deg) translateX(-10px);*/
-        opacity: 1;
-    }
 
     #form {
         width: 80% !important;
@@ -806,9 +801,9 @@ h2 {
 
     #MENU {
         display: none;
-        position: fixed;
-        left: 1%;
-        top: 50px;
+        position: absolute;
+        left: 4%;
+        top: 63px;
         font-size: 9px;
         min-width: 83px;
         max-width: 100px;
@@ -1005,6 +1000,40 @@ h2 {
 
     .hamburger {
         display: block;
+        width: 40px;
+        height: 35px;
+        border: 0;
+        border-top: 5px solid black;
+        background: transparent;
+        position: absolute;;
+        left: 4vw;
+        top: 4vw;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border-top: 5px solid black;
+        transform: translateY(10px);
+    }
+
+    .hamburger::after {
+        transform: translateY(25px);
+        transition: .3s transform linear;
+        opacity: 1;
+    }
+
+    .hamburger:focus {
+        transform: rotate(45deg);
+        color: red;
+    }
+
+    /* .hamburger {
+        display: block;
         width: 35px;
         height: 30px;
         border-top: 5px solid black;
@@ -1013,7 +1042,6 @@ h2 {
         left: 5%;
         top: 10px;
         opacity: .5;
-        /*transition: .3s transform linear;*/
     }
 
     .hamburger::before,
@@ -1028,20 +1056,16 @@ h2 {
 
     .hamburger::after {
         transform: translateY(22px);
-        /* transition: .3s transform linear;*/
         opacity: 1;
     }
 
     .hamburger:hover {
-        /* transform: rotate(45deg) translateY(5px);*/
-        /*border: none;*/
         opacity: 1;
     }
 
     .hamburger:hover::after {
-        /* transform: rotate(-90deg) translateX(-10px);*/
         opacity: 1;
-    }
+    } */
 
     #MENU ul a:link,
     #MENU ul a:visited {

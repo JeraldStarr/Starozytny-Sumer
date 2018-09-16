@@ -17,7 +17,7 @@ var performance = function () {
 
 
     /*
-     * Odpowiada za wyświetlanie lub ukrywanie menu w odpowiednich mementach
+     * Odpowiada za wyświetlanie lub ukrywanie menu po kliknięciu/dotknięciu
      */
 
     function toggleMenu() {
