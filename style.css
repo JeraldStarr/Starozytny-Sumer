@@ -1,3 +1,7 @@
+/* variables */
+:root {
+    --submenuMobileColor: #4d2b10;
+}
 html,
 body {
     background-color: #F5F2F0;
@@ -640,19 +644,63 @@ h2 {
 /* ============ responsive website ============ */
 @media (min-width: 480px) and (max-width: 768px) {
     #MENU {
-        display: none;
         position: absolute;
-        left: 4%;
-        top: 63px;
-        font-size: 10px;
-        min-width: 92px;
-        max-width: 110px;
+        left: -80%;
+        top: 70px;
+        font-size: 30px;
+        width: 70vw;
+        transition: 0.3s linear;
+        box-shadow: none;   
     }
 
     #MENU .podmenu {
-        font-size: 10px;
+        font-size: 20px;
         width: 110px;
         top: 34px;
+    }
+
+    #MENU ul a:link, #MENU ul a:visited {
+        padding-left: 7%;
+        height: 38px;
+        line-height: 38px;
+    }
+
+
+    li:hover .podmenu {
+        display: none;
+    }
+
+    #display {
+        display: block;
+        min-width: 100%;
+        position: relative;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+
+    #MENU ul#display a:link, #MENU ul#display a:visited {
+        color: whitesmoke;
+    }
+
+    #MENU ul#display {
+        margin-bottom: 34px;
+    }
+
+    .menuArrow{
+        background: var(--submenuMobileColor);
+        height: 45px;
+        width: 45px;
+        text-align: center;
+        transform: translateY(-5px) rotate(90deg);
+    }
+
+    /* .upSideDown {
+        transform: translateY(-5px) rotate(-90deg);
+    } */
+
+    #MENU ul a:hover .menuArrow {
+        transform: translateY(-5px) rotate(90deg);
     }
 
     .blok {
@@ -762,6 +810,7 @@ h2 {
         position: absolute;;
         left: 4vw;
         top: 4vw;
+        transition: 0.3s transform linear;
     }
 
     .hamburger::before,
@@ -781,9 +830,13 @@ h2 {
         opacity: 1;
     }
 
-    .hamburger:focus {
-        transform: rotate(45deg);
-        color: red;
+    .hamburgerClicked {
+        transform: rotate(45deg) translateY(-5px);
+        border: none;
+    }
+
+    .hamburgerClicked::after {
+        transform: rotate(-90deg) translateX(-10px);
     }
 
 
@@ -800,13 +853,13 @@ h2 {
     }
 
     #MENU {
-        display: none;
         position: absolute;
-        left: 4%;
-        top: 63px;
-        font-size: 9px;
-        min-width: 83px;
-        max-width: 100px;
+        left: -80%;
+        top: 70px;
+        font-size: 25px;
+        width: 70vw;
+        transition: 0.3s linear;
+        box-shadow: none;   
     }
 
     #MENU .podmenu {
@@ -856,6 +909,46 @@ h2 {
         left: 83px;
         bottom: -1px;
     }
+
+     #display {
+        display: block;
+        min-width: 100%;
+        position: relative;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+
+    #MENU ul a:link, #MENU ul a:visited {
+        width: 70vw;
+    }
+
+
+    #MENU ul#display a:link, #MENU ul#display a:visited {
+        color: whitesmoke;
+    }
+
+    #MENU ul#display {
+        margin-bottom: 34px;
+    }
+
+    #MENU .podmenu {
+        font-size: 20px;
+    }
+
+    .menuArrow{
+        background: var(--submenuMobileColor);
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 40px;
+        transform: translateY(-5px) rotate(90deg);
+    }
+
+    .upSideDown {
+        transform: translateY(-5px) rotate(-90deg);
+    }
+
 
     #TRESC {
         width: 99%;
@@ -1008,6 +1101,7 @@ h2 {
         position: absolute;;
         left: 4vw;
         top: 4vw;
+        transition: 0.3s transform linear;
     }
 
     .hamburger::before,
@@ -1027,61 +1121,26 @@ h2 {
         opacity: 1;
     }
 
-    .hamburger:focus {
-        transform: rotate(45deg);
-        color: red;
+    .hamburgerClicked {
+        transform: rotate(45deg) translateY(-5px);
+        border: none;
     }
 
-    /* .hamburger {
-        display: block;
-        width: 35px;
-        height: 30px;
-        border-top: 5px solid black;
-        background: transparent;
-        position: fixed;
-        left: 5%;
-        top: 10px;
-        opacity: .5;
+    .hamburgerClicked::after {
+        transform: rotate(-90deg) translateX(-10px);
     }
-
-    .hamburger::before,
-    .hamburger::after {
-        content: "";
-        position: fixed;
-        left: 5%;
-        width: 35px;
-        border-top: 5px solid black;
-        transform: translateY(8px);
-    }
-
-    .hamburger::after {
-        transform: translateY(22px);
-        opacity: 1;
-    }
-
-    .hamburger:hover {
-        opacity: 1;
-    }
-
-    .hamburger:hover::after {
-        opacity: 1;
-    } */
 
     #MENU ul a:link,
     #MENU ul a:visited {
         display: block;
         text-decoration: none;
         background-color: #754219;
-        color: #FFFFCC;
         padding: 5px;
         border: 2px outset gray;
     }
 
-    #MENU ul a:hover {
-        border-style: inset;
-        padding: 7px 3px 3px 7px;
-        color: white;
-        background: #633816;
+    li:hover .podmenu {
+        display: none;
     }
 
     form#form {

@@ -17,34 +17,55 @@ var performance = function () {
 
 
     /*
-     * Odpowiada za wyświetlanie lub ukrywanie menu po kliknięciu/dotknięciu
+     * Odpowiada za wyświetlanie lub ukrywanie poza krawędzią viewportu menu po kliknięciu/dotknięciu
      */
 
     function toggleMenu() {
         var hamburger = document.getElementsByClassName("hamburger")[0],
-            menu = document.getElementById("MENU"),
-            flag = !0;
-        hamburger.onclick = function () {
-            console.log("Hamburger clicked");
-            flag ? (menu.style.display = "block", flag = false) : (menu.style.display = "none", flag = true);
-            console.log(`display: ${menu.style.display}`);
-            console.log(`flag: ${flag}`);
-        }
+            menu = document.getElementById("MENU");
+            hamburger.addEventListener("click", function() {
+                if (menu.style.left === "-80%" || menu.style.left === "") {
+                    menu.style.left = "4%";
+                    hamburger.classList.add("hamburgerClicked");
+                } else if (menu.style.left === "4%") {
+                    menu.style.left = "-80%";
+                    hamburger.classList.remove("hamburgerClicked");
+                }
+                
+            });
 
         window.addEventListener("resize", function () {
             if (window.innerWidth > 768) {
-                menu.style.display = "block";
-                flag = false;
-            } else if (window.innerWidth <= 768 && menu.style.display == "block") {
-                menu.style.display = "none";
-                flag = true;
+                menu.style.left = "-20px;"
+            } else if (window.innerWidth <= 768 && menu.style.left === "-20px") {
+                menu.style.left = "4%";
             }
-
-            console.log(window.innerWidth);
-            console.log(`display: ${menu.style.display}`);
-            console.log(`flag: ${flag}`);
         }, false)
 
+    }
+
+    // Transforms desktop menu in mobile menu
+
+    function transformToMobileMenu() {
+        
+        if (window.innerWidth < 768 ) {
+            const arrows = document.querySelectorAll(".menuArrow");
+            for (let i = 0; i < arrows.length; i++) {
+                arrows[i].addEventListener("click", function(event) {
+                    event.preventDefault();
+                    console.log(arrows[i].parentNode.parentNode.childNodes[1]);
+                    if (arrows[i].parentNode.parentNode.childNodes[1].id == "display") {
+                        arrows[i].parentNode.parentNode.childNodes[1].id = "";
+                        document.querySelectorAll(".menuArrow")[i].classList.remove("upSideDown");
+                    } else {
+                        arrows[i].parentNode.parentNode.childNodes[1].id = "display";
+                        document.querySelectorAll(".menuArrow")[i].classList.add("upSideDown");
+                    }
+                    
+                    
+                });
+            }
+        }
     }
 
     function displayBigImg() {
@@ -149,6 +170,7 @@ var performance = function () {
         showHeader: showHeader,
         insertHamburger: insertHamburger,
         toggleMenu: toggleMenu,
+        transformToMobileMenu: transformToMobileMenu,
         displayBigImg: displayBigImg,
         galleryService: galleryService,
         displayAnotherWebsiteLabel: displayAnotherWebsiteLabel,
