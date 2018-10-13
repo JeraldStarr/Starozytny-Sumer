@@ -91,7 +91,7 @@ body {
 }
 
 #MENU>span {
-    display: inline-block;
+    /* display: inline-block; */
     float: left;
     margin: 110px 0 25px;
     font-size: 19px;
@@ -270,7 +270,6 @@ ul.urIIIpodzial {
 
 .menuArrow {
     float: right;
-    display: inline-block;
 }
 
 a:link {
@@ -642,6 +641,7 @@ h2 {
 }
 
 /* ============ responsive website ============ */
+
 @media (min-width: 480px) and (max-width: 768px) {
     #MENU {
         position: absolute;
@@ -657,6 +657,7 @@ h2 {
         font-size: 20px;
         width: 110px;
         top: 34px;
+        background-color: var(--submenuMobileColor);
     }
 
     #MENU ul a:link, #MENU ul a:visited {
@@ -681,30 +682,24 @@ h2 {
 
     #MENU ul#display a:link, #MENU ul#display a:visited {
         color: whitesmoke;
+        background-color: var(--submenuMobileColor);
     }
 
-    #MENU ul#display {
+    /* #MENU ul#display {
         margin-bottom: 34px;
-    }
+    } */
 
     .menuArrow{
         background: var(--submenuMobileColor);
         height: 45px;
         width: 45px;
         text-align: center;
+        line-height: 45px;
         transform: translateY(-5px) rotate(90deg);
     }
 
-    /* .upSideDown {
-        transform: translateY(-5px) rotate(-90deg);
-    } */
-
-    #MENU ul a:hover .menuArrow {
-        transform: translateY(-5px) rotate(90deg);
-    }
-
-    .blok {
-        overflow: visible;
+    ul.blok {
+        display: none;
         margin-left: 10px;
         font-size: 12px;
         border: 1px solid lightgray;
@@ -713,6 +708,7 @@ h2 {
         font-size: 10px;
         width: 92px;
         top: 30px;
+        margin: 0;
     }
 
     .podmenu .gliptyka:hover .blok,
@@ -720,7 +716,7 @@ h2 {
     .podmenu .swiatynie:hover .blok,
     .podmenu .plaskorzezba:hover .blok,
     .podmenu .okrNowosum:hover .blok {
-        display: block;
+        display: none;
         position: absolute;
         left: 100px;
     }
@@ -742,6 +738,20 @@ h2 {
         position: absolute;
         left: 90px;
         bottom: -1px;
+    }
+
+    .podmenu a {
+        position: relative;
+    }
+
+    .podmenu .menuArrow {
+        position: absolute;
+        top: 6px;
+        right: 0px;
+        background-color: #8c4a14;
+        width: 46px;
+        height: 45px;
+        line-height: 46px;
     }
 
     #TRESC {
@@ -839,6 +849,9 @@ h2 {
         transform: rotate(-90deg) translateX(-10px);
     }
 
+    .upSideDown {
+        transform: translateY(-5px) rotate(-90deg);
+    }
 
     #form {
         width: 80% !important;
@@ -867,10 +880,11 @@ h2 {
         font-size: 9px;
         width: 83px;
         top: 34px;
+        background-color: var(--submenuMobileColor)
     }
 
-    .blok {
-        overflow: visible;
+    /* ul.blok {
+        display: none;
         margin-left: 10px;
         font-size: 12px;
         border: 1px solid lightgray;
@@ -879,16 +893,19 @@ h2 {
         font-size: 9px;
         width: 83px;
         top: 30px;
-    }
+        margin: 0;
+    } */
 
     .podmenu .gliptyka:hover .blok,
     .podmenu .krolowie:hover .blok,
     .podmenu .swiatynie:hover .blok,
     .podmenu .plaskorzezba:hover .blok,
     .podmenu .okrNowosum:hover .blok {
-        display: block;
-        position: absolute;
-        left: 73px;
+        display: none;
+        border: 1px solid lightgray;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
+        font-size: 9px;
+        margin: 0;
     }
 
     .odciski,
@@ -910,6 +927,20 @@ h2 {
         bottom: -1px;
     }
 
+    .podmenu a {
+        position: relative;
+    }
+
+    .podmenu .menuArrow {
+        position: absolute;
+        top: 6px;
+        right: 0px;
+        background-color: #8c4a14;
+        width: 33px;
+        height: 33px;
+        line-height: 33px;
+    }
+
      #display {
         display: block;
         min-width: 100%;
@@ -926,11 +957,12 @@ h2 {
 
     #MENU ul#display a:link, #MENU ul#display a:visited {
         color: whitesmoke;
+        background-color: var(--submenuMobileColor);
     }
 
-    #MENU ul#display {
+    /* #MENU ul#display {
         margin-bottom: 34px;
-    }
+    } */
 
     #MENU .podmenu {
         font-size: 20px;
@@ -943,10 +975,6 @@ h2 {
         text-align: center;
         line-height: 40px;
         transform: translateY(-5px) rotate(90deg);
-    }
-
-    .upSideDown {
-        transform: translateY(-5px) rotate(-90deg);
     }
 
 
@@ -1128,6 +1156,10 @@ h2 {
 
     .hamburgerClicked::after {
         transform: rotate(-90deg) translateX(-10px);
+    }
+
+    .upSideDown {
+        transform: translateY(-5px) rotate(-90deg);
     }
 
     #MENU ul a:link,
