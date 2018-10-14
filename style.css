@@ -685,7 +685,11 @@ h2 {
     }
 
     #MENU ul#display .blok a:link, #MENU ul#display .blok a:visited {
-        background-color: black;
+        background-color: #683b17;
+    }
+
+    #MENU ul#display .blok .urIII li a, #MENU ul#display .blok .pieczecie li a {
+        background-color: #844e23;
     }
 
     .menuArrow {
@@ -695,6 +699,8 @@ h2 {
         text-align: center;
         line-height: 45px;
         transform: translateY(-5px) rotate(90deg);
+        transition: .1s;
+        border-radius: 3px;
     }
 
     .podmenu .gliptyka .blok,
@@ -712,28 +718,30 @@ h2 {
     .podmenu .gliptyka:hover .blok,
     .podmenu .krolowie:hover .blok,
     .podmenu .swiatynie:hover .blok,
-    .podmenu .plaskorzezba:hover .blok,
+    .podmenu .plaskorzezba .blok,
     .podmenu .okrNowosum:hover .blok {
         display: none;
     }
 
-    .odciski,
-    .urIIIpodzial {
-        width: 100px;
-    }
-
-    ul.odciski,
-    ul.urIIIpodzial {
-        display: none;
-        z-index: 1;
-    }
-
     .podmenu .blok .pieczecie .odciski,
     .podmenu .blok .urIII .urIIIpodzial {
-        display: block;
+        display: none;
         position: absolute;
         left: 90px;
         bottom: -1px;
+    }
+
+    /* defuse hover from mobile view */
+    .podmenu .blok .pieczecie:hover .odciski,
+    .podmenu .blok .urIII:hover .urIIIpodzial {
+        display: none;
+    }
+
+    #MENU .urIII .menuArrow, #MENU .pieczecie .menuArrow {
+        position: absolute;
+        top: 5px;
+        right: -1px;
+        background-color: #8c4a14;
     }
 
     .podmenu a {
@@ -900,23 +908,25 @@ h2 {
         display: none;
     }
 
-    .odciski,
-    .urIIIpodzial {
-        width: 83px;
-    }
-
-    ul.odciski,
-    ul.urIIIpodzial {
+    .podmenu .blok .pieczecie .odciski,
+    .podmenu .blok .urIII .urIIIpodzial {
         display: none;
-        z-index: 1;
-    }
-
-    .podmenu .blok .pieczecie:hover .odciski,
-    .podmenu .blok .urIII:hover .urIIIpodzial {
-        display: block;
         position: absolute;
         left: 83px;
         bottom: -1px;
+    }
+
+    /* defuse hover from desktop view */
+    .podmenu .blok .pieczecie:hover .odciski,
+    .podmenu .blok .urIII:hover .urIIIpodzial {
+        display: none;
+    }
+
+    #MENU .urIII .menuArrow, #MENU .pieczecie .menuArrow {
+        position: absolute;
+        top: 5px;
+        right: -1px;
+        background-color: #8c4a14;
     }
 
     .podmenu a {
@@ -953,7 +963,11 @@ h2 {
     }
 
     #MENU ul#display .blok a:link, #MENU ul#display .blok a:visited {
-        background-color: black;
+        background-color: #683b17;
+    }
+
+    #MENU ul#display .blok .urIII li a, #MENU ul#display .blok .pieczecie li a {
+        background-color: #844e23;
     }
 
     .podmenu {
@@ -967,6 +981,8 @@ h2 {
         text-align: center;
         line-height: 40px;
         transform: translateY(-5px) rotate(90deg);
+        transition: .1s;
+        border-radius: 3px;
     }
 
 
