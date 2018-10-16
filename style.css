@@ -23,7 +23,6 @@ body {
  */
 #calosc {
     background-color: #FAFACD;
-    position: center;
     max-width: 980px;
     margin: 0 auto;
     border: 1px solid lightgray;
@@ -91,7 +90,7 @@ body {
 }
 
 #MENU>span {
-    display: inline-block;
+    /* display: inline-block; */
     float: left;
     margin: 110px 0 25px;
     font-size: 19px;
@@ -270,7 +269,6 @@ ul.urIIIpodzial {
 
 .menuArrow {
     float: right;
-    display: inline-block;
 }
 
 a:link {
@@ -642,7 +640,8 @@ h2 {
 }
 
 /* ============ responsive website ============ */
-@media (min-width: 480px) and (max-width: 768px) {
+
+@media (min-width: 480px) and (max-width: 770px) {
     #MENU {
         position: absolute;
         left: -80%;
@@ -654,9 +653,10 @@ h2 {
     }
 
     #MENU .podmenu {
-        font-size: 20px;
         width: 110px;
         top: 34px;
+        background-color: var(--submenuMobileColor);
+        margin-bottom: 34px;
     }
 
     #MENU ul a:link, #MENU ul a:visited {
@@ -681,38 +681,38 @@ h2 {
 
     #MENU ul#display a:link, #MENU ul#display a:visited {
         color: whitesmoke;
+        background-color: var(--submenuMobileColor);
     }
 
-    #MENU ul#display {
-        margin-bottom: 34px;
+    #MENU ul#display .blok a:link, #MENU ul#display .blok a:visited {
+        background-color: #683b17;
     }
 
-    .menuArrow{
+    #MENU ul#display .blok .urIII li a, #MENU ul#display .blok .pieczecie li a {
+        background-color: #844e23;
+    }
+
+    .menuArrow {
         background: var(--submenuMobileColor);
         height: 45px;
         width: 45px;
         text-align: center;
+        line-height: 45px;
         transform: translateY(-5px) rotate(90deg);
+        transition: .3s;
+        border-radius: 3px;
     }
 
-    /* .upSideDown {
-        transform: translateY(-5px) rotate(-90deg);
-    } */
-
-    #MENU ul a:hover .menuArrow {
-        transform: translateY(-5px) rotate(90deg);
-    }
-
-    .blok {
-        overflow: visible;
-        margin-left: 10px;
-        font-size: 12px;
+    .podmenu .gliptyka .blok,
+    .podmenu .krolowie .blok,
+    .podmenu .swiatynie .blok,
+    .podmenu .plaskorzezba .blok,
+    .podmenu .okrNowosum .blok {
+        display: none;
         border: 1px solid lightgray;
         box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
-        margin-top: -32px;
-        font-size: 10px;
-        width: 92px;
-        top: 30px;
+        font-size: 18px;
+        margin: 0;
     }
 
     .podmenu .gliptyka:hover .blok,
@@ -720,28 +720,63 @@ h2 {
     .podmenu .swiatynie:hover .blok,
     .podmenu .plaskorzezba:hover .blok,
     .podmenu .okrNowosum:hover .blok {
-        display: block;
-        position: absolute;
-        left: 100px;
-    }
-
-    .odciski,
-    .urIIIpodzial {
-        width: 100px;
-    }
-
-    ul.odciski,
-    ul.urIIIpodzial {
         display: none;
-        z-index: 1;
     }
 
-    .podmenu .blok .pieczecie:hover .odciski,
-    .podmenu .blok .urIII:hover .urIIIpodzial {
-        display: block;
+    .podmenu .gliptyka .blok,
+    .podmenu .krolowie .blok,
+    .podmenu .swiatynie .blok,
+    .podmenu .plaskorzezba .blok,
+    .podmenu .okrNowosum .blok {
+        display: none;
+        border: 1px solid lightgray;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .podmenu .gliptyka .blok,
+    .podmenu .krolowie .blok,
+    .podmenu .swiatynie .blok,
+    .podmenu .plaskorzezba .blok,
+    .podmenu .okrNowosum .blok {
+        display: none;
+    }
+
+    .podmenu .blok .pieczecie .odciski,
+    .podmenu .blok .urIII .urIIIpodzial {
+        display: none;
         position: absolute;
         left: 90px;
         bottom: -1px;
+    }
+
+    /* defuse hover from desktop view */
+    .podmenu .blok .pieczecie:hover .odciski,
+    .podmenu .blok .urIII:hover .urIIIpodzial {
+        display: none;
+    }
+
+    #MENU .urIII .menuArrow, #MENU .pieczecie .menuArrow {
+        position: absolute;
+        top: 5px;
+        right: -1px;
+        background-color: #8c4a14;
+    }
+
+    .podmenu a {
+        position: relative;
+        font-size: 27px;
+    }
+
+    .podmenu .menuArrow {
+        position: absolute;
+        top: 6px;
+        right: 0px;
+        background-color: #8c4a14;
+        width: 46px;
+        height: 45px;
+        line-height: 46px;
     }
 
     #TRESC {
@@ -839,6 +874,9 @@ h2 {
         transform: rotate(-90deg) translateX(-10px);
     }
 
+    .upSideDown {
+        transform: translateY(-5px) rotate(-90deg);
+    }
 
     #form {
         width: 80% !important;
@@ -862,23 +900,24 @@ h2 {
         box-shadow: none;   
     }
 
+
     #MENU .podmenu {
-        overflow: visible;
-        font-size: 9px;
         width: 83px;
         top: 34px;
+        background-color: var(--submenuMobileColor);
+        margin-bottom: 34px;
     }
 
-    .blok {
-        overflow: visible;
-        margin-left: 10px;
-        font-size: 12px;
+    .podmenu .gliptyka .blok,
+    .podmenu .krolowie .blok,
+    .podmenu .swiatynie .blok,
+    .podmenu .plaskorzezba .blok,
+    .podmenu .okrNowosum .blok {
+        display: none;
         border: 1px solid lightgray;
         box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
-        margin-top: -32px;
-        font-size: 9px;
-        width: 83px;
-        top: 30px;
+        font-size: 18px;
+        margin: 0;
     }
 
     .podmenu .gliptyka:hover .blok,
@@ -886,28 +925,42 @@ h2 {
     .podmenu .swiatynie:hover .blok,
     .podmenu .plaskorzezba:hover .blok,
     .podmenu .okrNowosum:hover .blok {
-        display: block;
-        position: absolute;
-        left: 73px;
-    }
-
-    .odciski,
-    .urIIIpodzial {
-        width: 83px;
-    }
-
-    ul.odciski,
-    ul.urIIIpodzial {
         display: none;
-        z-index: 1;
     }
 
-    .podmenu .blok .pieczecie:hover .odciski,
-    .podmenu .blok .urIII:hover .urIIIpodzial {
-        display: block;
+    .podmenu .blok .pieczecie .odciski,
+    .podmenu .blok .urIII .urIIIpodzial {
+        display: none;
         position: absolute;
         left: 83px;
         bottom: -1px;
+    }
+
+    /* defuse hover from desktop view */
+    .podmenu .blok .pieczecie:hover .odciski,
+    .podmenu .blok .urIII:hover .urIIIpodzial {
+        display: none;
+    }
+
+    #MENU .urIII .menuArrow, #MENU .pieczecie .menuArrow {
+        position: absolute;
+        top: 5px;
+        right: -1px;
+        background-color: #8c4a14;
+    }
+
+    .podmenu a {
+        position: relative;
+    }
+
+    .podmenu .menuArrow {
+        position: absolute;
+        top: 6px;
+        right: 0px;
+        background-color: #8c4a14;
+        width: 33px;
+        height: 33px;
+        line-height: 33px;
     }
 
      #display {
@@ -926,13 +979,18 @@ h2 {
 
     #MENU ul#display a:link, #MENU ul#display a:visited {
         color: whitesmoke;
+        background-color: var(--submenuMobileColor);
     }
 
-    #MENU ul#display {
-        margin-bottom: 34px;
+    #MENU ul#display .blok a:link, #MENU ul#display .blok a:visited {
+        background-color: #683b17;
     }
 
-    #MENU .podmenu {
+    #MENU ul#display .blok .urIII li a, #MENU ul#display .blok .pieczecie li a {
+        background-color: #844e23;
+    }
+
+    .podmenu {
         font-size: 20px;
     }
 
@@ -943,10 +1001,8 @@ h2 {
         text-align: center;
         line-height: 40px;
         transform: translateY(-5px) rotate(90deg);
-    }
-
-    .upSideDown {
-        transform: translateY(-5px) rotate(-90deg);
+        transition: .3s;
+        border-radius: 3px;
     }
 
 
@@ -1128,6 +1184,10 @@ h2 {
 
     .hamburgerClicked::after {
         transform: rotate(-90deg) translateX(-10px);
+    }
+
+    .upSideDown {
+        transform: translateY(-5px) rotate(-90deg);
     }
 
     #MENU ul a:link,

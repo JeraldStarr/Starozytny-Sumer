@@ -45,29 +45,29 @@ var performance = function () {
     }
 
     // Transforms desktop menu in mobile menu
-
-    function transformToMobileMenu() {
-        
-        if (window.innerWidth < 768 ) {
+    function transformToMobileMenu() {       
+        if (window.innerWidth < 770 ) {
             const arrows = document.querySelectorAll(".menuArrow");
             for (let i = 0; i < arrows.length; i++) {
+                // moving apart mobile menu in order to display submentu
+                console.log(arrows[i].parentNode);
                 arrows[i].addEventListener("click", function(event) {
                     event.preventDefault();
-                    console.log(arrows[i].parentNode.parentNode.childNodes[1]);
-                    if (arrows[i].parentNode.parentNode.childNodes[1].id == "display") {
-                        arrows[i].parentNode.parentNode.childNodes[1].id = "";
+                    console.log("clicked");
+                    const ulUnderArrow = arrows[i].parentNode.parentNode.childNodes[1];
+                    if (ulUnderArrow.id == "display") {
+                        ulUnderArrow.id = "";
                         document.querySelectorAll(".menuArrow")[i].classList.remove("upSideDown");
+                            console.log($(this));
                     } else {
-                        arrows[i].parentNode.parentNode.childNodes[1].id = "display";
+                        ulUnderArrow.id = "display";
                         document.querySelectorAll(".menuArrow")[i].classList.add("upSideDown");
                     }
-                    
-                    
                 });
-            }
-        }
-    }
-
+            };
+        };
+    };
+    // displays big version of the picture after clicking in small one
     function displayBigImg() {
         $(document).ready(function () {
             $("figure a").fancybox({
@@ -82,7 +82,7 @@ var performance = function () {
             })
         })
     }
-
+    // displays picture in gallery
     function galleryService() {
         $(document).ready(function () {
             $("#galeria a").fancybox({
@@ -99,7 +99,7 @@ var performance = function () {
             })
         })
     }
-
+    // displays label to inform user when he cliks in link he'll be passed to external website
     function displayAnotherWebsiteLabel() {
         $(document).ready(function () {
             $(".etykieta").hide();
@@ -141,7 +141,7 @@ var performance = function () {
             });
         }); // koniec ready 
     }
-
+    // creates ">" mark if menu element has submenu
     function createExtendingMark(url, i, level) {
         if (level) {
             let divElement = document.createElement("div");
