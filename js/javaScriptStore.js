@@ -65,9 +65,9 @@ var performance = function () {
                         arrows[i].classList.add("upSideDown");
                     }
                 });
-            }
-        }
-    }
+            };
+        };
+    };
     // displays big version of the picture after clicking in small one
     function displayBigImg() {
         $(document).ready(function () {
