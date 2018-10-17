@@ -48,6 +48,7 @@ var performance = function () {
     function transformToMobileMenu() {       
         if (window.innerWidth < 770 ) {
             const arrows = document.querySelectorAll(".mobileArrow");
+            console.log(arrows);
             for (let i = 0; i < arrows.length; i++) {
                 // moving apart mobile menu in order to display submentu
                 console.log(arrows[i].parentNode);
