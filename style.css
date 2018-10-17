@@ -639,12 +639,16 @@ h2 {
     display: none;
 }
 
+.mobileArrow {
+    display: none;
+}
+
 /* ============ responsive website ============ */
 
 @media (min-width: 480px) and (max-width: 770px) {
     #MENU {
         position: absolute;
-        left: -80%;
+        left: -120%;
         top: 70px;
         font-size: 30px;
         width: 70vw;
@@ -692,15 +696,28 @@ h2 {
         background-color: #844e23;
     }
 
+    .nav li {
+        position: relative;
+    }
+    .mobileArrow {
+          display: block;
+          position: absolute;
+          top: 0;
+          right: -62px;
+          color: white;
+          width: 4vw;
+          height: 2vw;
+          line-height: 2vw;
+          text-align: center;
+          padding: 2vw;
+          background-color: rgba(0,0,0,.4);
+          transition: .3s linear;
+          border-radius: 10px;
+          font-size: 40px;
+    }
+
     .menuArrow {
-        background: var(--submenuMobileColor);
-        height: 45px;
-        width: 45px;
-        text-align: center;
-        line-height: 45px;
-        transform: translateY(-5px) rotate(90deg);
-        transition: .3s;
-        border-radius: 3px;
+        display: none;
     }
 
     .podmenu .gliptyka .blok,
@@ -767,16 +784,6 @@ h2 {
     .podmenu a {
         position: relative;
         font-size: 27px;
-    }
-
-    .podmenu .menuArrow {
-        position: absolute;
-        top: 6px;
-        right: 0px;
-        background-color: #8c4a14;
-        width: 46px;
-        height: 45px;
-        line-height: 46px;
     }
 
     #TRESC {
@@ -892,7 +899,7 @@ h2 {
 
     #MENU {
         position: absolute;
-        left: -80%;
+        left: -120%;
         top: 70px;
         font-size: 25px;
         width: 70vw;
@@ -994,15 +1001,26 @@ h2 {
         font-size: 20px;
     }
 
-    .menuArrow{
-        background: var(--submenuMobileColor);
-        height: 40px;
-        width: 40px;
+    .nav li {
+        position: relative;
+    }
+    .mobileArrow {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -62px;
+        color: white;
+        width: 8vw;
+        height: auto;
         text-align: center;
-        line-height: 40px;
-        transform: translateY(-5px) rotate(90deg);
-        transition: .3s;
-        border-radius: 3px;
+        padding: 2vw;
+        background-color: rgba(0,0,0,.4);
+        transition: .3s linear;
+        border-radius: 10px;
+    }
+
+    .menuArrow{
+        display: none;
     }
 
 
@@ -1225,9 +1243,6 @@ h2 {
         display: none;
     }
 
-    body {
-        text-align: center;
-    }
 }
 
 /* =========== STYLE DRUKARKI ============== */

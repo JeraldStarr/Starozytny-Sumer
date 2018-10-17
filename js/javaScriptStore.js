@@ -24,11 +24,11 @@ var performance = function () {
         var hamburger = document.getElementsByClassName("hamburger")[0],
             menu = document.getElementById("MENU");
             hamburger.addEventListener("click", function() {
-                if (menu.style.left === "-80%" || menu.style.left === "") {
+                if (menu.style.left === "-120%" || menu.style.left === "") {
                     menu.style.left = "4%";
                     hamburger.classList.add("hamburgerClicked");
                 } else if (menu.style.left === "4%") {
-                    menu.style.left = "-80%";
+                    menu.style.left = "-120%";
                     hamburger.classList.remove("hamburgerClicked");
                 }
                 
@@ -47,21 +47,22 @@ var performance = function () {
     // Transforms desktop menu in mobile menu
     function transformToMobileMenu() {       
         if (window.innerWidth < 770 ) {
-            const arrows = document.querySelectorAll(".menuArrow");
+            const arrows = document.querySelectorAll(".mobileArrow");
+            console.log(arrows);
             for (let i = 0; i < arrows.length; i++) {
                 // moving apart mobile menu in order to display submentu
                 console.log(arrows[i].parentNode);
                 arrows[i].addEventListener("click", function(event) {
                     event.preventDefault();
                     console.log("clicked");
-                    const ulUnderArrow = arrows[i].parentNode.parentNode.childNodes[1];
+                    const ulUnderArrow = arrows[i].parentNode.childNodes[2];
                     if (ulUnderArrow.id == "display") {
                         ulUnderArrow.id = "";
-                        document.querySelectorAll(".menuArrow")[i].classList.remove("upSideDown");
+                        arrows[i].classList.remove("upSideDown");
                             console.log($(this));
                     } else {
                         ulUnderArrow.id = "display";
-                        document.querySelectorAll(".menuArrow")[i].classList.add("upSideDown");
+                        arrows[i].classList.add("upSideDown");
                     }
                 });
             }
@@ -151,6 +152,15 @@ var performance = function () {
         }
     }
 
+    function createMobileArrow(liElement, level) {
+        if(level) {
+            let mobileArrow = document.createElement("div");
+            mobileArrow.innerText = ">";
+            mobileArrow.classList.add("mobileArrow");
+            liElement.appendChild(mobileArrow);
+        }
+    }
+
     function under319px() {
         let paragraphElement = document.createElement("p");
 
@@ -175,6 +185,7 @@ var performance = function () {
         galleryService: galleryService,
         displayAnotherWebsiteLabel: displayAnotherWebsiteLabel,
         createExtendingMark: createExtendingMark,
+        createMobileArrow: createMobileArrow,
         under319px: under319px
     }
 }();
@@ -191,6 +202,7 @@ var menu = function () {
             setList(liElement, ulElement);
             setURL(urlElement, data.menu[i].url, liElement, data.menu[i].name);
             performance.createExtendingMark(urlElement, i, data.menu[i].extand);
+            performance.createMobileArrow(liElement, data.menu[i].extand);
             //second level declaration
             if (data.menu[i].extand) {
                 var ulElement1 = document.createElement("ul");
@@ -224,6 +236,7 @@ var menu = function () {
                     };
 
                     performance.createExtendingMark(urlElement1, j, data.menu[i].extandContent[j].extand);
+                    performance.createMobileArrow(liElement1, data.menu[i].extandContent[j].extand);
                     //third level declaration
                     if (data.menu[i].extandContent[j].extand) {
                         let ulElement2 = document.createElement("ul");
@@ -245,7 +258,7 @@ var menu = function () {
                             }
 
                             performance.createExtendingMark(urlElement2, j, data.menu[i].extandContent[j].extandContent[k].extand);
-
+                            performance.createMobileArrow(liElement2, data.menu[i].extandContent[j].extandContent[k].extand);
                             //fourth level declaration
                             if (data.menu[i].extandContent[j].extandContent[k].extand) {
                                 let ulElement3 = document.createElement("ul");
