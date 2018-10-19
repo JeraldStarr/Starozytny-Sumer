@@ -28,27 +28,6 @@
          }
       </style>
 
-      <script>
-         $(document).ready(function(){
-         $(".szczegoly").hide();
-         $("h3").toggle(
-         	function() {
-         		$(this).next(".szczegoly").fadeIn(1000);
-         		$(this).removeClass("open").addClass("close");
-         
-         	},
-         
-         	function() {
-         		$(this).next(".szczegoly").fadeOut(1000);
-         		$(this).removeClass("close").addClass("open");
-         
-         	}
-         
-         ); // koniec funkcji toggle
-         
-         }); // koniec funkcji ready
-         
-      </script>
    </head>
    <body>
       <div id="calosc">
@@ -207,6 +186,27 @@
       <script src="/js/add.js"></script>
       <!-- users' tracking by google analitics -->
       <script src="/js/tracking.js"></script>
+      <script>
+        // $(document).ready(function(){
+        $(".szczegoly").hide();
+        $("h3").toggle(
+            function() {
+                $(this).next(".szczegoly").fadeIn(1000);
+                $(this).removeClass("open").addClass("close");
+        
+            },
+        
+            function() {
+                $(this).next(".szczegoly").fadeOut(1000);
+                $(this).removeClass("close").addClass("open");
+        
+            }
+        
+        ); // koniec funkcji toggle
+        
+        // }); // koniec funkcji ready
+        
+     </script>
    </body>
 </html>
 
