@@ -44,24 +44,36 @@ var performance = function () {
 
     }
 
+    // clean third level menu
+    function thirdLevelMobileMenuCleaner() {
+        const ulBlokClass = document.querySelectorAll(".blok");
+        for(let i = 0; i < ulBlokClass.length; i++) {
+            if(ulBlokClass[i].id === "display") {
+                ulBlokClass[i].id = "";
+                ulBlokClass[i].parentNode.childNodes[0].childNodes[1].classList.remove("upSideDown")
+            };
+        }
+        console.log("third level menu cleaned");
+    }
+
     // Transforms desktop menu in mobile menu
     function transformToMobileMenu() {       
         if (window.innerWidth < 770 ) {
             const arrows = document.querySelectorAll(".menuArrow");
             for (let i = 0; i < arrows.length; i++) {
                 // moving apart mobile menu in order to display submentu
-                console.log(arrows[i].parentNode);
                 arrows[i].addEventListener("click", function(event) {
                     event.preventDefault();
                     console.log("clicked");
                     const ulUnderArrow = arrows[i].parentNode.parentNode.childNodes[1];
                     if (ulUnderArrow.id == "display") {
                         ulUnderArrow.id = "";
-                        document.querySelectorAll(".menuArrow")[i].classList.remove("upSideDown");
-                            console.log($(this));
+                        arrows[i].classList.remove("upSideDown");
+                        // cleans third level menu
+                        thirdLevelMobileMenuCleaner();
                     } else {
                         ulUnderArrow.id = "display";
-                        document.querySelectorAll(".menuArrow")[i].classList.add("upSideDown");
+                        arrows[i].classList.add("upSideDown");
                     }
                 });
             }
