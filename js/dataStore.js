@@ -479,7 +479,7 @@ var data = {
                     },
                     {
                         "name" : "Podatek bala",
-		                "url" : "podstrony/podstrony-historia/imperium/bala.html",
+		                "url" : "/podstrony/podstrony-historia/imperium/bala.html",
 		                "extand" : false
                     }
                     
