@@ -1,17 +1,7 @@
   /**
    * This .js file has been created by Lukasz Sitnik - the author of webside "Starożytny Sumer" - http://www.starozytnysumer.pl
    */
-
-
-
-
-
-
-
-
-
-
-  window.onload = function () {
+ window.onload = function () {
       performance.showHeader();
       performance.insertHamburger();
       performance.toggleMenu();
