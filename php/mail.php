@@ -9,12 +9,6 @@ $headers = 'From:' . $_POST['email'] . "\r\n" .
 <html lang="pl">
 <head>
 	<meta charset="utf-8" />
-	
-	<!-- CSS -->
-	<link rel="stylesheet" href="/style.css" type="text/css" />
-
-	<!-- CSS - wtyczka fancy box -->
-	<link href="/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet"/> 
 
 	
 	
@@ -27,20 +21,6 @@ $headers = 'From:' . $_POST['email'] . "\r\n" .
 	     <meta name="last-modified" content="2016-04-14"/>
 	     <link rel="Shortcut icon" href="/starozytny_sumer.ico" />
 
-	<!-- biblioteka jquery -->
-<script src="/js/jquery-1.6.3.min.js"></script>
-
-	<!-- wtyczka easing -->
-<script src="/js/jquery.easing.1.3.js"></script>
-
-	<!-- wtyczka fancybox -->
-<script src="/fancybox/jquery.fancybox-1.3.4.min.js"></script>
-
-	<!-- zewnętrzny javaScript -->
-<script src="/js/glowny.js"></script>
-
-	<!-- zewnętrzny dodatkowy javaScript -->
-<script src="/js/dodatkowy.js"></script>
 	
        
     <title>Kontakt</title>
@@ -112,148 +92,7 @@ $headers = 'From:' . $_POST['email'] . "\r\n" .
 	}
 	</style>
 	
-	<script>
-		window.onload = function() {
-			initForms();
-			pokazTytul();
-		}// funkcja anonimowa
-		
-		function initForms() {
-			for(i=0;i<document.forms.length;i++) {
-				document.forms[i].onsubmit = validForm;
-			}// for
-		}// initForms
-		
-		function validForm() {
-			var allGood = true;
-			var allTags = document.getElementsByTagName("*");
-			
-			for(i=0;i<allTags.length;i++) {
-				if(!validTag(allTags[i])) {
-					allGood = false;
-				}// if
-			}// for
-			
-			return allGood;
-			
-			function validTag(thisTag) {
-				var outClass = "";
-				var allClasses = thisTag.className.split(" ");
-				
-				for(j=0;j<allClasses.length;j++) {
-					outClass += validBasedOnClass(allClasses[j]) + " ";
-				}// for
-				
-				thisTag.className = outClass;
-				
-				if(outClass.indexOf("invalid") > -1) {
-				invalidLabel(thisTag.parentNode);
-					thisTag.focus();
-					if(thisTag.nodeName == "INPUT") {
-						thisTag.select();
-					}// if
-					return false;
-				}// if
-				return true;
-				
-				function validBasedOnClass(thisClass) {
-					var classBack = "";
-					
-					switch(thisClass) {
-						case "":
-						case "invalid":
-						break;
-						
-						case "required":
-						if(allGood && thisTag.value == "") {
-							classBack = "invalid ";
-						}// if
-						
-						classBack += thisClass;
-						break;
-						case "email":
-						if(allGood && !validEmail(thisTag.value)) {
-							classBack = "invalid ";
-						}// if
-						classBack += thisClass;
-						break;
-						case "textarea":
-						if(allGood && !validTextarea(thisTag.value)) {
-							classBack = "invalid ";
-						}// if
-						classBack += thisClass;
-						break;
-						case "subject":
-						if(allGood && !validSubject(thisTag.value)) {
-							classBack = "invalid ";
-						}// if
-						classBack += thisClass;
-						break;
-						default:
-						classBack += thisClass;
-					}// switch
-					return classBack;
-				}// validBasedOnClass
-				
-				function invalidLabel(parentTag) {
-					if(parentTag.nodeName == "LABEL") {
-						parentTag.className += "invalid";
-					}// if
-				}// invalidLabel
-				
-				function validEmail(email) {
-					var invalidChars = " /;:,";
-					
-					if(email == "") {
-					document.getElementById("wrong").innerHTML = "Pole jest puste";
-						return false;
-					}// if
-				      for(k=0;k<invalidChars.length;k++) {
-						var badChar = invalidChars.charAt(k);
-					if(email.indexOf(badChar) > -1) {
-						document.getElementById("wrong").innerHTML = "Podany adres e-mal zawiera niedozwolony znak: " + badChar;
-							return false;
-						}// if
-					}// for
-					
-					var atPos = email.indexOf("@",1);
-					if(atPos == -1) {
-					document.getElementById("wrong").innerHTML = "Podano nieprawidłowy e-mail";
-						return false;
-					}// if
-					if (email.indexOf("@",atPos+1) != -1) {
-					document.getElementById("wrong").innerHTML = "Podano nieprawidłowy e-mail";
-						return false;
-					}
-					var periodPos = email.indexOf(".",atPos);
-					if (periodPos == -1) {	
-					document.getElementById("wrong").innerHTML = "Podano nieprawidłowy e-mail";
-						return false;
-					}
-					if (periodPos+3 > email.length)	{
-					document.getElementById("wrong").innerHTML = "Podano nieprawidłowy e-mail";
-						return false;
-					}
-					return true;
-				}// validEmail
-				function validTextarea(text) {
-					if(text == "") {
-					document.getElementById("wrong").innerHTML = "Proszę podać treść";
-						return false;
-					}//if
-					return true;
-				}// validTextarea
-				function validSubject(topic) {
-					if(topic == "") {
-						document.getElementById("wrong").innerHTML = "Proszę podać temat wiadomości";
-						return false
-					}//if
-					return true;
-				}// validSubject
-			}// validTag
-		}// validForm
-		
-	</script>
+
 </head>
 
   <body>
@@ -316,26 +155,8 @@ e-mail: <strong>lukasz.sitnik@gmail.com</strong>
 
 	<div id="MENU">
 
-	<ul>
-
-	<li><a href="/">Strona Główna</a></li>
-	<li><a href="/podstrony/bogowie.html">Bogowie</a></li>
-	<li><a href="/podstrony/mitologia.html">Piśmiennictwo</a></li>
-	<li><a href="/podstrony/sztuka.html">Sztuka</a></li>
-	<li><a href="/podstrony/architektura.html">Architektura</a></li>
-	<li><a href="/podstrony/miasta.html">Miasta</a></li>
-	<li><a href="/podstrony/historia.html">Historia</a></li>
-	<li><a href="/podstrony/prawo.html">Prawo</a></li>
-	<li><a href="/podstrony/nauka.html">Nauka</a></li>
-	<li><a href="/podstrony/pismo.html">Pismo</a></li>
-	<li><a href="http://net3.pl/uslugi/ksiega.php?p_user=sitnikl1&p_nrksiegi=0" target="blank">Księga Gości</a></li>
-	<li><a href="/podstrony/linki.html">Linki</a></li>
-
-   </ul>
-
 	
 
-	 <script src="/js/boczne_bloki.js"></script>
 
 
 	</div>
@@ -353,7 +174,26 @@ e-mail: <strong>lukasz.sitnik@gmail.com</strong>
 
 
 	</div>
-    </div>
+	</div>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="/style.css" type="text/css" />
+	<!-- CSS - wtyczka fancy box -->
+	<link href="/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet">
+	<!-- jquery libery-->
+	<script src="/js/jquery-1.6.3.min.js"></script>
+	<!--  easing plugin -->
+	<script src="/js/jquery.easing.1.3.js"></script>
+	<!--  fancybox plugin -->
+	<script src="/fancybox/jquery.fancybox-1.3.4.min.js"></script>
+	<!-- the file stores a data -->
+	<script src="/js/dataStore.js"></script>  
+	<!-- module design pattern -->
+	<script src="/js/javaScriptStore.js"></script>
+	<!-- main js -->
+	<script src="/js/add.js"></script>
+	<!-- users tracking by google analitics -->
+	<script src="/js/tracking.js"></script>
 
 </body>
 
