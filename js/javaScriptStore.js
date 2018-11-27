@@ -392,7 +392,7 @@ var aside = function () {
                 } else if (i === 2 || i === 4 || i === 6) {
                     let from = getFromVariable(i);
                     let to = getToVariable(i);
-                    news.displayBlocks(from, to);
+                    news.displayBlock(from, to);
                 } else {
                     let header = getHeader(i);
                     setHeader(header);
@@ -419,7 +419,7 @@ var google = function () {
     }
 }();
 var news = function () {
-    function displayBlocks(startsFrom, endsOn) {
+    function displayBlock(startsFrom, endsOn) {
         const TITLE = "Proszę kliknąć, aby przejść do artykułu";
         for (var i = startsFrom; i <= endsOn; i++) {
             var emElement = document.createElement("em");
@@ -455,6 +455,6 @@ var news = function () {
         }
     }
     return {
-        displayBlocks: displayBlocks
+        displayBlock: displayBlock
     }
 }();
