@@ -333,28 +333,74 @@ var menu = function () {
     }
 }();
 var aside = function () {
-    function displaySideBar() {
-        function setWaterMark(url, alternativeText) {
-            var imgElement = document.createElement("img");
+    const displaySideBar = () => {
+        const setWaterMark = (url, alternativeText) => {
+            const imgElement = document.createElement("img");
             imgElement.setAttribute("class", "bocznyDingir");
             imgElement.setAttribute("src", url);
             imgElement.setAttribute("alt", alternativeText);
             menu.menuIDElement.appendChild(imgElement)
         }
 
-        function setInformationBlock(text) {
-            var spanElement = document.createElement("span");
+        const setHeader = text => {
+            const spanElement = document.createElement("span");
             menu.menuIDElement.appendChild(spanElement);
             spanElement.innerHTML = text;
         }
-        setWaterMark("/grafika/zdjecia/dingir/dingir_przezroczysty_wersja2.gif", "Skrzydlaty dysk symbolizował sumeryjskich bogów");
-        setInformationBlock("Co nowego");
-        news.displayBlocks(0, 3);
-        setInformationBlock("Ostatnio aktualizowane");
-        news.displayBlocks(4, 7);
-        setInformationBlock("Najczęściej odwiedzane");
-        news.displayBlocks(8, 8);
-        setWaterMark("/grafika/zdjecia/dingir/dingir_przezroczysty_wersja2.gif", "Skrzydlaty dysk symbolizował sumeryjskich bogów")
+
+        const showTiles = () => {
+            const asideDingir = "/grafika/zdjecia/dingir/dingir_przezroczysty_wersja2.gif";
+            const asideDingirAltText = "Skrzydlaty dysk symbolizował sumeryjskich bogów";
+            const numberOfTiles = 8;
+
+            const getFromVariable = index => {
+                switch(index) {
+                    case 2: return 0;
+                    break;
+                    case 4: return 4;
+                    break;
+                    case 6: return 8;
+                    break;
+                }
+            }
+
+            const getToVariable = index => {
+                switch(index) {
+                    case 2: return 3;
+                    break;
+                    case 4: return 7;
+                    break;
+                    case 6: return 8;
+                    break;
+                }
+            }
+
+            const getHeader = index => {
+                switch(index) {
+                    case 1: return "Co nowego";
+                    break;
+                    case 3: return "Ostatnio aktualizowane";
+                    break;
+                    case 5: return "Najczęściej odwiedzane";
+                    break;
+                }
+            }
+
+            for (let i = 0; i < numberOfTiles; i++) {
+                if (i === 0 || i === 7) {
+                    setWaterMark(asideDingir, asideDingirAltText);
+                } else if (i === 2 || i === 4 || i === 6) {
+                    let from = getFromVariable(i);
+                    let to = getToVariable(i);
+                    news.displayBlocks(from, to);
+                } else {
+                    let header = getHeader(i);
+                    setHeader(header);
+                }
+            }
+        }
+
+        showTiles();
     }
     return {
         displaySideBar: displaySideBar
