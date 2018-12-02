@@ -421,37 +421,57 @@ var google = function () {
 var news = function () {
     function displayBlock(startsFrom, endsOn) {
         const TITLE = "Proszę kliknąć, aby przejść do artykułu";
-        for (var i = startsFrom; i <= endsOn; i++) {
-            var emElement = document.createElement("em");
-            emElement.innerHTML = dates[i];
-            menu.menuIDElement.appendChild(emElement);
-            var divElement = document.createElement("div");
-            divElement.setAttribute("class", "co_nowego");
-            menu.menuIDElement.appendChild(divElement);
-            var link = document.createElement("a");
-            var aElementFirst = link;
-            aElementFirst.setAttribute("href", urls[i]);
-            aElementFirst.setAttribute("title", TITLE);
-            aElementFirst.innerHTML = titles[i];
-            var aElementSecond = link;
-            aElementSecond.setAttribute("href", urls[i]);
-            aElementSecond.setAttribute("title", TITLE);
-            divElement.appendChild(aElementFirst);
-            divElement.appendChild(aElementSecond);
-            var imgElement = document.createElement("img");
-            imgElement.setAttribute("style", "height: 70; width: 167");
-            imgElement.setAttribute("src", iconsURLs[i]);
-            imgElement.setAttribute("alt", alt[i]);
-            aElementSecond.appendChild(imgElement);
-            var divElement2 = document.createElement("div");
-            divElement2.setAttribute("class", "czcionka_co_nowego");
-            divElement2.innerHTML = texts[i];
-            divElement.appendChild(divElement2);
-            var aElementThird = document.createElement("a");
-            aElementThird.setAttribute("href", urls[i]);
-            aElementThird.setAttribute("title", TITLE);
-            aElementThird.innerHTML = "więcej>>";
-            divElement2.appendChild(aElementThird);
+        for (let i = startsFrom; i <= endsOn; i++) {
+            const date = document.createElement("em");
+            const articleTile = document.createElement("div");
+            const shortDescription = document.createElement("div");
+            const link = document.createElement("a");
+            const articleTitle = link;
+            const imgIconLink = link;
+            const clickMoreLink = document.createElement("a");
+            const icon = document.createElement("img");
+
+            const buildLink = aHTML => {           
+                aHTML.setAttribute("href", urls[i]);
+                aHTML.setAttribute("title", TITLE);
+                if (articleTitle) {
+                    aHTML.textContent = titles[i];
+                };
+            };
+
+            const buildIcon = htmlElement => {
+                htmlElement.setAttribute("style", "height: 70; width: 167");
+                htmlElement.setAttribute("src", iconsURLs[i]);
+                htmlElement.setAttribute("alt", alt[i]);
+            }
+
+            const buildShortDescription = textContainer => {
+                textContainer.setAttribute("class", "czcionka_co_nowego");
+                textContainer.textContent = texts[i];
+                return textContainer;
+            }
+
+            const buildArticleTiles = element => {
+                element.setAttribute("class", "co_nowego");
+                element.appendChild(articleTitle);
+                element.appendChild(imgIconLink);
+                element.appendChild(buildShortDescription(shortDescription));
+                return element;
+            }
+
+            date.innerText = dates[i];
+            menu.menuIDElement.appendChild(date);
+            menu.menuIDElement.appendChild(buildArticleTiles(articleTile));
+            
+            buildLink(articleTitle);
+            buildLink(imgIconLink);
+            buildIcon(icon);
+            imgIconLink.appendChild(icon);
+
+            buildLink(clickMoreLink);
+            clickMoreLink.textContent = "więcej>>";
+
+            shortDescription.appendChild(clickMoreLink);
         }
     }
     return {
