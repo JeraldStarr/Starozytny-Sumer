@@ -459,16 +459,13 @@ var news = function () {
                 return element;
             }
 
-            // article tiles are built and added as a childer to parent element
             date.innerText = dates[i];
             menu.menuIDElement.appendChild(date);
             menu.menuIDElement.appendChild(buildArticleTiles(articleTile));
             
-            
             buildLink(articleTitle);
             buildLink(imgIconLink);
             buildIcon(icon);
-
             imgIconLink.appendChild(icon);
 
             buildLink(clickMoreLink);
