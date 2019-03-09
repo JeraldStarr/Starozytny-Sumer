@@ -377,6 +377,11 @@ var data = {
 				"extand" : false
 			},
 			{
+				"name" : "Urukagina",
+				"url" : "/podstrony/podstrony-historia/krolowie/urukagina.html",
+				"extand" : false
+			},
+			{
 				"name" : "Gudea",
 				"url" : "/podstrony/podstrony-historia/krolowie/gudea.html",
 				"extand" : false
@@ -384,11 +389,6 @@ var data = {
 			{
 				"name" : "Ur-Ningirsu",
 				"url" : "/podstrony/podstrony-historia/krolowie/ur-ningirsu.html",
-				"extand" : false
-			},
-			{
-				"name" : "Dumuzi",
-				"url" : "/podstrony/podstrony_poziom_1_bogowie/dumuzi.html",
 				"extand" : false
 			},
 			{
@@ -565,10 +565,10 @@ var data = {
 
 
 var urls = [
+	"/podstrony/podstrony-historia/krolowie/urukagina.html",
 	"/podstrony/podstrony-historia/krolowie/ur-ningirsu.html",
     "/podstrony/podstrony_poziom_1_bogowie/bau.html",
     "/podstrony/podstrony-historia/krolowie/szu-suen.html",
-    "/podstrony/podstrony_poziom_1_podania/enki-ninhursag.html",
     
     "/podstrony/historia.html",
     "/podstrony/podstrony_poziom_1_bogowie/nanna.html",
@@ -580,10 +580,10 @@ var urls = [
 
 // articles' titles
 var titles = [
+	"Urukagina",
 	"Ur-Ningirsu",
     "Bau",
     "Szu-Suen",
-    "Enki i Ninhursag",
     
     "Historia Sumerów",
     "Nanna",
@@ -595,8 +595,8 @@ var titles = [
 
 // urls for articles' icons 
 var iconsURLs = [
+	"/grafika/ikonka/urukagina.jpg",
 	"/grafika/ikonka/urNingirsu.jpg",
-    "/grafika/ikonka/ikonka_standardowa.gif",
     "/grafika/ikonka/ikonka_standardowa.gif",
     "/grafika/ikonka/ikonka_standardowa.gif",
 
@@ -610,10 +610,10 @@ var iconsURLs = [
 
 // fragmenty tekstów z artykułów
 var texts = [
+	"Urukagina na swoich stożkach fundacyjnych opisał w jakich warunkach żyli zwykli ...",
 	"Ur-Namma i Ur-Ningirsu byli mniej więcej w tym samym wieku. Dorastając, byli młodymi... ",
     "Głównym miejscem kultu Bau była świątynia E-tarsirsir w Girsu. Oprócz tego posiadała swoją ...",
     "Sukcesy polityczne oraz zakresy tytularnego zwierzchnictwa potwiedza inskrypcja fundacyjna ...",
-    "Idea boskiego raju, z którego wypływały słodkie życiodajne wody, użyźniające ziemię ...",
     
     "Najdawniejsze dzieje Sumerów nie są znane. Przypuszcza się, że ich cywilizacja zaczęła się w ...",
     "Nanna był opiekuńczym bóstwem Ur, mianowany do tej funkcji przez Enlila. Tym samym wyznaczył ...",
@@ -627,10 +627,10 @@ var texts = [
 
 // daty dodania bądź aktualizacji artykułów
 var dates = [
+	"18.03.2019",
 	"05.09.2018",
     "01.03.2018",
     "29.01.2018",
-    "31.12.2017",
 
     "21.03.2018",
     "23.10.2017",
@@ -642,8 +642,8 @@ var dates = [
 
 // treści do znacznika alt
 var alt = [
+	"Gliniana tabliczka Urukaginy",
 	"Ur-Ningirsu",
-    "Pismo",
     "Pismo",
     "Pismo",
     
