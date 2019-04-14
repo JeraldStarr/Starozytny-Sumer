@@ -569,11 +569,11 @@ var urls = [
 	"/podstrony/podstrony-historia/krolowie/ur-ningirsu.html",
     "/podstrony/podstrony_poziom_1_bogowie/bau.html",
     "/podstrony/podstrony-historia/krolowie/szu-suen.html",
-    
+	
+	"/podstrony/nauka/astronomia.html",
     "/podstrony/historia.html",
     "/podstrony/podstrony_poziom_1_bogowie/nanna.html",
     "/podstrony/podstrony-historia/poczatek-i-okres-wczesnodynastyczny.html",
-    "/podstrony/podstrony-historia/sumeryjski_renesans.html",
 
     "/podstrony/bogowie.html"
 ];
@@ -584,11 +584,11 @@ var titles = [
 	"Ur-Ningirsu",
     "Bau",
     "Szu-Suen",
-    
+	
+	"Astronomia",
     "Historia Sumerów",
     "Nanna",
     "Okres wczesnodynastyczny",
-    "Okres nowosumeryjski",
 
     "Sumeryjscy bogowie"
 ];
@@ -600,10 +600,10 @@ var iconsURLs = [
     "/grafika/ikonka/ikonka_standardowa.gif",
     "/grafika/ikonka/ikonka_standardowa.gif",
 
-    "/grafika/ikonka/historia.gif",
+	"/grafika/ikonka/astronomia.gif",
+	"/grafika/ikonka/historia.gif",
     "/grafika/ikonka/nanna.jpg",
     "/grafika/ikonka/okres_wczesnodynastyczny.gif",
-    "/grafika/ikonka/okres-nowosumeryjski.jpg",
 
     "/grafika/ikonka/bogowie.gif"
 ];
@@ -614,12 +614,11 @@ var texts = [
 	"Ur-Namma i Ur-Ningirsu byli mniej więcej w tym samym wieku. Dorastając, byli młodymi... ",
     "Głównym miejscem kultu Bau była świątynia E-tarsirsir w Girsu. Oprócz tego posiadała swoją ...",
     "Sukcesy polityczne oraz zakresy tytularnego zwierzchnictwa potwiedza inskrypcja fundacyjna ...",
-    
+	
+	"Najstarsze świadectwa wiedzy astronomicznej Sumerów pochodzą z Uruku i datowane są na schyłek ...",
     "Najdawniejsze dzieje Sumerów nie są znane. Przypuszcza się, że ich cywilizacja zaczęła się w ...",
     "Nanna był opiekuńczym bóstwem Ur, mianowany do tej funkcji przez Enlila. Tym samym wyznaczył ...",
     "Wobec niedostatku rzetelnych źródeł informacje pochodzące z różnych gatunków piśmiennictwa mogą ...",
-    "Ostatnim królem państwa nowosumeryjskiego był Ibbi-Suen, a ćwierćwiecze jego panowania ...",
-    
 
     "Nadrzędne siły miały charakter niepoznawalny, a ich źródło pozostawało niewyjaśnione ..."
 
@@ -632,10 +631,10 @@ var dates = [
     "01.03.2018",
     "29.01.2018",
 
-    "21.03.2018",
+	"14.04.2019",
+	"21.03.2018",
     "23.10.2017",
     "03.09.2017",
-    "30.08.2017",
 
     ""
 ];
@@ -647,10 +646,10 @@ var alt = [
     "Pismo",
     "Pismo",
     
-    "Fragment sumeryjskiej listy królów",
+	"Gliniana tabliczka przedstawiająca sumeryjskich bogów astralnych",
+	"Fragment sumeryjskiej listy królów",
     "Głowa byka",
     "Sumeryjska lista królów",
-    "Podobizna Ur-Nammy",
 
     "Bogowie na odcisku pieczęci"
 ];
