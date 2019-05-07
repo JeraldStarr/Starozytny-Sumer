@@ -17,7 +17,8 @@ var performance = function () {
 
 
     /*
-     * Odpowiada za wyświetlanie lub ukrywanie poza krawędzią viewportu menu po kliknięciu/dotknięciu
+     * Odpowiada za wyświetlanie lub ukrywanie poza krawędzią viewportu 
+       menu po kliknięciu/dotknięciu
      */
 
     function toggleMenu() {
@@ -64,7 +65,6 @@ var performance = function () {
                 // moving apart mobile menu in order to display submentu
                 arrows[i].addEventListener("click", function(event) {
                     event.preventDefault();
-                    console.log("clicked");
                     const ulUnderArrow = arrows[i].parentNode.parentNode.childNodes[1];
                     if (ulUnderArrow.id == "display") {
                         ulUnderArrow.id = "";
@@ -476,5 +476,18 @@ var news = function () {
     }
     return {
         displayBlock: displayBlock
+    }
+}();
+var scrolls = function () {
+    function goToSection() {
+        $(".strukturaArtykulu a").click(function() {
+            const section = `[data-section=${$(this).attr("class")}]`;
+                $("body, html").animate({
+                scrollTop: $(section).offset().top
+                })
+            })
+    }
+    return {
+        goToSection: goToSection
     }
 }();
