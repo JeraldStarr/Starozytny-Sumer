@@ -13,6 +13,8 @@
       <meta name="creation-date" content="2010-12-13">
       <meta name="last-modified" content="2015-05-28"/>
       <link rel="icon" href="/starozytny_sumer.ico" />
+      <!-- CSS -->
+      <link rel="stylesheet" href="/style.css" type="text/css" />
       <title>Uruk - Sumeryjskie miasta</title>
    </head>
    <body>
@@ -36,10 +38,10 @@
             <div class="strukturaArtykulu plywaPrawo">
                <span>Spis treści</span>
                <ol>
-                  <li><a href="#researches">Badania archeologiczne</a></li>
-                  <li><a href="#cityWall">Mury obronne</a></li>
-                  <li><a href="#history">Historia miasta</a></li>
-                  <li><a href="#gallery">Galeria zdjęć</a></li>
+                  <li><a class="sectionOne" href="#">Badania archeologiczne</a></li>
+                  <li><a class="sectionTwo" href="#">Mury obronne</a></li>
+                  <li><a class="sectionThree" href="#">Historia miasta</a></li>
+                  <li><a class="sectionFour" href="#">Galeria zdjęć</a></li>
                </ol>
             </div>
             <p class="wstep">
@@ -58,7 +60,7 @@
             <p>
                Bogiem opiekunem Uruku był <a  href="/podstrony/podstrony_poziom_1_bogowie/an.html" title="Prosze kliknąć, aby przejść do artykułu: An">An</a>, jednak w późniejszych czasach jego kult został zastąpiony kultem Inanny, dlatego w mieście znajdują się dwa kompleksy sakralne - <a href="/podstrony/podstrony_poziom_1/okreg_inanny.html" title="Prosze kliknąć, aby przejść do artykułu: E-anna">E-anna</a>, który był poświęcony Inannie i Kullaba, poświęcony Anowi. 
             </p>
-            <h2 id="researches">Badania archeologiczne</h2>
+            <h2 data-section="sectionOne">Badania archeologiczne</h2>
             <hr class="podkreslenie"/>
             <p>
                Na terenie Uruku odkopano 18 archaicznych warstw. Jeśli chodzi o czasy sumeryjskie to warstwy Uruk VIII do IV zostały przyporządkowane do <a href="/podstrony/podstrony-historia/okres_uruk.html" title="Prosze kliknąć, aby przejść do artykułu: Okres Uruk">okresu Uruk</a>, warstwa Uruk III odpowiada okresowi <a href="/podstrony/podstrony-historia/dzemdet-nasr.html" title="Proszę kliknąć, aby przejść do artykułu: Okres Dżemdet Nasr">Dżemdet Nasr</a>, a warstwa  Uruk  I odpowiada okresowi wczesnodynastycznemu. Warstwa Uruk II została błędnie oznaczona, na skutek czego wyłączono ją z terminologii.
@@ -78,13 +80,13 @@
             <p>
                Pod względem architektonicznym w Uruku najlepiej znane są budowle o charakterze kultowym lub administracyjnym, które odkryto na obszarze dzielnicy E-anna i w dzielnicy z zigguratem boga Ana, na którym stała Biała Świątynia (Ryc.2).
             </p>
-            <h2 id="cityWall">Mury obronne</h2>
+            <h2 data-section="sectionTwo">Mury obronne</h2>
             <hr class="podkreslenie"/>
 
             <p>
                W pierwszym okresie wczesnodynastycznym, w pierwszej połowie III tys. p.n.e. mieszkańcy Uruku, prawdopodobnie jako pierwsi zbudowali mur obronny. Jako materiał budowlany posłużyła suszona cegła – mur liczył 9 km długości i szczelnie otaczał miasto. Pomimo, że wał nie został dokładnie odkopany tak wczesna data jego budowy została wywnioskowana na podstawie informacji z odcisku pieczęci cylindrycznej. W przeciągu setek lat zasiedlenia miasta mur był wielokrotnie naprawiany. 
             </p>
-            <h2 id="history">Historia miasta</h2>
+            <h2 data-section="sectionThree">Historia miasta</h2>
             <hr class="podkreslenie"/>
              
                          <div class="notes plywaPrawo">
@@ -94,7 +96,7 @@
                   <li>Meski'aggaszer</li>
                   <li>Enmerkar</li>
                   <li>Lugalbanda</li>
-                  <li><a href="/podstrony/podstrony_poziom_1_bogowie/dumuzi.html" title="Proszę kliknąć, aby przejść do artykułu: Dumuzi">Dumuzi</a></li>
+                  <li>Dumuzi</li>
                   <li>Gilgamesz</li>
                   <li>Urlugal</li>
                   <li>Utulkalama</li>
@@ -150,7 +152,7 @@
             <p>
                W okresie nowosumeryjskim, podczas krótkotrwałej niezależności, kiedy to Utuhengal z Uruku rządził Sumerem, miasto stało się częścią państwa III dynastii z Ur. <a href="/podstrony/podstrony-historia/krolowie/ur-namma.html" title="Proszę kliknąć, aby przejść do artykułu: Ur-Namma">Ur-Namma</a>, pierwszy król z tej dynastii, rozpoczął intensywne prace budowlane, głównie w E-anna i w tym czasie wzniesiono ziggurat. Po upadku królestwa III dynastii z Ur, około 2000 roku p.n.e. Uruk stał się częścią państwa Larsy. 
             </p>
-            <h2 id="gallery">Galeria zdjęć</h2>
+            <h2 data-section="sectionFour">Galeria zdjęć</h2>
             <hr class="podkreslenie"/>
             <div id="galeria">
                <a href="/grafika/zdjecia/uruk/Uruk-2100pne.jpg" rel="bookmark" title="Plan Uruku około 2100 p.n.e."><img src="/grafika/zdjecia/uruk/galeria/Uruk-2100pne-gal.jpg" alt="Plan Uruku około 2100 p.n.e." title="pozycja nr 1"/></a>
@@ -175,8 +177,6 @@
             </p>
          </div>
       </div>
-      <!-- CSS -->
-      <link rel="stylesheet" href="/style.css" type="text/css" />
       <!-- CSS - wtyczka fancy box -->
       <link href="/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet">
       <!-- jquery libery-->
