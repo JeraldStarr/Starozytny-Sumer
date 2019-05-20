@@ -15,4 +15,5 @@
       google.displaySearch();
       performance.transformToMobileMenu();
       scrolls.goToSection();
+      scrolls.goToUp();
   }

@@ -487,7 +487,15 @@ var scrolls = function () {
                 })
             })
     }
+    function goToUp() {
+        $(".gora_strony a").click(function() {
+            $("body, html").animate({
+                scrollTop: $("#calosc").offset().top
+            }) 
+        })
+    }
     return {
-        goToSection: goToSection
+        goToSection: goToSection,
+        goToUp: goToUp
     }
 }();
