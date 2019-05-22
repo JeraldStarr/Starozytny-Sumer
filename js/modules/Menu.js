@@ -1,3 +1,4 @@
+import {data} from '../data/data.js';
 import performance from './Performance.js';
 
 var menu = function () {

@@ -13,7 +13,6 @@ const asideBar = {
 
         const setHeader = text => {
             const spanElement = document.createElement("span");
-            debugger;
             menu.menuIDElement.appendChild(spanElement);
             spanElement.innerHTML = text;
         }

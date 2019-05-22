@@ -1,4 +1,4 @@
-var data = {
+export const data = {
 	"menu"  : [
 	{
 		"name" : "Strona Główna",
@@ -564,7 +564,7 @@ var data = {
 }
 
 
-var urls = [
+export const urls = [
 	"/podstrony/podstrony-historia/krolowie/urukagina.html",
 	"/podstrony/podstrony-historia/krolowie/ur-ningirsu.html",
     "/podstrony/podstrony_poziom_1_bogowie/bau.html",
@@ -579,7 +579,7 @@ var urls = [
 ];
 
 // articles' titles
-var titles = [
+export const titles = [
 	"Urukagina",
 	"Ur-Ningirsu",
     "Bau",
@@ -594,7 +594,7 @@ var titles = [
 ];
 
 // urls for articles' icons 
-var iconsURLs = [
+export const iconsURLs = [
 	"/grafika/ikonka/urukagina.jpg",
 	"/grafika/ikonka/urNingirsu.jpg",
     "/grafika/ikonka/ikonka_standardowa.gif",
@@ -609,7 +609,7 @@ var iconsURLs = [
 ];
 
 // fragmenty tekstów z artykułów
-var texts = [
+export const texts = [
 	"Urukagina na swoich stożkach fundacyjnych opisał w jakich warunkach żyli zwykli ...",
 	"Ur-Namma i Ur-Ningirsu byli mniej więcej w tym samym wieku. Dorastając, byli młodymi... ",
     "Głównym miejscem kultu Bau była świątynia E-tarsirsir w Girsu. Oprócz tego posiadała swoją ...",
@@ -625,7 +625,7 @@ var texts = [
 ];
 
 // daty dodania bądź aktualizacji artykułów
-var dates = [
+export const dates = [
 	"18.03.2019",
 	"05.09.2018",
     "01.03.2018",
@@ -640,8 +640,8 @@ var dates = [
 ];
 
 // treści do znacznika alt
-var alt = [
-	"Gliniana tabliczka Urukaginy",
+export const alt = [
+    "Gliniana tabliczka Urukaginy",
 	"Ur-Ningirsu",
     "Pismo",
     "Pismo",

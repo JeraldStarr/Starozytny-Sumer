@@ -106,48 +106,6 @@ const performance = {
             })
         })
     },
-    // displays label to inform user when he cliks in link he'll be passed to external website
-    displayAnotherWebsiteLabel() {
-        $(document).ready(function () {
-            $(".etykieta").hide();
-            $(".wyzwalacz").mouseover(function () {
-                var poziomaWspolrzedna,
-                    pionowaWspolrzedna,
-                    $this = $(this),
-                    $data_tooltip = $($this.attr("data-tooltip")),
-                    pozycjaWyzwalacza = $this.offset(),
-                    wyzwalaczWys = $this.outerHeight(),
-                    wyzwalaczSzer = $this.outerWidth(),
-                    etykietaWys = $data_tooltip.outerHeight(),
-                    etykietaSzer = $data_tooltip.outerWidth(),
-                    oknoSzer = $(window).width(),
-                    przewiniete = $(document).scrollTop();
-                if (pozycjaWyzwalacza.top - etykietaWys - przewiniete > 0) {
-                    pionowaWspolrzedna = pozycjaWyzwalacza.top - etykietaWys - 10;
-                } // if
-                else {
-                    pionowaWspolrzedna = pozycjaWyzwalacza.top + wyzwalaczWys + 10;
-                } // else
-
-                var wystajePoza = (pozycjaWyzwalacza.left + etykietaSzer) - oknoSzer;
-                if (wystajePoza > 0) {
-                    poziomaWspolrzedna = pozycjaWyzwalacza.left - wystajePoza - 10;
-                } // if
-                else {
-                    poziomaWspolrzedna = pozycjaWyzwalacza.left;
-                }
-
-                $data_tooltip.css({
-                    left: poziomaWspolrzedna,
-                    top: pionowaWspolrzedna,
-                    position: "absolute"
-                }).fadeIn(200);
-            }); // koniec mouseover 
-            $(".wyzwalacz").mouseout(function () {
-                $(".etykieta").fadeOut(200);
-            });
-        }); // koniec ready 
-    },
     // creates ">" mark if menu element has submenu
     createExtendingMark(url, i, level) {
         if (level) {

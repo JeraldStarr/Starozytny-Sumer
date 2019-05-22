@@ -7,12 +7,13 @@ import menu from './modules/Menu.js';
 import asideBar from './modules/AsideBar.js';
 import googleSearch from './modules/GoogleSearch.js';
 import scrolls from './modules/Scroll.js';
+import tracker from './modules/Tracker.js';
+import label from './modules/Label.js';
 
 window.addEventListener("load", () => {
   performance.showHeader();
   performance.insertHamburger();
   performance.toggleMenu();
-  performance.displayAnotherWebsiteLabel();
   performance.displayBigImg();
   performance.galleryService();
   performance.under319px();
@@ -22,4 +23,7 @@ window.addEventListener("load", () => {
   performance.transformToMobileMenu();
   scrolls.goToSection();
   scrolls.goToUp();
+  tracker.track();
+  label.create();
+  label.displayAnotherWebsiteLabel();
 }, false);
