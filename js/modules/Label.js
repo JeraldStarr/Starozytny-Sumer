@@ -7,7 +7,7 @@ const label = {
         const strongHTMLTag = document.createElement("strong");
         const icon = document.createElement("img");
 
-        icon.setAttribute("src", "grafika/zdjecia/starozytnaAsyria.jpg");
+        icon.setAttribute("src", "/grafika/zdjecia/starozytnaAsyria.jpg");
         spanHTMLTag1.textContent = "Artykuł znajduje się w zewnętrznym serwisie:";
         spanHTMLTag2.textContent = "Kliknięcie spowoduje otwarcie nowej karty";
         strongHTMLTag.textContent = "Starożytna Asyria";
