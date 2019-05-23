@@ -562,8 +562,6 @@ export const data = {
 	]
 
 }
-
-
 export const urls = [
 	"/podstrony/podstrony-historia/krolowie/urukagina.html",
 	"/podstrony/podstrony-historia/krolowie/ur-ningirsu.html",
