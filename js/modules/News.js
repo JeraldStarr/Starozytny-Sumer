@@ -1,9 +1,4 @@
-import {dates} from '../data/data.js';
-import {texts} from '../data/data.js';
-import {urls} from '../data/data.js';
-import {titles} from '../data/data.js';
-import {iconsURLs} from '../data/data.js';
-import {alt} from '../data/data.js';
+import { dates, texts, urls, titles, iconsURLs, alt } from '../data/data.js';
 import menu from './Menu.js';
 
 const news = {
