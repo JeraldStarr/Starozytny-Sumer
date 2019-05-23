@@ -1,3 +1,4 @@
+import {watermark, asideHeaders} from '../data/data.js';
 import menu from './Menu.js';
 import news from './News.js';
 
@@ -18,8 +19,8 @@ const asideBar = {
         }
 
         const showTiles = () => {
-            const asideDingir = "/grafika/zdjecia/dingir/dingir_przezroczysty_wersja2.gif";
-            const asideDingirAltText = "Skrzydlaty dysk symbolizował sumeryjskich bogów";
+            const asideDingir = watermark.path;
+            const asideDingirAltText = watermark.alt;
             const numberOfTiles = 8;
 
             const getFromVariable = index => {
@@ -46,11 +47,11 @@ const asideBar = {
 
             const getHeader = index => {
                 switch (index) {
-                    case 1: return "Co nowego";
+                    case 1: return asideHeaders.header1;
                         break;
-                    case 3: return "Ostatnio aktualizowane";
+                    case 3: return asideHeaders.header2;
                         break;
-                    case 5: return "Najczęściej odwiedzane";
+                    case 5: return asideHeaders.header3;
                         break;
                 }
             }

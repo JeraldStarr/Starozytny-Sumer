@@ -653,3 +653,14 @@ export const alt = [
 
     "Bogowie na odcisku pieczęci"
 ];
+
+export const watermark = {
+	alt: "Skrzydlaty dysk symbolizował sumeryjskich bogów",
+	path: "/grafika/zdjecia/dingir/dingir_przezroczysty_wersja2.gif"
+}
+
+export const asideHeaders = {
+	header1: "Co nowego",
+	header2: "Ostatnio aktualizowane",
+	header3: "Najczęściej odwiedzane"
+}
