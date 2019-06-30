@@ -1,10 +1,9 @@
 import {data} from '../data/data.js';
 import performance from './Performance.js';
 
-var menu = function () {
-    var menuIDElement = document.getElementById("MENU");
-
-    function setMenu() {
+var menu = {
+    menuIDElement: document.getElementById("MENU"),
+    setMenu() {
         var ulElement = document.createElement("ul");
         ulElement.classList.add("nav");
         // first level declaration
@@ -134,13 +133,9 @@ var menu = function () {
             anchor.innerText = innerText;
             liParent.appendChild(anchor);
         };
-        menuIDElement.appendChild(ulElement);
+        this.menuIDElement.appendChild(ulElement);
 
-    };
-    return {
-        menuIDElement: menuIDElement,
-        setMenu: setMenu
     }
-}();
+};
 
 export default menu;
