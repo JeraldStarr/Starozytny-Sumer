@@ -568,10 +568,10 @@ export const urls = [
     "/podstrony/podstrony_poziom_1_bogowie/bau.html",
     "/podstrony/podstrony-historia/krolowie/szu-suen.html",
 	
+	"/podstrony/podstrony-historia/pochodzenie.html",
 	"/",
 	"/podstrony/nauka/astronomia.html",
     "/podstrony/historia.html",
-    "/podstrony/podstrony_poziom_1_bogowie/nanna.html",
 
     "/podstrony/bogowie.html"
 ];
@@ -583,10 +583,10 @@ export const titles = [
     "Bau",
     "Szu-Suen",
 	
+	"Pochodzenie Sumerów",
 	"Artykuł główny",
 	"Astronomia",
     "Historia Sumerów",
-    "Nanna",
 
     "Sumeryjscy bogowie"
 ];
@@ -598,10 +598,10 @@ export const iconsURLs = [
     "/grafika/ikonka/ikonka_standardowa.gif",
     "/grafika/ikonka/ikonka_standardowa.gif",
 
+	"/grafika/ikonka/pochodzenie.jpg",
 	"/grafika/ikonka/index.gif",
 	"/grafika/ikonka/astronomia.gif",
 	"/grafika/ikonka/historia.gif",
-    "/grafika/ikonka/nanna.jpg",
 
     "/grafika/ikonka/bogowie.gif"
 ];
@@ -613,10 +613,10 @@ export const texts = [
     "Głównym miejscem kultu Bau była świątynia E-tarsirsir w Girsu. Oprócz tego posiadała swoją ...",
     "Sukcesy polityczne oraz zakresy tytularnego zwierzchnictwa potwiedza inskrypcja fundacyjna ...",
 	
+	"Jeżeli nie ma możliwości odnalezienia powiązań językowych, należy poszukać innych dowodów ...",
 	"Jako osiągnięcia cywilizacyjne Sumerów można zatem wymienić monumentalną architekturę, zastosowanie ...",
 	"Najstarsze świadectwa wiedzy astronomicznej Sumerów pochodzą z Uruku i datowane są na schyłek ...",
     "Najdawniejsze dzieje Sumerów nie są znane. Przypuszcza się, że ich cywilizacja zaczęła się w ...",
-    "Nanna był opiekuńczym bóstwem Ur, mianowany do tej funkcji przez Enlila. Tym samym wyznaczył ...",
 
     "Nadrzędne siły miały charakter niepoznawalny, a ich źródło pozostawało niewyjaśnione ..."
 
@@ -629,10 +629,10 @@ export const dates = [
     "01.03.2018",
     "29.01.2018",
 
+	"27.07.2019",
 	"28.05.2019",
 	"14.04.2019",
 	"21.03.2018",
-    "23.10.2017",
 
     ""
 ];
@@ -644,10 +644,10 @@ export const alt = [
     "Pismo",
     "Pismo",
 	
+	"Mapa",
 	"Świątynie",
 	"Gliniana tabliczka przedstawiająca sumeryjskich bogów astralnych",
 	"Fragment sumeryjskiej listy królów",
-    "Głowa byka",
 
     "Bogowie na odcisku pieczęci"
 ];
