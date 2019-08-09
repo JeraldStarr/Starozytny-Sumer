@@ -61,11 +61,11 @@ const performance = {
                 arrows[i].addEventListener("click", function (event) {
                     event.preventDefault();
                     const ulUnderArrow = arrows[i].parentNode.parentNode.childNodes[1];
-                    if (ulUnderArrow.id == "display") {
+                    if (ulUnderArrow.id === "display") {
                         ulUnderArrow.id = "";
                         arrows[i].classList.remove("upSideDown");
                         // cleans third level menu
-                        thirdLevelMobileMenuCleaner();
+                        performance.thirdLevelMobileMenuCleaner();
                     } else {
                         ulUnderArrow.id = "display";
                         arrows[i].classList.add("upSideDown");
