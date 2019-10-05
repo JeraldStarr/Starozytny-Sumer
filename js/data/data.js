@@ -568,10 +568,10 @@ export const urls = [
     "/podstrony/podstrony_poziom_1_bogowie/bau.html",
     "/podstrony/podstrony-historia/krolowie/szu-suen.html",
 	
+	"/podstrony/podstrony-historia/krolowie_sumeru.html",
 	"/podstrony/podstrony_poziom_1_miasta/eridu.html",
 	"/podstrony/podstrony-historia/pochodzenie.html",
 	"/",
-	"/podstrony/nauka/astronomia.html",
 
     "/podstrony/bogowie.html"
 ];
@@ -583,10 +583,10 @@ export const titles = [
     "Bau",
     "Szu-Suen",
 	
+	"Królowie Sumerów",
 	"Eridu",
 	"Pochodzenie Sumerów",
 	"Artykuł główny",
-	"Astronomia",
 
     "Sumeryjscy bogowie"
 ];
@@ -598,10 +598,10 @@ export const iconsURLs = [
     "/grafika/ikonka/ikonka_standardowa.gif",
     "/grafika/ikonka/ikonka_standardowa.gif",
 
+	"/grafika/ikonka/krol_sumeru.gif",
 	"/grafika/ikonka/eridu.jpg",
 	"/grafika/ikonka/pochodzenie.jpg",
 	"/grafika/ikonka/index.gif",
-	"/grafika/ikonka/astronomia.gif",
 
     "/grafika/ikonka/bogowie.gif"
 ];
@@ -613,10 +613,10 @@ export const texts = [
     "Głównym miejscem kultu Bau była świątynia E-tarsirsir w Girsu. Oprócz tego posiadała swoją ...",
     "Sukcesy polityczne oraz zakresy tytularnego zwierzchnictwa potwiedza inskrypcja fundacyjna ...",
 	
+	"Słowo Sipa, jak zwany był przez Sumerów ich król, oznaczało pasterza, człowieka który...",
 	"W mieście odkopano również pięć zespołów mieszkalnych oraz fragmenty dwóch ulic...",
 	"Jeżeli nie ma możliwości odnalezienia powiązań językowych, należy poszukać innych dowodów ...",
 	"Jako osiągnięcia cywilizacyjne Sumerów można zatem wymienić monumentalną architekturę, zastosowanie ...",
-	"Najstarsze świadectwa wiedzy astronomicznej Sumerów pochodzą z Uruku i datowane są na schyłek ...",
 
     "Nadrzędne siły miały charakter niepoznawalny, a ich źródło pozostawało niewyjaśnione ..."
 
@@ -629,10 +629,10 @@ export const dates = [
     "01.03.2018",
     "29.01.2018",
 
+	"00.00.2019",
 	"25.09.2019",
 	"27.07.2019",
 	"28.05.2019",
-	"14.04.2019",
 
     ""
 ];
@@ -644,10 +644,10 @@ export const alt = [
     "Pismo",
     "Pismo",
 	
+	"Król miasta Lagasz - Ur-Nansze",
 	"Mapa",
 	"Świątynie",
 	"Gliniana tabliczka przedstawiająca sumeryjskich bogów astralnych",
-	"Fragment sumeryjskiej listy królów",
 
     "Bogowie na odcisku pieczęci"
 ];
