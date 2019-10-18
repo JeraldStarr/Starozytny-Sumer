@@ -129,7 +129,7 @@ const performance = {
         window.addEventListener("resize", function () {
             showMessage();
         }, false);
-    }
+    },
 };
 
 export default performance;

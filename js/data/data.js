@@ -654,7 +654,7 @@ export const alt = [
 
 export const watermark = {
 	alt: "Skrzydlaty dysk symbolizował sumeryjskich bogów",
-	path: "/grafika/zdjecia/dingir/dingir_przezroczysty_wersja2.gif"
+	path: "/grafika/zdjecia/dingir/imdugud.gif"
 }
 
 export const asideHeaders = {
