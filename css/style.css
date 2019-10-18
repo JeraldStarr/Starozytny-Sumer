@@ -23,7 +23,7 @@ body {
  */
 #calosc {
     background-color: #FAFACD;
-    max-width: 980px;
+    max-width: 1200px;
     margin: 0 auto;
     border: 1px solid lightgray;
     padding: 10px;
@@ -35,6 +35,9 @@ body {
  * contains a banner
  */
 #NAGLOWEK {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     width: 100%;
     height: 800px;
     background: url('/grafika/zdjecia/logo.png') no-repeat;
@@ -68,7 +71,7 @@ body {
 
 #NAGLOWEK span:nth-of-type(3) {
     font-size: 20px;
-    padding-right: 18.8%;
+    padding-right: 15.8%;
     padding-top: 10px;
     clear: both;
 }
