@@ -28,7 +28,6 @@ body {
     border: 1px solid lightgray;
     padding: 10px;
     font-family: "Bookman Old Style normal", serif;
-    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, .2);
 }
 
 /**
@@ -90,7 +89,6 @@ body {
     width: 18.877%;
     min-width: 137px;
     float: left;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
 }
 
 #MENU>span {
@@ -242,24 +240,24 @@ ul.urIIIpodzial {
 
 /*stosowany do formatowania dat i żródeł na końcu każdego artykułu*/
     {
-    font-size: 12px;
+    font-size: 14px;
     font-style: italic;
 }
 
 .co_nowego {
     /*bloki z odnośnikami do nowych lub ostanio aktualizowanych artykułów*/
     border: 1px solid lightgray;
-    width: 89.18%;
+    width: 100%;
     overflow: hidden;
     padding: 1%;
-    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, .2);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
     margin-bottom: 15px;
     transition: all 0.3s ease-out;
 }
 
 .co_nowego:hover {
-    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, .4);
-    background-color: #F5F5C9;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .4);
+    background-color: rgb(238, 238, 210);
 }
 
 .co_nowego div a {
@@ -293,7 +291,7 @@ a:active {
 
 .czcionka_co_nowego {
     /*klasa służy do formatowania tekstu, który znajduje się w blokach o klasie .co_nowego*/
-    font-size: 9px;
+    font-size: 14px;
     color: black;
     text-align: justify;
 }
@@ -538,7 +536,7 @@ img {
 /* --- KONIEC FORMATOWANIA DLA SKRZYDLATYCH DYSKÓW ---*/
 /*========== FORMATOWANIE OBRAZÓW ==========*/
 figcaption {
-    font-size: 12px;
+    font-size: 14px;
     color: black;
     border-top: 1px solid #7A4646;
     line-height: 108%;
