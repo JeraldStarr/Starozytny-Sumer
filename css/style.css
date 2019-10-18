@@ -4,8 +4,8 @@
 }
 html,
 body {
-    background-color: #F5F2F0;
-    color: #702525;
+    background-color: rgb(247, 247, 231);
+    color: #4b1818;
 }
 
 @font-face {
@@ -22,10 +22,9 @@ body {
  * container for all elements on the website
  */
 #calosc {
-    background-color: #FAFACD;
+    background-color: rgb(247, 247, 231);
     max-width: 1200px;
     margin: 0 auto;
-    border: 1px solid lightgray;
     padding: 10px;
     font-family: "Bookman Old Style normal", serif;
 }
@@ -60,7 +59,7 @@ body {
     font-size: 48px;
     text-decoration: underline;
     padding-right: 5%;
-    margin-top: 475px;
+    margin-top: 100px;
 }
 
 #NAGLOWEK span:nth-of-type(2) {
@@ -85,8 +84,12 @@ body {
 }
 
 #MENU {
-    /*zawiera pionowy pasek nawigacyjny + bloki z odnoścnikami do najświeższych zmian na stronie*/
-    width: 18.877%;
+    /*zawiera pionowy pasek nawigacyjny + bloki z odnoścnikami do najświeższych 
+    zmian na stronie*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20.877%;
     min-width: 137px;
     float: left;
 }
@@ -102,6 +105,9 @@ body {
 
 #MENU>span:first-of-type {
     margin-top: 25%;
+}
+.nav {
+    width: 100%;
 }
 
 .nav li:hover {
@@ -290,18 +296,25 @@ a:active {
 }
 
 .czcionka_co_nowego {
-    /*klasa służy do formatowania tekstu, który znajduje się w blokach o klasie .co_nowego*/
+    /*klasa służy do formatowania tekstu, który znajduje się w blokach o klasie 
+    .co_nowego*/
     font-size: 14px;
     color: black;
     text-align: justify;
 }
 
 #TRESC {
-    /*id, które służy fo formatowania tekstu artykułu; cześciej używa się do tego nazwy contain*/
-    width: 76.530%;
+    /*id, które służy fo formatowania tekstu artykułu; cześciej używa się do 
+    tego nazwy contain*/
+    width: 74.530%;
     text-align: justify;
     float: right;
     padding-right: 25px;
+}
+
+#TRESC p:not(.daty_zrodla) {
+    font-size: 20px;
+    line-height: 30px;
 }
 
 #starozytnaAsyria {
