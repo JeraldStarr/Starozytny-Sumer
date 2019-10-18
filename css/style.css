@@ -36,8 +36,8 @@ body {
  */
 #NAGLOWEK {
     width: 100%;
-    height: 208px;
-    background: url('/grafika/zdjecia/sumeryjska-swiatynia.jpg');
+    height: 800px;
+    background: url('/grafika/zdjecia/logo.png') no-repeat;
     font-family: 'Bookman Old Style fat italic';
 }
 
@@ -58,6 +58,7 @@ body {
     font-size: 48px;
     text-decoration: underline;
     padding-right: 5%;
+    margin-top: 475px;
 }
 
 #NAGLOWEK span:nth-of-type(2) {
