@@ -1,0 +1,75 @@
+/**
+ * contains a banner
+ */
+ #NAGLOWEK {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: 100vh;
+    background: url('/grafika/zdjecia/logo.png') no-repeat center left;
+    font-family: 'Bookman Old Style fat italic';
+}
+
+#NAGLOWEK img {
+    visibility: hidden;
+}
+
+#NAGLOWEK span {
+    display: block;
+    font-style: italic;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 2px rgba(225, 225, 225, 1);
+    float: right;
+}
+
+#NAGLOWEK span:first-of-type {
+    font-size: 60px;
+    text-decoration: underline;
+    padding-right: 5%;
+    margin-top: 5vh;
+}
+
+#NAGLOWEK span:nth-of-type(2) {
+    font-size: 28px;
+    padding-right: 5%;
+}
+
+#NAGLOWEK span:nth-of-type(3) {
+    font-size: 20px;
+    padding-right: 15.8%;
+    padding-top: 10px;
+    clear: both;
+}
+
+#NAGLOWEK section {
+    /* background: red; */
+    width: 50%;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    right: 0;
+    top: 55%;
+    padding-right: 5%;
+}
+
+#NAGLOWEK section .sectionTitle {
+    font-size: 30px;
+    text-decoration: none;
+    margin-top: 0;
+    text-align: center;
+}
+
+.waterMarkTitle {
+    background-image: url("/grafika/zdjecia/imdugud_min.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 15vh;
+    height: 15vh;
+
+}
