@@ -23,7 +23,6 @@ const structure = {
         beforeWaterMarkContainer.classList.add("waterMarkTitle");
         afterWaterMarkContainer.classList.add("waterMarkTitle");
         waterMarkContainers.push(beforeWaterMarkContainer, afterWaterMarkContainer);
-        // waterMarkContainers.push(afterWaterMarkContainer);
         return waterMarkContainers;
     }
 
