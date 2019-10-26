@@ -1,3 +1,4 @@
+import { data } from "../data/data.js";
 const structure = {
     insertSectionToHeader() {
         const header = document.getElementById("NAGLOWEK");
@@ -13,7 +14,7 @@ const structure = {
     buildSpan() {
         const span = document.createElement("span");
         span.classList.add("sectionTitle");
-        span.innerText = document.querySelector("h1").innerText;
+        span.innerText = this.getArticleName();
         return span;
     },
     buildWaterMarkContainers() {
@@ -22,10 +23,44 @@ const structure = {
         const afterWaterMarkContainer = document.createElement("div");
         beforeWaterMarkContainer.classList.add("waterMarkTitle");
         afterWaterMarkContainer.classList.add("waterMarkTitle");
-        waterMarkContainers.push(beforeWaterMarkContainer, afterWaterMarkContainer);
+        waterMarkContainers.push(beforeWaterMarkContainer, 
+            afterWaterMarkContainer);
         return waterMarkContainers;
+    },
+    getArticleName() {
+        var articleLocation = `/${location.href.split("/").slice(3).join("/")}`;
+        for(let art in data.menu) {
+            if (articleLocation === data.menu[art].url) {
+                return data.menu[art].name;
+            }
+            if (data.menu[art].extand) {
+                for (let subart in data.menu[art].extandContent) {
+                    if (articleLocation === data.menu[art].extandContent[subart]
+                        .url) {
+                        return data.menu[art].extandContent[subart].name;
+                    }
+                    if (data.menu[art].extandContent[subart].extand) {
+                        for (let subsubart in data.menu[art].extandContent[subart].extandContent) {
+                            if (articleLocation === data.menu[art].extandContent[subart].extandContent[subsubart]
+                                .url) {
+                                return data.menu[art].extandContent[subart].extandContent[subsubart].name;
+                            }
+                            if (data.menu[art].extandContent[subart].extandContent[subsubart].extand) {
+                                for (let subsubsubart in data.menu[art].extandContent[subart].extandContent[subsubart].extandContent) {
+                                    if (articleLocation === data.menu[art].extandContent[subart].extandContent[subsubart].extandContent[subsubsubart]
+                                        .url) {
+                                        return data.menu[art].extandContent[subart].extandContent[subsubart].extandContent[subsubsubart].name;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
 }
 
 export default structure;
+
