@@ -1,24 +1,30 @@
-@media (max-width: 950px) {
+@media (max-height: 600px) and (max-width: 950px) {
     #NAGLOWEK {
-        background: url('/grafika/zdjecia/logo_500.gif') no-repeat center;
-        align-items: center;
+        background: url('/grafika/zdjecia/logo_300px.gif') no-repeat center;
     }
 
     #NAGLOWEK span:first-of-type {
+        font-size: 50px;
         padding: 0;        
     }
     
     #NAGLOWEK span:nth-of-type(2) {
+        font-size: 25px;
         padding: 0;
     }
     
     #NAGLOWEK span:nth-of-type(3) {
+        font-size: 18px;
         padding: 0;
     }
 
+    #NAGLOWEK section .sectionTitle {
+        font-size: 25px;
+    }
 
     #NAGLOWEK section {
         width: 80%;
         padding-right: 0;
+        top: 35%;
     }
 }

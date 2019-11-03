@@ -11,10 +11,6 @@
     font-family: 'Bookman Old Style fat italic';
 }
 
-#NAGLOWEK img {
-    visibility: hidden;
-}
-
 #NAGLOWEK span {
     display: block;
     font-style: italic;
@@ -44,7 +40,6 @@
 }
 
 #NAGLOWEK section {
-    /* background: red; */
     width: 50%;
     height: 20vh;
     display: flex;
