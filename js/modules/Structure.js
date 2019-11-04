@@ -40,16 +40,30 @@ const structure = {
                         return data.menu[art].extandContent[subart].name;
                     }
                     if (data.menu[art].extandContent[subart].extand) {
-                        for (let subsubart in data.menu[art].extandContent[subart].extandContent) {
-                            if (articleLocation === data.menu[art].extandContent[subart].extandContent[subsubart]
+                        for (let subsubart in data.menu[art]
+                            .extandContent[subart].extandContent) {
+                            if (articleLocation === data.menu[art]
+                                .extandContent[subart]
+                                .extandContent[subsubart]
                                 .url) {
-                                return data.menu[art].extandContent[subart].extandContent[subsubart].name;
+                                return data.menu[art].extandContent[subart]
+                                .extandContent[subsubart].name;
                             }
-                            if (data.menu[art].extandContent[subart].extandContent[subsubart].extand) {
-                                for (let subsubsubart in data.menu[art].extandContent[subart].extandContent[subsubart].extandContent) {
-                                    if (articleLocation === data.menu[art].extandContent[subart].extandContent[subsubart].extandContent[subsubsubart]
+                            if (data.menu[art].extandContent[subart]
+                                .extandContent[subsubart].extand) {
+                                for (let subsubsubart in data.menu[art]
+                                    .extandContent[subart]
+                                    .extandContent[subsubart]
+                                    .extandContent) {
+                                    if (articleLocation === data.menu[art]
+                                        .extandContent[subart]
+                                        .extandContent[subsubart]
+                                        .extandContent[subsubsubart]
                                         .url) {
-                                        return data.menu[art].extandContent[subart].extandContent[subsubart].extandContent[subsubsubart].name;
+                                        return data.menu[art]
+                                        .extandContent[subart]
+                                        .extandContent[subsubart]
+                                        .extandContent[subsubsubart].name;
                                     }
                                 }
                             }
