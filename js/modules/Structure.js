@@ -29,6 +29,11 @@ const structure = {
     },
     getArticleName() {
         var articleLocation = `/${location.href.split("/").slice(3).join("/")}`;
+        if (articleLocation === "/inne_podstrony/kontakt.html") {
+            return "Kontakt";
+        } else if (articleLocation === "/sitemap.html") {
+            return "Mapa strony";
+        }
         for(let art in data.menu) {
             if (articleLocation === data.menu[art].url) {
                 return data.menu[art].name;
