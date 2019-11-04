@@ -983,7 +983,7 @@ h2 {
         width: 80%;
     }
 
-    #NAGLOWEK {
+    /* #NAGLOWEK {
         background: url('/grafika/zdjecia/sumeryjska-swiatynia-maly.jpg') no-repeat;
         height: 120px;
         background-size: contain;
@@ -1009,7 +1009,7 @@ h2 {
         padding-right: 14%;
         padding-top: 0;
         clear: both;
-    }
+    } */
 
     .duzyObraz {
         /*formatowanie dla obrazu o szerokości około 500px*/
