@@ -1,6 +1,4 @@
 @import "header.css";
-@import "header_950px.css";
-@import "header_600px_950px.css";
 /* variables */
 :root {
     --submenuMobileColor: #4d2b10;
