@@ -392,6 +392,11 @@ export const data = {
 				"extand" : false
 			},
 			{
+				"name" : "Enmerkar",
+				"url" : "/podstrony/podstrony-historia/krolowie/enmerkar.html",
+				"extand" : false
+			},
+			{
 				"name" : "Lugalzagesi",
 				"url" : "/podstrony/podstrony-historia/krolowie/lugalzagesi.html",
 				"extand" : false
@@ -563,10 +568,10 @@ export const data = {
 
 }
 export const urls = [
+	"/podstrony/podstrony-historia/krolowie/enmerkar.html",
 	"/podstrony/podstrony-historia/krolowie/urukagina.html",
 	"/podstrony/podstrony-historia/krolowie/ur-ningirsu.html",
     "/podstrony/podstrony_poziom_1_bogowie/bau.html",
-    "/podstrony/podstrony-historia/krolowie/szu-suen.html",
 	
 	"/podstrony/podstrony-historia/krolowie_sumeru.html",
 	"/podstrony/podstrony_poziom_1_miasta/eridu.html",
@@ -578,10 +583,10 @@ export const urls = [
 
 // articles' titles
 export const titles = [
+	"Enmerkar",
 	"Urukagina",
 	"Ur-Ningirsu",
     "Bau",
-    "Szu-Suen",
 	
 	"Królowie Sumerów",
 	"Eridu",
@@ -593,9 +598,9 @@ export const titles = [
 
 // urls for articles' icons 
 export const iconsURLs = [
+	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/urukagina.jpg",
 	"/grafika/ikonka/urNingirsu.jpg",
-    "/grafika/ikonka/ikonka_standardowa.gif",
     "/grafika/ikonka/ikonka_standardowa.gif",
 
 	"/grafika/ikonka/krol_sumeru.gif",
@@ -608,10 +613,10 @@ export const iconsURLs = [
 
 // fragmenty tekstów z artykułów
 export const texts = [
+	"Tradycja informuje o nim, ale badania nie zdołały dostarczyć dowodów na jego istnienie ...",
 	"Urukagina na swoich stożkach fundacyjnych opisał w jakich warunkach żyli zwykli ...",
 	"Ur-Namma i Ur-Ningirsu byli mniej więcej w tym samym wieku. Dorastając, byli młodymi... ",
     "Głównym miejscem kultu Bau była świątynia E-tarsirsir w Girsu. Oprócz tego posiadała swoją ...",
-    "Sukcesy polityczne oraz zakresy tytularnego zwierzchnictwa potwiedza inskrypcja fundacyjna ...",
 	
 	"Słowo Sipa, jak zwany był przez Sumerów ich król, oznaczało pasterza, człowieka który...",
 	"W mieście odkopano również pięć zespołów mieszkalnych oraz fragmenty dwóch ulic...",
@@ -624,10 +629,10 @@ export const texts = [
 
 // daty dodania bądź aktualizacji artykułów
 export const dates = [
+	"08.11.2019",
 	"18.03.2019",
 	"05.09.2018",
     "01.03.2018",
-    "29.01.2018",
 
 	"06.10.2019",
 	"25.09.2019",
@@ -639,9 +644,9 @@ export const dates = [
 
 // treści do znacznika alt
 export const alt = [
+	"Pismo",
     "Gliniana tabliczka Urukaginy",
 	"Ur-Ningirsu",
-    "Pismo",
     "Pismo",
 	
 	"Król miasta Lagasz - Ur-Nansze",
