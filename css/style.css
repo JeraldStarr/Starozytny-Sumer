@@ -106,12 +106,26 @@ body {
     padding: 1%;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
     margin-bottom: 15px;
+    font-size: 21px;
+    text-align: center;
     transition: all 0.3s ease-out;
 }
 
 .co_nowego:hover {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .4);
     background-color: rgb(238, 238, 210);
+}
+
+#MENU .co_nowego a {
+    text-decoration: none;
+    color: black;
+}
+
+#MENU em {
+    color: var(--accentColor);
+    font-style: normal;
+    font-size: 20px;
+    padding: 12px;
 }
 
 .co_nowego div a {
@@ -452,12 +466,12 @@ ul a:active {
     margin-bottom: 25px;
     font-size: 18px;
     line-height: 135%;
-    color: rgb(195, 151, 51);
+    color: var(--accentColor);
     font-weight: bold;
 }
 
 .wstep a {
-    color: rgb(195, 151, 51);
+    color: var(--accentColor);
 }
 
 h1 {
