@@ -1,8 +1,8 @@
+@import "variables.css";
 @import "header.css";
+@import "menu.css";
 /* variables */
-:root {
-    --submenuMobileColor: #4d2b10;
-}
+
 html,
 body {
     background-color: rgb(236, 234, 234);
@@ -39,115 +39,7 @@ body {
     clear: both;
 }
 
-#MENU {
-    /*zawiera pionowy pasek nawigacyjny + bloki z odnoścnikami do najświeższych 
-    zmian na stronie*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20.877%;
-    min-width: 137px;
-    float: left;
-}
-
-#MENU>span {
-    /* display: inline-block; */
-    float: left;
-    margin: 110px 0 25px;
-    font-size: 19px;
-    font-weight: bold;
-    font-style: italic;
-}
-
-#MENU>span:first-of-type {
-    margin-top: 25%;
-}
-.nav {
-    width: 100%;
-}
-
-.nav li:hover {
-    position: relative;
-}
-
-/*============ 2-gi poziom menu ===========*/
-.podmenu {
-    overflow: visible;
-    padding: 0px;
-    border: 1px solid lightgray;
-    font-size: 12px;
-    margin-right: 12px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
-    width: 140px;
-    margin-top: -34px;
-}
-
-ul.podmenu {
-    display: none;
-    z-index: 1;
-}
-
-li:hover .podmenu {
-    display: block;
-    position: absolute;
-    left: 100%;
-}
-
-/*============ 2-gi poziom menu ===========*/
-/*============ 3-ci poziom menu ===========*/
-.blok {
-    overflow: visible;
-    margin-left: 10px;
-    font-size: 12px;
-    border: 1px solid lightgray;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
-    margin-top: -32px;
-    width: 155px;
-}
-
-ul.blok {
-    display: none;
-    z-index: 1;
-}
-
-.podmenu .gliptyka:hover .blok,
-.podmenu .krolowie:hover .blok,
-.podmenu .swiatynie:hover .blok,
-.podmenu .plaskorzezba:hover .blok,
-.podmenu .okrNowosum:hover .blok {
-    display: block;
-    position: absolute;
-    left: 130px;
-}
-
-/*============ 3-ci poziom menu ===========*/
-/*============ 4-ty poziom menu ===========*/
-.odciski,
-.urIIIpodzial {
-    width: 150px;
-}
-
-ul.odciski,
-ul.urIIIpodzial {
-    display: none;
-    z-index: 1;
-}
-
-.podmenu .blok .pieczecie:hover .odciski,
-.podmenu .blok .urIII:hover .urIIIpodzial {
-    display: block;
-    position: absolute;
-    left: 154px;
-    bottom: -1px;
-}
-
-.podmenu .blok .pieczecie:hover .odciski {
-    top: 1px;
-}
-
-.podmenu .blok .urIII:hover .urIIIpodzial {
-    top: -1px;
-}
+/*  */
 
 /*============ 4-ty poziom menu ===========*/
 .sitemap
@@ -431,33 +323,6 @@ ol.none
     width: 100%;
 }
 
-/*========== FORMATOWANIE MENU ==========*/
-ul,
-ul li {
-    display: block;
-    margin: 0;
-    padding: 0;
-}
-
-#MENU ul a:link,
-#MENU ul a:visited {
-    display: block;
-    text-decoration: none;
-    background-color: #754219;
-    color: #FFFFCC;
-    padding: 5px;
-    border: 2px outset gray;
-}
-
-#MENU ul a:hover {
-    border-style: inset;
-    padding: 7px 3px 3px 7px;
-    color: white;
-    background: #633816;
-}
-
-/*========== KONIEC FORMATOWANIA MENU ==========*/
-
 figure img:hover
 
 /*animacja, która powoduje efekt lekkego unienienia się obrazu po najechaniu na niegu myszą*/
@@ -614,151 +479,10 @@ h2 {
 /* ============ responsive website ============ */
 
 @media (min-width: 480px) and (max-width: 770px) {
-    #MENU {
-        position: absolute;
-        left: -80%;
-        top: 70px;
-        font-size: 30px;
-        width: 70vw;
-        transition: 0.3s linear;
-        box-shadow: none;   
-    }
-
-    #MENU .podmenu {
-        width: 110px;
-        top: 34px;
-        background-color: var(--submenuMobileColor);
-        margin-bottom: 34px;
-    }
-
-    #MENU ul a:link, #MENU ul a:visited {
-        padding-left: 7%;
-        height: 38px;
-        line-height: 38px;
-    }
-
-
-    li:hover .podmenu {
-        display: none;
-    }
-
-    #display {
-        display: block;
-        min-width: 100%;
-        position: relative;
-        left: 50%;
-        top: 0;
-        transform: translateX(-50%);
-    }
-
-    #MENU ul#display a:link, #MENU ul#display a:visited {
-        color: whitesmoke;
-        background-color: var(--submenuMobileColor);
-    }
-
-    #MENU ul#display .blok a:link, #MENU ul#display .blok a:visited {
-        background-color: #683b17;
-    }
-
-    #MENU ul#display .blok .urIII li a, #MENU ul#display .blok .pieczecie li a {
-        background-color: #844e23;
-    }
-
-    .menuArrow {
-        background: var(--submenuMobileColor);
-        height: 45px;
-        width: 45px;
-        text-align: center;
-        line-height: 45px;
-        transform: translateY(-5px) rotate(90deg);
-        transition: .1s;
-        border-radius: 3px;
-    }
-
-    .podmenu .gliptyka .blok,
-    .podmenu .krolowie .blok,
-    .podmenu .swiatynie .blok,
-    .podmenu .plaskorzezba .blok,
-    .podmenu .okrNowosum .blok {
-        display: none;
-        border: 1px solid lightgray;
-        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
-        font-size: 18px;
-        margin: 0;
-    }
-
-    .podmenu .gliptyka:hover .blok,
-    .podmenu .krolowie:hover .blok,
-    .podmenu .swiatynie:hover .blok,
-    .podmenu .plaskorzezba .blok,
-    .podmenu .okrNowosum:hover .blok {
-        display: none;
-    }
-
-    .podmenu .blok .pieczecie .odciski,
-    .podmenu .blok .urIII .urIIIpodzial {
-        display: none;
-        position: absolute;
-        left: 90px;
-        bottom: -1px;
-    }
-
-    /* defuse hover from mobile view */
-    .podmenu .blok .pieczecie:hover .odciski,
-    .podmenu .blok .urIII:hover .urIIIpodzial {
-        display: none;
-    }
-
-    #MENU .urIII .menuArrow, #MENU .pieczecie .menuArrow {
-        position: absolute;
-        top: 5px;
-        right: -1px;
-        background-color: #8c4a14;
-    }
-
-    .podmenu a {
-        position: relative;
-        font-size: 27px;
-    }
-
-    .podmenu .menuArrow {
-        position: absolute;
-        top: 6px;
-        right: 0px;
-        background-color: #8c4a14;
-        width: 46px;
-        height: 45px;
-        line-height: 46px;
-    }
 
     #TRESC {
         width: 94%;
     }
-
-    /* #NAGLOWEK span {
-        float: none;
-    } */
-
-    /* #NAGLOWEK span:first-of-type {
-        font-size: 31px;
-        text-decoration: underline;
-        float: right;
-    } */
-
-    /* #NAGLOWEK span:nth-of-type(2) {
-        clear: both;
-        float: right;
-        font-size: 17px;
-        padding-right: 7%;
-    } */
-
-    /* #NAGLOWEK span:nth-of-type(3) {
-        float: right;
-        font-size: 12px;
-        padding-right: 18.8%;
-        padding-top: 5px;
-        clear: both;
-    } */
 
     .dingir {
         width: 80%;
@@ -841,126 +565,15 @@ h2 {
     #calosc {
         padding: 2px;
     }
-
-    #MENU {
-        position: absolute;
-        left: -80%;
-        top: 70px;
-        font-size: 25px;
-        width: 70vw;
-        transition: 0.3s linear;
-        box-shadow: none;   
-    }
-
-
-    #MENU .podmenu {
-        width: 83px;
-        top: 34px;
-        background-color: var(--submenuMobileColor);
-        margin-bottom: 34px;
-    }
-
-    .podmenu .gliptyka .blok,
-    .podmenu .krolowie .blok,
-    .podmenu .swiatynie .blok,
-    .podmenu .plaskorzezba .blok,
-    .podmenu .okrNowosum .blok {
-        display: none;
-        border: 1px solid lightgray;
-        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
-        font-size: 18px;
-        margin: 0;
-    }
-
-    .podmenu .gliptyka:hover .blok,
-    .podmenu .krolowie:hover .blok,
-    .podmenu .swiatynie:hover .blok,
-    .podmenu .plaskorzezba:hover .blok,
-    .podmenu .okrNowosum:hover .blok {
-        display: none;
-    }
-
-    .podmenu .blok .pieczecie .odciski,
-    .podmenu .blok .urIII .urIIIpodzial {
-        display: none;
-        position: absolute;
-        left: 83px;
-        bottom: -1px;
-    }
-
-    /* defuse hover from desktop view */
-    .podmenu .blok .pieczecie:hover .odciski,
-    .podmenu .blok .urIII:hover .urIIIpodzial {
-        display: none;
-    }
-
-    #MENU .urIII .menuArrow, #MENU .pieczecie .menuArrow {
-        position: absolute;
-        top: 5px;
-        right: -1px;
-        background-color: #8c4a14;
-    }
-
-    .podmenu a {
-        position: relative;
-    }
-
-    .podmenu .menuArrow {
-        position: absolute;
-        top: 6px;
-        right: 0px;
-        background-color: #8c4a14;
-        width: 33px;
-        height: 33px;
-        line-height: 33px;
-    }
-
-     #display {
-        display: block;
-        min-width: 100%;
-        position: relative;
-        left: 50%;
-        top: 0;
-        transform: translateX(-50%);
-    }
-
-    #MENU ul a:link, #MENU ul a:visited {
-        width: 70vw;
-    }
-
-
-    #MENU ul#display a:link, #MENU ul#display a:visited {
-        color: whitesmoke;
-        background-color: var(--submenuMobileColor);
-    }
-
-    #MENU ul#display .blok a:link, #MENU ul#display .blok a:visited {
-        background-color: #683b17;
-    }
-
-    #MENU ul#display .blok .urIII li a, #MENU ul#display .blok .pieczecie li a {
-        background-color: #844e23;
-    }
-
-    .podmenu {
-        font-size: 20px;
-    }
-
-    .menuArrow{
-        background: var(--submenuMobileColor);
-        height: 40px;
-        width: 40px;
-        text-align: center;
-        line-height: 40px;
-        transform: translateY(-5px) rotate(90deg);
-        transition: .1s;
-        border-radius: 3px;
-    }
-
-
+    
     #TRESC {
         width: 99%;
         padding-right: 1px;
+    }
+
+    #TRESC p:not(.daty_zrodla) {
+        font-size: 15px;
+        line-height: 25px;
     }
 
     #lokalizacja {
@@ -982,34 +595,6 @@ h2 {
     .wyszukiwarka {
         width: 80%;
     }
-
-    /* #NAGLOWEK {
-        background: url('/grafika/zdjecia/sumeryjska-swiatynia-maly.jpg') no-repeat;
-        height: 120px;
-        background-size: contain;
-        margin-top: 0;
-    }
-
-    #NAGLOWEK span:first-of-type {
-        font-size: 20px;
-        text-decoration: underline;
-        float: right;
-    }
-
-    #NAGLOWEK span:nth-of-type(2) {
-        clear: both;
-        float: right;
-        font-size: 13px;
-        padding-right: 3.5%;
-    }
-
-    #NAGLOWEK span:nth-of-type(3) {
-        float: right;
-        font-size: 12px;
-        padding-right: 14%;
-        padding-top: 0;
-        clear: both;
-    } */
 
     .duzyObraz {
         /*formatowanie dla obrazu o szerokości około 500px*/
@@ -1136,19 +721,6 @@ h2 {
 
     .hamburgerClicked::after {
         transform: rotate(-90deg) translateX(-10px);
-    }
-
-    .upSideDown {
-        transform: translateY(-5px) rotate(-90deg);
-    }
-
-    #MENU ul a:link,
-    #MENU ul a:visited {
-        display: block;
-        text-decoration: none;
-        background-color: #754219;
-        padding: 5px;
-        border: 2px outset gray;
     }
 
     li:hover .podmenu {
