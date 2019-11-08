@@ -33,6 +33,8 @@ const structure = {
             return "Kontakt";
         } else if (articleLocation === "/sitemap.html") {
             return "Mapa strony";
+        } else if (articleLocation === "/index.html") {
+            return 'Strona główna';
         }
         for(let art in data.menu) {
             if (articleLocation === data.menu[art].url) {
