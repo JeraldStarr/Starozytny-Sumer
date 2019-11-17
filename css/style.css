@@ -10,13 +10,8 @@ body {
 }
 
 @font-face {
-    font-family: "Bookman Old Style fat italic";
-    src: url("/fonts/bookman-old-style/bookman old style fat italic.ttf");
-}
-
-@font-face {
-    font-family: "Bookman Old Style normal";
-    src: url("/fonts/bookman-old-style/BOOKOS.TTF")
+    font-family: "Lato";
+    src: url("/fonts/lato/Lato-Regular.ttf");
 }
 
 /**
@@ -27,7 +22,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
-    font-family: "Bookman Old Style normal", serif;
+    font-family: "Lato";
 }
 
 /**

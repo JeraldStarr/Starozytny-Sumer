@@ -18,7 +18,6 @@ window.addEventListener("load", () => {
   performance.toggleMenu();
   performance.displayBigImg();
   performance.galleryService();
-  performance.under319px();
   menu.setMenu();
   asideBar.displaySideBar();
   googleSearch.displaySearch();

@@ -457,7 +457,7 @@ export const data = {
 		"extand" : false
 	},
 	{
-		"name" : "Okres nowosumeryjski",
+		"name" : "Okr. nowosumeryjski",
 		"url" : "/podstrony/podstrony-historia/sumeryjski_renesans.html",
 		"extand" : true,
 		"extandContent" : [

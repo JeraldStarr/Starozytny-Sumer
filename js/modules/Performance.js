@@ -104,24 +104,6 @@ const performance = {
             url.appendChild(divElement);
         }
     },
-    under319px() {
-        let paragraphElement = document.createElement("p");
-
-        function showMessage() {
-            
-            if (window.innerWidth < 319) {
-                paragraphElement.innerText = "Ta strona nie jest obsługiwana w rozdzielczości niższej niż 319 pikseli szerokości wyświetlacza. Proszę o użycie urządzenia z szerszym ekranem.";
-                document.body.appendChild(paragraphElement);
-            } else if (window.innerWidth > 319) {
-                document.body.removeChild(paragraphElement);
-            }
-        }
-        showMessage();
-
-        window.addEventListener("resize", function () {
-            showMessage();
-        }, false);
-    },
 };
 
 export default performance;
