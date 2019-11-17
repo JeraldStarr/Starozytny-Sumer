@@ -18,7 +18,7 @@ body {
  * container for all elements on the website
  */
 #calosc {
-    background-color: rgb(247, 247, 231);
+    background: linear-gradient(150deg, white, #f7f7e7 1000px);
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
