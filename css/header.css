@@ -126,6 +126,13 @@
     }
 }
 
+@media (max-height: 750px) {
+    #NAGLOWEK section {
+        /* background: red; */
+        top: 45%;
+    }
+}
+
 @media (min-height: 700px) and (max-height: 800px) and (max-width: 1200px) {
     #NAGLOWEK section {
         top: 55%;
