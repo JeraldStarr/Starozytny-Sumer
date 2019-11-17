@@ -167,15 +167,15 @@ ul.urIIIpodzial {
     
     #MENU ul#display a:link, #MENU ul#display a:visited {
         color: whitesmoke;
-        background-color: #614444;
+        background-color: var(--secondLevelMobileMenuColor);
     }
     
     #MENU ul#display .blok a:link, #MENU ul#display .blok a:visited {
-        background-color: #683b17;
+        background-color: var(--thirdLevelMobileMenuColor);
     }
     
     #MENU ul#display .blok .urIII li a, #MENU ul#display .blok .pieczecie li a {
-        background-color: #844e23;
+        background-color: var(--fourthLevelMobileMenuColor);
     }
     
     .menuArrow {
@@ -309,9 +309,9 @@ ul.urIIIpodzial {
         top: 10px;
         right: 0px;
         background-color: #8c4a14;
-        width: 33px;
-        height: 33px;
-        line-height: 33px;
+        width: var(--smallestMenuArrowSize);
+        height: var(--smallestMenuArrowSize);
+        line-height: var(--smallestMenuArrowSize);
     }
     
      #display {
@@ -330,15 +330,15 @@ ul.urIIIpodzial {
     
     #MENU ul#display a:link, #MENU ul#display a:visited {
         color: whitesmoke;
-        background-color: #614444;
+        background-color: var(--secondLevelMobileMenuColor);
     }
     
     #MENU ul#display .blok a:link, #MENU ul#display .blok a:visited {
-        background-color: #683b17;
+        background-color: var(--thirdLevelMobileMenuColor);
     }
     
     #MENU ul#display .blok .urIII li a, #MENU ul#display .blok .pieczecie li a {
-        background-color: #70390c;
+        background-color: var(--fourthLevelMobileMenuColor);
     }
     
     .podmenu {
@@ -347,10 +347,10 @@ ul.urIIIpodzial {
     
     .menuArrow{
         background-color: #663d1c;
-        height: var(--menuArrowSizeForSmaller);
-        width: var(--menuArrowSizeForSmaller);
+        height: var(--smallerMenuArrowSize);
+        width: var(--smallerMenuArrowSize);
         text-align: center;
-        line-height: var(--menuArrowSizeForSmaller);;
+        line-height: var(---smallerMenuArrowSize);
         transform: translateY(-5px) rotate(90deg);
         transition: .1s;
         border-radius: 3px;

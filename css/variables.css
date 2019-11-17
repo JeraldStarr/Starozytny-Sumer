@@ -1,6 +1,10 @@
 :root {
     --submenuMobileColor: #4d2b10;
     --menuArrowSize: 50px;
-    --menuArrowSizeForSmaller: 35px;
+    --smallerMenuArrowSize: 35px;
+    --smallestMenuArrowSize: 33px;
     --accentColor: #c39733;
+    --secondLevelMobileMenuColor: #614444;
+    --thirdLevelMobileMenuColor: #683b17;
+    --fourthLevelMobileMenuColor: #844e23;
 }
