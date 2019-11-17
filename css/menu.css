@@ -350,7 +350,7 @@ ul.urIIIpodzial {
         height: var(--smallerMenuArrowSize);
         width: var(--smallerMenuArrowSize);
         text-align: center;
-        line-height: var(---smallerMenuArrowSize);
+        line-height: 35px;
         transform: translateY(-5px) rotate(90deg);
         transition: .1s;
         border-radius: 3px;
