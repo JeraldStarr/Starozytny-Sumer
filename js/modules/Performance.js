@@ -42,16 +42,6 @@ const performance = {
         }, false)
 
     },
-    // clean third level menu
-    thirdLevelMobileMenuCleaner() {
-        const ulBlokClass = document.querySelectorAll(".blok");
-        for (let i = 0; i < ulBlokClass.length; i++) {
-            if (ulBlokClass[i].id === "display") {
-                ulBlokClass[i].id = "";
-                ulBlokClass[i].parentNode.childNodes[0].childNodes[1].classList.remove("upSideDown")
-            };
-        }
-    },
     // Transforms desktop menu in mobile menu
     transformToMobileMenu() {
         if (window.innerWidth < 770) {
@@ -65,7 +55,6 @@ const performance = {
                         ulUnderArrow.id = "";
                         arrows[i].classList.remove("upSideDown");
                         // cleans third level menu
-                        performance.thirdLevelMobileMenuCleaner();
                     } else {
                         ulUnderArrow.id = "display";
                         arrows[i].classList.add("upSideDown");
