@@ -137,11 +137,11 @@ body {
 }
 
 a:link {
-    color: #17089C;
+    color: var(--accentColor);
 }
 
 a:visited {
-    color: #840F94;
+    color: brown;
 }
 
 a:hover {
