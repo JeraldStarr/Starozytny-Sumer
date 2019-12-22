@@ -522,6 +522,11 @@ export const data = {
 		"url" : "/podstrony/prawo/prawo-karne-w-sumerze.html",
 		"extand" : false
 	},
+	{
+		"name" : "Kodeks Ur-Nammy",
+		"url" : "/podstrony/prawo/kodeks-urnammy.html",
+		"extand" : false
+	},
             
         ]
 	},
@@ -568,10 +573,10 @@ export const data = {
 
 }
 export const urls = [
+	"/podstrony/prawo/kodeks-urnammy.html",
 	"/podstrony/podstrony-historia/krolowie/enmerkar.html",
 	"/podstrony/podstrony-historia/krolowie/urukagina.html",
 	"/podstrony/podstrony-historia/krolowie/ur-ningirsu.html",
-    "/podstrony/podstrony_poziom_1_bogowie/bau.html",
 	
 	"/podstrony/podstrony-historia/krolowie_sumeru.html",
 	"/podstrony/podstrony_poziom_1_miasta/eridu.html",
@@ -583,10 +588,10 @@ export const urls = [
 
 // articles' titles
 export const titles = [
+	"Kodeks Ur-Nammy",
 	"Enmerkar",
 	"Urukagina",
 	"Ur-Ningirsu",
-    "Bau",
 	
 	"Królowie Sumerów",
 	"Eridu",
@@ -598,10 +603,10 @@ export const titles = [
 
 // urls for articles' icons 
 export const iconsURLs = [
+	"/grafika/ikonka/kodeks_ur-nammy.jpg",
 	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/urukagina.jpg",
 	"/grafika/ikonka/urNingirsu.jpg",
-    "/grafika/ikonka/ikonka_standardowa.gif",
 
 	"/grafika/ikonka/krol_sumeru.gif",
 	"/grafika/ikonka/eridu.jpg",
@@ -613,10 +618,11 @@ export const iconsURLs = [
 
 // fragmenty tekstów z artykułów
 export const texts = [
+	`Istnieje zasada, że prawo zapisuje się wtedy, gdy zagrożone są zasady prawa 
+	zwyczajowego ...`,
 	"Tradycja informuje o nim, ale badania nie zdołały dostarczyć dowodów na jego istnienie ...",
 	"Urukagina na swoich stożkach fundacyjnych opisał w jakich warunkach żyli zwykli ...",
 	"Ur-Namma i Ur-Ningirsu byli mniej więcej w tym samym wieku. Dorastając, byli młodymi... ",
-    "Głównym miejscem kultu Bau była świątynia E-tarsirsir w Girsu. Oprócz tego posiadała swoją ...",
 	
 	"Słowo Sipa, jak zwany był przez Sumerów ich król, oznaczało pasterza, człowieka który...",
 	"W mieście odkopano również pięć zespołów mieszkalnych oraz fragmenty dwóch ulic...",
@@ -629,10 +635,10 @@ export const texts = [
 
 // daty dodania bądź aktualizacji artykułów
 export const dates = [
+	"22.12.2019",
 	"08.11.2019",
 	"18.03.2019",
 	"05.09.2018",
-    "01.03.2018",
 
 	"06.10.2019",
 	"25.09.2019",
@@ -644,10 +650,10 @@ export const dates = [
 
 // treści do znacznika alt
 export const alt = [
+	"Kodeks Ur-Nammy",
 	"Pismo",
     "Gliniana tabliczka Urukaginy",
 	"Ur-Ningirsu",
-    "Pismo",
 	
 	"Król miasta Lagasz - Ur-Nansze",
 	"Mapa",
