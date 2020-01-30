@@ -15,7 +15,7 @@ const news = {
             const icon = document.createElement("img");
 
             const buildLink = aHTML => {
-                aHTML.setAttribute("href", urls[i]);
+                aHTML.setAttribute("href", `${urls[i]}#lokalizacja`);
                 aHTML.setAttribute("title", TITLE);
                 if (articleTitle) {
                     aHTML.textContent = titles[i];

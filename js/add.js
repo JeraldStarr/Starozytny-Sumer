@@ -27,4 +27,5 @@ window.addEventListener("load", () => {
   label.create();
   label.displayAnotherWebsiteLabel();
   links.fixUpScrolling();
+  links.addTagToLinks();
 }, false);
