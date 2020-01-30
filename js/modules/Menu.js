@@ -129,7 +129,7 @@ var menu = {
             // url       - takes url from data base
             // liParent  - takes parent element (always <li></li>)
             // innerText - takes the name of the article from data base
-            anchor.setAttribute("href", url);
+            anchor.setAttribute("href", `${url}#lokalizacja`);
             anchor.innerText = innerText;
             liParent.appendChild(anchor);
         };
