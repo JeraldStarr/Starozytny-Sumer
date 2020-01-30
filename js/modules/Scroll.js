@@ -10,7 +10,7 @@ const scrolls = {
     goToUp() {
         $(".gora_strony a").click(function () {
             $("body, html").animate({
-                scrollTop: $("#lokalizacja").offset().top
+                scrollTop: $(".sitemap").offset().top
             })
         })
     }
