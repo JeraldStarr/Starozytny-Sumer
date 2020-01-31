@@ -9,13 +9,21 @@ const links = {
     addTagToLinks() {
         this.addTagToLinksInSection("TRESC");
         this.addTagToLinksInSection("lokalizacja");
+        this.addTagToLinksInSection("contain");
     },
     addTagToLinksInSection(selector) {
         const section = document.getElementById(selector);
         const linksCollection = section.getElementsByTagName("a");
         const validLinksCollection = [];
-        for (var i = 0; i < linksCollection.length; i++) {  
-            this.addTagToLink(linksCollection, i, validLinksCollection);
+        for (var i = 0; i < linksCollection.length; i++) { 
+            if (selector === "TRESC") {
+                if (linksCollection[i].title
+                    .includes("Proszę kliknąć, aby przejść do artykułu:")) {
+                    this.addTagToLink(linksCollection, i, validLinksCollection);
+                };
+            } else if (selector === "lokalizacja" || selector === "contain") {
+                this.addTagToLink(linksCollection, i, validLinksCollection);
+            }
         };
     },
     addTagToLink(linksCollection, i, validLinksCollection) {     
