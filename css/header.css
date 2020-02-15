@@ -84,6 +84,19 @@
     }
 }
 
+@media (max-width: 576px) {
+    #NAGLOWEK span:first-of-type {
+        font-size: 50px;
+    }
+    #NAGLOWEK span:nth-of-type(2) {
+        font-size: 30px;
+        padding-top: 10px;
+    }
+    #NAGLOWEK span:nth-of-type(3) {
+        font-size: 28px;
+    }
+}
+
 @media (max-height: 420px) and (max-width: 1000px) {
     #NAGLOWEK {
         background: url('/grafika/zdjecia/logo_300px.gif') no-repeat center;

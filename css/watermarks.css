@@ -1,0 +1,54 @@
+.dingir {
+    padding: 9% 10%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.malyDingir {
+    width: 20%;
+    padding: 2%;
+    padding-bottom: 4%;
+    margin: auto;
+    display: block;
+}
+
+.bocznyDingir {
+    width: 55%;
+    padding: 20% 10% 0;
+    margin-left: 11%;
+}
+
+.bocznyDingir:nth-of-type(2) {
+    padding-bottom: 20%;
+}
+
+@media (min-width: 480px) and (max-width: 770px) {
+    .dingir {
+        width: 80%;
+    }
+
+    .bocznyDingir,
+    #MENU span,
+    #MENU em,
+    .co_nowego {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    .dingir {
+        width: 80%;
+    }
+
+    .bocznyDingir,
+    #MENU span,
+    #MENU em,
+    .co_nowego {
+        display: none;
+    }
+
+    .malyDingir {
+        width: 50%;
+    }
+}

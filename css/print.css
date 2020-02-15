@@ -1,0 +1,42 @@
+@media print {
+    #calosc {
+        background: white;
+        color: black !important;
+        box-shadow: none;
+    }
+
+    #NAGLOWEK,
+    .menu,
+    #MENU,
+    .podmenu,
+    .sitemap,
+    .gora_strony,
+    .wyszukiwarka,
+    #lokalizacja,
+    #TRESC .dingir,
+    .linki_dol_strony {
+        display: none;
+    }
+
+    #TRESC {
+        width: 97%;
+    }
+
+    #TRESC .wstep {
+        color: black;
+    }
+
+    #calosc a {
+        color: black;
+        text-decoration: none;
+    }
+
+    figcaption {
+        border-top: 1px solid black;
+    }
+
+    figure {
+        border-top: 1px solid black !important;
+        border-bottom: 1px solid black !important;
+    }
+}
