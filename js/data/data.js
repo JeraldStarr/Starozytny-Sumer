@@ -583,10 +583,10 @@ export const urls = [
 	"/podstrony/podstrony-historia/krolowie/enmerkar.html",
 	"/podstrony/podstrony-historia/krolowie/urukagina.html",
 	
+	"/podstrony/podstrony_poziom_1_bogowie/utu.html",
 	"/podstrony/podstrony-historia/krolowie_sumeru.html",
 	"/podstrony/podstrony_poziom_1_miasta/eridu.html",
 	"/podstrony/podstrony-historia/pochodzenie.html",
-	"/",
 
     "/podstrony/bogowie.html"
 ];
@@ -598,10 +598,10 @@ export const titles = [
 	"Enmerkar",
 	"Urukagina",
 	
+	"Utu",
 	"Królowie Sumerów",
 	"Eridu",
 	"Pochodzenie Sumerów",
-	"Artykuł główny",
 
     "Sumeryjscy bogowie"
 ];
@@ -613,10 +613,10 @@ export const iconsURLs = [
 	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/urukagina.jpg",
 
+	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/krol_sumeru.gif",
 	"/grafika/ikonka/eridu.jpg",
 	"/grafika/ikonka/pochodzenie.jpg",
-	"/grafika/ikonka/index.gif",
 
     "/grafika/ikonka/bogowie.gif"
 ];
@@ -630,10 +630,11 @@ export const texts = [
 	"Tradycja informuje o nim, ale badania nie zdołały dostarczyć dowodów na jego istnienie ...",
 	"Urukagina na swoich stożkach fundacyjnych opisał w jakich warunkach żyli zwykli ...",
 	
+	`Przynosił światło i ciepło na ziemię, pozwalał rosnąć roślinom i zbożom. 
+	O poranku wyłaniał się ze swojej podziemnej sypialni i codziennie wędrował po niebie. ...`,
 	"Słowo Sipa, jak zwany był przez Sumerów ich król, oznaczało pasterza, człowieka który...",
 	"W mieście odkopano również pięć zespołów mieszkalnych oraz fragmenty dwóch ulic...",
 	"Jeżeli nie ma możliwości odnalezienia powiązań językowych, należy poszukać innych dowodów ...",
-	"Jako osiągnięcia cywilizacyjne Sumerów można zatem wymienić monumentalną architekturę, zastosowanie ...",
 
     "Nadrzędne siły miały charakter niepoznawalny, a ich źródło pozostawało niewyjaśnione ..."
 
@@ -646,10 +647,10 @@ export const dates = [
 	"08.11.2019",
 	"18.03.2019",
 
+	"06.03.2020",
 	"06.10.2019",
 	"25.09.2019",
 	"27.07.2019",
-	"28.05.2019",
 
     ""
 ];
@@ -661,10 +662,10 @@ export const alt = [
 	"Pismo",
     "Gliniana tabliczka Urukaginy",
 	
+	"Pismo",
 	"Król miasta Lagasz - Ur-Nansze",
 	"Mapa",
 	"Świątynie",
-	"Gliniana tabliczka przedstawiająca sumeryjskich bogów astralnych",
 
     "Bogowie na odcisku pieczęci"
 ];
