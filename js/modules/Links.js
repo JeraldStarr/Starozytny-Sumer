@@ -2,16 +2,19 @@ const links = {
     fixUpScrolling() {
         const tagText = "gora_strony";
         const upReturnElement = document.getElementsByClassName(tagText)[0];
-        const upReturnLink = upReturnElement.childNodes[0];
+        const upReturnLink = upReturnElement.children[0];
         upReturnElement.id = tagText;
         upReturnLink.setAttribute("href", `#${tagText}`);
     },
     addTagToLinks() {
-        this.addTagToLinksInSection("TRESC");
-        this.addTagToLinksInSection("lokalizacja");
-        this.addTagToLinksInSection("content");
+        this._addTagToLinksInSection("TRESC");
+        this._addTagToLinksInSection("lokalizacja");
+        this._addTagToLinksInSection("content");
     },
-    addTagToLinksInSection(selector) {
+    _addTagToLinksInSection(selector) {
+        if (!document.getElementById(selector)) {
+            return null;
+        }
         const section = document.getElementById(selector);
         const linksCollection = section.getElementsByTagName("a");
         const validLinksCollection = [];
@@ -19,14 +22,14 @@ const links = {
             if (selector === "TRESC") {
                 if (linksCollection[i].title
                     .includes("Proszę kliknąć, aby przejść do artykułu:")) {
-                    this.addTagToLink(linksCollection, i, validLinksCollection);
+                    this._addTagToLink(linksCollection, i, validLinksCollection);
                 };
             } else if (selector === "lokalizacja" || selector === "content") {
-                this.addTagToLink(linksCollection, i, validLinksCollection);
+                this._addTagToLink(linksCollection, i, validLinksCollection);
             }
         };
     },
-    addTagToLink(linksCollection, i, validLinksCollection) {     
+    _addTagToLink(linksCollection, i, validLinksCollection) {     
         linksCollection[i].setAttribute("href", `${linksCollection[i]
             .href}#lokalizacja`);
         validLinksCollection.push(linksCollection[i]);    
