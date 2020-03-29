@@ -1,4 +1,4 @@
-import links from '../js/modules/Links.js';
+import {fixUpScrolling, addTagToLinks} from '../js/modules/Links.js';
 
 describe("Links module: ", () => {
     describe("fixUpScrolling: ", () => {
@@ -10,14 +10,14 @@ describe("Links module: ", () => {
         })
         test("should check if <a> has an attribute '#gora_strony'", () => {
 
-            links.fixUpScrolling();
+            fixUpScrolling();
 
             expect(document.getElementsByTagName("a")[0].getAttribute("href"))
             .toBe("#gora_strony");
         });
         test("should check if <div> has an id 'gora_strony'", () => {
 
-            links.fixUpScrolling();
+            fixUpScrolling();
 
             expect(document.getElementsByClassName("gora_strony")[0].id)
             .toBe("gora_strony");
