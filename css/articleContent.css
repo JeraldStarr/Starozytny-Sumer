@@ -1,0 +1,39 @@
+.strukturaArtykulu {
+    /* blok, w którym wyświetlana jest struktura artykułu*/
+    background-color: #F5F9FA;
+    font-size: 14px;
+    color: black;
+    margin-right: 10px;
+    border-style: solid;
+    width: 30%;
+}
+
+.strukturaArtykulu span {
+    color: black;
+    font-weight: bold;
+    display: block;
+    margin: 7px 0;
+    margin-left: 29%;
+}
+
+.strukturaArtykulu li {
+    list-style-type: disc;
+    padding: 3px 0;
+}
+
+.strukturaArtykulu ol {
+    float: left;
+    margin: 0;
+    padding: 0;
+    padding: 12%;
+}
+.strukturaArtykulu {
+    width: 40%;
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+
+    .strukturaArtykulu {
+        width: 94%;
+    }
+}

@@ -1,0 +1,257 @@
+html,
+body {
+    background-color: rgb(236, 234, 234);
+    color: #4b1818;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/lato/Lato-Regular.ttf");
+}
+
+/**
+ * container for all elements on the website
+ */
+#calosc {
+    background: linear-gradient(150deg, white, #f7f7e7 1000px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: "Lato";
+}
+
+/**
+ * bread crumbs
+ */
+#lokalizacja {
+    width: 94.9%;
+    padding: 25px;
+    clear: both;
+}
+
+.sitemap
+
+/*zastosowanie do akapitu, gdzie znajduje się link do mapy strony, umiejscowia go po prawiej stronie bloku*/
+    {
+    float: right;
+    margin: 1px;
+    margin-top: -80px;
+}
+
+.podkreslenie
+
+/*stosowany do znacznika hr - decyduje o grubości lini podkreślenia pod zacznikami h1 i h2*/
+    {
+    border: 1px solid lightgray;
+}
+
+.gora_strony
+
+/*klasa stosowana do linku na końcu artykułu, który  ładuje stronę od nowa i wyświetla początek artykułu*/
+    {
+    clear: both;
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wyszukiwarka {
+    /*dla bloku z wyszukiwarką*/
+    float: left;
+    width: 245px;
+}
+
+.szukaj {
+    float: left;
+    width: 141px;
+    margin: 2% 0 0 2.5%;
+    color: black;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.linki_dol_strony
+
+/*klasa stosowana do formatowania linków, znajdujących się w stopce*/
+    {
+    font-size: 11px;
+}
+
+.daty_zrodla
+
+/*stosowany do formatowania dat i żródeł na końcu każdego artykułu*/
+    {
+    font-size: 14px;
+    font-style: italic;
+}
+
+#TRESC {
+    /*id, które służy fo formatowania tekstu artykułu; cześciej używa się do 
+    tego nazwy contain*/
+    width: 74.530%;
+    text-align: justify;
+    float: right;
+    padding-right: 25px;
+}
+
+#TRESC p:not(.daty_zrodla) {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.naglowek_notes {
+    /*nagłówek do bloku o klasie .notes*/
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* ======= koniec =======*/
+.download {
+    /* blok, w którym umeiszczane są linki do pobierania tekstów w pdf. Blok połozony będzie po prawej stronie*/
+    background-color: #fdfde6;
+    font-size: 14px;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    float: right;
+    margin: 25px 0 0 10px;
+    border-style: solid;
+}
+
+.download a {
+    padding: 0 30px 0 0;
+    background-image: url("/grafika/zdjecia/acrobat.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.daty_zrodla a {
+    /*klasa do formatowania bloku, który znajduje się pod każdym artykułem; zawiera informacje o źródłach oraz dacie 
+    utworzenia i dacie ostatniej aktualizacji*/
+    padding: 0 30px 0 0;
+    background: url("/grafika/zdjecia/globe.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+#STOPKA {
+    clear: both;
+    width: 100%;
+}
+
+ul a:active {
+    color: #BA223B;
+}
+
+.wstep
+
+/*do wyróżnienia pierwszego akapitu*/
+    {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 135%;
+    color: var(--accentColor);
+    font-weight: bold;
+}
+
+.wstep a {
+    color: var(--accentColor);
+}
+
+h1 {
+    margin: 0;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+h2 {
+    margin: 60px 0 0;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+/* ============ responsive website ============ */
+
+@media (min-width: 480px) and (max-width: 770px) { 
+
+    #TRESC {
+        width: 94%;
+    }
+
+    .szukaj {
+        display: none;
+    }
+
+    #lokalizacja {
+        padding: 1.5%;
+    }
+
+    .sitemap {
+        margin-top: -67px;
+    }
+
+    /* .strukturaArtykulu {
+        width: 40%;
+    } */
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    #calosc {
+        padding: 2px;
+    }
+    
+    #TRESC {
+        width: 99%;
+        padding-right: 1px;
+    }
+
+    #TRESC p:not(.daty_zrodla) {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    #lokalizacja {
+        padding: 0;
+        margin-bottom: 30px;
+        font-size: 13px;
+    }
+
+    .szukaj {
+        display: none;
+    }
+
+    .sitemap {
+        clear: both;
+        float: none;
+        line-height: 400%;
+    }
+
+    .wyszukiwarka {
+        width: 80%;
+    }
+
+
+    .daty_zrodla {
+        font-size: 9px;
+    }
+
+    h1 {
+        letter-spacing: 0px;
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 319px) {
+    #calosc {
+        display: none;
+    }
+    body {
+        text-align: center;
+    }
+}

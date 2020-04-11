@@ -1,0 +1,131 @@
+figure img:hover
+
+/*animacja, która powoduje efekt lekkego unienienia się obrazu po najechaniu na niegu myszą*/
+    {
+    -webkit-transform: translate(-5px, -5px);
+    -moz-transform: translate(-5px, -5px);
+    -o-transform: translate(-5px, -5px);
+    -ms-transform: translate(-5px, -5px);
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+}
+
+img {
+    border: none;
+    transition: all 0.3s ease-out;
+}
+
+/*========== FORMATOWANIE OBRAZÓW ==========*/
+figcaption {
+    font-size: 14px;
+    color: black;
+    border-top: 1px solid #7A4646;
+    line-height: 108%;
+    padding: 3px 5px 0;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+figure img {
+    width: 100%;
+}
+
+.Obraz {
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+}
+
+.duzyObraz {
+    /*formatowanie dla obrazu o szerokości około 500px*/
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+    width: 64.516%;
+}
+
+.sporyObraz {
+    /*formatowanie dla obrazu o szerokości około 400px*/
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+    width: 51.679%;
+}
+
+.sredniObraz {
+    /*formatowanie dla obrazu o szerokości około 300px*/
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+    width: 38.461%;
+}
+
+.malyObraz {
+    /*formatowanie dla obrazu o szerokości około 200px*/
+    width: 28.101%;
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+}
+
+.najmniejszyObraz {
+    /*formatowanie dla obrazu o szerokości około 120px*/
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+    width: 120px;
+}
+
+.plywaLewo {
+    margin: 0 10px 5px 0;
+    float: left;
+}
+
+.plywaPrawo {
+    margin: 0 0 5px 10px;
+    float: right;
+}
+
+/*========== KONIEC FORMATOWANIA OBRAZÓW ==========*/
+
+@media (min-width: 320px) and (max-width: 479px) {
+    .duzyObraz {
+        /*formatowanie dla obrazu o szerokości około 500px*/
+        border-bottom: 1px solid #7A4646;
+        border-top: 1px solid #7A4646;
+        padding: 5px 0;
+        width: 100%;
+    }
+
+    .sporyObraz {
+        /*formatowanie dla obrazu o szerokości około 400px*/
+        border-bottom: 1px solid #7A4646;
+        border-top: 1px solid #7A4646;
+        padding: 5px 0;
+        width: 100%;
+    }
+
+    .sredniObraz {
+        /*formatowanie dla obrazu o szerokości około 300px*/
+        border-bottom: 1px solid #7A4646;
+        border-top: 1px solid #7A4646;
+        padding: 5px 0;
+        width: 100%;
+    }
+
+    .malyObraz {
+        /*formatowanie dla obrazu o szerokości około 200px*/
+        border-bottom: 1px solid #7A4646;
+        border-top: 1px solid #7A4646;
+        padding: 5px 0;
+        width: 55%;
+    }
+
+    .najmniejszyObraz {
+        /*formatowanie dla obrazu o szerokości około 120px*/
+        border-bottom: 1px solid #7A4646;
+        border-top: 1px solid #7A4646;
+        padding: 5px 0;
+        width: 50%;
+    }
+}

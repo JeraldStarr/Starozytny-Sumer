@@ -1,0 +1,78 @@
+.naglowek_notes {
+    /*nagłówek do bloku o klasie .notes*/
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.notes {
+    /* blok, w którym wyświetlane są najważniejsze informacje w wersji pigułki. Blok połozony będzie po lewej stronie*/
+    background-color: #fdfde6;
+    font-size: 14px;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    margin-right: 10px;
+    border-style: solid;
+}
+
+.notes_right {
+    /* blok, w którym wyświetlane są najważniejsze informacje w wersji pigułki. Blok połozony będzie po prawej stronie*/
+    background-color: #fdfde6;
+    font-size: 14px;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    float: right;
+    margin-left: 10px;
+    border-style: solid;
+}
+
+/* === style dla cytatów ===*/
+.quote p {
+    text-align: center;
+    font-style: italic;
+}
+
+.quote {
+    width: 87%;
+    float: none;
+    margin: 10px;
+    padding: 1%;
+    background-color: #fdfde6;
+    font-size: 14px;
+    color: black;
+    border-style: solid;
+}
+
+ol.c
+
+/*punktor w kształcie kropki*/
+    {
+    list-style-type: disc;
+}
+
+ol.none
+
+/*bez wypunktowania*/
+    {
+    list-style-type: none;
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    .notes_right {
+        width: 91%;
+        padding: 0 2%;
+    }
+
+    .notes_right ol,
+    .notes ol,
+    .notes_right ul,
+    .notes ul {
+        padding-left: 5%;
+    }
+
+    .notes {
+        width: 91%;
+    }
+}

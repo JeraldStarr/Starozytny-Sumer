@@ -1,0 +1,33 @@
+#starozytnaAsyria {
+    width: 460px;
+    height: 100px;
+    background: black;
+    color: white;
+    opacity: 0.87;
+    box-shadow: 7px 7px 5px 1px rgba(0, 0, 0, .6);
+    border: 1px solid white;
+}
+
+#starozytnaAsyria img {
+    float: right;
+    padding: 20px;
+}
+
+#starozytnaAsyria span {
+    display: block;
+    float: left;
+    clear: both;
+}
+
+#starozytnaAsyria strong {
+    display: block;
+    float: left;
+    font-size: 22px;
+    clear: both;
+    margin-left: 50px;
+}
+
+#labelTextContainer {
+    float: left;
+    padding: 17px;
+}

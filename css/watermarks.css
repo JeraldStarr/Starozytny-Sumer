@@ -27,11 +27,7 @@
     .dingir {
         width: 80%;
     }
-
-    .bocznyDingir,
-    #MENU span,
-    #MENU em,
-    .co_nowego {
+    .bocznyDingir {
         display: none;
     }
 }
@@ -41,14 +37,11 @@
         width: 80%;
     }
 
-    .bocznyDingir,
-    #MENU span,
-    #MENU em,
-    .co_nowego {
-        display: none;
-    }
-
     .malyDingir {
         width: 50%;
+    }
+
+    .bocznyDingir {
+        display: none;
     }
 }

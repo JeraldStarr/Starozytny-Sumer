@@ -1,0 +1,27 @@
+@media (min-width: 480px) and (max-width: 770px) {
+    #form {
+        width: 80% !important;
+        margin: 35px 0 0 !important;
+        text-align: left;
+    }
+
+    
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    form#form {
+        text-align: left;
+    }
+
+    form div#wrong {
+        margin: 0 0 0 0 !important;
+    }
+
+    input[type="text"] {
+        width: 90%;
+    }
+
+    input[type="text"]#subject {
+        margin-left: 3% !important;
+    }
+}

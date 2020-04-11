@@ -1,0 +1,58 @@
+.co_nowego {
+    /*bloki z odnośnikami do nowych lub ostanio aktualizowanych artykułów*/
+    border: 1px solid lightgray;
+    width: 100%;
+    overflow: hidden;
+    padding: 1%;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
+    margin-bottom: 15px;
+    font-size: 21px;
+    text-align: center;
+    transition: all 0.3s ease-out;
+}
+
+.co_nowego:hover {
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .4);
+    background-color: rgb(238, 238, 210);
+}
+
+#MENU .co_nowego a {
+    text-decoration: none;
+    color: black;
+}
+
+#MENU em {
+    color: var(--accentColor);
+    font-style: normal;
+    font-size: 20px;
+    padding: 12px;
+}
+
+.co_nowego div a {
+    float: right;
+    margin: 20px 0 10px;
+}
+
+.co_nowego img {
+    width: 100%;
+}
+
+.menuArrow {
+    float: right;
+}
+
+.czcionka_co_nowego {
+    /*klasa służy do formatowania tekstu, który znajduje się w blokach o klasie 
+    .co_nowego*/
+    font-size: 14px;
+    color: black;
+    text-align: justify;
+}
+
+@media (max-width: 770px) {
+    #MENU span,
+    #MENU em,
+    .co_nowego {
+        display: none;
+    }
+}
