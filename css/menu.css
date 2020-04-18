@@ -370,3 +370,7 @@ ul.urIIIpodzial {
     }
     
 }
+
+li:hover .podmenu {
+    display: none;
+}

@@ -5,7 +5,7 @@
     color: black;
     margin-right: 10px;
     border-style: solid;
-    width: 30%;
+    width: 40%;
 }
 
 .strukturaArtykulu span {
@@ -27,9 +27,12 @@
     padding: 0;
     padding: 12%;
 }
+<<<<<<< Updated upstream
 .strukturaArtykulu {
     width: 40%;
 }
+=======
+>>>>>>> Stashed changes
 
 @media (min-width: 320px) and (max-width: 479px) {
 
