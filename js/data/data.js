@@ -583,10 +583,10 @@ export const urls = [
 	"/podstrony/podstrony-historia/krolowie/enmerkar.html",
 	"/podstrony/podstrony-historia/krolowie/urukagina.html",
 	
+	"/podstrony/podstrony_poziom_1_bogowie/ningiszzida.html",
 	"/podstrony/podstrony_poziom_1_bogowie/utu.html",
 	"/podstrony/podstrony-historia/krolowie_sumeru.html",
 	"/podstrony/podstrony_poziom_1_miasta/eridu.html",
-	"/podstrony/podstrony-historia/pochodzenie.html",
 
     "/podstrony/bogowie.html"
 ];
@@ -598,10 +598,10 @@ export const titles = [
 	"Enmerkar",
 	"Urukagina",
 	
+	"Ningiszzida",
 	"Utu",
 	"Królowie Sumerów",
 	"Eridu",
-	"Pochodzenie Sumerów",
 
     "Sumeryjscy bogowie"
 ];
@@ -613,10 +613,10 @@ export const iconsURLs = [
 	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/urukagina.jpg",
 
+	"/grafika/ikonka/ningiszzida.jpg",
 	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/krol_sumeru.gif",
 	"/grafika/ikonka/eridu.jpg",
-	"/grafika/ikonka/pochodzenie.jpg",
 
     "/grafika/ikonka/bogowie.gif"
 ];
@@ -630,11 +630,12 @@ export const texts = [
 	"Tradycja informuje o nim, ale badania nie zdołały dostarczyć dowodów na jego istnienie ...",
 	"Urukagina na swoich stożkach fundacyjnych opisał w jakich warunkach żyli zwykli ...",
 	
+	`Sumeryjski bóg świata podziemnego i wegetacji, kojarzony również z wężami. Jego domem było 
+	miasto Giszbanda, które leżało w górę rzeki od Ur ...`,
 	`Przynosił światło i ciepło na ziemię, pozwalał rosnąć roślinom i zbożom. 
 	O poranku wyłaniał się ze swojej podziemnej sypialni i codziennie wędrował po niebie. ...`,
 	"Słowo Sipa, jak zwany był przez Sumerów ich król, oznaczało pasterza, człowieka który...",
 	"W mieście odkopano również pięć zespołów mieszkalnych oraz fragmenty dwóch ulic...",
-	"Jeżeli nie ma możliwości odnalezienia powiązań językowych, należy poszukać innych dowodów ...",
 
     "Nadrzędne siły miały charakter niepoznawalny, a ich źródło pozostawało niewyjaśnione ..."
 
@@ -647,10 +648,10 @@ export const dates = [
 	"08.11.2019",
 	"18.03.2019",
 
+	"26.04.2020",
 	"06.03.2020",
 	"06.10.2019",
 	"25.09.2019",
-	"27.07.2019",
 
     ""
 ];
@@ -665,7 +666,7 @@ export const alt = [
 	"Pismo",
 	"Król miasta Lagasz - Ur-Nansze",
 	"Mapa",
-	"Świątynie",
+	"Ningiszzida",
 
     "Bogowie na odcisku pieczęci"
 ];
