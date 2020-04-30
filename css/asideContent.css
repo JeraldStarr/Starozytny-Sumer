@@ -37,10 +37,6 @@
     width: 100%;
 }
 
-.menuArrow {
-    float: right;
-}
-
 .czcionka_co_nowego {
     /*klasa służy do formatowania tekstu, który znajduje się w blokach o klasie 
     .co_nowego*/
