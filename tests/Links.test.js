@@ -1,4 +1,4 @@
-import {fixUpScrolling, addTagToLinks} from '../js/modules/Links.js';
+import {fixUpScrolling, addTagToURLs} from '../js/modules/Links.js';
 
 describe("Links module: ", () => {
     describe("fixUpScrolling: ", () => {
@@ -23,7 +23,7 @@ describe("Links module: ", () => {
             .toBe("gora_strony");
         });
     });
-    describe("addTagToLinks: ", () => {
+    describe("addTagToURLs: ", () => {
         beforeEach(() => {
             document.body.innerHTML = `
                 <div id="lokalizacja">
@@ -45,9 +45,9 @@ describe("Links module: ", () => {
                 </ol>
             `
         });
-        test("should return links with href attributes containing '#lokalizacja'", () => {
+        test("should return URLs with href attributes containing '#lokalizacja'", () => {
 
-            addTagToLinks()
+            addTagToURLs()
 
             expect(document.body.innerHTML).toBe(`
                 <div id="lokalizacja">
@@ -69,5 +69,47 @@ describe("Links module: ", () => {
                 </ol>
             `);
         });
+        test("should return empty string if none of needed html element exists", () => {
+
+            clearDOM();
+            
+            addTagToURLs();
+            
+            expect(document.body.innerHTML).toBe('');
+
+        })
+        test("should return false if <a> elements have not title attributes", () => {
+
+            removeTitles();
+
+            addTagToURLs();
+
+            expect(document.querySelector("#TRESC a").href.includes("#lokalizacja")).toBeFalsy();
+        });
+        test("should return false if <a> elements have not ids attributes", () => {
+
+            removeIds();
+
+            addTagToURLs();
+
+            expect(document.querySelector("a").href.includes("#lokalizacja")).toBeFalsy();
+        });
+        function clearDOM() {
+            document.body.innerHTML = "";
+        }
+
+        function removeTitles() {
+            const aHTMLElementsCollection = document.querySelectorAll("a");
+            aHTMLElementsCollection.forEach(aElement => {
+                aElement.removeAttribute("title");
+            })
+        }
+
+        function removeIds() {
+            const aHTMLElementsCollection = document.querySelectorAll("div");
+            aHTMLElementsCollection.forEach(divElement => {
+                divElement.removeAttribute("id");
+            })
+        }
     })
 });

@@ -9,7 +9,7 @@ import googleSearch from './modules/GoogleSearch.js';
 import scrolls from './modules/Scroll.js';
 import tracker from './modules/Tracker.js';
 import label from './modules/Label.js';
-import {fixUpScrolling, addTagToLinks} from './modules/Links.js';
+import {fixUpScrolling, addTagToURLs} from './modules/Links.js';
 
 window.addEventListener("load", () => {
   performance.showHeader();
@@ -27,5 +27,5 @@ window.addEventListener("load", () => {
   label.create();
   label.displayAnotherWebsiteLabel();
   fixUpScrolling();
-  addTagToLinks();
+  addTagToURLs();
 }, false);

@@ -5,34 +5,31 @@ function fixUpScrolling() {
     upReturnElement.id = tagText;
     upReturnLink.setAttribute("href", `#${tagText}`);
 };
-    function addTagToLinks() {
-        const ids = ["TRESC", "lokalizacja", "content"];
-        ids.forEach(id => {
-            _addTagToLinksInSection(id);
-        });
-    };
-    function _addTagToLinksInSection(selector) {
-        if (!document.getElementById(selector)) {
-            return null;
+function addTagToURLs() {
+    const ids = ["TRESC", "lokalizacja", "content"];
+    ids.forEach(id => {
+        _addTagToURLsInSection(id);
+    });
+};
+function _addTagToURLsInSection(selector) {
+    if (!document.getElementById(selector)) {
+        return null;
+    }
+    const section = document.getElementById(selector);
+    const linksCollection = section.getElementsByTagName("a");
+    for (var i = 0; i < linksCollection.length; i++) { 
+        if (selector === "TRESC") {
+            if (linksCollection[i].title) {
+                _addTagToLink(linksCollection, i);
+            };
+        } else if (selector === "lokalizacja" || selector === "content") {
+            _addTagToLink(linksCollection, i);
         }
-        const section = document.getElementById(selector);
-        const linksCollection = section.getElementsByTagName("a");
-        const validLinksCollection = [];
-        for (var i = 0; i < linksCollection.length; i++) { 
-            if (selector === "TRESC") {
-                if (linksCollection[i].title
-                    .includes("Proszę kliknąć, aby przejść do artykułu:")) {
-                    _addTagToLink(linksCollection, i, validLinksCollection);
-                };
-            } else if (selector === "lokalizacja" || selector === "content") {
-                _addTagToLink(linksCollection, i, validLinksCollection);
-            }
-        };
     };
-    function _addTagToLink(linksCollection, i, validLinksCollection) {     
-        linksCollection[i].setAttribute("href", `${linksCollection[i]
-            .href}#lokalizacja`);
-        validLinksCollection.push(linksCollection[i]);    
-    };
+};
+function _addTagToLink(linksCollection, i) {     
+    linksCollection[i].setAttribute("href", `${linksCollection[i]
+        .href}#lokalizacja`);   
+};
 
-export {fixUpScrolling, addTagToLinks};
+export {fixUpScrolling, addTagToURLs};
