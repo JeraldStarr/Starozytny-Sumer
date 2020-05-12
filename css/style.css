@@ -1,15 +1,700 @@
 @import "variables.css";
 @import "base.css";
+@import "form.css";
+@import "articleContent.css";
+@import "asideContent.css";
 @import "header.css";
 @import "menu.css";
 @import "watermarks.css";
-@import "articleContent.css";
-@import "asideContent.css";
-@import "form.css";
 @import "hamburger.css";
 @import "label.css";
 @import "links.css";
-@import "pictures.css";
 @import "notes.css";
-@import "base.css";
+@import "pictures.css";
 @import "print.css";
+/* variables */
+
+/* html,
+body {
+    background-color: rgb(236, 234, 234);
+    color: #4b1818;
+} */
+
+/* @font-face {
+    font-family: "Lato";
+    src: url("/fonts/lato/Lato-Regular.ttf");
+} */
+
+/**
+ * container for all elements on the website
+ */
+/* #calosc {
+    background: linear-gradient(150deg, white, #f7f7e7 1000px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: "Lato";
+} */
+
+/**
+ * bread crumbs
+ */
+/* #lokalizacja {
+    width: 94.9%;
+    padding: 25px;
+    clear: both;
+} */
+
+/*  */
+
+/*============ 4-ty poziom menu ===========*/
+/* .sitemap */
+
+/*zastosowanie do akapitu, gdzie znajduje się link do mapy strony, umiejscowia go po prawiej stronie bloku*/
+    /* {
+    float: right;
+    margin: 1px;
+    margin-top: -80px;
+} */
+
+/* .podkreslenie */
+
+/*stosowany do znacznika hr - decyduje o grubości lini podkreślenia pod zacznikami h1 i h2*/
+    /* {
+    border: 1px solid lightgray;
+} */
+
+/* .gora_strony */
+
+/*klasa stosowana do linku na końcu artykułu, który  ładuje stronę od nowa i wyświetla początek artykułu*/
+    /* {
+    clear: both;
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+/* .wyszukiwarka { */
+    /*dla bloku z wyszukiwarką*/
+    /* float: left;
+    width: 245px;
+} */
+
+/* .szukaj {
+    float: left;
+    width: 141px;
+    margin: 2% 0 0 2.5%;
+    color: black;
+    font-style: italic;
+    font-size: 14px;
+} */
+
+/* .linki_dol_strony */
+
+/*klasa stosowana do formatowania linków, znajdujących się w stopce*/
+    /* { */
+    /* font-size: 11px; */
+/* } */
+
+/* .daty_zrodla */
+
+/*stosowany do formatowania dat i żródeł na końcu każdego artykułu*/
+    /* {
+    font-size: 14px;
+    font-style: italic;
+} */
+
+/* .co_nowego {
+    border: 1px solid lightgray;
+    width: 100%;
+    overflow: hidden;
+    padding: 1%;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
+    margin-bottom: 15px;
+    font-size: 21px;
+    text-align: center;
+    transition: all 0.3s ease-out;
+} */
+
+/* .co_nowego:hover {
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .4);
+    background-color: rgb(238, 238, 210);
+} */
+
+/* #MENU .co_nowego a {
+    text-decoration: none;
+    color: black;
+} */
+
+/* #MENU em {
+    color: var(--accentColor);
+    font-style: normal;
+    font-size: 20px;
+    padding: 12px;
+} */
+
+/* .co_nowego div a {
+    float: right;
+    margin: 20px 0 10px;
+} */
+
+/* .co_nowego img {
+    width: 100%;
+} */
+
+.menuArrow {
+    float: right;
+}
+
+/* a:link {
+    color: var(--accentColor);
+}
+
+a:visited {
+    color: brown;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    color: #BA223B;
+} */
+
+/* .czcionka_co_nowego {
+    font-size: 14px;
+    color: black;
+    text-align: justify;
+} */
+
+/* #TRESC {
+    width: 74.530%;
+    text-align: justify;
+    float: right;
+    padding-right: 25px;
+} */
+
+/* #TRESC p:not(.daty_zrodla) {
+    font-size: 20px;
+    line-height: 30px;
+} */
+
+#starozytnaAsyria {
+    width: 460px;
+    height: 100px;
+    background: black;
+    color: white;
+    opacity: 0.87;
+    box-shadow: 7px 7px 5px 1px rgba(0, 0, 0, .6);
+    border: 1px solid white;
+}
+
+#starozytnaAsyria img {
+    float: right;
+    padding: 20px;
+}
+
+#starozytnaAsyria span {
+    display: block;
+    float: left;
+    clear: both;
+}
+
+#starozytnaAsyria strong {
+    display: block;
+    float: left;
+    font-size: 22px;
+    clear: both;
+    margin-left: 50px;
+}
+
+#labelTextContainer {
+    float: left;
+    padding: 17px;
+}
+
+/* .naglowek_notes {
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+} */
+
+/* .strukturaArtykulu {
+    background-color: #F5F9FA;
+    font-size: 14px;
+    color: black;
+    margin-right: 10px;
+    border-style: solid;
+    width: 30%;
+} */
+
+/* .strukturaArtykulu span {
+    color: black;
+    font-weight: bold;
+    display: block;
+    margin: 7px 0;
+    margin-left: 29%;
+} */
+
+/* .strukturaArtykulu li {
+    list-style-type: disc;
+    padding: 3px 0;
+} */
+
+/* .strukturaArtykulu ol {
+    float: left;
+    margin: 0;
+    padding: 0;
+    padding: 12%;
+} */
+
+/* .notes {
+    background-color: #fdfde6;
+    font-size: 14px;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    margin-right: 10px;
+    border-style: solid;
+}
+
+.notes_right {
+    background-color: #fdfde6;
+    font-size: 14px;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    float: right;
+    margin-left: 10px;
+    border-style: solid;
+} */
+
+/* === style dla cytatów ===*/
+.quote p {
+    text-align: center;
+    font-style: italic;
+}
+
+.quote {
+    width: 87%;
+    float: none;
+    margin: 10px;
+    padding: 1%;
+    background-color: #fdfde6;
+    font-size: 14px;
+    color: black;
+    border-style: solid;
+}
+
+/* ======= koniec =======*/
+/* .download {
+    background-color: #fdfde6;
+    font-size: 14px;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    float: right;
+    margin: 25px 0 0 10px;
+    border-style: solid;
+} */
+
+/* .download a {
+    padding: 0 30px 0 0;
+    background-image: url("/grafika/zdjecia/acrobat.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+} */
+
+/* .daty_zrodla a {
+    padding: 0 30px 0 0;
+    background: url("/grafika/zdjecia/globe.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+} */
+
+ol.c
+    {
+    list-style-type: disc;
+}
+
+ol.none
+
+    {
+    list-style-type: none;
+}
+
+/* #STOPKA {
+    clear: both;
+    width: 100%;
+} */
+
+/* figure img:hover
+
+    {
+    -webkit-transform: translate(-5px, -5px);
+    -moz-transform: translate(-5px, -5px);
+    -o-transform: translate(-5px, -5px);
+    -ms-transform: translate(-5px, -5px);
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+} */
+
+/* img {
+    border: none;
+    transition: all 0.3s ease-out;
+} */
+
+/*========== FORMATOWANIE OBRAZÓW ==========*/
+/* figcaption {
+    font-size: 14px;
+    color: black;
+    border-top: 1px solid #7A4646;
+    line-height: 108%;
+    padding: 3px 5px 0;
+    text-align: center;
+    word-wrap: break-word;
+} */
+
+/* figure img {
+    width: 100%;
+} */
+
+/* .Obraz {
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+} */
+/* 
+.duzyObraz {
+
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+    width: 64.516%;
+} */
+
+/* .sporyObraz {
+
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+    width: 51.679%;
+} */
+
+/* .sredniObraz {
+
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+    width: 38.461%;
+} */
+
+/* .malyObraz {
+    width: 28.101%;
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+} */
+
+/* .najmniejszyObraz {
+    border-bottom: 1px solid #7A4646;
+    border-top: 1px solid #7A4646;
+    padding: 5px 0;
+    width: 120px;
+} */
+
+/* .plywaLewo {
+    margin: 0 10px 5px 0;
+    float: left;
+} */
+
+/* .plywaPrawo {
+    margin: 0 0 5px 10px;
+    float: right;
+} */
+
+/*========== KONIEC FORMATOWANIA OBRAZÓW ==========*/
+/* ul a:active {
+    color: #BA223B;
+} */
+
+/* .wstep
+    {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 135%;
+    color: var(--accentColor);
+    font-weight: bold;
+} */
+
+/* .wstep a {
+    color: var(--accentColor);
+} */
+
+/* h1 {
+    margin: 0;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+h2 {
+    margin: 60px 0 0;
+    letter-spacing: 1px;
+    font-weight: normal;
+} */
+
+/* .hamburger {
+    display: none;
+} */
+
+/* ============ responsive website ============ */
+
+@media (min-width: 480px) and (max-width: 770px) {
+
+    /* #TRESC {
+        width: 94%;
+    }
+
+    .szukaj {
+        display: none;
+    }
+
+    #lokalizacja {
+        padding: 1.5%;
+    } */
+
+    /* .sitemap {
+        margin-top: -67px;
+    } */
+
+    /* .strukturaArtykulu {
+        width: 40%;
+    } */
+
+    /* .hamburger {
+        display: block;
+        width: 40px;
+        height: 35px;
+        border: 0;
+        border-top: 5px solid black;
+        background: transparent;
+        position: absolute;;
+        left: 4vw;
+        top: 4vw;
+        transition: 0.3s transform linear;
+    } */
+
+    /* .hamburger::before,
+    .hamburger::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border-top: 5px solid black;
+        transform: translateY(10px);
+    }
+
+    .hamburger::after {
+        transform: translateY(25px);
+        transition: .3s transform linear;
+        opacity: 1;
+    } */
+
+    /* .hamburgerClicked {
+        transform: rotate(45deg) translateY(-5px);
+        border: none;
+    }
+
+    .hamburgerClicked::after {
+        transform: rotate(-90deg) translateX(-10px);
+    } */
+
+    .upSideDown {
+        transform: translateY(-5px) rotate(-90deg);
+    }
+
+    /* #form {
+        width: 80% !important;
+        margin: 35px 0 0 !important;
+        text-align: left;
+    } */
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    /* #calosc {
+        padding: 2px;
+    } */
+    
+    /* #TRESC {
+        width: 99%;
+        padding-right: 1px;
+    }
+
+    #TRESC p:not(.daty_zrodla) {
+        font-size: 15px;
+        line-height: 25px;
+    } */
+
+    /* #lokalizacja {
+        padding: 0;
+        margin-bottom: 30px;
+        font-size: 13px;
+    }
+
+    .szukaj {
+        display: none;
+    } */
+
+    /* .sitemap {
+        clear: both;
+        float: none;
+        line-height: 400%;
+    } */
+
+    /* .wyszukiwarka {
+        width: 80%;
+    } */
+
+    /* .duzyObraz {
+
+        border-bottom: 1px solid #7A4646;
+        border-top: 1px solid #7A4646;
+        padding: 5px 0;
+        width: 100%;
+    } */
+
+    /* .sporyObraz {
+
+        border-bottom: 1px solid #7A4646;
+        border-top: 1px solid #7A4646;
+        padding: 5px 0;
+        width: 100%;
+    } */
+/* 
+    .sredniObraz {
+
+        border-bottom: 1px solid #7A4646;
+        border-top: 1px solid #7A4646;
+        padding: 5px 0;
+        width: 100%;
+    } */
+
+    /* .malyObraz {
+
+        border-bottom: 1px solid #7A4646;
+        border-top: 1px solid #7A4646;
+        padding: 5px 0;
+        width: 55%;
+    } */
+
+    /* .najmniejszyObraz {
+    
+        border-bottom: 1px solid #7A4646;
+        border-top: 1px solid #7A4646;
+        padding: 5px 0;
+        width: 50%;
+    } */
+    /* .daty_zrodla {
+        font-size: 9px;
+    } */
+
+    /* h1 {
+        letter-spacing: 0px;
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 20px;
+    } */
+
+    /* .notes_right {
+        width: 91%;
+        padding: 0 2%;
+    }
+
+    .notes_right ol,
+    .notes ol,
+    .notes_right ul,
+    .notes ul {
+        padding-left: 5%;
+    }
+
+    .notes {
+        width: 91%;
+    } */
+
+    /* .strukturaArtykulu {
+        width: 100%;
+    } */
+
+    /* .hamburger {
+        display: block;
+        width: 40px;
+        height: 35px;
+        border: 0;
+        border-top: 5px solid black;
+        background: transparent;
+        position: absolute;;
+        left: 4vw;
+        top: 4vw;
+        transition: 0.3s transform linear;
+    } */
+
+    /* .hamburger::before,
+    .hamburger::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border-top: 5px solid black;
+        transform: translateY(10px);
+    } */
+
+    /* .hamburger::after {
+        transform: translateY(25px);
+        transition: .3s transform linear;
+        opacity: 1;
+    } */
+
+    /* .hamburgerClicked {
+        transform: rotate(45deg) translateY(-5px);
+        border: none;
+    }
+
+    .hamburgerClicked::after {
+        transform: rotate(-90deg) translateX(-10px);
+    } */
+
+    li:hover .podmenu {
+        display: none;
+    }
+
+    /* form#form {
+        text-align: left;
+    }
+
+    form div#wrong {
+        margin: 0 0 0 0 !important;
+    }
+
+    input[type="text"] {
+        width: 90%;
+    } */
+
+    /* input[type="text"]#subject {
+        margin-left: 3% !important;
+    } */
+}
+
+@media (max-width: 319px) {
+    #calosc {
+        display: none;
+    }
+
+    body {
+        text-align: center;
+    }
+}

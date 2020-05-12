@@ -107,6 +107,26 @@ body {
     text-decoration: underline;
 }
 
+.notes {
+    background-color: #fdfde6;
+    font-size: 14px;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    margin-right: 10px;
+    border-style: solid;
+}
+
+.notes_right {
+    background-color: #fdfde6;
+    font-size: 14px;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    float: right;
+    margin-left: 10px;
+    border-style: solid;
+}
+
 /* ======= koniec =======*/
 .download {
     /* blok, w którym umeiszczane są linki do pobierania tekstów w pdf. Blok połozony będzie po prawej stronie*/
@@ -244,6 +264,22 @@ h2 {
 
     h2 {
         font-size: 20px;
+    }
+
+    .notes_right {
+        width: 91%;
+        padding: 0 2%;
+    }
+
+    .notes_right ol,
+    .notes ol,
+    .notes_right ul,
+    .notes ul {
+        padding-left: 5%;
+    }
+
+    .notes {
+        width: 91%;
     }
 }
 
