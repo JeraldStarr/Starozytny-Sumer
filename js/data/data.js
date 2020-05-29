@@ -583,10 +583,10 @@ export const urls = [
 	"/podstrony/podstrony-historia/krolowie/enmerkar.html",
 	"/podstrony/podstrony-historia/krolowie/urukagina.html",
 	
+	"/podstrony/podstrony-historia/okres_gutejski.html",
 	"/podstrony/podstrony_poziom_1_bogowie/ningiszzida.html",
 	"/podstrony/podstrony_poziom_1_bogowie/utu.html",
 	"/podstrony/podstrony-historia/krolowie_sumeru.html",
-	"/podstrony/podstrony_poziom_1_miasta/eridu.html",
 
     "/podstrony/bogowie.html"
 ];
@@ -598,10 +598,10 @@ export const titles = [
 	"Enmerkar",
 	"Urukagina",
 	
+	"Okres gutejski",
 	"Ningiszzida",
 	"Utu",
 	"Królowie Sumerów",
-	"Eridu",
 
     "Sumeryjscy bogowie"
 ];
@@ -613,10 +613,10 @@ export const iconsURLs = [
 	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/urukagina.jpg",
 
+	"/grafika/ikonka/okres_gutejski.gif",
 	"/grafika/ikonka/ningiszzida.jpg",
 	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/krol_sumeru.gif",
-	"/grafika/ikonka/eridu.jpg",
 
     "/grafika/ikonka/bogowie.gif"
 ];
@@ -630,12 +630,14 @@ export const texts = [
 	"Tradycja informuje o nim, ale badania nie zdołały dostarczyć dowodów na jego istnienie ...",
 	"Urukagina na swoich stożkach fundacyjnych opisał w jakich warunkach żyli zwykli ...",
 	
+	`Najeźdźcy przerwali wszelkie połączenia drogowe. Systemy nawadniające zostały zniszczone, 
+	co przyczyniło się do stepowienia całych połaci ziemi uprawnej i głodu ...`,
 	`Sumeryjski bóg świata podziemnego i wegetacji, kojarzony również z wężami. Jego domem było 
 	miasto Giszbanda, które leżało w górę rzeki od Ur ...`,
 	`Przynosił światło i ciepło na ziemię, pozwalał rosnąć roślinom i zbożom. 
 	O poranku wyłaniał się ze swojej podziemnej sypialni i codziennie wędrował po niebie. ...`,
 	"Słowo Sipa, jak zwany był przez Sumerów ich król, oznaczało pasterza, człowieka który...",
-	"W mieście odkopano również pięć zespołów mieszkalnych oraz fragmenty dwóch ulic...",
+
 
     "Nadrzędne siły miały charakter niepoznawalny, a ich źródło pozostawało niewyjaśnione ..."
 
@@ -648,10 +650,10 @@ export const dates = [
 	"08.11.2019",
 	"18.03.2019",
 
+	"30.05.2020",
 	"26.04.2020",
 	"06.03.2020",
 	"06.10.2019",
-	"25.09.2019",
 
     ""
 ];
@@ -663,10 +665,10 @@ export const alt = [
 	"Pismo",
     "Gliniana tabliczka Urukaginy",
 	
+	"Gudea",
 	"Pismo",
 	"Król miasta Lagasz - Ur-Nansze",
 	"Mapa",
-	"Ningiszzida",
 
     "Bogowie na odcisku pieczęci"
 ];
