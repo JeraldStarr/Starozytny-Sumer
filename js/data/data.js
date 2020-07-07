@@ -377,6 +377,11 @@ export const data = {
 				"extand" : false
 			},
 			{
+				"name" : "Lugalanda",
+				"url" : "/podstrony/podstrony-historia/krolowie/lugalanda.html",
+				"extand" : false
+			},
+			{
 				"name" : "Urukagina",
 				"url" : "/podstrony/podstrony-historia/krolowie/urukagina.html",
 				"extand" : false
@@ -578,10 +583,10 @@ export const data = {
 
 }
 export const urls = [
+	"/podstrony/podstrony-historia/krolowie/lugalanda.html",
 	"/podstrony/podstrony-historia/krolowie/lugalanemundu.html",
 	"/podstrony/prawo/kodeks-urnammy.html",
 	"/podstrony/podstrony-historia/krolowie/enmerkar.html",
-	"/podstrony/podstrony-historia/krolowie/urukagina.html",
 	
 	"/podstrony/podstrony-historia/okres_gutejski.html",
 	"/podstrony/podstrony_poziom_1_bogowie/ningiszzida.html",
@@ -593,10 +598,10 @@ export const urls = [
 
 // articles' titles
 export const titles = [
+	"Lugalanda",
 	"Lugalanemundu",
 	"Kodeks Ur-Nammy",
 	"Enmerkar",
-	"Urukagina",
 	
 	"Okres gutejski",
 	"Ningiszzida",
@@ -609,9 +614,9 @@ export const titles = [
 // urls for articles' icons 
 export const iconsURLs = [
 	"/grafika/ikonka/ikonka_standardowa.gif",
+	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/kodeks_ur-nammy.jpg",
 	"/grafika/ikonka/ikonka_standardowa.gif",
-	"/grafika/ikonka/urukagina.jpg",
 
 	"/grafika/ikonka/okres_gutejski.gif",
 	"/grafika/ikonka/ningiszzida.jpg",
@@ -623,12 +628,13 @@ export const iconsURLs = [
 
 // fragmenty tekstów z artykułów
 export const texts = [
+	`Lugalanda miał reputację człowieka chciwego i skorumpowanego. Przejął kontrolę nad największymi 
+	świątynaimi Ningirsu, Szulszagany i Bau ...`,
 	`Lugalanemundu to król z Adabu. Oprócz Sumeryjskiej listy królów wspomina o nim 
 	tylko jeszcze jeden tekst ... `,
 	`Istnieje zasada, że prawo zapisuje się wtedy, gdy zagrożone są zasady prawa 
 	zwyczajowego ...`,
 	"Tradycja informuje o nim, ale badania nie zdołały dostarczyć dowodów na jego istnienie ...",
-	"Urukagina na swoich stożkach fundacyjnych opisał w jakich warunkach żyli zwykli ...",
 	
 	`Najeźdźcy przerwali wszelkie połączenia drogowe. Systemy nawadniające zostały zniszczone, 
 	co przyczyniło się do stepowienia całych połaci ziemi uprawnej i głodu ...`,
@@ -645,10 +651,10 @@ export const texts = [
 
 // daty dodania bądź aktualizacji artykułów
 export const dates = [
+	"08.07.2020",
 	"15.02.2020",
 	"22.12.2019",
 	"08.11.2019",
-	"18.03.2019",
 
 	"30.05.2020",
 	"26.04.2020",
@@ -661,9 +667,9 @@ export const dates = [
 // treści do znacznika alt
 export const alt = [
 	"Pismo",
+	"Pismo",
 	"Kodeks Ur-Nammy",
 	"Pismo",
-    "Gliniana tabliczka Urukaginy",
 	
 	"Gudea",
 	"Pismo",
