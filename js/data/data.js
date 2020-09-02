@@ -588,10 +588,10 @@ export const urls = [
 	"/podstrony/prawo/kodeks-urnammy.html",
 	"/podstrony/podstrony-historia/krolowie/enmerkar.html",
 	
+	"/podstrony/bogowie.html",
 	"/podstrony/prawo.html",
 	"/podstrony/podstrony-historia/okres_gutejski.html",
 	"/podstrony/podstrony_poziom_1_bogowie/ningiszzida.html",
-	"/podstrony/podstrony_poziom_1_bogowie/utu.html",
 
     "/podstrony/bogowie.html"
 ];
@@ -603,10 +603,10 @@ export const titles = [
 	"Kodeks Ur-Nammy",
 	"Enmerkar",
 	
+	"Bogowie",
 	"Prawo",
 	"Okres gutejski",
 	"Ningiszzida",
-	"Utu",
 
     "Sumeryjscy bogowie"
 ];
@@ -618,10 +618,10 @@ export const iconsURLs = [
 	"/grafika/ikonka/kodeks_ur-nammy.jpg",
 	"/grafika/ikonka/ikonka_standardowa.gif",
 
+	"/grafika/ikonka/bogowie.gif",
 	"/grafika/ikonka/prawo.jpg",
 	"/grafika/ikonka/okres_gutejski.gif",
 	"/grafika/ikonka/ningiszzida.jpg",
-	"/grafika/ikonka/ikonka_standardowa.gif",
 
     "/grafika/ikonka/bogowie.gif"
 ];
@@ -636,13 +636,13 @@ export const texts = [
 	zwyczajowego ...`,
 	"Tradycja informuje o nim, ale badania nie zdołały dostarczyć dowodów na jego istnienie ...",
 	
+	`Bogowie mogli być łatwo rozpoznani w rzeźbach, płaskorzeźbach lub postaciach z pieczęci 
+	cylindrycznych. Ich znakiem rozpoznawczym były nakrycia głowy z rogami ...`,
 	`Ważnym rysem prawodawstwa sumeryjskiego była równość mężczyzny i kobiety wobec prawa ...`,
 	`Najeźdźcy przerwali wszelkie połączenia drogowe. Systemy nawadniające zostały zniszczone, 
 	co przyczyniło się do stepowienia całych połaci ziemi uprawnej i głodu ...`,
 	`Sumeryjski bóg świata podziemnego i wegetacji, kojarzony również z wężami. Jego domem było 
 	miasto Giszbanda, które leżało w górę rzeki od Ur ...`,
-	`Przynosił światło i ciepło na ziemię, pozwalał rosnąć roślinom i zbożom. 
-	O poranku wyłaniał się ze swojej podziemnej sypialni i codziennie wędrował po niebie. ...`,
 
 
     "Nadrzędne siły miały charakter niepoznawalny, a ich źródło pozostawało niewyjaśnione ..."
@@ -656,10 +656,10 @@ export const dates = [
 	"22.12.2019",
 	"08.11.2019",
 
+	"02.09.2020",
 	"22.08.2020",
 	"30.05.2020",
 	"26.04.2020",
-	"06.03.2020",
 
     ""
 ];
@@ -671,10 +671,10 @@ export const alt = [
 	"Kodeks Ur-Nammy",
 	"Pismo",
 	
+	"Tabliczka zgromadzenie bogów",
 	"Kodeks Ur-Nammy",
 	"Gudea",
 	"Pismo",
-	"Król miasta Lagasz - Ur-Nansze",
 
     "Bogowie na odcisku pieczęci"
 ];
