@@ -11,6 +11,9 @@
   "scripts": {
     "test": "jest"
   },
+  "jest": {
+    "collectCoverage": true
+  },
   "repository": {
     "type": "git",
     "url": "git+https://Swerad@bitbucket.org/Swerad/starozytnysumer.git"
