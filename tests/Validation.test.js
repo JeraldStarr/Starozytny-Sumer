@@ -1,4 +1,4 @@
-import {validateInputBox, handleSubmit, validateInputBoxSetter, handleSubmitSetter, initForm} from '../js/modules/Validation.js';
+import {validateInputBox, handleSubmit, validateInputBoxSetter, initForm, validateEmail} from '../js/modules/Validation.js';
 
 describe("Validation module: ", () => {
     beforeEach(() => {
@@ -59,33 +59,26 @@ describe("Validation module: ", () => {
         test("checks if html element with id 'wrong' has a comment inside, when input box is not valid", () => {
             const inputBox = {
                 value: "",
-                classList: ['email']
+                classList: document.getElementsByClassName("email")[0]
             }
 
             validateInputBox(e, inputBox);
             expect(document.getElementById("wrong").innerText).toBeTruthy();
         })
         test("checks if html element with id 'wrong' is empty when e-mail is valid", () => {
-            const inputBox = {
-                value: "myEmail@onet.pl",
-                classList: ['e-mail']
-            }
+            const inputBox = document.getElementsByClassName("email")[0];
+            inputBox.value = "myEmail@onet.pl";
 
             validateInputBox(e, inputBox);
             expect(document.getElementById("wrong").innerText).toBeFalsy();
         })
         test("checks if html element with id 'wrong' displays error when e-mail is not valid", () => {
-            const inputBox = {
-                value: "myEmailonet.pl",
-                classList: ['e-mail']
-            }
+            const inputBox = document.getElementsByClassName("email")[0];
+            inputBox.value = "myEmailonet.pl";
 
             validateInputBox(e, inputBox);
             expect(document.getElementById("wrong").innerText).toBeTruthy();
         })
-        test("checks if 'validateEmailInputBox' returns true when e-mail is valid", () => {
-
-        });
     })
     describe('handleSubmit: ', () => {
         let e;
@@ -101,10 +94,24 @@ describe("Validation module: ", () => {
         })
         afterAll(()=> {
             validateInputBoxSetter(validateInputBoxFunction);
+            e = {};
         });
         test('checks if mocked "validateInputBox" has been called', () => {
             handleSubmit(e)
             expect(validateInputBoxMock).toHaveBeenCalled();
+        })
+    })
+    describe("validateEmail: ", () => {
+        let e;
+        let inputBox;
+        beforeEach(() => {
+            e = {
+                preventDefault: jest.fn().mockName('preventDefaultMock'),
+            };
+            inputBox = document.getElementsByClassName("subject")[0]
+        });
+        test("checks if returns null when input box has not class 'email'", () => {
+            expect(validateEmail(e, inputBox)).toBeNull();
         })
     })
 })

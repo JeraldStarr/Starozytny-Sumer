@@ -4,7 +4,6 @@ function initForm() {
         return null;
     }
     form.addEventListener('submit', handleSubmit, false);
-    return 'dupa';
 }
 
 function handleSubmit(e) {
@@ -25,15 +24,17 @@ function validateInputBox(e, inputBox) {
 }
 
 function validateEmail(e, inputBox) {
+    if (!inputBox.classList.contains("email")) {
+        return null;
+    }
     const isValid = /^\w+.{0,1}\w+@\w+.{0,1}\w{0,3}$/.test(inputBox.value);
     if (!isValid) {
         document.getElementById("wrong").innerText = "Proszę podać poprawny adres e-mail";
         e.preventDefault();
     }
-    return isValid;
 }
 
 const validateInputBoxSetter = validateInputBoxFunction => validateInputBox = validateInputBoxFunction;
 
 
-export { initForm, validateInputBox, validateInputBoxSetter, handleSubmit };
+export { initForm, validateInputBox, validateInputBoxSetter, handleSubmit, validateEmail };
