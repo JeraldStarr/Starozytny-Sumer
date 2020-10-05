@@ -363,9 +363,13 @@ export const data = {
 		"url" : "/podstrony/podstrony-historia/krolowie_sumeru.html",
 		"extand" : true,
 		"extandContent" : [
-
 			{
+				"name" : "Ur-Nansze",
+				"url" : "/podstrony/podstrony-historia/krolowie/ur-nansze.html",
+				"extand" : false
 
+			},
+			{
 				"name" : "Eannatum",
 				"url" : "/podstrony/podstrony-historia/krolowie/eannatum.html",
 				"extand" : false
@@ -583,10 +587,10 @@ export const data = {
 
 }
 export const urls = [
+	"/podstrony/podstrony-historia/krolowie/ur-nansze.html",
 	"/podstrony/podstrony-historia/krolowie/lugalanda.html",
 	"/podstrony/podstrony-historia/krolowie/lugalanemundu.html",
 	"/podstrony/prawo/kodeks-urnammy.html",
-	"/podstrony/podstrony-historia/krolowie/enmerkar.html",
 	
 	"/podstrony/bogowie.html",
 	"/podstrony/prawo.html",
@@ -598,10 +602,10 @@ export const urls = [
 
 // articles' titles
 export const titles = [
+	"Ur-Nansze",
 	"Lugalanda",
 	"Lugalanemundu",
 	"Kodeks Ur-Nammy",
-	"Enmerkar",
 	
 	"Bogowie",
 	"Prawo",
@@ -613,10 +617,10 @@ export const titles = [
 
 // urls for articles' icons 
 export const iconsURLs = [
+	"/grafika/ikonka/ur-nansze.png",
 	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/kodeks_ur-nammy.jpg",
-	"/grafika/ikonka/ikonka_standardowa.gif",
 
 	"/grafika/ikonka/bogowie.gif",
 	"/grafika/ikonka/prawo.jpg",
@@ -628,13 +632,14 @@ export const iconsURLs = [
 
 // fragmenty tekstów z artykułów
 export const texts = [
+	`Teksty wspominają o nim jako o budowniczym kanałów i świątyń dla Ningirsu oraz Bau. 
+	Na potrzeby swoich prac sprowadzał drewno i kamień z gór Masz ...`,
 	`Lugalanda miał reputację człowieka chciwego i skorumpowanego. Przejął kontrolę nad największymi 
 	świątynaimi Ningirsu, Szulszagany i Bau ...`,
 	`Lugalanemundu to król z Adabu. Oprócz Sumeryjskiej listy królów wspomina o nim 
 	tylko jeszcze jeden tekst ... `,
 	`Istnieje zasada, że prawo zapisuje się wtedy, gdy zagrożone są zasady prawa 
 	zwyczajowego ...`,
-	"Tradycja informuje o nim, ale badania nie zdołały dostarczyć dowodów na jego istnienie ...",
 	
 	`Bogowie mogli być łatwo rozpoznani w rzeźbach, płaskorzeźbach lub postaciach z pieczęci 
 	cylindrycznych. Ich znakiem rozpoznawczym były nakrycia głowy z rogami ...`,
@@ -651,10 +656,10 @@ export const texts = [
 
 // daty dodania bądź aktualizacji artykułów
 export const dates = [
+	"05.10.2020",
 	"08.07.2020",
 	"15.02.2020",
 	"22.12.2019",
-	"08.11.2019",
 
 	"02.09.2020",
 	"22.08.2020",
@@ -666,10 +671,10 @@ export const dates = [
 
 // treści do znacznika alt
 export const alt = [
+	"Podobizna Ur-Nansze",
 	"Pismo",
 	"Pismo",
 	"Kodeks Ur-Nammy",
-	"Pismo",
 	
 	"Tabliczka zgromadzenie bogów",
 	"Kodeks Ur-Nammy",
