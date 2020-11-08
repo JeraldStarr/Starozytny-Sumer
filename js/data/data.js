@@ -592,10 +592,10 @@ export const urls = [
 	"/podstrony/podstrony-historia/krolowie/lugalanemundu.html",
 	"/podstrony/prawo/kodeks-urnammy.html",
 	
+	"/podstrony/podstrony-historia/sumerowie_semici.html",
 	"/podstrony/bogowie.html",
 	"/podstrony/prawo.html",
 	"/podstrony/podstrony-historia/okres_gutejski.html",
-	"/podstrony/podstrony_poziom_1_bogowie/ningiszzida.html",
 
     "/podstrony/bogowie.html"
 ];
@@ -607,10 +607,10 @@ export const titles = [
 	"Lugalanemundu",
 	"Kodeks Ur-Nammy",
 	
+	"Sumerowie i Semici",
 	"Bogowie",
 	"Prawo",
 	"Okres gutejski",
-	"Ningiszzida",
 
     "Sumeryjscy bogowie"
 ];
@@ -622,10 +622,10 @@ export const iconsURLs = [
 	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/kodeks_ur-nammy.jpg",
 
+	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/bogowie.gif",
 	"/grafika/ikonka/prawo.jpg",
 	"/grafika/ikonka/okres_gutejski.gif",
-	"/grafika/ikonka/ningiszzida.jpg",
 
     "/grafika/ikonka/bogowie.gif"
 ];
@@ -641,14 +641,13 @@ export const texts = [
 	`Istnieje zasada, że prawo zapisuje się wtedy, gdy zagrożone są zasady prawa 
 	zwyczajowego ...`,
 	
+	`Na początku II tys. p.n.e. rozwój Sumeru został zahamowany. Sumeryjski umarł jako język żywy, 
+		a sumeryjskie dziedzictwo przejęli Akadowie od tego czasu zwani Babilończykami ...`,
 	`Bogowie mogli być łatwo rozpoznani w rzeźbach, płaskorzeźbach lub postaciach z pieczęci 
 	cylindrycznych. Ich znakiem rozpoznawczym były nakrycia głowy z rogami ...`,
 	`Ważnym rysem prawodawstwa sumeryjskiego była równość mężczyzny i kobiety wobec prawa ...`,
 	`Najeźdźcy przerwali wszelkie połączenia drogowe. Systemy nawadniające zostały zniszczone, 
 	co przyczyniło się do stepowienia całych połaci ziemi uprawnej i głodu ...`,
-	`Sumeryjski bóg świata podziemnego i wegetacji, kojarzony również z wężami. Jego domem było 
-	miasto Giszbanda, które leżało w górę rzeki od Ur ...`,
-
 
     "Nadrzędne siły miały charakter niepoznawalny, a ich źródło pozostawało niewyjaśnione ..."
 
@@ -661,10 +660,10 @@ export const dates = [
 	"15.02.2020",
 	"22.12.2019",
 
+	"08.11.2020",
 	"02.09.2020",
 	"22.08.2020",
 	"30.05.2020",
-	"26.04.2020",
 
     ""
 ];
