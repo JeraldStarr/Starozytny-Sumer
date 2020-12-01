@@ -10,10 +10,7 @@ $headers = 'From:' . $_POST['email'] . "\r\n" .
 <head>
 	<meta charset="utf-8" />
 	<title>Kontakt</title>
-	<style>
-	.contactMessage{background:linear-gradient(150deg, white, #f7f7e7 1000px);width:100vw;height:100vh}.contactMessage__text{font-size:50px;text-align:center;position:relative;top:30vh}.contactMessage__button{position:relative;left:50%;top:60%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);background:#702525;color:white;border-radius:4px;border:3px solid lightgray;-webkit-transition:.3s;transition:.3s;width:100px;height:40px;font-size:20px;cursor:pointer}.contactMessage__button:hover{opacity:.8}
-/*# sourceMappingURL=contactMessage.css.map */
-</style>
+	<link href="/css/compressed/contactMessage.min.css" rel="stylesheet"/>
 </head>
 
 <body class="contactMessage">

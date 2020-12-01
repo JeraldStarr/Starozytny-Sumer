@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/lato/Lato-Regular.ttf");
+}
+
+.contactMessage { 
+    font-family: 'Lato';
+    background: linear-gradient(150deg, white, #f7f7e7 1000px);
+    width: 100vw;
+    height: 100vh;
+    &__text { 
+        font-size: 50px;
+        text-align: center;
+        position: relative;
+        top: 30vh
+    }
+    &__button {
+        position: relative;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+        background: #702525;
+        color: white;
+        border-radius: 4px;
+        border: 3px solid lightgray;
+        transition: .3s;
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover {
+            opacity: .8
+        }
+    }
+    
+}
