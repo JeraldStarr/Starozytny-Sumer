@@ -498,7 +498,7 @@ export const data = {
                     },
                     {
                         "name" : "Państwa wasalne",
-		                "url" :  "/podstrony/podstrony-historia/imperium/peryferie-panstwa-III-dynastii-z-ur.html",
+		                "url" :  "/podstrony/podstrony-historia/imperium/panstwa-wasalne.html",
 		                "extand" : false
                     },
                     {
