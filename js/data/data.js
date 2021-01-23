@@ -411,6 +411,11 @@ export const data = {
 				"extand" : false
 			},
 			{
+				"name" : "Utuhengal",
+				"url" : "/podstrony/podstrony-historia/krolowie/utuhengal.html",
+				"extand" : false
+			},
+			{
 				"name" : "Ur-Namma",
 				"url" : "/podstrony/podstrony-historia/krolowie/ur-namma.html",
 				"extand" : false
@@ -587,67 +592,67 @@ export const data = {
 
 }
 export const urls = [
+	"/podstrony/podstrony-historia/krolowie/utuhengal.html",
 	"/podstrony/podstrony-historia/krolowie/ur-nansze.html",
 	"/podstrony/podstrony-historia/krolowie/lugalanda.html",
 	"/podstrony/podstrony-historia/krolowie/lugalanemundu.html",
-	"/podstrony/prawo/kodeks-urnammy.html",
 	
+	"/podstrony/miasta.html",
 	"/podstrony/podstrony-historia/sumerowie_semici.html",
 	"/podstrony/bogowie.html",
 	"/podstrony/prawo.html",
-	"/podstrony/podstrony-historia/okres_gutejski.html",
 
     "/podstrony/bogowie.html"
 ];
 
 // articles' titles
 export const titles = [
+	"Utuhengal",
 	"Ur-Nansze",
 	"Lugalanda",
 	"Lugalanemundu",
-	"Kodeks Ur-Nammy",
 	
+	"Sumeryjskie miasta",
 	"Sumerowie i Semici",
 	"Bogowie",
 	"Prawo",
-	"Okres gutejski",
 
     "Sumeryjscy bogowie"
 ];
 
 // urls for articles' icons 
 export const iconsURLs = [
+	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/ur-nansze.png",
 	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/ikonka_standardowa.gif",
-	"/grafika/ikonka/kodeks_ur-nammy.jpg",
 
+	"/grafika/ikonka/miasta.gif",
 	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/bogowie.gif",
 	"/grafika/ikonka/prawo.jpg",
-	"/grafika/ikonka/okres_gutejski.gif",
 
     "/grafika/ikonka/bogowie.gif"
 ];
 
 // fragmenty tekstów z artykułów
 export const texts = [
+	`Po zwycięstwie Utuhengala w Sumerach zaszła zmiana mentalna. Nie myślano już tylko o własnym 
+	mieście, jako o ojczyźnie, lecz pojmowano ją szerzej – jako cały kraj ...`,
 	`Teksty wspominają o nim jako o budowniczym kanałów i świątyń dla Ningirsu oraz Bau. 
 	Na potrzeby swoich prac sprowadzał drewno i kamień z gór Masz ...`,
 	`Lugalanda miał reputację człowieka chciwego i skorumpowanego. Przejął kontrolę nad największymi 
 	świątynaimi Ningirsu, Szulszagany i Bau ...`,
 	`Lugalanemundu to król z Adabu. Oprócz Sumeryjskiej listy królów wspomina o nim 
 	tylko jeszcze jeden tekst ... `,
-	`Istnieje zasada, że prawo zapisuje się wtedy, gdy zagrożone są zasady prawa 
-	zwyczajowego ...`,
 	
+	`Zabudowa była na ogół nieuporządkowana, a miasta przecinały wąskie, niekiedy kręte lub ślepe 
+	uliczki. Wiele z nich prowadziło do głównej części miasta, czyli ... `,
 	`Na początku II tys. p.n.e. rozwój Sumeru został zahamowany. Sumeryjski umarł jako język żywy, 
 		a sumeryjskie dziedzictwo przejęli Akadowie od tego czasu zwani Babilończykami ...`,
 	`Bogowie mogli być łatwo rozpoznani w rzeźbach, płaskorzeźbach lub postaciach z pieczęci 
 	cylindrycznych. Ich znakiem rozpoznawczym były nakrycia głowy z rogami ...`,
 	`Ważnym rysem prawodawstwa sumeryjskiego była równość mężczyzny i kobiety wobec prawa ...`,
-	`Najeźdźcy przerwali wszelkie połączenia drogowe. Systemy nawadniające zostały zniszczone, 
-	co przyczyniło się do stepowienia całych połaci ziemi uprawnej i głodu ...`,
 
     "Nadrzędne siły miały charakter niepoznawalny, a ich źródło pozostawało niewyjaśnione ..."
 
@@ -655,30 +660,30 @@ export const texts = [
 
 // daty dodania bądź aktualizacji artykułów
 export const dates = [
+	"16.12.2020",
 	"05.10.2020",
 	"08.07.2020",
 	"15.02.2020",
-	"22.12.2019",
 
+	"23.01.2021",
 	"08.11.2020",
 	"02.09.2020",
 	"22.08.2020",
-	"30.05.2020",
 
     ""
 ];
 
 // treści do znacznika alt
 export const alt = [
+	"Utuhengal",
 	"Podobizna Ur-Nansze",
 	"Pismo",
 	"Pismo",
-	"Kodeks Ur-Nammy",
 	
+	"Sumeryjskie miasto Ur",
 	"Tabliczka zgromadzenie bogów",
 	"Kodeks Ur-Nammy",
 	"Gudea",
-	"Pismo",
 
     "Bogowie na odcisku pieczęci"
 ];
