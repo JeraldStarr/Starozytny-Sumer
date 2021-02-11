@@ -45,32 +45,8 @@ var menu = {
                     };
 
                     performance.createExtendingMark(urlElement1, j, data.menu[i].extandContent[j].extand);
-                    //third level declaration
-                    if (data.menu[i].extandContent[j].extand) {
-                        let ulElement2 = document.createElement("ul");
-                        ulElement2.classList.add("blok");
-                        for (var k in data.menu[i].extandContent[j].extandContent) {
-                            let liElement2 = document.createElement("li");
-                            let urlElement2 = document.createElement("a");
-                            setList(liElement2, ulElement2);
-                            setURL(urlElement2, data.menu[i].extandContent[j].extandContent[k].url, liElement2, data.menu[i].extandContent[j].extandContent[k].name);
 
-                            // adding CSS classes to <li></li> second level
-
-                            switch (liElement2.innerText) {
-                                case data.menu[3].extandContent[0].extandContent[5].name:
-                                    liElement2.classList.add("pieczecie");
-                                    break;
-                                case data.menu[6].extandContent[7].extandContent[0].name:
-                                    liElement2.classList.add("urIII");
-                            }
-
-                            performance.createExtendingMark(urlElement2, j, data.menu[i].extandContent[j].extandContent[k].extand);
-
-                            buildFourthLevel(i, j, liElement2, data);
-                        }
-                        liElement1.appendChild(ulElement2); // submitting third level
-                    }
+                    buildThirdLevel(i, j, liElement1);
                 }
                 liElement.appendChild(ulElement1); // submitting second level
             }
@@ -99,23 +75,53 @@ var menu = {
             anchor.innerText = innerText;
             liParent.appendChild(anchor);
         };
+        function buildThirdLevel(i, j, secondLevelElementItem) {
+            const secondLevelArticles = data.menu[i].extandContent[j];
+            if (secondLevelArticles.extand) {
+                let thirdLevelList = document.createElement("ul");
+                thirdLevelList.classList.add("blok");
+                for (var k in data.menu[i].extandContent[j].extandContent) {
+                    let thirdLevelElement = document.createElement("li");
+                    let thirdLevelElementLink = document.createElement("a");
+                    setList(thirdLevelElement, thirdLevelList);
+                    setURL(thirdLevelElementLink, data.menu[i].extandContent[j].extandContent[k].url, thirdLevelElement, data.menu[i].extandContent[j].extandContent[k].name);
 
-        function buildFourthLevel(i, j, thirdLevelElementItem) {
-            const thirdLevelArticlesWithExtention = data.menu[i].extandContent[j].extandContent[k];
+                    addClassToThirdLevelList(thirdLevelElement);
 
-            if (thirdLevelArticlesWithExtention.extand) {
-                const fourthLevelList = document.createElement("ul");
-                for (let x in thirdLevelArticlesWithExtention.extandContent) {
-                    const fourthLevelElement = document.createElement("li");
-                    const foruthLevelElementLink = document.createElement("a");
-                    setList(fourthLevelElement, fourthLevelList);
-                    setURL(foruthLevelElementLink, thirdLevelArticlesWithExtention.extandContent[x].url, fourthLevelElement, thirdLevelArticlesWithExtention.extandContent[x].name);
+                    performance.createExtendingMark(thirdLevelElementLink, j, data.menu[i].extandContent[j].extandContent[k].extand);
+
+                    buildFourthLevel(i, j, thirdLevelElement, data, k);
                 }
-                addClassToThirdLevelElementsWithExtention(thirdLevelElementItem, fourthLevelList);
+                secondLevelElementItem.appendChild(thirdLevelList); // submitting third level
             }
         }
 
-        function addClassToThirdLevelElementsWithExtention(element, fourthLevelMenu) {
+        function addClassToThirdLevelList(thirdLevelElement) {
+            switch (thirdLevelElement.innerText) {
+                case data.menu[3].extandContent[0].extandContent[5].name:
+                    thirdLevelElement.classList.add("pieczecie");
+                    break;
+                case data.menu[6].extandContent[7].extandContent[0].name:
+                    thirdLevelElement.classList.add("urIII");
+            }
+        }
+
+        function buildFourthLevel(i, j, thirdLevelElementItem, data, k) {
+            const thirdLevelArticles = data.menu[i].extandContent[j].extandContent[k];
+
+            if (thirdLevelArticles.extand) {
+                const fourthLevelList = document.createElement("ul");
+                for (let x in thirdLevelArticles.extandContent) {
+                    const fourthLevelElement = document.createElement("li");
+                    const foruthLevelElementLink = document.createElement("a");
+                    setList(fourthLevelElement, fourthLevelList);
+                    setURL(foruthLevelElementLink, thirdLevelArticles.extandContent[x].url, fourthLevelElement, thirdLevelArticles.extandContent[x].name);
+                }
+                addClassToFourthLevelList(thirdLevelElementItem, fourthLevelList);
+            }
+        }
+
+        function addClassToFourthLevelList(element, fourthLevelMenu) {
             const cylinderSealsArticleName = data.menu[3].extandContent[0].extandContent[5].name;
             const urIIIArticleName = data.menu[6].extandContent[7].extandContent[0].name;
             element.appendChild(fourthLevelMenu);
