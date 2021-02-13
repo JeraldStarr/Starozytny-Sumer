@@ -592,7 +592,7 @@ export const data = {
 
 }
 export const urls = [
-	"/podstrony/podstrony-historia/krolowie/utuhengal.html",
+	"/podstrony/podstrony-historia/krolowie/puzer-mama.html",
 	"/podstrony/podstrony-historia/krolowie/ur-nansze.html",
 	"/podstrony/podstrony-historia/krolowie/lugalanda.html",
 	"/podstrony/podstrony-historia/krolowie/lugalanemundu.html",
@@ -607,10 +607,10 @@ export const urls = [
 
 // articles' titles
 export const titles = [
+	"Puzer-Mama",
 	"Utuhengal",
 	"Ur-Nansze",
 	"Lugalanda",
-	"Lugalanemundu",
 	
 	"Sumeryjskie miasta",
 	"Sumerowie i Semici",
@@ -623,8 +623,8 @@ export const titles = [
 // urls for articles' icons 
 export const iconsURLs = [
 	"/grafika/ikonka/ikonka_standardowa.gif",
-	"/grafika/ikonka/ur-nansze.png",
 	"/grafika/ikonka/ikonka_standardowa.gif",
+	"/grafika/ikonka/ur-nansze.png",
 	"/grafika/ikonka/ikonka_standardowa.gif",
 
 	"/grafika/ikonka/miasta.gif",
@@ -637,14 +637,14 @@ export const iconsURLs = [
 
 // fragmenty tekstów z artykułów
 export const texts = [
+	`Przejął kontrolę na miastem za panowania Szar-kali-szarriego z dynastii akadyjskiej. 
+	W inskrypcji królewskiej Puzer-Mama otrzymuje różne dary od bogów ...`,
 	`Po zwycięstwie Utuhengala w Sumerach zaszła zmiana mentalna. Nie myślano już tylko o własnym 
 	mieście, jako o ojczyźnie, lecz pojmowano ją szerzej – jako cały kraj ...`,
 	`Teksty wspominają o nim jako o budowniczym kanałów i świątyń dla Ningirsu oraz Bau. 
 	Na potrzeby swoich prac sprowadzał drewno i kamień z gór Masz ...`,
 	`Lugalanda miał reputację człowieka chciwego i skorumpowanego. Przejął kontrolę nad największymi 
 	świątynaimi Ningirsu, Szulszagany i Bau ...`,
-	`Lugalanemundu to król z Adabu. Oprócz Sumeryjskiej listy królów wspomina o nim 
-	tylko jeszcze jeden tekst ... `,
 	
 	`Zabudowa była na ogół nieuporządkowana, a miasta przecinały wąskie, niekiedy kręte lub ślepe 
 	uliczki. Wiele z nich prowadziło do głównej części miasta, czyli ... `,
@@ -660,10 +660,10 @@ export const texts = [
 
 // daty dodania bądź aktualizacji artykułów
 export const dates = [
+	"13.02.2021",
 	"16.12.2020",
 	"05.10.2020",
 	"08.07.2020",
-	"15.02.2020",
 
 	"23.01.2021",
 	"08.11.2020",
@@ -675,9 +675,9 @@ export const dates = [
 
 // treści do znacznika alt
 export const alt = [
+	"Pismo",
 	"Utuhengal",
 	"Podobizna Ur-Nansze",
-	"Pismo",
 	"Pismo",
 	
 	"Sumeryjskie miasto Ur",
