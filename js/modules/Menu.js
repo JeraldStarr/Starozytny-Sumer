@@ -14,42 +14,43 @@ var menu = {
             setURL(urlElement, data.menu[i].url, liElement, data.menu[i].name);
             performance.createExtendingMark(urlElement, i, data.menu[i].extand);
             //second level declaration
-            if (data.menu[i].extand) {
-                var ulElement1 = document.createElement("ul");
-                ulElement1.classList.add("podmenu");
-                for (let j in data.menu[i].extandContent) {
-                    let liElement1 = document.createElement("li");
-                    let urlElement1 = document.createElement("a");
-                    setList(liElement1, ulElement1);
-                    setURL(urlElement1, data.menu[i].extandContent[j].url, liElement1, data.menu[i].extandContent[j].name);
+            buildSecondLevel(i, liElement);
+            // if (data.menu[i].extand) {
+            //     var ulElement1 = document.createElement("ul");
+            //     ulElement1.classList.add("podmenu");
+            //     for (let j in data.menu[i].extandContent) {
+            //         let liElement1 = document.createElement("li");
+            //         let urlElement1 = document.createElement("a");
+            //         setList(liElement1, ulElement1);
+            //         setURL(urlElement1, data.menu[i].extandContent[j].url, liElement1, data.menu[i].extandContent[j].name);
 
-                    // adding CSS classes to <li></li> second level
+            //         // adding CSS classes to <li></li> second level
 
-                    switch (liElement1.innerText) {
-                        case data.menu[3].extandContent[0].name:
-                            liElement1.classList.add("gliptyka");
-                            break;
-                        case data.menu[3].extandContent[2].name:
-                            liElement1.classList.add("plaskorzezba");
-                            break;
-                        case data.menu[4].extandContent[0].name:
-                            liElement1.classList.add("swiatynie");
-                            break;
-                        case data.menu[6].extandContent[0].name:
-                            liElement1.classList.add("krolowie");
-                            break;
-                        case data.menu[6].extandContent[7].name:
-                            liElement1.classList.add("okrNowosum");
-                            break;
-                        default:
-                    };
+            //         switch (liElement1.innerText) {
+            //             case data.menu[3].extandContent[0].name:
+            //                 liElement1.classList.add("gliptyka");
+            //                 break;
+            //             case data.menu[3].extandContent[2].name:
+            //                 liElement1.classList.add("plaskorzezba");
+            //                 break;
+            //             case data.menu[4].extandContent[0].name:
+            //                 liElement1.classList.add("swiatynie");
+            //                 break;
+            //             case data.menu[6].extandContent[0].name:
+            //                 liElement1.classList.add("krolowie");
+            //                 break;
+            //             case data.menu[6].extandContent[7].name:
+            //                 liElement1.classList.add("okrNowosum");
+            //                 break;
+            //             default:
+            //         };
 
-                    performance.createExtendingMark(urlElement1, j, data.menu[i].extandContent[j].extand);
+            //         performance.createExtendingMark(urlElement1, j, data.menu[i].extandContent[j].extand);
 
-                    buildThirdLevel(i, j, liElement1);
-                }
-                liElement.appendChild(ulElement1); // submitting second level
-            }
+            //         buildThirdLevel(i, j, liElement1);
+            //     }
+            //     liElement.appendChild(ulElement1); // submitting second level
+            // }
         }
 
         /*
@@ -75,6 +76,45 @@ var menu = {
             anchor.innerText = innerText;
             liParent.appendChild(anchor);
         };
+        function buildSecondLevel(i, liElement) {
+            const firstLevelArticle = data.menu[i].extand;
+            if (firstLevelArticle) {
+                const secondLevelList = document.createElement("ul");
+                secondLevelList.classList.add("podmenu");
+                for (let j in data.menu[i].extandContent) {
+                    let secondLevelElement = document.createElement("li");
+                    let urlElement1 = document.createElement("a");
+                    setList(secondLevelElement, secondLevelList);
+                    setURL(urlElement1, data.menu[i].extandContent[j].url, secondLevelElement, data.menu[i].extandContent[j].name);
+
+                    // adding CSS classes to <li></li> second level
+
+                    switch (secondLevelElement.innerText) {
+                        case data.menu[3].extandContent[0].name:
+                            secondLevelElement.classList.add("gliptyka");
+                            break;
+                        case data.menu[3].extandContent[2].name:
+                            secondLevelElement.classList.add("plaskorzezba");
+                            break;
+                        case data.menu[4].extandContent[0].name:
+                            secondLevelElement.classList.add("swiatynie");
+                            break;
+                        case data.menu[6].extandContent[0].name:
+                            secondLevelElement.classList.add("krolowie");
+                            break;
+                        case data.menu[6].extandContent[7].name:
+                            secondLevelElement.classList.add("okrNowosum");
+                            break;
+                        default:
+                    };
+
+                    performance.createExtendingMark(urlElement1, j, data.menu[i].extandContent[j].extand);
+
+                    buildThirdLevel(i, j, secondLevelElement);
+                }
+                liElement.appendChild(secondLevelList); // submitting second level
+            }
+        }
         function buildThirdLevel(i, j, secondLevelElementItem) {
             const secondLevelArticles = data.menu[i].extandContent[j];
             if (secondLevelArticles.extand) {
