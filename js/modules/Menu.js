@@ -10,14 +10,14 @@ var menu = {
         for (let i in data.menu) {
             let firstLevelElement = document.createElement("li");
             let firstLevelElementLink = document.createElement("a");
-            setList(firstLevelElement, menuElement);
-            setURL(firstLevelElementLink, data.menu[i].url, firstLevelElement, data.menu[i].name);
+            this.setList(firstLevelElement, menuElement);
+            this.setURL(firstLevelElementLink, data.menu[i].url, firstLevelElement, data.menu[i].name);
             performance.createExtendingMark(firstLevelElementLink, i, data.menu[i].extand);
             //second level declaration
-            buildSecondLevel(i, firstLevelElement);
+            buildSecondLevel(i, firstLevelElement, this);
         }
 
-        function buildSecondLevel(i, liElement) {
+        function buildSecondLevel(i, liElement, self) {
             const firstLevelArticle = data.menu[i].extand;
             if (firstLevelArticle) {
                 const secondLevelList = document.createElement("ul");
@@ -25,8 +25,8 @@ var menu = {
                 for (let j in data.menu[i].extandContent) {
                     let secondLevelElement = document.createElement("li");
                     let secondLevelElementLink = document.createElement("a");
-                    setList(secondLevelElement, secondLevelList);
-                    setURL(secondLevelElementLink, data.menu[i].extandContent[j].url, secondLevelElement, data.menu[i].extandContent[j].name);
+                    self.setList(secondLevelElement, secondLevelList);
+                    self.setURL(secondLevelElementLink, data.menu[i].extandContent[j].url, secondLevelElement, data.menu[i].extandContent[j].name);
 
                     // adding CSS classes to <li></li> second level
 
@@ -51,12 +51,12 @@ var menu = {
 
                     performance.createExtendingMark(secondLevelElementLink, j, data.menu[i].extandContent[j].extand);
 
-                    buildThirdLevel(i, j, secondLevelElement);
+                    buildThirdLevel(i, j, secondLevelElement, self);
                 }
                 liElement.appendChild(secondLevelList); // submitting second level
             }
         }
-        function buildThirdLevel(i, j, secondLevelElementItem) {
+        function buildThirdLevel(i, j, secondLevelElementItem, that) {
             const secondLevelArticles = data.menu[i].extandContent[j];
             if (secondLevelArticles.extand) {
                 let thirdLevelList = document.createElement("ul");
@@ -64,14 +64,14 @@ var menu = {
                 for (var k in data.menu[i].extandContent[j].extandContent) {
                     let thirdLevelElement = document.createElement("li");
                     let thirdLevelElementLink = document.createElement("a");
-                    setList(thirdLevelElement, thirdLevelList);
-                    setURL(thirdLevelElementLink, data.menu[i].extandContent[j].extandContent[k].url, thirdLevelElement, data.menu[i].extandContent[j].extandContent[k].name);
+                    that.setList(thirdLevelElement, thirdLevelList);
+                    that.setURL(thirdLevelElementLink, data.menu[i].extandContent[j].extandContent[k].url, thirdLevelElement, data.menu[i].extandContent[j].extandContent[k].name);
 
                     addClassToThirdLevelList(thirdLevelElement);
 
                     performance.createExtendingMark(thirdLevelElementLink, j, data.menu[i].extandContent[j].extandContent[k].extand);
 
-                    buildFourthLevel(i, j, thirdLevelElement, data, k);
+                    buildFourthLevel(i, j, thirdLevelElement, data, k, that);
                 }
                 secondLevelElementItem.appendChild(thirdLevelList); // submitting third level
             }
@@ -87,7 +87,7 @@ var menu = {
             }
         }
 
-        function buildFourthLevel(i, j, thirdLevelElementItem, data, k) {
+        function buildFourthLevel(i, j, thirdLevelElementItem, data, k, t) {
             const thirdLevelArticles = data.menu[i].extandContent[j].extandContent[k];
 
             if (thirdLevelArticles.extand) {
@@ -96,27 +96,31 @@ var menu = {
                 for (let x in thirdLevelArticles.extandContent) {
                     const fourthLevelElement = document.createElement("li");
                     const foruthLevelElementLink = document.createElement("a");
-                    setList(fourthLevelElement, fourthLevelList);
-                    setURL(foruthLevelElementLink, thirdLevelArticles.extandContent[x].url, fourthLevelElement, thirdLevelArticles.extandContent[x].name);
+                    t.setList(fourthLevelElement, fourthLevelList);
+                    t.setURL(foruthLevelElementLink, thirdLevelArticles.extandContent[x].url, fourthLevelElement, thirdLevelArticles.extandContent[x].name);
                 }
                 thirdLevelElementItem.appendChild(fourthLevelList);
             }
         }
-        /*
+
+        this.menuIDElement.appendChild(menuElement);
+
+    },
+            /*
          * this function gives the name to the article from menu navigation
          */
 
-        function setList(li, parent) {
+        setList(li, parent) {
             // li       - takes <li></li> element, which should get a name
             // parent   - takes parent element (always <ul></ul>)
             parent.appendChild(li)
-        };
+        },
 
         /*
          * this function set url to the menu article
          */
 
-        function setURL(anchor, url, liParent, innerText) {
+        setURL(anchor, url, liParent, innerText) {
             // anchor    - takes <a></a> html element
             // url       - takes url from data base
             // liParent  - takes parent element (always <li></li>)
@@ -124,11 +128,7 @@ var menu = {
             anchor.setAttribute("href", `${url}#lokalizacja`);
             anchor.innerText = innerText;
             liParent.appendChild(anchor);
-        };
-
-        this.menuIDElement.appendChild(menuElement);
-
-    }
+        }
 };
 
 export default menu;
