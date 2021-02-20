@@ -18,27 +18,32 @@ var menu = {
     },
     menuIDElement: document.getElementById("MENU"),
     setMenu() {
-        const menuElement = document.createElement("ul");
-        menuElement.classList.add("nav");
-        // first level declaration
-        for (let i in data.menu) {
-            let firstLevelElement = document.createElement("li");
-            let firstLevelElementLink = document.createElement("a");
-            this.setList(firstLevelElement, menuElement);
-            this.setURL(firstLevelElementLink, data.menu[i].url, firstLevelElement, data.menu[i].name);
-            performance.createExtendingMark(firstLevelElementLink, i, data.menu[i].extand);
-            //second level declaration
-            this.buildSecondLevel(i, firstLevelElement);
-        }
-
-        this.menuIDElement.appendChild(menuElement);
+        this.buildLevel(this.menuIDElement);
 
     },
+    buildLevel(parent, indexParam = 0) {
+        const menuLevelList = document.createElement("ul");
+        menuLevelList.classList.add("nav");
+        // first level declaration
+        const jsonLevel = data.menu;
+        for (let i in jsonLevel) {
+            let menuListParent = document.createElement("li");
+            let link = document.createElement("a");
+            this.setList(menuListParent, menuLevelList);
+            this.setURL(link, jsonLevel[i].url, menuListParent, jsonLevel[i].name);
+            performance.createExtendingMark(link, i, jsonLevel[i].extandContent);
+            //second level declaration
+            this.buildSecondLevel(i, menuListParent);
+        }
+
+        parent.appendChild(menuLevelList);
+    },
     buildSecondLevel(i, liElement) {
+        console.log(i);
         const firstLevelArticle = data.menu[i].extand;
         const level = this.config.secondLevel;
         if (firstLevelArticle) {
-            console.log(data.menu[i]);
+            // console.log(data.menu[i]);
             const secondLevelList = document.createElement("ul");
             secondLevelList.classList.add("podmenu");
             for (let j in data.menu[i].extandContent) {
