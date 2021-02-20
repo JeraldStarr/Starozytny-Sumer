@@ -593,9 +593,9 @@ export const data = {
 }
 export const urls = [
 	"/podstrony/podstrony-historia/krolowie/puzer-mama.html",
+	"/podstrony/podstrony-historia/krolowie/utuhengal.html",
 	"/podstrony/podstrony-historia/krolowie/ur-nansze.html",
 	"/podstrony/podstrony-historia/krolowie/lugalanda.html",
-	"/podstrony/podstrony-historia/krolowie/lugalanemundu.html",
 	
 	"/podstrony/miasta.html",
 	"/podstrony/podstrony-historia/sumerowie_semici.html",
