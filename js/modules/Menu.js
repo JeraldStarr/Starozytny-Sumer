@@ -54,7 +54,25 @@ var menu = {
 
                 // adding CSS classes to <li></li> second level
 
-                this.addClassToExtendingElement(secondLevelElement, level);
+                // this.addClassToExtendingElement(secondLevelElement, level);
+                switch (secondLevelElement.innerText) {
+                    case data.menu[3].extandContent[0].name:
+                        secondLevelElement.classList.add("gliptyka");
+                        break;
+                    case data.menu[3].extandContent[2].name:
+                        secondLevelElement.classList.add("plaskorzezba");
+                        break;
+                    case data.menu[4].extandContent[0].name:
+                        secondLevelElement.classList.add("swiatynie");
+                        break;
+                    case data.menu[6].extandContent[0].name:
+                        secondLevelElement.classList.add("krolowie");
+                        break;
+                    case data.menu[6].extandContent[7].name:
+                        secondLevelElement.classList.add("okrNowosum");
+                        break;
+                    default:
+                };
 
                 performance.createExtendingMark(secondLevelElementLink, j, data.menu[i].extandContent[j].extand);
 
@@ -75,7 +93,14 @@ var menu = {
                 this.setList(thirdLevelElement, thirdLevelList);
                 this.setURL(thirdLevelElementLink, data.menu[i].extandContent[j].extandContent[k].url, thirdLevelElement, data.menu[i].extandContent[j].extandContent[k].name);
 
-                this.addClassToExtendingElement(thirdLevelElement, level);
+                // this.addClassToExtendingElement(thirdLevelElement, level);
+                switch (thirdLevelElement.innerText) {
+                    case data.menu[3].extandContent[0].extandContent[5].name:
+                        thirdLevelElement.classList.add("pieczecie");
+                        break;
+                    case data.menu[6].extandContent[7].extandContent[0].name:
+                        thirdLevelElement.classList.add("urIII");
+                }
 
                 performance.createExtendingMark(thirdLevelElementLink, j, data.menu[i].extandContent[j].extandContent[k].extand);
 
