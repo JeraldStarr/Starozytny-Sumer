@@ -54,25 +54,7 @@ var menu = {
 
                 // adding CSS classes to <li></li> second level
 
-                // this.addClassToExtendingElement(secondLevelElement, level);
-                switch (secondLevelElement.innerText) {
-                    case data.menu[3].extandContent[0].name:
-                        secondLevelElement.classList.add("gliptyka");
-                        break;
-                    case data.menu[3].extandContent[2].name:
-                        secondLevelElement.classList.add("plaskorzezba");
-                        break;
-                    case data.menu[4].extandContent[0].name:
-                        secondLevelElement.classList.add("swiatynie");
-                        break;
-                    case data.menu[6].extandContent[0].name:
-                        secondLevelElement.classList.add("krolowie");
-                        break;
-                    case data.menu[6].extandContent[7].name:
-                        secondLevelElement.classList.add("okrNowosum");
-                        break;
-                    default:
-                };
+                this.addClassToExtendingElement(secondLevelElement);
 
                 performance.createExtendingMark(secondLevelElementLink, j, data.menu[i].extandContent[j].extand);
 
@@ -93,14 +75,7 @@ var menu = {
                 this.setList(thirdLevelElement, thirdLevelList);
                 this.setURL(thirdLevelElementLink, data.menu[i].extandContent[j].extandContent[k].url, thirdLevelElement, data.menu[i].extandContent[j].extandContent[k].name);
 
-                // this.addClassToExtendingElement(thirdLevelElement, level);
-                switch (thirdLevelElement.innerText) {
-                    case data.menu[3].extandContent[0].extandContent[5].name:
-                        thirdLevelElement.classList.add("pieczecie");
-                        break;
-                    case data.menu[6].extandContent[7].extandContent[0].name:
-                        thirdLevelElement.classList.add("urIII");
-                }
+                this.addClassToExtendingElement(thirdLevelElement);
 
                 performance.createExtendingMark(thirdLevelElementLink, j, data.menu[i].extandContent[j].extandContent[k].extand);
 
@@ -108,6 +83,15 @@ var menu = {
             }
             secondLevelElementItem.appendChild(thirdLevelList); // submitting third level
         }
+    },
+    addClassToExtendingElement(extElem) {
+        const level = extElem.parentElement.classList.contains("podmenu") ? menu.config.secondLevel :
+         menu.config.thirdLevel;
+        level.forEach(item => {
+            if (extElem.innerText === item.name) {
+                extElem.classList.add(item.cssClass);
+            }
+        });
     },
     buildFourthLevel(thirdLevelElementItem, i, j, k) {
         const thirdLevelArticles = data.menu[i].extandContent[j].extandContent[k];
@@ -123,9 +107,6 @@ var menu = {
             }
             thirdLevelElementItem.appendChild(fourthLevelList);
         }
-    },
-    addClassToExtendingElement(thirdLevelElement, level) {
-        level.forEach(element => thirdLevelElement.classList.add(element.cssClass));
     },
     /*
     * this function gives the name to the article from menu navigation
