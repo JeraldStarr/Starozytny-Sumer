@@ -3,8 +3,9 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 710px;
     background: url('/grafika/zdjecia/logo.png') no-repeat center center;
+    background-size: 500px;
     font-family: 'Lato';
 }
 
