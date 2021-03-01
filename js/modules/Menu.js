@@ -14,56 +14,42 @@ var menu = {
             {name: data.menu[3].extandContent[0].extandContent[5].name, cssClass: "pieczecie"},
             {name: data.menu[6].extandContent[7].extandContent[0].name, cssClass: "urIII"}
         ]
-
     },
     menuIDElement: document.getElementById("MENU"),
     setMenu() {
-        this.buildLevel(this.menuIDElement);
+        this.buildLevel(this.menuIDElement, 0);
 
     },
-    buildLevel(parent, indexParam = 0) {
-        const isExtending = true;
-        if(isExtending) {
+    buildLevel(parent, indexParam) {
+        const isExtending = data.menu;
+        this.composeElements(parent, isExtending, indexParam, "nav");
+    },
+    buildSecondLevel(parent, indexParam) {
+        const isExtending = data.menu[indexParam].extandContent;
+        this.composeElements(parent, isExtending, indexParam, "podmenu");
+    },
+    composeElements(parent, isExtending, indexParam, extendingElClass) {
+        if (isExtending) {
             const extendedMenu = document.createElement("ul");
-            extendedMenu.classList.add("nav");
-            // first level declaration
-            const jsonLevel = data.menu;
-            console.log("jsonLevel: ", jsonLevel);
+            extendedMenu.classList.add(extendingElClass);
+            const jsonLevel = isExtending;
             for (let i in jsonLevel) {
                 let parentEl = document.createElement("li");
                 let link = document.createElement("a");
                 this.setList(parentEl, extendedMenu);
                 this.setURL(link, jsonLevel[i].url, parentEl, jsonLevel[i].name);
-                performance.createExtendingMark(link, i, jsonLevel[i].extandContent);
-                //second level declaration
-                this.buildSecondLevel(parentEl, i);
+                if (parent.id !== "MENU") {
+                    this.addClassToExtendingElement(parentEl);
+                }
+
+                performance.createExtendingMark(link, i, jsonLevel[i].extand);
+                if (parent.id === "MENU") {
+                    this.buildSecondLevel(parentEl, i);
+                } else {
+                    this.buildThirdLevel(parentEl, indexParam, i);
+                }
             }
-    
             parent.appendChild(extendedMenu);
-        }
-    },
-    buildSecondLevel(parent, i) {
-        const isExtending = data.menu[i].extandContent;
-        if (isExtending) {
-            // console.log(data.menu[i]);
-            const extendedMenu = document.createElement("ul");
-            extendedMenu.classList.add("podmenu");
-            const jsonLevel = data.menu[i].extandContent;
-            for (let j in jsonLevel) {
-                let parentEl = document.createElement("li");
-                let link = document.createElement("a");
-                this.setList(parentEl, extendedMenu);
-                this.setURL(link, jsonLevel[j].url, parentEl, jsonLevel[j].name);
-
-                // adding CSS classes to <li></li> second level
-
-                this.addClassToExtendingElement(parentEl);
-
-                performance.createExtendingMark(link, j, jsonLevel[j].extand);
-
-                this.buildThirdLevel(parentEl, i, j);
-            }
-            parent.appendChild(extendedMenu); // submitting second level
         }
     },
     buildThirdLevel(secondLevelElementItem, i, j) {
