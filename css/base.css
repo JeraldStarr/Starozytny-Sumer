@@ -33,9 +33,30 @@ body {
 
 /*zastosowanie do akapitu, gdzie znajduje się link do mapy strony, umiejscowia go po prawiej stronie bloku*/
     {
+    height: 30px;
+    width: 123px;
+    line-height: 1.6;
     float: right;
+    text-align: right;
     margin: 1px;
     margin-top: -80px;
+}
+
+#lokalizacja .sitemap a {
+    color: black;
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    background-image: url('/grafika/ikonka/sitemap.png');
+    background-repeat: no-repeat;
+    filter: invert(20%);
+    font-weight: 700;
+}
+
+#lokalizacja .sitemap a:hover {
+    filter: invert(0%);
+    
 }
 
 .podkreslenie
