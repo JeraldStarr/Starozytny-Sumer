@@ -597,10 +597,10 @@ export const urls = [
 	"/podstrony/podstrony-historia/krolowie/ur-nansze.html",
 	"/podstrony/podstrony-historia/krolowie/lugalanda.html",
 	
+	"/podstrony/podstrony_poziom_1_podania/sumeryjska_lista_krolow.html",
 	"/podstrony/miasta.html",
 	"/podstrony/podstrony-historia/sumerowie_semici.html",
 	"/podstrony/bogowie.html",
-	"/podstrony/prawo.html",
 
     "/podstrony/bogowie.html"
 ];
@@ -612,10 +612,10 @@ export const titles = [
 	"Ur-Nansze",
 	"Lugalanda",
 	
+	"Sumeryjska lista królów",
 	"Sumeryjskie miasta",
 	"Sumerowie i Semici",
 	"Bogowie",
-	"Prawo",
 
     "Sumeryjscy bogowie"
 ];
@@ -627,10 +627,10 @@ export const iconsURLs = [
 	"/grafika/ikonka/ur-nansze.png",
 	"/grafika/ikonka/ikonka_standardowa.gif",
 
+	"/grafika/ikonka/sumeryjska_lista_krolow.gif",
 	"/grafika/ikonka/miasta.gif",
 	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/bogowie.gif",
-	"/grafika/ikonka/prawo.jpg",
 
     "/grafika/ikonka/bogowie.gif"
 ];
@@ -646,13 +646,14 @@ export const texts = [
 	`Lugalanda miał reputację człowieka chciwego i skorumpowanego. Przejął kontrolę nad największymi 
 	świątynaimi Ningirsu, Szulszagany i Bau ...`,
 	
+	`Nie ma żadnego powodu, żeby ufać informacjom zawartym w tym dokumencie. Nie da się według 
+	Sumeryjskiej listy królów zrekonstruować chronologii władców sumeryjskich ...`,
 	`Zabudowa była na ogół nieuporządkowana, a miasta przecinały wąskie, niekiedy kręte lub ślepe 
 	uliczki. Wiele z nich prowadziło do głównej części miasta, czyli ... `,
 	`Na początku II tys. p.n.e. rozwój Sumeru został zahamowany. Sumeryjski umarł jako język żywy, 
 		a sumeryjskie dziedzictwo przejęli Akadowie od tego czasu zwani Babilończykami ...`,
 	`Bogowie mogli być łatwo rozpoznani w rzeźbach, płaskorzeźbach lub postaciach z pieczęci 
 	cylindrycznych. Ich znakiem rozpoznawczym były nakrycia głowy z rogami ...`,
-	`Ważnym rysem prawodawstwa sumeryjskiego była równość mężczyzny i kobiety wobec prawa ...`,
 
     "Nadrzędne siły miały charakter niepoznawalny, a ich źródło pozostawało niewyjaśnione ..."
 
@@ -665,10 +666,10 @@ export const dates = [
 	"05.10.2020",
 	"08.07.2020",
 
+	"28.04.2021",
 	"23.01.2021",
 	"08.11.2020",
 	"02.09.2020",
-	"22.08.2020",
 
     ""
 ];
@@ -680,10 +681,10 @@ export const alt = [
 	"Podobizna Ur-Nansze",
 	"Pismo",
 	
+	"Sumeryjska lista królów",
 	"Sumeryjskie miasto Ur",
 	"Tabliczka zgromadzenie bogów",
 	"Kodeks Ur-Nammy",
-	"Gudea",
 
     "Bogowie na odcisku pieczęci"
 ];
