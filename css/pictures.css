@@ -31,6 +31,7 @@ figure img {
 }
 
 .Obraz {
+    /*formatowanie dla obrazu o szerokości 100% artykułu*/
     border-bottom: 1px solid #7A4646;
     border-top: 1px solid #7A4646;
     padding: 5px 0;
@@ -63,7 +64,7 @@ figure img {
 }
 
 .malyObraz {
-    /*formatowanie dla obrazu o szerokości około 200px*/
+    /*formatowanie dla obrazu o szerokości około 250px*/
     width: 28.101%;
     border-bottom: 1px solid #7A4646;
     border-top: 1px solid #7A4646;
