@@ -1,10 +1,6 @@
 {
   "name": "starozytny_sumer",
-<<<<<<< HEAD
-  "version": "1.1.030",
-=======
-  "version": "1.1.029",
->>>>>>> fc0f01fea8f8489bec8c6a4fd0c3b600040b9ae5
+  "version": "1.1.031",
   "description": "\"# My project's README\"",
   "main": "add.js",
   "dependencies": {},
