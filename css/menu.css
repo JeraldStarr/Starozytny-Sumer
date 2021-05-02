@@ -98,30 +98,29 @@ ul.blok {
 
 /*============ third level end ===========*/
 /*============ fourth level ===========*/
-.odciski,
-.urIIIpodzial {
+
+.mainMenu__4thLevel {
     width: 150px;
 }
 
-ul.odciski,
-ul.urIIIpodzial {
+.mainMenu__4thLevel {
     display: none;
     z-index: 1;
 }
 
-.podmenu .blok .pieczecie:hover .odciski,
-.podmenu .blok .urIII:hover .urIIIpodzial {
+.podmenu .blok .pieczecie:hover .mainMenu__4thLevel,
+.podmenu .blok .urIII:hover .mainMenu__4thLevel {
     display: block;
     position: absolute;
     left: 154px;
     bottom: -1px;
 }
 
-.podmenu .blok .pieczecie:hover .odciski {
+.podmenu .blok .pieczecie:hover .mainMenu__4thLevel {
     top: 1px;
 }
 
-.podmenu .blok .urIII:hover .urIIIpodzial {
+.podmenu .blok .urIII:hover .mainMenu__4thLevel {
     top: -1px;
 }
 /*============ fourth level end ===========*/

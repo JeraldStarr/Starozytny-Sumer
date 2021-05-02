@@ -3,7 +3,7 @@
  * the author of webside "Starożytny Sumer" - http://www.starozytnysumer.pl
  */
 import performance from './modules/Performance.js';
-import menu from './modules/Menu.js';
+import {init as initMenu} from './modules/Menu.js';
 import asideBar from './modules/AsideBar.js';
 import googleSearch from './modules/GoogleSearch.js';
 import scrolls from './modules/Scroll.js';
@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
   performance.toggleMenu();
   performance.displayBigImg();
   performance.galleryService();
-  menu.setMenu();
+  initMenu();
   asideBar.displaySideBar();
   googleSearch.displaySearch();
   performance.transformToMobileMenu();

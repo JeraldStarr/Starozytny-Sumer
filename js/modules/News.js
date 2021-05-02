@@ -1,5 +1,5 @@
 import { dates, texts, urls, titles, iconsURLs, alt } from '../data/data.js';
-import menu from './Menu.js';
+import { menuIDElement } from './Menu.js';
 
 const news = {
     displayBlock(startsFrom, endsOn) {
@@ -43,8 +43,8 @@ const news = {
             }
 
             date.innerText = dates[i];
-            menu.menuIDElement.appendChild(date);
-            menu.menuIDElement.appendChild(buildArticleTiles(articleTile));
+            menuIDElement.appendChild(date);
+            menuIDElement.appendChild(buildArticleTiles(articleTile));
 
             buildLink(articleTitle);
             buildLink(imgIconLink);

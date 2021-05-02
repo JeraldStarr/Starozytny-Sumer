@@ -1,5 +1,5 @@
 import {watermark, asideHeaders} from '../data/data.js';
-import menu from './Menu.js';
+import { menuIDElement } from './Menu.js';
 import news from './News.js';
 
 const asideBar = {
@@ -11,11 +11,11 @@ const asideBar = {
         imgElement.setAttribute("class", "bocznyDingir");
         imgElement.setAttribute("src", url);
         imgElement.setAttribute("alt", alternativeText);
-        menu.menuIDElement.appendChild(imgElement)
+        menuIDElement.appendChild(imgElement)
     },
     setHeader(text) {
         const spanElement = document.createElement("span");
-        menu.menuIDElement.appendChild(spanElement);
+        menuIDElement.appendChild(spanElement);
         spanElement.innerHTML = text;
     },
     getFromVariable(index) {
