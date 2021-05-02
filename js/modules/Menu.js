@@ -17,40 +17,15 @@ const config = {
 };
 const menuIDElement = document.getElementById("MENU");
 function init() {
-    buildLevel(menuIDElement, 0);
-
+    buildElementOf1stLevel(menuIDElement, 0);
 };
-function buildLevel(parent, indexParam) {
+function buildElementOf1stLevel(parent, indexParam) {
     const isExtending = data.menu;
-    composeElements(parent, isExtending, indexParam, "nav");
+    composeElement(parent, isExtending, indexParam, "nav");
 };
-function buildSecondLevel(parent, indexParam) {
+function buildElementOf2ndLevel(parent, indexParam) {
     const isExtending = data.menu[indexParam].extandContent;
-    composeElements(parent, isExtending, indexParam, "podmenu");
-};
-function composeElements(parent, isExtending, indexParam, extendingElClass) {
-    if (isExtending) {
-        const extendedMenu = document.createElement("ul");
-        extendedMenu.classList.add(extendingElClass);
-        const jsonLevel = isExtending;
-        for (let i in jsonLevel) {
-            let parentEl = document.createElement("li");
-            let link = document.createElement("a");
-            setList(parentEl, extendedMenu);
-            setURL(link, jsonLevel[i].url, parentEl, jsonLevel[i].name);
-            if (parent.id !== "MENU") {
-                addClassToExtendingElement(parentEl);
-            }
-
-            performance.createExtendingMark(link, i, jsonLevel[i].extand);
-            if (parent.id === "MENU") {
-                buildSecondLevel(parentEl, i);
-            } else {
-                buildThirdLevel(parentEl, indexParam, i);
-            }
-        }
-        parent.appendChild(extendedMenu);
-    }
+    composeElement(parent, isExtending, indexParam, "podmenu");
 };
 function buildThirdLevel(secondLevelElementItem, i, j) {
     const secondLevelArticles = data.menu[i].extandContent[j];
@@ -75,15 +50,6 @@ function buildThirdLevel(secondLevelElementItem, i, j) {
         secondLevelElementItem.appendChild(thirdLevelList); // submitting third level
     }
 };
-function addClassToExtendingElement(extElem) {
-    const level = extElem.parentElement.classList.contains("podmenu") ? config.secondLevel :
-    config.thirdLevel;
-    level.forEach(item => {
-        if (extElem.innerText === item.name) {
-            extElem.classList.add(item.cssClass);
-        }
-    });
-};
 function buildFourthLevel(thirdLevelElementItem, i, j, k) {
     const thirdLevelArticles = data.menu[i].extandContent[j].extandContent[k];
 
@@ -98,6 +64,39 @@ function buildFourthLevel(thirdLevelElementItem, i, j, k) {
         }
         thirdLevelElementItem.appendChild(fourthLevelList);
     }
+};
+function composeElement(parent, isExtending, indexParam, extendingElClass) {
+    if (isExtending) {
+        const extendedMenu = document.createElement("ul");
+        extendedMenu.classList.add(extendingElClass);
+        const jsonLevel = isExtending;
+        for (let i in jsonLevel) {
+            let parentEl = document.createElement("li");
+            let link = document.createElement("a");
+            setList(parentEl, extendedMenu);
+            setURL(link, jsonLevel[i].url, parentEl, jsonLevel[i].name);
+            if (parent.id !== "MENU") {
+                addClassToExtendingElement(parentEl);
+            }
+
+            performance.createExtendingMark(link, i, jsonLevel[i].extand);
+            if (parent.id === "MENU") {
+                buildElementOf2ndLevel(parentEl, i);
+            } else {
+                buildThirdLevel(parentEl, indexParam, i);
+            }
+        }
+        parent.appendChild(extendedMenu);
+    }
+};
+function addClassToExtendingElement(extElem) {
+    const level = extElem.parentElement.classList.contains("podmenu") ? config.secondLevel :
+    config.thirdLevel;
+    level.forEach(item => {
+        if (extElem.innerText === item.name) {
+            extElem.classList.add(item.cssClass);
+        }
+    });
 };
 /*
 * this function gives the name to the article from menu navigation
