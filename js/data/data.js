@@ -195,8 +195,13 @@ export const data = {
                 		"extand" : false
                 	},
                 	{
-                		"name" : "Stella Ur-Nammy",
+                		"name" : "Stela Ur-Nammy",
                 		"url" : "/podstrony/podstrony_poziom_1_sztuka/poziom_2/relief/stela_ur-nammy.html",
+                		"extand" : false
+                	},
+					{
+                		"name" : "Stela Sępów",
+                		"url" : "/podstrony/podstrony_poziom_1_sztuka/poziom_2/relief/stela_sepow.html",
                 		"extand" : false
                 	}
 
@@ -388,6 +393,11 @@ export const data = {
 			{
 				"name" : "Urukagina",
 				"url" : "/podstrony/podstrony-historia/krolowie/urukagina.html",
+				"extand" : false
+			},
+			{
+				"name" : "Puzer-Mama",
+				"url" : "/podstrony/podstrony-historia/krolowie/puzer-mama.html",
 				"extand" : false
 			},
 			{
@@ -592,59 +602,59 @@ export const data = {
 
 }
 export const urls = [
+	"/podstrony/podstrony_poziom_1_sztuka/poziom_2/relief/stela_sepow.html",
 	"/podstrony/podstrony-historia/krolowie/puzer-mama.html",
 	"/podstrony/podstrony-historia/krolowie/utuhengal.html",
 	"/podstrony/podstrony-historia/krolowie/ur-nansze.html",
-	"/podstrony/podstrony-historia/krolowie/lugalanda.html",
 	
+	"/podstrony/podstrony_poziom_1_sztuka/plaskorzezba.html",
 	"/podstrony/podstrony_poziom_1_podania/sumeryjska_lista_krolow.html",
 	"/podstrony/miasta.html",
 	"/podstrony/podstrony-historia/sumerowie_semici.html",
-	"/podstrony/bogowie.html",
 
     "/podstrony/bogowie.html"
 ];
 
 // articles' titles
 export const titles = [
+	"Stela Sępów",
 	"Puzer-Mama",
 	"Utuhengal",
 	"Ur-Nansze",
-	"Lugalanda",
 	
+	"Płaskorzeźba",
 	"Sumeryjska lista królów",
 	"Sumeryjskie miasta",
 	"Sumerowie i Semici",
-	"Bogowie",
 
     "Sumeryjscy bogowie"
 ];
 
 // urls for articles' icons 
 export const iconsURLs = [
+	"/grafika/ikonka/stela_sepow.png",
 	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/ikonka_standardowa.gif",
 	"/grafika/ikonka/ur-nansze.png",
-	"/grafika/ikonka/ikonka_standardowa.gif",
 
+	"/grafika/ikonka/plaskorzezba.gif",
 	"/grafika/ikonka/sumeryjska_lista_krolow.gif",
 	"/grafika/ikonka/miasta.gif",
 	"/grafika/ikonka/ikonka_standardowa.gif",
-	"/grafika/ikonka/bogowie.gif",
 
     "/grafika/ikonka/bogowie.gif"
 ];
 
 // fragmenty tekstów z artykułów
 export const texts = [
+	`Powierzchowny obserwator zadowoli się tym, że ponad tarczami widać dziewięć głów w hełmach. 
+	Jednakże niżej znajdują się tylko cztery tarcze, ale za to ...`,
 	`Przejął kontrolę na miastem za panowania Szar-kali-szarriego z dynastii akadyjskiej. 
 	W inskrypcji królewskiej Puzer-Mama otrzymuje różne dary od bogów ...`,
 	`Po zwycięstwie Utuhengala w Sumerach zaszła zmiana mentalna. Nie myślano już tylko o własnym 
 	mieście, jako o ojczyźnie, lecz pojmowano ją szerzej – jako cały kraj ...`,
 	`Teksty wspominają o nim jako o budowniczym kanałów i świątyń dla Ningirsu oraz Bau. 
 	Na potrzeby swoich prac sprowadzał drewno i kamień z gór Masz ...`,
-	`Lugalanda miał reputację człowieka chciwego i skorumpowanego. Przejął kontrolę nad największymi 
-	świątynaimi Ningirsu, Szulszagany i Bau ...`,
 	
 	`Nie ma żadnego powodu, żeby ufać informacjom zawartym w tym dokumencie. Nie da się według 
 	Sumeryjskiej listy królów zrekonstruować chronologii władców sumeryjskich ...`,
@@ -661,15 +671,15 @@ export const texts = [
 
 // daty dodania bądź aktualizacji artykułów
 export const dates = [
+	"06.06.2021",
 	"13.02.2021",
 	"16.12.2020",
 	"05.10.2020",
-	"08.07.2020",
 
+	"06.06.2021",
 	"28.04.2021",
 	"23.01.2021",
 	"08.11.2020",
-	"02.09.2020",
 
     ""
 ];
