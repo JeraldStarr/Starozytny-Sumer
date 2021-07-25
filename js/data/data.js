@@ -656,14 +656,14 @@ export const texts = [
 	`Teksty wspominają o nim jako o budowniczym kanałów i świątyń dla Ningirsu oraz Bau. 
 	Na potrzeby swoich prac sprowadzał drewno i kamień z gór Masz ...`,
 	
+	`Reliefy są bardzo dobrym źródłem informacji nie tylko o sztuce, ale również i o życiu Sumerów. 
+	Patrząc na płaskorzeźbione przedstawienia odbiorca nie gubi się w nieznanych szczegółach religii ...`,
 	`Nie ma żadnego powodu, żeby ufać informacjom zawartym w tym dokumencie. Nie da się według 
 	Sumeryjskiej listy królów zrekonstruować chronologii władców sumeryjskich ...`,
 	`Zabudowa była na ogół nieuporządkowana, a miasta przecinały wąskie, niekiedy kręte lub ślepe 
 	uliczki. Wiele z nich prowadziło do głównej części miasta, czyli ... `,
 	`Na początku II tys. p.n.e. rozwój Sumeru został zahamowany. Sumeryjski umarł jako język żywy, 
 		a sumeryjskie dziedzictwo przejęli Akadowie od tego czasu zwani Babilończykami ...`,
-	`Bogowie mogli być łatwo rozpoznani w rzeźbach, płaskorzeźbach lub postaciach z pieczęci 
-	cylindrycznych. Ich znakiem rozpoznawczym były nakrycia głowy z rogami ...`,
 
     "Nadrzędne siły miały charakter niepoznawalny, a ich źródło pozostawało niewyjaśnione ..."
 
