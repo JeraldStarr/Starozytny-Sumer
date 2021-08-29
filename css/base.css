@@ -102,7 +102,7 @@ body {
 
 /*stosowany do formatowania dat i żródeł na końcu każdego artykułu*/
     {
-    font-size: 14px;
+    font-size: 15px;
     font-style: italic;
 }
 
@@ -282,7 +282,7 @@ h2 {
 
 
     .daty_zrodla {
-        font-size: 9px;
+        font-size: 15px;
     }
 
     h1 {
