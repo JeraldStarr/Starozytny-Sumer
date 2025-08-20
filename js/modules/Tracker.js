@@ -1,22 +1,25 @@
 const tracker = {
-    track() {
-        // (function(i, s, o, g, r, a, m) {
-        //     i['GoogleAnalyticsObject'] = r;
-        //     i[r] = i[r] || function() {
-        //         (i[r].q = i[r].q || []).push(arguments)
-        //     }, i[r].l = 1 * new Date();
-        //     a = s.createElement(o),
-        //         m = s.getElementsByTagName(o)[0];
-        //     a.async = 1;
-        //     a.src = g;
-        //     m.parentNode.insertBefore(a, m)
-        // })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-      
-        // ga('create', 'UA-55459898-1', 'auto');
-        // ga('send', 'pageview');
-      
+  track() {
+    if (!window.gtag) {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-ZYQB3VN7V3";
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      window.gtag = gtag;
+
+      gtag('js', new Date());
+      gtag('config', 'G-ZYQB3VN7V3');
+    } else {
+      window.gtag('config', 'G-ZYQB3VN7V3', {
+        page_path: window.location.pathname,
+      });
     }
-}
+  }
+};
 
 export default tracker;
+
 
